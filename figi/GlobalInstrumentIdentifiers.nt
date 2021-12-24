@@ -1,0 +1,186 @@
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/2000/01/rdf-schema#label> "Financial Industry Global Instrument Identifiers (FIGI) Ontology" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Copyright (c) 2013-2015 Bloomberg LP\nCopyright (c) 2013-2015 Object Management Group, Inc."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://purl.org/dc/terms/license> "http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> "GlobalInstrumentIdentifiers.rdf"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> "figi-gii"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.omg.org/spec/FIGI/20150501/GlobalInstrumentIdentifiers/> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> "The Financial Instrument Global Identifier (FIGI) is a unique, persistent twelve character string that serves to identify financial instruments. Along with the identifier, a number of related data points are identified and defined so as to provide clear context and differentiation of the financial instruments specified by the identifiers.  \n\nThis ontology provides the 'schema' for the identifier and related constructs.  Individuals representing the corresponding security types and pricing sources are provided in separate RDF/XML serialized OWL files."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/2004/02/skos/core#changeNote> "The http://www.omg.org/spec/FIGI/20140201/GlobalInstrumentIdentifiers.rdf version of this ontology was modified per the issue resolutions identified in the FIGI 1.0 FTF report."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> "http://www.omg.org/techprocess/ab/SpecificationMetadata/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> "http://www.omg.org/spec/ODM/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> "http://www.w3.org/standards/techs/owl#w3c_all"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omg.org/spec/FIGI/AboutFIGI/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.w3.org/2002/07/owl#imports> <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> <http://www.w3.org/2000/01/rdf-schema#label> "classifies" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> <http://www.w3.org/2004/02/skos/core#definition> "arranges in classes; assigns to a category"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> <http://purl.org/dc/terms/source> "Merriam-Webster Dictionary"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> <http://www.w3.org/2000/01/rdf-schema#label> "has" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> <http://www.w3.org/2004/02/skos/core#definition> "indicates that someone (or something) possesses something, as a characteristic, attribute, feature, capability, and so forth"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> <http://www.w3.org/2000/01/rdf-schema#label> "identifies" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> <http://www.w3.org/2004/02/skos/core#definition> "relates an identifier to the entity that it identifies"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is classified by" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> <http://www.w3.org/2004/02/skos/core#definition> "indicates the category or classifier used to classify an entity"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is identified by" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> <http://www.w3.org/2004/02/skos/core#definition> "relates an entity to an identifier or key that identifies it"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has unique text identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "links an entity to a unique identifier for that entity; may be associated with anything.  With reference to a given (possibly implicit) set of objects, a unique identifier (UID) is any identifier which is guaranteed to be unique among all identifiers used for those objects and for a specific purpose."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Unique_identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.w3.org/2000/01/rdf-schema#label> "code" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.w3.org/2004/02/skos/core#definition> "A system of valid symbols that substitute for specified values, such as alpha, numeric, symbols or combinations thereof."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> "ISO/IEC 11179-3, Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "composite global identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A composite global identifier is a global identifier which is differentiated from a 'normal' global identifier in that it serves as a parent in a hierarchy of individual global identifiers.  This parent identifier may also provide a unique, common identifier for a financial instrument within the context of a jurisdiction (e.g., country)."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> <http://www.w3.org/2004/02/skos/core#example> "AAPL common stock, US Composite"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/GlobalIdentifier> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> .
+_:genid5 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ExchangeCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ExchangeCode> <http://www.w3.org/2000/01/rdf-schema#label> "exchange code" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ExchangeCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ExchangeCode> <http://www.w3.org/2004/02/skos/core#definition> "a code for the exchange on which the security trades"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/2000/01/rdf-schema#label> "financial instrument" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/2004/02/skos/core#definition> "Financial instruments are cash, evidence of an ownership interest in an entity, or a contractual right to receive, or deliver, cash or another financial instrument."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> <http://www.w3.org/2004/02/skos/core#scopeNote> "Financial instruments can be categorized by form depending on whether they are cash instruments or derivative instruments.\n\nCash instruments are financial instruments whose value is determined directly by markets. They can be divided into securities, which are readily transferable, and other cash instruments such as loans and deposits, where both borrower and lender have to agree on a transfer.\n\nDerivative instruments are financial instruments which derive their value from the value and characteristics of one or more underlying assets. They can be divided into exchange-traded derivatives and over-the-counter (OTC) derivatives.\n\nAlternatively, financial instruments can be categorized by 'asset class' depending on whether they are equity based (reflecting ownership of the issuing entity) or debt based (reflecting a loan the investor has made to the issuing entity). If it is debt, it can be further categorized into short term (less than one year) or long term.\n\nForeign Exchange instruments and transactions are neither debt nor equity based and belong in their own category."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentName> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Ticker> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ExchangeCode> .
+_:genid17 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "financial instrument identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A financial instrument identifier is an identifier that identifies (that is, labels the identity of) a financial instrument with a unique, persistent, semantically meaningless ID. The abbreviation 'ID' often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification).  A financial instrument identifier consists of a 12 digit alpha-numeric, randomly generated ID covering active and inactive securities. In total there will be more than 852 billion potential combinations available. The first 3 characters begin with 'xxG'; where 'x' can be any upper-case consonant or 'Y' (with certain restrictions), positions 4-11 are alpha-numeric (excluding vowels) and the last digit is a check digit, which is calculated based on a variation of the Modulus 10 Double Add Double Formula."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> <http://www.w3.org/2004/02/skos/core#scopeNote> "Note that not all versions of the various OWL 2 compliant reasoning engines available can process the string pattern properly.\n\nThe structure of the identifier includes twelve (12) character string as follows:\nPosition 1: any upper-case alpha character excluding vowels ('Y' counts as a consonant).\nPosition 2: any upper-case alpha character exlcuding vowels.\nPosition 3: the letter 'G'.\nPositions 4-11: any alpha numeric charater excluding vowels that, in combination with positions 1 and 2 does not constitute a duplicate of an existing string.\nPosition 12: check digit (see additional documentation for algorithm)\nQualification: positions 1 and 2 cannot be the following sequences: BS, BM, GG, GB, VG, GH, or KY."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid20 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid20 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/2001/XMLSchema#pattern> "^(((?!BS|BM|GG|GB|VG|GH|KY)[BCDFGHJKLMNPQRSTVWXZ]{2})G[BCDFGHJKLMNPQRSTVWXYZ\\d]{8}\\d)$"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> .
+_:genid23 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> .
+_:genid23 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentName> <http://www.w3.org/2000/01/rdf-schema#label> "financial instrument name" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentName> <http://www.w3.org/2004/02/skos/core#definition> "the English language name of the company or the financial instrument, e.g., a particular fund name. It sometimes includes a brief description of the security or a differentiating feature, e.g., the issuance date. The name of an instrument may change in conjunction with corporate actions."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/GlobalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/GlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "global identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/GlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/GlobalIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A global identifier is the most basic type of identifier that applies to exactly and only one Financial Instrument at the most granular level. For example,  AAPL common stock as traded on NASDAQ Global Select. The granularity of this identifier is found in that which it identifies. In particular, the most basic FIGI identifies a financial instrument, where applicable, at the trading venue level. That is, where applicable, the Global Identifier  identifies a Financial Instrument within the context of an exchange venue."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid26 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> .
+_:genid26 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.w3.org/2004/02/skos/core#definition> "An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the 'object' or class may be an idea, physical (countable) object (or class thereof), or physical (noncountable) substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.\n\nThe words, numbers, letters, or symbols may follow an encoding system (wherein letters, digits, words, or symbols stand for (represent) ideas or longer names) or they may simply be arbitrary. When an identifier follows an encoding system, it is often referred to as a code or ID code. Identifiers that do not follow any encoding scheme are often said to be arbitrary IDs; they are arbitrarily assigned and have no greater meaning. (Sometimes identifiers are called 'codes' even when they are actually arbitrary, whether because the speaker believes that they have deeper meaning or simply because he is speaking casually and imprecisely.)"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> "http://en.wikipedia.org/wiki/Identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> .
+_:genid28 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#token> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> <http://www.w3.org/2000/01/rdf-schema#label> "pricing source" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> <http://www.w3.org/2004/02/skos/core#definition> "the pricing source for a security"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> <http://www.w3.org/2000/01/rdf-schema#label> "security type" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> <http://www.w3.org/2004/02/skos/core#definition> "the type of security, for example, common stock"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> .
+_:genid29 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> .
+_:genid29 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "share class global identifier" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/ShareClassGlobalIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A share class global identifier is a global identifier that is differentiated from a 'normal' global identifier and a composite global identifier in that it serves as a parent in a hierarchy of individual composite global identifiers. For example, AAPL common stock as traded across the planet presented as a list of ocmposite global identifiers. Similar to a composite global identifier, the share class global identifier identifies a financial instrument within the context of the global perspective, e.g., aapl common stock."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has> .
+_:genid30 <http://www.w3.org/2002/07/owl#onClass> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> .
+_:genid30 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Ticker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Ticker> <http://www.w3.org/2000/01/rdf-schema#label> "ticker" .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Ticker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> .
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Ticker> <http://www.w3.org/2004/02/skos/core#definition> "the assigned ticker for a financial instrument; the rules for forming the ticker vary according to security class"^^<http://www.w3.org/2001/XMLSchema#string> .

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY figi-gii "http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/" >
+]>
+
+<rdf:RDF   xml:base="http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:figi-gii="http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/">
+
+
+    <owl:Ontology rdf:about="http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/">
+        <rdfs:label>Financial Industry Global Instrument Identifiers (FIGI) Ontology</rdfs:label>
+
+
+    <!-- Curation and Rights Metadata for the FIGI Global Instrument Identifiers Ontology -->
+
+        <sm:copyright rdf:datatype="&xsd;string">Copyright (c) 2013-2015 Bloomberg LP
+Copyright (c) 2013-2015 Object Management Group, Inc.</sm:copyright>
+        <dct:license rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense</dct:license>
+
+
+    <!-- Ontology/File-Level Metadata for the FIGI Global Instrument Identifiers Ontology -->
+
+        <sm:filename rdf:datatype="&xsd;string">GlobalInstrumentIdentifiers.rdf</sm:filename>
+        <sm:fileAbbreviation rdf:datatype="&xsd;string">figi-gii</sm:fileAbbreviation>
+        <owl:versionIRI rdf:resource="http://www.omg.org/spec/FIGI/20150501/GlobalInstrumentIdentifiers/"/>
+        <sm:fileAbstract rdf:datatype="&xsd;string">The Financial Instrument Global Identifier (FIGI) is a unique, persistent twelve character string that serves to identify financial instruments. Along with the identifier, a number of related data points are identified and defined so as to provide clear context and differentiation of the financial instruments specified by the identifiers.  
+
+This ontology provides the 'schema' for the identifier and related constructs.  Individuals representing the corresponding security types and pricing sources are provided in separate RDF/XML serialized OWL files.</sm:fileAbstract>
+
+        <skos:changeNote rdf:datatype="&xsd;string">The http://www.omg.org/spec/FIGI/20140201/GlobalInstrumentIdentifiers.rdf version of this ontology was modified per the issue resolutions identified in the FIGI 1.0 FTF report.</skos:changeNote>
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
+
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/ODM/</sm:contentLanguage>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/FIGI/AboutFIGI/</rdfs:seeAlso>
+
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="&figi-gii;classifies">
+        <rdfs:label>classifies</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">arranges in classes; assigns to a category</skos:definition>
+        <dct:source rdf:datatype="&xsd;string">Merriam-Webster Dictionary</dct:source>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&figi-gii;has">
+        <rdfs:label>has</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">indicates that someone (or something) possesses something, as a characteristic, attribute, feature, capability, and so forth</skos:definition>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&figi-gii;identifies">
+        <rdfs:label>identifies</rdfs:label>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <skos:definition rdf:datatype="&xsd;string">relates an identifier to the entity that it identifies</skos:definition>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&figi-gii;isClassifiedBy">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label>is classified by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">indicates the category or classifier used to classify an entity</skos:definition>
+        <owl:inverseOf rdf:resource="&figi-gii;classifies"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&figi-gii;isIdentifiedBy">
+        <rdfs:label>is identified by</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">relates an entity to an identifier or key that identifies it</skos:definition>
+        <owl:inverseOf rdf:resource="&figi-gii;identifies"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:DatatypeProperty rdf:about="&figi-gii;hasUniqueTextIdentifier">
+        <rdfs:label>has unique text identifier</rdfs:label>
+        <skos:definition rdf:datatype="&xsd;string">links an entity to a unique identifier for that entity; may be associated with anything.  With reference to a given (possibly implicit) set of objects, a unique identifier (UID) is any identifier which is guaranteed to be unique among all identifiers used for those objects and for a specific purpose.</skos:definition>
+        <dct:source rdf:datatype="&xsd;anyURI">https://en.wikipedia.org/wiki/Unique_identifier</dct:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="&figi-gii;Code">
+        <rdfs:label>code</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;hasUniqueTextIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A system of valid symbols that substitute for specified values, such as alpha, numeric, symbols or combinations thereof.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">ISO/IEC 11179-3, Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes</sm:directSource>
+    </owl:Class>
+
+    <owl:Class rdf:about="&figi-gii;CompositeGlobalIdentifier">
+        <rdfs:label>composite global identifier</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;has"/>
+                <owl:onClass rdf:resource="&figi-gii;GlobalIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&figi-gii;FinancialInstrumentIdentifier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;has"/>
+                        <owl:onClass rdf:resource="&figi-gii;ShareClassGlobalIdentifier"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A composite global identifier is a global identifier which is differentiated from a 'normal' global identifier in that it serves as a parent in a hierarchy of individual global identifiers.  This parent identifier may also provide a unique, common identifier for a financial instrument within the context of a jurisdiction (e.g., country).</skos:definition>
+        <skos:example rdf:datatype="&xsd;string">AAPL common stock, US Composite</skos:example>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;ExchangeCode">
+        <rdfs:label>exchange code</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&figi-gii;Code"/>
+        <skos:definition rdf:datatype="&xsd;string">a code for the exchange on which the security trades</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;FinancialInstrument">
+        <rdfs:label>financial instrument</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;isIdentifiedBy"/>
+                <owl:onClass rdf:resource="&figi-gii;FinancialInstrumentIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;has"/>
+                        <owl:onClass rdf:resource="&figi-gii;PricingSource"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;isClassifiedBy"/>
+                        <owl:onClass rdf:resource="&figi-gii;SecurityType"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;isIdentifiedBy"/>
+                        <owl:onClass rdf:resource="&figi-gii;FinancialInstrumentName"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;isIdentifiedBy"/>
+                        <owl:onClass rdf:resource="&figi-gii;Ticker"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;has"/>
+                        <owl:onClass rdf:resource="&figi-gii;ExchangeCode"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">Financial instruments are cash, evidence of an ownership interest in an entity, or a contractual right to receive, or deliver, cash or another financial instrument.</skos:definition>
+        <skos:scopeNote rdf:datatype="&xsd;string">Financial instruments can be categorized by form depending on whether they are cash instruments or derivative instruments.
+
+Cash instruments are financial instruments whose value is determined directly by markets. They can be divided into securities, which are readily transferable, and other cash instruments such as loans and deposits, where both borrower and lender have to agree on a transfer.
+
+Derivative instruments are financial instruments which derive their value from the value and characteristics of one or more underlying assets. They can be divided into exchange-traded derivatives and over-the-counter (OTC) derivatives.
+
+Alternatively, financial instruments can be categorized by 'asset class' depending on whether they are equity based (reflecting ownership of the issuing entity) or debt based (reflecting a loan the investor has made to the issuing entity). If it is debt, it can be further categorized into short term (less than one year) or long term.
+
+Foreign Exchange instruments and transactions are neither debt nor equity based and belong in their own category.</skos:scopeNote>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;FinancialInstrumentIdentifier">
+        <rdfs:label>financial instrument identifier</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;hasUniqueTextIdentifier"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern rdf:datatype="&xsd;string">^(((?!BS|BM|GG|GB|VG|GH|KY)[BCDFGHJKLMNPQRSTVWXZ]{2})G[BCDFGHJKLMNPQRSTVWXYZ\d]{8}\d)$</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&figi-gii;Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;identifies"/>
+                <owl:onClass rdf:resource="&figi-gii;FinancialInstrument"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A financial instrument identifier is an identifier that identifies (that is, labels the identity of) a financial instrument with a unique, persistent, semantically meaningless ID. The abbreviation 'ID' often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification).  A financial instrument identifier consists of a 12 digit alpha-numeric, randomly generated ID covering active and inactive securities. In total there will be more than 852 billion potential combinations available. The first 3 characters begin with 'xxG'; where 'x' can be any upper-case consonant or 'Y' (with certain restrictions), positions 4-11 are alpha-numeric (excluding vowels) and the last digit is a check digit, which is calculated based on a variation of the Modulus 10 Double Add Double Formula.</skos:definition>
+        <skos:scopeNote rdf:datatype="&xsd;string">Note that not all versions of the various OWL 2 compliant reasoning engines available can process the string pattern properly.
+
+The structure of the identifier includes twelve (12) character string as follows:
+Position 1: any upper-case alpha character excluding vowels ('Y' counts as a consonant).
+Position 2: any upper-case alpha character exlcuding vowels.
+Position 3: the letter 'G'.
+Positions 4-11: any alpha numeric charater excluding vowels that, in combination with positions 1 and 2 does not constitute a duplicate of an existing string.
+Position 12: check digit (see additional documentation for algorithm)
+Qualification: positions 1 and 2 cannot be the following sequences: BS, BM, GG, GB, VG, GH, or KY.</skos:scopeNote>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;FinancialInstrumentName">
+        <rdfs:label>financial instrument name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&figi-gii;Identifier"/>
+        <skos:definition rdf:datatype="&xsd;string">the English language name of the company or the financial instrument, e.g., a particular fund name. It sometimes includes a brief description of the security or a differentiating feature, e.g., the issuance date. The name of an instrument may change in conjunction with corporate actions.</skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&figi-gii;GlobalIdentifier">
+        <rdfs:label>global identifier</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&figi-gii;FinancialInstrumentIdentifier"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&figi-gii;has"/>
+                        <owl:onClass rdf:resource="&figi-gii;CompositeGlobalIdentifier"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A global identifier is the most basic type of identifier that applies to exactly and only one Financial Instrument at the most granular level. For example,  AAPL common stock as traded on NASDAQ Global Select. The granularity of this identifier is found in that which it identifies. In particular, the most basic FIGI identifies a financial instrument, where applicable, at the trading venue level. That is, where applicable, the Global Identifier  identifies a Financial Instrument within the context of an exchange venue.</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;Identifier">
+        <rdfs:label>identifier</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;hasUniqueTextIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the 'object' or class may be an idea, physical (countable) object (or class thereof), or physical (noncountable) substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.
+
+The words, numbers, letters, or symbols may follow an encoding system (wherein letters, digits, words, or symbols stand for (represent) ideas or longer names) or they may simply be arbitrary. When an identifier follows an encoding system, it is often referred to as a code or ID code. Identifiers that do not follow any encoding scheme are often said to be arbitrary IDs; they are arbitrarily assigned and have no greater meaning. (Sometimes identifiers are called 'codes' even when they are actually arbitrary, whether because the speaker believes that they have deeper meaning or simply because he is speaking casually and imprecisely.)</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;anyURI">http://en.wikipedia.org/wiki/Identifier</sm:directSource>
+    </owl:Class>
+        
+    <owl:Class rdf:about="&figi-gii;PricingSource">
+        <rdfs:label>pricing source</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&figi-gii;Code"/>
+        <skos:definition rdf:datatype="&xsd;string">the pricing source for a security</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;SecurityType">
+        <rdfs:label>security type</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;isIdentifiedBy"/>
+                <owl:onClass rdf:resource="&figi-gii;Identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">the type of security, for example, common stock</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;ShareClassGlobalIdentifier">
+        <rdfs:label>share class global identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&figi-gii;FinancialInstrumentIdentifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&figi-gii;has"/>
+                <owl:onClass rdf:resource="&figi-gii;CompositeGlobalIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition rdf:datatype="&xsd;string">A share class global identifier is a global identifier that is differentiated from a 'normal' global identifier and a composite global identifier in that it serves as a parent in a hierarchy of individual composite global identifiers. For example, AAPL common stock as traded across the planet presented as a list of ocmposite global identifiers. Similar to a composite global identifier, the share class global identifier identifies a financial instrument within the context of the global perspective, e.g., aapl common stock.</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&figi-gii;Ticker">
+        <rdfs:label>ticker</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&figi-gii;Identifier"/>
+        <skos:definition rdf:datatype="&xsd;string">the assigned ticker for a financial instrument; the rules for forming the ticker vary according to security class</skos:definition>
+    </owl:Class>
+
+</rdf:RDF>
