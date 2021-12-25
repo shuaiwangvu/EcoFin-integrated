@@ -1,3 +1,4 @@
 ./book-paper-doc
 data/*.nt
 .DS_Store
+data/*.hdt.index.v1-1
