@@ -3,6 +3,7 @@ import networkx as nx
 from collections import Counter
 import matplotlib.pyplot as plt
 from collections import Counter
+import networkx.algorithms.distance_measures as dm
 
 owl_sameas = "http://www.w3.org/2002/07/owl#sameAs"
 skos_exactMatch = "http://www.w3.org/2004/02/skos/core#exactMatch"
@@ -46,6 +47,11 @@ for file in files:
 
 	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
 	print ('\t with ', len (entities), ' entities')
+	try:
+		print ('\t diameter = ', dm.diameter(g))
+	except Exception as e:
+		print ('\t diameter = infinite')
+
 	for n in g.nodes():
 		d = g.in_degree(n)
 		ct_in[d] += 1
@@ -60,13 +66,14 @@ for file in files:
 	# in
 	x = ct_in.keys()
 	y = ct_in.values()
-	axs[0].scatter(x, y, alpha = 0.5, label=kg_name[file])
+	axs[0].scatter(x, y, alpha = 0.3, label=kg_name[file])
 	print ('max in = ', max(x))
 	# out
 	x = ct_out.keys()
 	y = ct_out.values()
-	axs[1].scatter(x, y, alpha = 0.5, label=kg_name[file])
+	axs[1].scatter(x, y, alpha = 0.3, label=kg_name[file])
 	print ('max out = ', max(x))
+
 
 
 print ('\n\n----------INTEGRATED----------\n')
@@ -88,6 +95,11 @@ for s, p, o in triples:
 
 print ('\n\nKG ', file, 'has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')
+try:
+	print ('\t diameter = ', dm.diameter(g))
+except Exception as e:
+	print ('\t diameter = infinite')
+
 for n in g.nodes():
 	d = g.in_degree(n)
 	ct_in[d] += 1
@@ -104,11 +116,11 @@ print ('out:', ct_out)
 # in
 x = ct_in.keys()
 y = ct_in.values()
-axs[0].scatter(x, y, alpha = 0.5, label='integrated')
+axs[0].scatter(x, y, alpha = 0.3, label='integrated')
 # out
 x = ct_out.keys()
 y = ct_out.values()
-axs[1].scatter(x, y, alpha = 0.5, label='integrated')
+axs[1].scatter(x, y, alpha = 0.3, label='integrated')
 
 print ('the integrated KG has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')
@@ -131,7 +143,7 @@ axs[0].set_xscale('log')
 axs[0].set_xlabel('in-degree')
 axs[0].set_ylabel('frequency')
 axs[1].set_xlabel('out-degree')
-axs[2].set_ylabel('frequency')
+axs[1].set_ylabel('frequency')
 
 plt.savefig('degree.png', bbox_inches='tight', dpi = 300)
 
@@ -143,3 +155,12 @@ for n in collect_big_in.keys():
 collect_big_out = {k: v for k, v in sorted(collect_big_out.items(), key=lambda item: item[1])}
 for n in collect_big_out.keys():
 	print (n, ' has out-degree ', collect_big_out[n])
+	triples, cardinality = hdt_kg.search_triples(n, "", "")
+	l = 0
+	for s,p,o in triples:
+		p = str(p)
+		if 'definition' in p or 'label' in p:
+			print (n, p, o)
+		l += 1
+		if l > 20:
+			break
