@@ -4,3 +4,5 @@ data/*.nt
 data/*.hdt.index.v1-1
 bank
 bank/*
+fund/*
+fund
