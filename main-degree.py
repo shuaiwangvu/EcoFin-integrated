@@ -21,8 +21,8 @@ collect_big_in = {}
 collect_big_out = {}
 
 fig, axs = plt.subplots(2)
-axs[0].set_title('in-degree')
-axs[1].set_title('out-degree')
+# axs[0].set_title('in-degree')
+# axs[1].set_title('out-degree')
 fig.set_figwidth(6)
 fig.set_figheight(10)
 

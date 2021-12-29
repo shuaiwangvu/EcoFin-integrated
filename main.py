@@ -13,8 +13,10 @@ skos_narrower = "http://www.w3.org/2004/02/skos/core#narrower"
 skos_relatedMatch = "http://www.w3.org/2004/02/skos/core#relatedMatch"
 skos_closeMatch = "http://www.w3.org/2004/02/skos/core#closeMatch"
 lkif_eq = 'http://www.estrellaproject.org/lkif-core/norm.owl#strictly_equivalent'
+rdfs_subClassOf = "http://www.w3.org/2000/01/rdf-schema#subClassOf"
 files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
 # files = []
+
 
 for file in files:
 	path_to_file = './data/'+file+'.hdt'
@@ -64,6 +66,9 @@ for file in files:
 	triples, cardinality = hdt_kg.search_triples("", lkif_eq, "")
 	print ('lkif:eq ', cardinality)
 
+	# subClassOf
+	triples, cardinality = hdt_kg.search_triples("", rdfs_subClassOf, "")
+	print ('rdfs:subClassOf ', cardinality)
 
 
 print ('\n\n----------INTEGRATED----------\n')
@@ -80,17 +85,44 @@ print ('\t with ', len (entities), ' entities')
 # owl:sameAs
 triples, cardinality = hdt_kg.search_triples("", owl_sameas, "")
 print ('owl:sameAs ', cardinality)
-sameAs_entities = set()
-for (s, p, o) in triples:
-	print ('ow:sameAs: ',s,o)
-	sameAs_entities.add(s)
-	sameAs_entities.add(o)
+# sameAs_entities = set()
+# for (s, p, o) in triples:
+# 	print ('ow:sameAs: ',s,o)
+# 	sameAs_entities.add(s)
+# 	sameAs_entities.add(o)
+#
+# for c in sameAs_entities:
+# 	print ('*** ', c, ' ***')
+# 	triples, cardinality = hdt_kg.search_triples(c, "", "")
+# 	for (s, p, o) in triples:
+# 		print ('\t\tSAMEAS ',s, p,o)
 
-for c in sameAs_entities:
-	print ('*** ', c, ' ***')
-	triples, cardinality = hdt_kg.search_triples(c, "", "")
-	for (s, p, o) in triples:
-		print ('\t\tSAMEAS ',s, p,o)
+
+
+# rdfs:subClassOf
+triples, cardinality = hdt_kg.search_triples("", rdfs_subClassOf, "")
+print ('rdfs:subClassOf ', cardinality)
+
+
+g_skos = nx.DiGraph()
+for (s, p, o) in triples:
+	g_skos.add_edge(s, o)
+
+# ccs = nx.connected_components(g_skos)
+# for cc in ccs:
+# 	if len (cc) > 13:
+# 		print('size = ',len (cc))
+# 		for c in cc:
+# 			print ('\t related_match: ', c)
+# 			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
+# 			for (_, p, o) in triples:
+# 				print ('\t\t',p,o)
+
+ccs = nx.strongly_connected_components(g_skos)
+len_summary = [len (cc) for cc in ccs]
+ct = Counter(len_summary)
+print ('rdfs:subClassOf strongly connected components: ',ct)
+
 
 
 f = plt.figure()
@@ -172,16 +204,16 @@ g_skos = nx.Graph()
 for (s, p, o) in triples:
 	g_skos.add_edge(s, o)
 
-ccs = nx.connected_components(g_skos)
-
-for cc in ccs:
-	if len (cc) > 13:
-		print('size = ',len (cc))
-		for c in cc:
-			print ('\t', c)
-			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
-			for (_, p, o) in triples:
-				print ('\t\t',p,o)
+# ccs = nx.connected_components(g_skos)
+#
+# for cc in ccs:
+# 	if len (cc) > 13:
+# 		print('size = ',len (cc))
+# 		for c in cc:
+# 			print ('\t', c)
+# 			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
+# 			for (_, p, o) in triples:
+# 				print ('\t\t',p,o)
 ccs = nx.connected_components(g_skos)
 len_summary = [len (cc) for cc in ccs]
 ct = Counter(len_summary)
@@ -225,15 +257,15 @@ len_summary = [len (scc) for scc in sccs]
 ct = Counter(len_summary)
 print ('strongly connected components: ',ct)
 
-ccs = nx.strongly_connected_components(g_broader)
-for cc in ccs:
-	if len (cc) >= 3:
-		print('size = ',len (cc))
-		for c in cc:
-			print ('\t', c)
-			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
-			for (_, p, o) in triples:
-				print ('\t\t',p,o)
+# ccs = nx.strongly_connected_components(g_broader)
+# for cc in ccs:
+# 	if len (cc) >= 3:
+# 		print('size = ',len (cc))
+# 		for c in cc:
+# 			print ('\t', c)
+# 			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
+# 			for (_, p, o) in triples:
+# 				print ('\t\t',p,o)
 
 # skos:broader
 triples, cardinality = hdt_kg.search_triples("", skos_broader, "")
@@ -260,15 +292,15 @@ len_summary = [len (scc) for scc in sccs]
 ct = Counter(len_summary)
 print ('strongly connected components: ',ct)
 
-ccs = nx.strongly_connected_components(g_broader)
-for cc in ccs:
-	if len (cc) >= 3:
-		print('size = ',len (cc))
-		for c in cc:
-			print ('\t', c)
-			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
-			for (_, p, o) in triples:
-				print ('\t\t',p,o)
+# ccs = nx.strongly_connected_components(g_broader)
+# for cc in ccs:
+# 	if len (cc) >= 3:
+# 		print('size = ',len (cc))
+# 		for c in cc:
+# 			print ('\t', c)
+# 			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
+# 			for (_, p, o) in triples:
+# 				print ('\t\t',p,o)
 
 # skos:narrower
 triples, cardinality = hdt_kg.search_triples("", skos_narrower, "")
