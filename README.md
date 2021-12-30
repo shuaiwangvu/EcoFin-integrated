@@ -1,6 +1,6 @@
 This repo is for my paper 
 
-**On the analysis of large integrated knowledge graphs for Economics, Banking, and Finance**
+## **On the analysis of large integrated knowledge graphs for Economics, Banking, and Finance**
 
 ### Integration 
 *main.py* is a Python script for the analysis of each individual knowledge graph and the integrated knowledge graph.
