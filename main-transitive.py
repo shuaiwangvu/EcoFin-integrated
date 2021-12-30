@@ -1,3 +1,5 @@
+# This is a script that prints all the transitive relations
+# and the closure under subPropertyOf and inverseOf
 from hdt import HDTDocument, IdentifierPosition
 import networkx as nx
 from collections import Counter

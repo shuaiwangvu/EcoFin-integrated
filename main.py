@@ -1,3 +1,10 @@
+# This is a Python script for the analysis of each individual knowledge graph and
+# the integrated knowledge graph.
+# More specifically, we study how the triples regarding the 10 relations works
+# during the integration of 11 files from 9 ontologies.
+# -----
+# A plot of the connected components of skos:exactMatch is exported as
+# connected_components_frequency.png
 from hdt import HDTDocument, IdentifierPosition
 import networkx as nx
 from collections import Counter
@@ -255,7 +262,7 @@ for (s, p, o) in triples:
 sccs = nx.strongly_connected_components(g_broader)
 len_summary = [len (scc) for scc in sccs]
 ct = Counter(len_summary)
-print ('strongly connected components: ',ct)
+print ('\tstrongly connected components: ',ct)
 
 # ccs = nx.strongly_connected_components(g_broader)
 # for cc in ccs:
@@ -278,7 +285,7 @@ for (s, p, o) in triples:
 sccs = nx.strongly_connected_components(g_broader)
 len_summary = [len (scc) for scc in sccs]
 ct = Counter(len_summary)
-print ('strongly connected components: ',ct)
+print ('\tstrongly connected components: ',ct)
 
 # skos:narrowMatch
 triples, cardinality = hdt_kg.search_triples("", skos_narrowMatch, "")
@@ -290,7 +297,7 @@ for (s, p, o) in triples:
 sccs = nx.strongly_connected_components(g_broader)
 len_summary = [len (scc) for scc in sccs]
 ct = Counter(len_summary)
-print ('strongly connected components: ',ct)
+print ('\tstrongly connected components: ',ct)
 
 # ccs = nx.strongly_connected_components(g_broader)
 # for cc in ccs:

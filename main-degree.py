@@ -1,3 +1,6 @@
+# This is a simple script that plots the in-/out-degree of entities before and
+# after integration
+
 from hdt import HDTDocument, IdentifierPosition
 import networkx as nx
 from collections import Counter

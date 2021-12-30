@@ -1,3 +1,11 @@
+# This is a Python script for the analysis of Strongly Connected Components (SCC)
+# and Weakly Connected Components (WCC) regarding the following relations:
+
+# skos:broader
+# skos:broadMatch
+# skos:narrower
+# skos:narrowMatch
+
 from hdt import HDTDocument, IdentifierPosition
 import networkx as nx
 from collections import Counter
