@@ -2,6 +2,9 @@ This repo is for my paper
 
 ## **On the analysis of large integrated knowledge graphs for Economics, Banking, and Finance**
 
+### Abstract
+Knowledge graphs are being used for the detection of money laundering, insurance fraud, and other suspicious activities. Some recent work demonstrated how knowledge graphs are being used to study the impact of the COVID-19 outbreak on economics. The fact that knowledge graphs are being used in more and more interdisciplinary problems calls for a need for a reliable source of interdisciplinary knowledge. In this paper, we study the integration of knowledge graphs in the domain of economics, banking, and finance. We demonstrate how the integrated graph has more entities with richer information. Its quality was examined by studying the identity links and (pseudo-)transitive relations. Finally, we study the source of error and its refinement and discuss how the use of it may lead to greater sophistication and good accuracy.
+
 ### Integration 
 *main.py* is a Python script for the analysis of each individual knowledge graph and the integrated knowledge graph.
 More specifically, we study how the triples regarding the 10 relations works during the integration of 11 files from 9 ontologies.
