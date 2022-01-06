@@ -7,6 +7,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 from collections import Counter
 import networkx.algorithms.distance_measures as dm
+import random
 
 owl_sameas = "http://www.w3.org/2002/07/owl#sameAs"
 skos_exactMatch = "http://www.w3.org/2004/02/skos/core#exactMatch"
@@ -34,6 +35,9 @@ kg_name = {'fibo-skos':'FIBO-SKOS', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'H
 # files = []
 in_degree_map = {}
 out_degree_map = {}
+
+markers = ["." , "," , "o" , "v" , "^" , "<", ">"]
+colors = ['r','g','b','c','m', 'y', 'k']
 
 for file in files:
 	path_to_file = './data/'+file+'.hdt'
@@ -66,15 +70,17 @@ for file in files:
 			collect_big_out[n] = d
 	print ('in: ',ct_in)
 	print ('out:', ct_out)
+	color = random.choice(colors)
+	shape = random.choice(markers)
 	# in
 	x = ct_in.keys()
 	y = ct_in.values()
-	axs[0].scatter(x, y, alpha = 0.3, label=kg_name[file])
+	axs[0].scatter(x, y, alpha = 0.4, label=kg_name[file], marker=shape, color=color)
 	print ('max in = ', max(x))
 	# out
 	x = ct_out.keys()
 	y = ct_out.values()
-	axs[1].scatter(x, y, alpha = 0.3, label=kg_name[file])
+	axs[1].scatter(x, y, alpha = 0.4, label=kg_name[file], marker=shape, color=color)
 	print ('max out = ', max(x))
 
 
@@ -119,11 +125,11 @@ print ('out:', ct_out)
 # in
 x = ct_in.keys()
 y = ct_in.values()
-axs[0].scatter(x, y, alpha = 0.3, label='integrated')
+axs[0].scatter(x, y, alpha = 0.4, label='integrated')
 # out
 x = ct_out.keys()
 y = ct_out.values()
-axs[1].scatter(x, y, alpha = 0.3, label='integrated')
+axs[1].scatter(x, y, alpha = 0.4, label='integrated')
 
 print ('the integrated KG has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')
