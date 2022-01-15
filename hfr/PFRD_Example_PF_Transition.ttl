@@ -1,0 +1,45 @@
+# baseURI: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Transition.ttl
+# imports: http://hedgefundontology.com/hfr/form/PFFormFiling.ttl
+# imports: http://topbraid.org/sxml
+# prefix: pfrd-samp-trans
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pfrd-samp-trans: <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Transition.ttl#> .
+@prefix pfrd-sec: <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance#> .
+
+<http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Transition.ttl>
+  rdf:type owl:Ontology ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/author> "Jurgen Ziemer"^^xsd:string ;
+  rdfs:comment "A Transition filing can contain simply the FilingType and the Signatures section. It can optionally also include Related persons. A filer transitioning from reporting on a Quarterly basis to reporting on an Annual basis should submit a Transition filing as in EXAMPLE_PF_TRANS.xml. However, it is not necessary to submit a Transition filing for the opposite case: to change from reporting on an Annual basis to reporting on a Quarterly basis. To accomplish a transition to reporting on a Quarterly basis a filer should simply specify the value Q for the ReportingPeriodType on an Updating filing. Example 3 shows a Transition filing."^^xsd:string ;
+  rdfs:comment "The instances in this ontology file are reverse engineered from the IARD sample XML sample file."^^xsd:string ;
+  rdfs:isDefinedBy <https://www.iard.com/pfrd/usersupport> ;
+  owl:imports <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "The ontology version of the SEC provided sample Initial Filing type This is an example of an adviser changing from quaterly to annual reporting."^^xsd:string ;
+.
+pfrd-samp-trans:Document
+  rdf:type sxml:Document ;
+  sxml:root pfrd-samp-trans:r ;
+.
+pfrd-samp-trans:r
+  rdf:type pfrd-sec:PFXMLFiling ;
+  pfrd-sec:filingTypeRef pfrd-sec:PFXMLFT_PF-TRANS ;
+  pfrd-sec:pFSection1aItemASignatureFirmAndRelatedPersonsRef pfrd-samp-trans:r-1 ;
+  sxml:prefix "xsi"^^xsd:string ;
+.
+pfrd-samp-trans:r-1
+  rdf:type pfrd-sec:PFSection1aItemASignatureMainType ;
+  pfrd-sec:emailAddress "johnsmith@example.com"^^pfrd-sec:EmailTypeDatatype ;
+  pfrd-sec:individualName "John Smith"^^pfrd-sec:StringRestricted128TypeDatatype ;
+  pfrd-sec:signature "/S/ (Signature of John Smith)"^^pfrd-sec:StringRestricted128TypeDatatype ;
+  pfrd-sec:signatureDate "2012-03-03"^^xsd:date ;
+  pfrd-sec:telephoneNumber "555-555-5555"^^pfrd-sec:StringRestricted27TypeDatatype ;
+  pfrd-sec:title "Director"^^pfrd-sec:StringRestricted128TypeDatatype ;
+  composite:index "1"^^xsd:int ;
+.

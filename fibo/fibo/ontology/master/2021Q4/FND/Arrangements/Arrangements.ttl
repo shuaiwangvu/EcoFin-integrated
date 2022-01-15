@@ -1,0 +1,129 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-arr-arr: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/>
+	a owl:Ontology ;
+	rdfs:label "Arrangements Ontology" ;
+	dct:abstract "This ontology defines abstract structural concepts, including arrangement and collection, for use in other FIBO ontology elements. These abstract concepts are further refined to support definition of identifiers, codes, quantities, and schemata that organize and classify such identifiers and codes." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2014-2021 EDM Council, Inc." ,
+		"Copyright (c) 2014-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-arr-arr" ;
+	sm:filename "Arrangements.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was introduced as a part of the issue resolutions identified in the FIBO FND 1.0 FTF report and in https://spec.edmcouncil.org/fibo/ontology/FND/1.0/AboutFND-1.0/.  It was further revised in the FTF in advance of the Long Beach meeting to promote Collection to the top level in the hierarchy, resulting in https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised as a part of the issue resolutions identified in the FIBO FND 1.2 RTF report to add a definition for a structured collection." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised for the FIBO 2.0 RFC report to add a general definition for scheme, add dated collection, and add mappings to LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised to add a restriction to structured collection pointing to the arrangement used to organize that collection, and to revise the definition accordingly." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised to eliminate duplication with concepts in LCC for classes including arrangement, collection, code element, code set, etc to simplify the hierarchy and usage for FIBO users." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised to loosen the range on hasObservedDateTime such that it can be used more generally." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised to loosen the restriction on hasObservedDateTime so that it can be used with the new CombinedDateTime datatype (in FinancialDates, which is not imported herein to avoid circular dependencies), with finer granularity than seconds as appropriate for trades, for example." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements.rdf version of this ontology was revised to move the concepts of a dated collection and dated collection constituent to Financial Dates in order to improve usability and simplify reasoning and make definitions ISO 704 compliant."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-arr-arr:CollectionConstituent
+	a owl:Class ;
+	rdfs:label "collection constituent" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	owl:equivalentClass [
+		a owl:Restriction ;
+		owl:onProperty fibo-fnd-arr-arr:isConstituentOf ;
+		owl:someValuesFrom lcc-lr:Collection ;
+	] ;
+	skos:definition "element of a collection" ;
+	.
+
+fibo-fnd-arr-arr:Scheme
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Arrangement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:defines ;
+			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	skos:definition "structure or means of organizing information such as a blueprint, schema, numbering system, organization structure, measurement system, plan, taxonomy, or language for organizing information" ;
+	.
+
+fibo-fnd-arr-arr:StructuredCollection
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Collection ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isCharacterizedBy ;
+			owl:onClass fibo-fnd-arr-arr:Scheme ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "structured collection" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	skos:definition "collection that has a clearly defined structure according to a specified scheme" ;
+	.
+
+fibo-fnd-arr-arr:hasCollectionSize
+	a owl:DatatypeProperty ;
+	rdfs:label "has collection size" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	rdfs:range xsd:nonNegativeInteger ;
+	skos:definition "indicates the number of elements in a given collection" ;
+	.
+
+fibo-fnd-arr-arr:hasConstituent
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:comprises ;
+	rdfs:label "has constituent" ;
+	rdfs:domain lcc-lr:Collection ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	skos:definition "consists of or contains" ;
+	fibo-fnd-utl-av:usageNote "Being a constituent of something does not necessarily mean parthood.  Whole-part relations are transitive, whereas constituency is not necessarily transitive and so this property is useful in cases where transitivity is not necessarily desirable or appropriate." ;
+	.
+
+fibo-fnd-arr-arr:isConstituentOf
+	a owl:ObjectProperty ;
+	rdfs:label "is constituent of" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> ;
+	rdfs:range lcc-lr:Collection ;
+	owl:inverseOf fibo-fnd-arr-arr:hasConstituent ;
+	skos:definition "identifies the collection that something is an element of" ;
+	.
+
+lcc-lr:CodeSet
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-arr-arr:Scheme ;
+	.
+

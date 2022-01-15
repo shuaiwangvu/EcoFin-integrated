@@ -1,0 +1,16 @@
+# baseURI: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.tll
+# imports: http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl
+
+@prefix hfr-fin-ref: <http://hedgefundontology.com/hfr/data/Hedge_Fund_Financial_Reference.tll#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.tll>
+  rdf:type owl:Ontology ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  skos:definition "Hedge Fund specific financial reference data."^^xsd:string ;
+.

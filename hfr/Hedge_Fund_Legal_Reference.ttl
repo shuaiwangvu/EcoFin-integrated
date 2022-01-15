@@ -1,0 +1,37 @@
+# baseURI: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl
+# imports: http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl
+# prefix: hfr_leg_ref
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix hfr_leg_ref: <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl#> .
+@prefix lkif-action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix lkif-proc: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix lkif-top: <http://www.estrellaproject.org/lkif-core/lkif-top.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl>
+  rdf:type owl:Ontology ;
+  dcterms:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "The data triples in this ontology instantiate FinRegOnt classes USC_Title, USC_Chapter,  USC_Paragraph etc. along with their properties. They are loaded from USC-2015-title12-chapter17, reverse engineered from the original data in Office of the Law Revision Counsel XML file."^^xsd:string ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  skos:definition "United States Code: CHAPTER 17— BANK HOLDING COMPANIES"^^xsd:string ;
+.
+hfr_leg_ref:Form_PF
+  rdf:type owl:Class ;
+  rdfs:label "Firm Report Reference"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/ref/LegalReference.ttl#LegalForm> ;
+.
+hfr_leg_ref:myForm_PF
+  rdf:type hfr_leg_ref:Form_PF ;
+  rdfs:label "Firm Report Reference"^^xsd:string ;
+.

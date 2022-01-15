@@ -1,0 +1,285 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Assessments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Reporting/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/Occurrences/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/OwnershipAndControl/Ownership/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/Analytics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Assessments/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-arr-asmt: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> .
+@prefix fibo-fnd-arr-rep: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-dt-oc: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/> .
+@prefix fibo-fnd-oac-own: <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/>
+	a owl:Ontology ;
+	rdfs:label "Assessments Ontology" ;
+	dct:abstract "This ontology defines abstract concepts for assessments, evaluations, and outcomes, as the basis for various analysis, such as for business performance, compliance and risk." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2019-2021 EDM Council, Inc." ,
+		"Copyright (c) 2019-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-arr-asmt" ;
+	sm:filename "Assessments.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Reporting/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/Occurrences/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/OwnershipAndControl/Ownership/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/Analytics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Assessments/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments.rdf version of this ontology was revised to augment the definition of appraisal with an estimated value and correct a bug in the definition of hasAppraiser." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments.rdf version of this ontology was revised to integrate concepts related to value assessments / appraisals."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-arr-asmt:Appraisal
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-asmt:AssessmentReport ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isGeneratedBy ;
+			owl:onClass fibo-fnd-arr-asmt:Appraiser ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:evaluates ;
+			owl:onClass fibo-fnd-oac-own:Asset ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-asmt:estimatesValueAt ;
+			owl:someValuesFrom fibo-fnd-arr-asmt:AppraisedValue ;
+		]
+		;
+	rdfs:label "appraisal" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "written estimate of the market value of something as of some point in time, typically provided by a qualified appraiser" ;
+	.
+
+fibo-fnd-arr-asmt:AppraisedValue
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-acc-cur:MonetaryAmount ;
+	rdfs:label "appraised value" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "estimated value of some asset as of a given point in time" ;
+	.
+
+fibo-fnd-arr-asmt:Appraiser
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:PartyInRole ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:evaluates ;
+			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:provides ;
+			owl:someValuesFrom fibo-fnd-arr-asmt:Appraisal ;
+		]
+		;
+	rdfs:label "appraiser" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "party that evaluates or estimates the nature, quality, ability, or value of someone or something" ;
+	.
+
+fibo-fnd-arr-asmt:AssessmentActivity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:OccurrenceKind ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:evaluates ;
+			owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isProvidedBy ;
+			owl:someValuesFrom fibo-fnd-pty-rl:AgentInRole ;
+		]
+		;
+	rdfs:label "assessment activity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "activity involving the evaluation or estimation of the nature, quality, ability, or value of someone or something" ;
+	.
+
+fibo-fnd-arr-asmt:AssessmentEvent
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:Occurrence ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:hasOutput ;
+			owl:onClass fibo-fnd-arr-asmt:AssessmentReport ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:exemplifies ;
+			owl:onClass fibo-fnd-arr-asmt:AssessmentActivity ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:hasOutput ;
+			owl:someValuesFrom fibo-fnd-arr-asmt:Opinion ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isProvidedBy ;
+			owl:someValuesFrom fibo-fnd-pty-rl:AgentInRole ;
+		]
+		;
+	rdfs:label "assessment event" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "event involving the evaluation or estimation of the nature, quality, or ability of someone or something" ;
+	.
+
+fibo-fnd-arr-asmt:AssessmentReport
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-rep:Report ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-rep:reportsOn ;
+			owl:onClass fibo-fnd-arr-asmt:Opinion ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "assessment report" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "report that includes an opinion, judgement, appraisal, or view about something and typically the methodology and raw inputs used to arrive at that opinion" ;
+	.
+
+fibo-fnd-arr-asmt:Opinion
+	a owl:Class ;
+	rdfs:subClassOf
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:isOutputFrom ;
+			owl:someValuesFrom fibo-fnd-arr-asmt:AssessmentEvent ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isGeneratedBy ;
+			owl:someValuesFrom fibo-fnd-pty-rl:AgentInRole ;
+		]
+		;
+	rdfs:label "opinion" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "judgement, appraisal, or view about something" ;
+	.
+
+fibo-fnd-arr-asmt:ValueAssessment
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-asmt:AssessmentEvent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:hasOutput ;
+			owl:onClass fibo-fnd-arr-asmt:Appraisal ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-asmt:hasAppraiser ;
+			owl:someValuesFrom fibo-fnd-pty-rl:AgentInRole ;
+		]
+		;
+	rdfs:label "value assessment" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "assessment event to estimate the value of something" ;
+	fibo-fnd-utl-av:explanatoryNote "Note that an appraiser in this context may be a licensed appraiser, such as a real estate appraiser or auction house, or a calculation agent, depending on the circumstances." ;
+	.
+
+fibo-fnd-arr-asmt:estimatesValueAt
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasMonetaryAmount ;
+	rdfs:label "estimates value at" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	rdfs:range fibo-fnd-arr-asmt:AppraisedValue ;
+	skos:definition "provides an approximate value of some asset as of some point in time" ;
+	.
+
+fibo-fnd-arr-asmt:hasAppraiser
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:isProvidedBy ;
+	rdfs:label "has appraiser" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	skos:definition "relates an assessment or report to an agent that conducts the assessment" ;
+	.
+
+fibo-fnd-arr-asmt:hasDateOfAssessment
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasExplicitDate ;
+	rdfs:label "has date of assessment"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	rdfs:range fibo-fnd-dt-fd:ExplicitDate ;
+	skos:definition "date on which an assessment process was completed"@en ;
+	.
+
+fibo-fnd-arr-asmt:hasEstimatedValue
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasMonetaryAmount ;
+	rdfs:label "has estimated value" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	rdfs:range fibo-fnd-arr-asmt:AppraisedValue ;
+	skos:definition "relates something to its estimated value" ;
+	.
+
+fibo-fnd-arr-asmt:isEstimatedValueOf
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-utl-alx:isValueOf ;
+	rdfs:label "is estimated value of" ;
+	rdfs:domain fibo-fnd-arr-asmt:AppraisedValue ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/> ;
+	owl:inverseOf fibo-fnd-arr-asmt:hasEstimatedValue ;
+	skos:definition "relates an appraised value to the asset of interest as of the date of the assessment" ;
+	.
+

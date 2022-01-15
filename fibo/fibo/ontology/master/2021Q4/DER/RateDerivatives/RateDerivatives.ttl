@@ -1,0 +1,195 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/RateDerivatives/RateDerivatives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/EconomicIndicators/EconomicIndicators/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/ForeignExchange/ForeignExchange/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/Indicators/Indicators/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/RateDerivatives/RateDerivatives/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-der-drc-bsc: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-rtd-rtd: <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-ei-ei: <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/> .
+@prefix fibo-ind-fx-fx: <https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/ForeignExchange/> .
+@prefix fibo-ind-ind-ind: <https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/> .
+@prefix fibo-ind-ir-ir: <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> .
+@prefix fibo-sec-sec-bsk: <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Baskets/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/>
+	a owl:Ontology ;
+	rdfs:label "Rate Derivatives Ontology" ;
+	dct:abstract "This ontology defines concepts that are common to derivatives based on variation in some defined variable, such as an economic rate, an interest rate or an index value." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage <https://www.w3.org/TR/owl2-quick-reference/> ;
+	sm:copyright
+		"Copyright (c) 2016-2021 EDM Council, Inc." ,
+		"Copyright (c) 2016-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/IND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/SEC/>
+		;
+	sm:fileAbbreviation "fibo-der-rtd-rtd" ;
+	sm:filename "RateDerivatives.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/EconomicIndicators/EconomicIndicators/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/ForeignExchange/ForeignExchange/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/Indicators/Indicators/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/RateDerivatives/RateDerivatives/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives.rdf version of this ontology was extended to include foreign exchange rates, forward rate agreements, and revise definitions to be unambiguous and ISO 704 compliant." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives.rdf version of this ontology was modified to eliminate the dependency on NonPhysicalUnderlier, which was redundant."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-der-rtd-rtd:EconomicRateBasedDerivativeInstrument
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedDerivativeInstrument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-rtd-rtd:EconomicRateObservable ;
+		]
+		;
+	rdfs:label "economic rate-based derivative instrument" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "rate-based derivative whose underlier is an economic indicator" ;
+	.
+
+fibo-der-rtd-rtd:EconomicRateObservable
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedObservable ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:onClass fibo-ind-ei-ei:EconomicIndicator ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "economic rate observable"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "rate-based observable that is specifically an economic indicator" ;
+	.
+
+fibo-der-rtd-rtd:ForeignExchangeRateObservable
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedObservable ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:someValuesFrom fibo-ind-fx-fx:QuotedExchangeRate ;
+		]
+		;
+	rdfs:label "foreign exchange rate observable"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "rate-based observable that is an exchange rate, typically a quoted exchange rate" ;
+	.
+
+fibo-der-rtd-rtd:ForwardRateAgreement
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-rtd-rtd:InterestRateDerivativeInstrument ;
+	rdfs:label "forward rate agreement"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "agreement to exchange an interest rate commitment on a notional amount"@en ;
+	fibo-fnd-utl-av:abbreviation "FRA"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The FRA determines the rates to be used along with the termination date and notional value. FRAs are cash-settled with the payment based on the net difference between the interest rate of the contract and the floating rate in the market called the reference rate. The notional amount is not exchanged, but rather a cash amount based on the rate differentials and the notional value of the contract."@en ;
+	.
+
+fibo-der-rtd-rtd:InterestRateDerivativeInstrument
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedDerivativeInstrument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-rtd-rtd:InterestRateObservable ;
+		]
+		;
+	rdfs:label "interest rate derivative instrument" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "rate-based derivative whose underlier is an interest rate" ;
+	.
+
+fibo-der-rtd-rtd:InterestRateObservable
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedObservable ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:someValuesFrom fibo-ind-ir-ir:ReferenceInterestRate ;
+		]
+		;
+	rdfs:label "interest rate observable" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "rate-based observable that is an interest rate, typically a well-known reference interest rate" ;
+	.
+
+fibo-der-rtd-rtd:RateBasedDerivativeInstrument
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:DerivativeInstrument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-rtd-rtd:RateBasedObservable ;
+		]
+		;
+	rdfs:label "rate-based derivative instrument" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "derivative instrument whose underlier is a non-physical observable rate" ;
+	.
+
+fibo-der-rtd-rtd:RateBasedObservable
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-bsc:ObservableValue ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-sec-sec-bsk:BasketOfIndices
+					fibo-ind-ind-ind:MarketRate
+					fibo-ind-ei-ei:EconomicIndicator
+					fibo-ind-fx-fx:QuotedExchangeRate
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "rate-based observable" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> ;
+	skos:definition "non-physical observable value, such as an interest rate, market rate, economic indicator, statistical measure calculated over some collection of indices, or some other rate that is readily observable in the world" ;
+	fibo-fnd-utl-av:explanatoryNote "Rate-based observables interest rates, market rate, economic indicators, statistical measure calculated over some collection of indices, foreign exchange rates and others that are readily observable in the world" ;
+	.
+

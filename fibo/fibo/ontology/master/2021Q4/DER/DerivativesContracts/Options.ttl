@@ -1,0 +1,602 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/InstrumentPricing/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Documents/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/OwnershipAndControl/Ownership/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/Analytics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/Bonds/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/ExerciseConventions/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Equities/EquityInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesListings/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-der-drc-bsc: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-drc-opt: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> .
+@prefix fibo-der-sbd-sbd: <https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/> .
+@prefix fibo-fbc-fct-mkt: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-fi-ip: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/InstrumentPricing/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-agr-ctr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-arr-doc: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-oac-own: <https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-alx: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-ir-ir: <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> .
+@prefix fibo-sec-dbt-bnd: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/> .
+@prefix fibo-sec-dbt-ex: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/ExerciseConventions/> .
+@prefix fibo-sec-sec-bsk: <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Baskets/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/>
+	a owl:Ontology ;
+	rdfs:label "Options Ontology"@en ;
+	dct:abstract "Concepts common to all option contracts. An option gives one party (the holder) the right to purchase or sell the underlying instrument at a given time or times in the future (as determined by the exercise convention), if they choose to do so." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2015-2021 EDM Council, Inc." ,
+		"Copyright (c) 2015-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/BE/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/SEC/> ,
+		<https://www.omg.org/spec/LCC/>
+		;
+	sm:fileAbbreviation "fibo-der-drc-opt" ;
+	sm:filename "Options.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/InstrumentPricing/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Documents/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/OwnershipAndControl/Ownership/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/Analytics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/Bonds/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/ExerciseConventions/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Equities/EquityInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesListings/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/DER/20210601/DerivativesContracts/Options.rdf version of this ontology was revised to add an expiration date as an important property of an option." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/DER/20210901/DerivativesContracts/Options.rdf version of this ontology was revised to correct a restriction on an option with respect to an optional option premium which was not well-formed, and modified the definition of interest rate option to reflect a benchmark, and to be a specialization of vanilla option."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-der-drc-bsc:DerivativesClearingOrganization
+	a owl:Class ;
+	fibo-fnd-utl-av:explanatoryNote "For options, the derivatives clearing organization is responsible for clearing transactions for put and call options on common stocks and other equity issues, stock indexes, foreign currencies, interest rate composites and single-stock futures."@en ;
+	.
+
+fibo-der-drc-opt:AtTheMoney
+	a
+		owl:NamedIndividual ,
+		fibo-der-drc-opt:Moneyness
+		;
+	rdfs:label "at-the-money"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "moneyness classifier that refers to an option whose value in terms of its strike price is the same or close to the current market price of the underlying security"@en ;
+	fibo-fnd-utl-av:abbreviation "ATM"@en ;
+	fibo-fnd-utl-av:explanatoryNote "An ATM option has a delta of ±0.50, positive if it is a call, negative for a put."@en ;
+	.
+
+fibo-der-drc-opt:BasketOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:VanillaOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-sec-bsk:MixedBasket ;
+		]
+		;
+	rdfs:label "basket option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option whose underlying asset is a group, or basket, of commodities, securities, indices, or currencies"@en ;
+	.
+
+fibo-der-drc-opt:BondOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:FixedIncomeOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-dbt-bnd:Bond ;
+		]
+		;
+	rdfs:label "bond option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to buy or sell (depending on whether it is a call or a put) a bond at a certain price on or before a specified date"@en ;
+	.
+
+fibo-der-drc-opt:CallOption
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:Option ;
+	rdfs:label "call option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to buy the assets specified at a fixed price or formula, on or before a specified date"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	fibo-fnd-utl-av:explanatoryNote "The seller (issuer) of the call option assumes the obligation of delivering the assets specified should the buyer exercise the option."@en ;
+	.
+
+fibo-der-drc-opt:EquityOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:VanillaOption ,
+		fibo-der-sbd-sbd:EquityDerivative ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasExerciseStyle ;
+			owl:hasValue fibo-sec-dbt-ex:AmericanExerciseConvention ;
+		]
+		;
+	rdfs:label "equity option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to buy (via a call option) or sell (via a put option) the underlying equity assets specified at a pre-determined price (i.e., the strike price, fixed or calculated), on or before a specified date (the expiration date)"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	fibo-fnd-utl-av:explanatoryNote "For an Equity Option, one contract represents 100 shares of stock.  Equity options settle in 'American style'."@en ;
+	.
+
+fibo-der-drc-opt:ExoticOption
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:Option ;
+	rdfs:label "exotic option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option that has a non-standard payout structure or other feature"@en ;
+	fibo-fnd-utl-av:adaptedFrom "Commodity Futures Trading Commission (CFTC) glossary, https://www.cftc.gov/LearnAndProtect/EducationCenter/CFTCGlossary/glossary_e.html"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Exotic options include Asian options and lookback options, and are mostly traded in the over-the-counter market."@en ;
+	.
+
+fibo-der-drc-opt:ExtrinsicValue
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-acc-cur:MonetaryMeasure ;
+	rdfs:label "extrinsic value"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	owl:disjointWith fibo-der-drc-opt:IntrinsicValue ;
+	skos:definition "measure of the difference between the market price of an option, called the premium, and its intrinsic value"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Extrinsic value is also the portion of the worth that has been assigned to an option by factors other than the underlying asset's price. The opposite of extrinsic value is intrinsic value, which is the inherent worth of an option."@en ;
+	.
+
+fibo-der-drc-opt:FixedIncomeOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:VanillaOption ,
+		fibo-der-sbd-sbd:DebtInstrumentDerivative
+		;
+	rdfs:label "fixed income option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to buy (via a call option) or sell (via a put option) the underlying fixed income assets specified at a pre-determined price (i.e., the strike price, fixed or calculated), on or before a specified date (the expiration date)"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	fibo-fnd-utl-av:explanatoryNote "Fixed income options, or debt options, are derivatives contracts that use bonds or other fixed-income securities as their underlying asset."@en ;
+	.
+
+fibo-der-drc-opt:InTheMoney
+	a
+		owl:NamedIndividual ,
+		fibo-der-drc-opt:Moneyness
+		;
+	rdfs:label "in-the-money"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "moneyness classifier that refers to an option that has value in a strike price that is favorable in comparison to the prevailing market price of the underlying asset"@en ;
+	fibo-fnd-utl-av:abbreviation "ITM"@en ;
+	fibo-fnd-utl-av:explanatoryNote "An in-the-money call option means the option holder has the opportunity to buy the security below its current market price. An in-the-money put option means the option holder can sell the security above its current market price."@en ;
+	.
+
+fibo-der-drc-opt:InterestRateOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:VanillaOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-ind-ir-ir:InterestRateBenchmark ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasStrikeRate ;
+			owl:someValuesFrom fibo-fnd-acc-cur:InterestRate ;
+		]
+		;
+	rdfs:label "interest rate option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option that giving the buyer (holder) the right, but not the obligation, to receive a cash payment if market interest rate of a reference rate is higher or lower, depending on the option, than the strike rate of the option"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The amount of the payment will be based on the difference between the market rate on the exercise date and the strike rate, multiplied by the notional principal specified in the option contract, to calculate the total payment."@en ;
+	.
+
+fibo-der-drc-opt:IntrinsicValue
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-acc-cur:MonetaryMeasure ;
+	rdfs:label "intrinsic value"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "measure of what an asset is worth, i.e. with respect to its current price"@en ;
+	fibo-fnd-utl-av:explanatoryNote "This measure is arrived at by means of an objective calculation or complex financial model. In financial analysis this term is used in conjunction with the work of identifying, as nearly as possible, the underlying value of a company and its cash flow. In options pricing it refers to the difference between the strike price of the option and the current price of the underlying asset."@en ;
+	.
+
+fibo-der-drc-opt:LongTermEquityAnticipationSecurity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:EquityOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:hasContractDuration ;
+			owl:someValuesFrom fibo-fnd-dt-fd:Duration ;
+		]
+		;
+	rdfs:label "long-term equity anticipation security"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "equity option that allows the holder to buy or sell shares of stock with expiration dates that are longer than one year, and typically up to three years from issue"@en ;
+	fibo-fnd-utl-av:abbreviation "LEAP"@en ;
+	fibo-fnd-utl-av:explanatoryNote "By providing opportunities to control and manage risk or even to speculate, LEAPS are virtually identical to regular options. Expiration dates on LEAPs can range from nine months to three years, which is longer than the holding period for a traditional call or put option. Although they are not available on all stocks, LEAPS are available on most widely held issues."@en ;
+	.
+
+fibo-der-drc-opt:Moneyness
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:classifies ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Option ;
+		]
+		;
+	rdfs:label "moneyness"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "classifier for a derivative relating its strike price to the price of its underlying asset"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Moneyness describes the intrinsic value of an option in its current state. The term moneyness is most commonly used with put and call options and is an indicator as to the comparative value of the option with respect to its exercise/strike price. Moneyness can be measured with respect to the underlying stock or other asset's current/spot price or its future price."@en ;
+	.
+
+fibo-der-drc-opt:OptionHolder
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-oac-own:Owner ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:holds ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Option ;
+		]
+		;
+	rdfs:label "option holder"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "party that owns an option"@en ;
+	fibo-fnd-utl-av:explanatoryNote "In a call, the option holder has the right, but not the obligation, to buy the underlying asset, while, in a put, the option holder has the right to sell the underlying asset. An option holder may sell the option contract itself, at which point the buyer becomes the option holder. Once the instrument is exercised there are typically additional, relevant obligations with regard to settlement."@en ;
+	.
+
+fibo-der-drc-opt:OptionIssuer
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:Issuer ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:isPlayedBy ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty fibo-fnd-pty-pty:isAPartyTo ;
+				owl:someValuesFrom fibo-fbc-fi-fi:Option ;
+			] ;
+		]
+		;
+	rdfs:label "option issuer"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "issuer granting the rights defined in the option in exchange for some consideration"@en ;
+	.
+
+fibo-der-drc-opt:OptionOnFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-opt:VanillaOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Future ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-dbt-ex:hasExerciseTerms ;
+			owl:someValuesFrom fibo-sec-dbt-ex:AmericanExerciseTerms ;
+		]
+		;
+	rdfs:label "option on future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option that gives the holder the right, but not the obligation, to buy or sell a specific futures contract at a specified price on or before the option's expiration date"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	.
+
+fibo-der-drc-opt:OptionPremium
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-ip:MarketPrice ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-acc-cur:hasMonetaryAmount ;
+			owl:onClass fibo-fnd-acc-cur:MonetaryAmount ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-qt-qtu:hasQuantityValue ;
+			owl:onClass fibo-fnd-acc-cur:PercentageMonetaryAmount ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "option premium"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "current market price of an option contract"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The option premium is the income received by the seller (writer) of an option contract to another party. In-the-money option premiums are composed of two factors: intrinsic and extrinsic value. Out-of-the-money options' premiums consist solely of extrinsic value. For stock options, the premium is quoted as a dollar amount per share, and most contracts represent the commitment of 100 shares."@en ;
+	.
+
+fibo-der-drc-opt:OptionTradingStrategy
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-pas-fpas:TradingStrategy ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:involves ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Option ;
+		]
+		;
+	rdfs:label "option trading strategy"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "trading tactic involving more than one option type, strike price, or expiration date on the same underlying asset"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Simple combinations include option spread trades such as vertical spreads, calendar (or horizontal) spreads, and diagonal spreads. More involved combinations include trades such as Condor or Butterfly spreads which are actually combinations of two vertical spreads."@en ;
+	.
+
+fibo-der-drc-opt:OutOfTheMoney
+	a
+		owl:NamedIndividual ,
+		fibo-der-drc-opt:Moneyness
+		;
+	rdfs:label "out-of-the-money"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "moneyness classifier that refers to an option whose value in terms of its strike price is not favorable in comparison to the prevailing market price of the underlying asset"@en ;
+	fibo-fnd-utl-av:abbreviation "OTM"@en ;
+	fibo-fnd-utl-av:explanatoryNote "An OTM call option will have a strike price that is higher than the market price of the underlying asset. Alternatively, an OTM put option has a strike price that is lower than the market price of the underlying asset."@en ;
+	.
+
+fibo-der-drc-opt:PutOption
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:Option ;
+	rdfs:label "put option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to sell the assets specified at a fixed price or formula, on or before a specified date"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	fibo-fnd-utl-av:explanatoryNote "The seller of the put option assumes the obligation of buying the assets specified should the buyer exercise the option."@en ;
+	.
+
+fibo-der-drc-opt:StandardizedOptionsTerms
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:StandardizedTerms ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-be-fct-pub:hasPublisher ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-fbc-fct-mkt:Exchange
+					fibo-der-drc-bsc:DerivativesClearingOrganization
+				) ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fi-ip:hasPriceDeterminationMethod ;
+			owl:someValuesFrom fibo-fbc-fi-ip:PriceDeterminationMethod ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-der-drc-opt:VanillaOption ;
+		]
+		;
+	rdfs:label "standardized options terms"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "standardized contract terms established by a securities or options exchange or by an options clearing entity"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	fibo-fnd-utl-av:explanatoryNote "Such terms may relate to the underlying instruments, exercise price, expiration date, and contract size, for example."@en ;
+	.
+
+fibo-der-drc-opt:StrikePrice
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-acc-cur:MonetaryPrice ;
+	rdfs:label "strike price"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "price at which a lot of the underlying asset may be bought or sold when the contract is exercised"@en ;
+	fibo-fnd-utl-av:explanatoryNote "For call options, the strike price is the price at which the security may be purchased by the option holder; for put options, the strike price is the price at which the security may be sold."@en ;
+	.
+
+fibo-der-drc-opt:VanillaOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:Option ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fi-ip:hasPriceDeterminationMethod ;
+			owl:someValuesFrom fibo-fbc-fi-ip:PriceDeterminationMethod ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:hasContractDuration ;
+			owl:someValuesFrom fibo-fnd-dt-fd:ExplicitDuration ;
+		]
+		;
+	rdfs:label "vanilla option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	skos:definition "common option giving the buyer (holder) the right, but not the obligation, to buy (via a call option) or sell (via a put option) the underlying assets specified at a pre-determined price (i.e., the strike price, fixed or calculated), on or before a specified date (the expiration date)"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Vanilla options include call or put options that have no special or unusual features, and are typically exchange traded."@en ;
+	.
+
+fibo-der-drc-opt:hasCalculatedMarketValue
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasPrice ;
+	rdfs:label "has calculated market value"@en ;
+	rdfs:domain fibo-fbc-fi-fi:Option ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-der-drc-opt:OptionPremium ;
+	skos:definition "indicates a calculated price as of some relative date considered the market value of the option at that point in time"@en ;
+	fibo-fnd-utl-av:synonym "has premium"@en ;
+	.
+
+fibo-der-drc-opt:hasExercisePrice
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasPrice ;
+	rdfs:label "has exercise price"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-der-drc-opt:StrikePrice ;
+	skos:definition "specifies a predetermined price at which the holder commits to buy or sell an underlying asset"@en ;
+	fibo-fnd-utl-av:synonym "has strike price"@en ;
+	.
+
+fibo-der-drc-opt:hasExerciseSchedule
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasSchedule ;
+	rdfs:label "has exercise schedule"@en ;
+	rdfs:domain fibo-fbc-fi-fi:Option ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-fnd-dt-fd:Schedule ;
+	skos:definition "links an option to the schedule specified in the contract that constrains when it may be exercised"@en ;
+	fibo-fnd-utl-av:explanatoryNote "An exercise schedule may be as simple as a single date or date period. However, in more complex cases, it may be an ad hoc schedule of individual dates, or a regular schedule of periodic exercise dates."@en ;
+	.
+
+fibo-der-drc-opt:hasExerciseStyle
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-cr:isClassifiedBy ;
+	rdfs:label "has exercise style" ;
+	rdfs:domain fibo-fbc-fi-fi:Option ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-sec-dbt-ex:ExerciseConvention ;
+	skos:definition "indicates the exercise convention specified for the option" ;
+	.
+
+fibo-der-drc-opt:hasOptionHolder
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-agr-ctr:hasContractParty ;
+	rdfs:label "has option holder" ;
+	rdfs:domain fibo-fbc-fi-fi:Option ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-der-drc-opt:OptionHolder ;
+	skos:definition "indicates the owner of the option" ;
+	.
+
+fibo-der-drc-opt:hasOptionWriter
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-agr-ctr:hasContractParty ;
+	rdfs:label "has option writer" ;
+	rdfs:domain fibo-fbc-fi-fi:Option ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-der-drc-opt:OptionIssuer ;
+	skos:definition "indicates the issuer of the option" ;
+	fibo-fnd-utl-av:explanatoryNote "Typically, the option writer collects the premium when the option is initially sold."@en ;
+	.
+
+fibo-der-drc-opt:hasStrikeRate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-qt-qtu:hasQuantityValue ;
+	rdfs:label "has strike rate"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ;
+	rdfs:range fibo-fnd-utl-alx:RatioValue ;
+	skos:definition "rate at which the contract may be exercised"@en ;
+	.
+
+fibo-fbc-fi-fi:Option
+	a owl:Class ;
+	rdfs:subClassOf
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasOptionHolder ;
+			owl:onClass fibo-der-drc-opt:OptionHolder ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasCalculatedMarketValue ;
+			owl:onClass fibo-der-drc-opt:OptionPremium ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasExercisePrice ;
+			owl:someValuesFrom fibo-der-drc-opt:StrikePrice ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasExerciseSchedule ;
+			owl:someValuesFrom fibo-fnd-dt-fd:Schedule ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasExerciseStyle ;
+			owl:someValuesFrom fibo-sec-dbt-ex:ExerciseConvention ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasOptionWriter ;
+			owl:someValuesFrom fibo-der-drc-opt:OptionIssuer ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fi-ip:hasLotSize ;
+			owl:someValuesFrom xsd:decimal ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-doc:hasExpirationDate ;
+			owl:someValuesFrom fibo-fnd-dt-fd:Date ;
+		]
+		;
+	.
+

@@ -1,0 +1,404 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-2-SubdivisionCodes/
+# imports: https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GB/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-ge-ge: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
+@prefix fibo-be-ge-ukj: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-fnd-law-jur: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-3166-2: <https://www.omg.org/spec/LCC/Countries/ISO3166-2-SubdivisionCodes/> .
+@prefix lcc-3166-2-gb: <https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GB/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/>
+	a owl:Ontology ;
+	rdfs:label "Government Entities and Jurisdictions for the United Kingdom of Great Britain and Northern Ireland Ontology" ;
+	dct:abstract "This ontology provides government entities and jurisdictions for the United Kingdom of Great Britain and Northern Ireland use in other FIBO ontologies." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "http://www.w3.org/standards/techs/owl#w3c_all"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2016-2020 EDM Council, Inc." ,
+		"Copyright (c) 2016-2020 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-be-ge-ukj" ;
+	sm:filename "UKGovernmentEntitiesAndJurisdictions.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-2-SubdivisionCodes/> ,
+		<https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GB/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	skos:changeNote "The http://www.omg.org/spec/EDMC-FIBO/BE/20200201/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions.rdf version of this ontology was modified to add devolved government entities for Scotland, Wales, and Northern Ireland." ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-be-ge-ukj:EnglandAndWalesJurisdiction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "England and Wales jurisdiction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Courts_of_England_and_Wales> ,
+		<https://law.gov.wales/>
+		;
+	skos:definition "jurisdiction of the Courts of England and Wales" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:NationalAssemblyForWales ;
+	fibo-fnd-law-jur:hasReach lcc-3166-2-gb:EnglandAndWales ;
+	.
+
+fibo-be-ge-ukj:GovernmentOfGuernsey
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label
+		"Gouvèrnément d'Guernési"@fr ,
+		"Government of Guernsey"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://www.gov.gg/> ;
+	skos:definition "parliamentary representative democracy that is the central government of the Bailiwick of Guernsey, a self-governing dependency of the United Kingdom and one of the British Channel Islands off the coast of Normandy" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:JurisdictionOfGuernsey ;
+	fibo-fnd-rel-rel:governs lcc-3166-1:Guernsey ;
+	.
+
+fibo-be-ge-ukj:GovernmentOfJersey
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label
+		"Gouvèrnément d'Jèrri"@fr ,
+		"Government of Jersey"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://www.gov.je/Pages/default.aspx> ;
+	skos:definition "central government of the Bailiwick of Jersey, a self-governing dependency of the United Kingdom that is the largest of the Channel Islands between England and France" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:JurisdictionOfJersey ;
+	fibo-fnd-rel-rel:governs lcc-3166-1:Jersey ;
+	.
+
+fibo-be-ge-ukj:GovernmentOfScotland
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:DevolvedGovernment ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label
+		"Government of Scotland"@en ,
+		"Riaghaltas na h-Alba"@gd
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Scottish_Government> ,
+		<https://www.gov.scot/> ,
+		<https://www.parliament.scot/index.aspx>
+		;
+	skos:definition "devolved government of Scotland" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:ScotlandJurisdiction ;
+	fibo-fnd-rel-rel:governs lcc-3166-2-gb:Scotland ;
+	fibo-fnd-utl-av:synonym "Scottish government" ;
+	.
+
+fibo-be-ge-ukj:GovernmentOfTheIsleOfMan
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label "Government of the Isle of Man"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://www.gov.im/> ;
+	skos:definition "central government of the Isle of Man, a self-governing British Crown dependency in the Irish Sea between England and Ireland" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:JurisdictionOfTheIsleOfMan ;
+	fibo-fnd-rel-rel:governs lcc-3166-1:IsleOfMan ;
+	fibo-fnd-utl-av:synonym "Manx Government" ;
+	.
+
+fibo-be-ge-ukj:GovernmentOfTheUnitedKingdom
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:NationalGovernment
+		;
+	rdfs:label "Government of the United Kingdom" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<http://www.parliament.uk/about/how/role/parliament-government/> ,
+		<https://en.wikipedia.org/wiki/Government_of_the_United_Kingdom> ,
+		<https://www.gov.uk/>
+		;
+	skos:definition "constitutional monarchy that is the government of the United Kingdom of Great Britain and Northern Ireland, including the monarch, who is the head of state and sovereign, prime minister, who is the head of government, and cabinet, parliament (House of Lords and House of Commons), and other agencies and institutions that comprise the government" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:UnitedKingdomJurisdiction ;
+	fibo-fnd-rel-rel:governs lcc-3166-1:UnitedKingdomOfGreatBritainAndNorthernIreland ;
+	fibo-fnd-utl-av:synonym "British government" ;
+	.
+
+fibo-be-ge-ukj:GuernseyEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Guernsey entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	skos:definition "regional sovereignty and polity that is the Bailiwick of Guernsey" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-1:Guernsey ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:GovernmentOfGuernsey ;
+	.
+
+fibo-be-ge-ukj:IsleOfManEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Isle of Man entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	skos:definition "regional sovereignty and polity that is the Isle of Man" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-1:IsleOfMan ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:GovernmentOfTheIsleOfMan ;
+	fibo-fnd-utl-av:synonym "Manx entity" ;
+	.
+
+fibo-be-ge-ukj:JerseyEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Jersey entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	skos:definition "regional sovereignty and polity that is the Bailiwick of Jersey" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-1:Jersey ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:GovernmentOfJersey ;
+	.
+
+fibo-be-ge-ukj:JurisdictionOfGuernsey
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "jurisdiction of Guernsey" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/Guernsey#Politics> ;
+	skos:definition "jurisdiction of the bailiwick judiciary of Guernsey, headed by its Bailiff, which is derived from a combination of Norman Customary Law and principles taken from English common law and Equity, as well as from statute law enacted by the competent legislature(s)" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:GovernmentOfGuernsey ;
+	fibo-fnd-law-jur:hasReach lcc-3166-1:Guernsey ;
+	.
+
+fibo-be-ge-ukj:JurisdictionOfJersey
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "jurisdiction of Jersey" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/Law_of_Jersey#Judiciary> ;
+	skos:definition "jurisdiction of the judiciary of Jersey, headed by is the Bailiff, who as well as performing the judicial functions of a chief justice is also the President (presiding officer) of the States of Jersey and has certain civic, ceremonial and executive functions" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:GovernmentOfJersey ;
+	fibo-fnd-law-jur:hasReach lcc-3166-1:Jersey ;
+	.
+
+fibo-be-ge-ukj:JurisdictionOfTheIsleOfMan
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "jurisdiction of the Isle of Man" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://en.wikipedia.org/wiki/Judiciary_of_the_Isle_of_Man> ;
+	skos:definition "jurisdiction of the judiciary of the Isle of Man, including the High Court of Justice of the Isle of Man, consisting of a Civil Division and an appeal division, called the Staff of Government Division" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:GovernmentOfTheIsleOfMan ;
+	fibo-fnd-law-jur:hasReach lcc-3166-1:IsleOfMan ;
+	.
+
+fibo-be-ge-ukj:NationalAssemblyForWales
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:DevolvedGovernment ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label
+		"Cynulliad Cenedlaethol Cymru"@cy ,
+		"National Assembly for Wales"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<http://www.assembly.wales/en/Pages/Home.aspx> ,
+		<https://en.wikipedia.org/wiki/National_Assembly_for_Wales> ,
+		<https://law.gov.wales/constitution-government/devolution/>
+		;
+	skos:definition "devolved government of Wales" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:EnglandAndWalesJurisdiction ;
+	fibo-fnd-rel-rel:governs lcc-3166-2-gb:Wales ;
+	fibo-fnd-utl-av:synonym
+		"Senedd"@cy ,
+		"Welsh Assembly"@en
+		;
+	.
+
+fibo-be-ge-ukj:NorthernIrelandAssembly
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:DevolvedGovernment ,
+		fibo-be-ge-ge:RegionalGovernment
+		;
+	rdfs:label
+		"Northern Ireland Assembly"@en ,
+		"Tionól Thuaisceart Éireann"@ga
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<http://www.niassembly.gov.uk/> ,
+		<https://en.wikipedia.org/wiki/Northern_Ireland_Assembly>
+		;
+	skos:definition "devolved government of Northern Ireland" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-ukj:NorthernIrelandJurisdiction ;
+	fibo-fnd-rel-rel:governs lcc-3166-2-gb:NorthernIreland ;
+	.
+
+fibo-be-ge-ukj:NorthernIrelandEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Northern Ireland entity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <http://www.niassembly.gov.uk/> ;
+	skos:definition "regional devolved sovereignty that is Northern Ireland" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-2-gb:NorthernIreland ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:NorthernIrelandAssembly ;
+	.
+
+fibo-be-ge-ukj:NorthernIrelandJurisdiction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "Northern Ireland jurisdiction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Courts_of_Northern_Ireland> ,
+		<https://www.justice-ni.gov.uk/topics/courts-and-tribunals>
+		;
+	skos:definition "jurisdiction of the Courts of Northern Ireland" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:NorthernIrelandAssembly ;
+	fibo-fnd-law-jur:hasReach lcc-3166-2-gb:NorthernIreland ;
+	.
+
+fibo-be-ge-ukj:ScotlandEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Scotland entity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Scottish_Government> ,
+		<https://www.gov.scot/>
+		;
+	skos:definition "regional devolved sovereignty that is Scotland" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-2-gb:Scotland ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:GovernmentOfScotland ;
+	.
+
+fibo-be-ge-ukj:ScotlandJurisdiction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "Scotland jurisdiction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Courts_of_Scotland> ,
+		<https://www.scotcourts.gov.uk/> ,
+		<https://www.scotcourts.gov.uk/the-courts/supreme-courts/about-the-court-of-session> ,
+		<https://www.scotcourts.gov.uk/the-courts/supreme-courts/high-court/about-the-high-court/>
+		;
+	skos:definition "jurisdiction of the Supreme Courts of Scotland" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:GovernmentOfScotland ;
+	fibo-fnd-law-jur:hasReach lcc-3166-2-gb:Scotland ;
+	.
+
+fibo-be-ge-ukj:UnitedKingdomEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:SovereignState
+		;
+	rdfs:label "United Kingdom entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Government_of_the_United_Kingdom> ,
+		<https://www.gov.uk/>
+		;
+	skos:definition "federated sovereignty and polity that is the United Kingdom of Great Britain and Northern Ireland" ;
+	fibo-be-ge-ge:hasFullSovereigntyOver
+		lcc-3166-1:Gibraltar ,
+		lcc-3166-1:UnitedKingdomOfGreatBritainAndNorthernIreland
+		;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:GovernmentOfTheUnitedKingdom ;
+	.
+
+fibo-be-ge-ukj:UnitedKingdomJurisdiction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "United Kingdom jurisdiction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso
+		<https://en.wikipedia.org/wiki/Courts_of_the_United_Kingdom> ,
+		<https://en.wikipedia.org/wiki/Judiciaries_of_the_United_Kingdom> ,
+		<https://www.supremecourt.uk/>
+		;
+	skos:definition "jurisdiction of the Supreme Court of the United Kingdom, the tribunal system, including the Asylum and Immigration Tribunal and the Special Immigration Appeals Commission, Employment tribunals and the Employment Appeal Tribunal" ;
+	skos:scopeNote "Note that the Courts of the United Kingdom are separated into three separate jurisdictions, the Courts of England and Wales, Courts of Scotland and the Courts of Northern Ireland, as the United Kingdom does not have a single unified judicial system, aside from the courts specifically identified in the definition of this individual." ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-ukj:GovernmentOfTheUnitedKingdom ;
+	fibo-fnd-law-jur:hasReach lcc-3166-1:UnitedKingdomOfGreatBritainAndNorthernIreland ;
+	.
+
+fibo-be-ge-ukj:WelshEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:RegionalSovereignty
+		;
+	rdfs:label "Welsh entity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <http://www.assembly.wales/en/Pages/Home.aspx> ;
+	skos:definition "regional devolved sovereignty that is Wales" ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver lcc-3166-2-gb:Wales ;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-ukj:NationalAssemblyForWales ;
+	.
+

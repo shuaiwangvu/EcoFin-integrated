@@ -1,0 +1,736 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddresses/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-plc-uspsa: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/>
+	a owl:Ontology ;
+	rdfs:label "U.S. Postal Service Addresses Ontology" ;
+	dct:abstract "This ontology augments the Addresses ontology in FND with concepts that conform to the USPS Pub 28.  The USPS provides automated address verification services that use the concepts defined herein for that purpose, and which many financial services entities use for data quality purposes." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "http://www.w3.org/standards/techs/owl#w3c_all"^^xsd:anyURI ;
+	sm:contributor "Thematix Partners LLC" ;
+	sm:copyright
+		"Copyright (c) 2019-2020 EDM Council, Inc." ,
+		"Copyright (c) 2019-2020 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-plc-uspsa" ;
+	sm:filename "USPostalServiceAddresses.rdf" ;
+	rdfs:seeAlso
+		<https://about.usps.com/who/profile/> ,
+		<https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf>
+		;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:changeNote "The https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses.rdf version of this ontology was revised to replace uses of hasTag in Relations with hasTag from LCC, as the more complex union of datatypes in the Relations concept is not needed here, and correct a duplicate label." ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-plc-adr:Apartment
+	a owl:NamedIndividual ;
+	rdfs:label "apartmento"@es ;
+	fibo-fnd-utl-av:preferredDesignation "APT" ;
+	.
+
+fibo-fnd-plc-adr:Basement
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "BSMT" ;
+	.
+
+fibo-fnd-plc-adr:Building
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "BLDG" ;
+	.
+
+fibo-fnd-plc-adr:Department
+	a owl:NamedIndividual ;
+	rdfs:label "departamento"@es ;
+	fibo-fnd-utl-av:preferredDesignation "DEPT" ;
+	.
+
+fibo-fnd-plc-adr:Floor
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "FL" ;
+	.
+
+fibo-fnd-plc-adr:Front
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "FRNT" ;
+	.
+
+fibo-fnd-plc-adr:GeographicDirectionalSymbol
+	a owl:Class ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:oneOf (
+			fibo-fnd-plc-uspsa:East
+			fibo-fnd-plc-uspsa:North
+			fibo-fnd-plc-uspsa:Northeast
+			fibo-fnd-plc-uspsa:Northwest
+			fibo-fnd-plc-uspsa:South
+			fibo-fnd-plc-uspsa:Southeast
+			fibo-fnd-plc-uspsa:Southwest
+			fibo-fnd-plc-uspsa:West
+		) ;
+	] ;
+	.
+
+fibo-fnd-plc-adr:Hangar
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "HNGR" ;
+	.
+
+fibo-fnd-plc-adr:Key
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "KEY" ;
+	.
+
+fibo-fnd-plc-adr:Lobby
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "LBBY" ;
+	.
+
+fibo-fnd-plc-adr:Lot
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "LOT" ;
+	.
+
+fibo-fnd-plc-adr:Lower
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "LOWR" ;
+	.
+
+fibo-fnd-plc-adr:Office
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "OFC" ;
+	.
+
+fibo-fnd-plc-adr:Penthouse
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PH" ;
+	.
+
+fibo-fnd-plc-adr:Pier
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PIER" ;
+	.
+
+fibo-fnd-plc-adr:Rear
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "REAR" ;
+	.
+
+fibo-fnd-plc-adr:Room
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "RM" ;
+	.
+
+fibo-fnd-plc-adr:Side
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SIDE" ;
+	.
+
+fibo-fnd-plc-adr:Slip
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SLP" ;
+	.
+
+fibo-fnd-plc-adr:Space
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SPC" ;
+	.
+
+fibo-fnd-plc-adr:Stop
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "STOP" ;
+	.
+
+fibo-fnd-plc-adr:Suite
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "STE" ;
+	.
+
+fibo-fnd-plc-adr:Trailer
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "TRLR" ;
+	.
+
+fibo-fnd-plc-adr:Unit
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "UNIT" ;
+	.
+
+fibo-fnd-plc-adr:Upper
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "UPPR" ;
+	.
+
+fibo-fnd-plc-uspsa:CompleteAddress
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-uspsa:StandardizedAddress ;
+	rdfs:label "complete address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "delivery address that has all the address elements necessary to allow an exact match with the current Postal Service ZIP+4 and City State files to obtain the finest level of ZIP+4 and delivery point codes for the delivery address" ;
+	fibo-fnd-utl-av:explanatoryNote "A complete address may be required on mail at some automation rates." ;
+	.
+
+fibo-fnd-plc-uspsa:DeliveryAddressCodeSet
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:CodeSet ,
+		lcc-lr:IdentificationScheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasMember ;
+			owl:someValuesFrom fibo-fnd-plc-uspsa:USPostalServiceAddressIdentifier ;
+		]
+		;
+	rdfs:label "delivery address code set" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	rdfs:seeAlso <https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf> ;
+	skos:definition "system of numeric codes that substitute for specified delivery point details according to the U.S. Postal Service Publication 28" ;
+	.
+
+fibo-fnd-plc-uspsa:DeliveryPointCode
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:CodeElement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:isMemberOf ;
+			owl:onClass fibo-fnd-plc-uspsa:DeliveryPointCodeSet ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasTag ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "delivery point code" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	rdfs:seeAlso <https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf> ;
+	skos:definition "specific set of digits between 00 and 99 assigned to a delivery point" ;
+	fibo-fnd-utl-av:explanatoryNote "When combined with the ZIP + 4 code, the delivery point code provides a unique identifier for every deliverable address served by the USPS.  The delivery point digits are almost never printed on mail in human-readable form; instead they are encoded in the POSTNET delivery point barcode (DPBC) or as part of the newer Intelligent Mail Barcode (IMB)." ;
+	.
+
+fibo-fnd-plc-uspsa:DeliveryPointCodeSet
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:CodeSet ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasMember ;
+			owl:someValuesFrom fibo-fnd-plc-uspsa:DeliveryPointCode ;
+		]
+		;
+	rdfs:label "delivery point code set" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	rdfs:seeAlso <https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf> ;
+	skos:definition "system of numeric codes that substitute for specified delivery point details according to the U.S. Postal Service Publication 28" ;
+	.
+
+fibo-fnd-plc-uspsa:DepartmentOfStateAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-plc-loc:hasCityName ;
+			owl:hasValue "DPO" ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:DepartmentOfStateUnitComponent ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:Mailbox ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "Department of State address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:disjointWith fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	skos:definition "delivery address whose delivery address line uses 'UNIT' followed by the unit identifier, followed by 'BOX' followed by box number, in place of a street address, 'DPO' as the literal value for the city, and the appropriate armed forces subdivision code in place of a subdivision (state) code" ;
+	.
+
+fibo-fnd-plc-uspsa:DepartmentOfStateUnitComponent
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:SupplementalAddressComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:hasValue fibo-fnd-plc-adr:Unit ;
+		]
+		;
+	rdfs:label "Department of State unit component" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "component of a Department of State address that includes 'UNIT' followed by the unit identifier" ;
+	.
+
+fibo-fnd-plc-uspsa:East
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"East"@en ,
+		"Este"@es
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for East" ;
+	lcc-lr:hasTag "E" ;
+	.
+
+fibo-fnd-plc-uspsa:GeneralDeliveryAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-plc-adr:hasAddressLine1 ;
+			owl:hasValue "GENERAL DELIVERY" ;
+		]
+		;
+	rdfs:label "general delivery address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:disjointWith fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	skos:definition "delivery address that uses the words 'GENERAL DELIVERY', uppercase preferred, spelled out (no abbreviation), in place of a street address" ;
+	fibo-fnd-utl-av:explanatoryNote "The value of the +4 component of a ZIP+4 code should be '9999'." ;
+	.
+
+fibo-fnd-plc-uspsa:HighwayContractRoute
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:SupplementalAddressComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:hasValue fibo-fnd-plc-uspsa:HighwayContractRouteDesignator ;
+		]
+		;
+	rdfs:label "highway contract route" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "highway contract route associated with an address" ;
+	.
+
+fibo-fnd-plc-uspsa:HighwayContractRouteAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:HighwayContractRoute ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:Mailbox ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "highway contract address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:disjointWith fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	skos:definition "delivery address whose delivery address line uses the abbreviation 'HC', followed by the route identifier, followed by 'BOX' followed by box number, in place of a street address" ;
+	.
+
+fibo-fnd-plc-uspsa:HighwayContractRouteDesignator
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:SupplementalAddressDesignator
+		;
+	rdfs:label "highway contract route designator" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "designator for a route served by an independent contractor rather than directly by the U.S. Postal Service" ;
+	fibo-fnd-utl-av:preferredDesignation "HC" ;
+	.
+
+fibo-fnd-plc-uspsa:InternationalAddress
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-adr:PhysicalAddress ;
+	rdfs:label "international address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:equivalentClass [
+		a owl:Restriction ;
+		owl:onProperty fibo-fnd-plc-loc:hasCountry ;
+		owl:onClass lcc-cr:Country ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	skos:definition "physical address that explicitly includes a country" ;
+	.
+
+fibo-fnd-plc-uspsa:Mailbox
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:SupplementalAddressComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:hasValue fibo-fnd-plc-uspsa:MailboxDesignator ;
+		]
+		;
+	rdfs:label "mailbox" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "mailbox, other than a U.S. Post Office box, associated with an address" ;
+	.
+
+fibo-fnd-plc-uspsa:MailboxDesignator
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:SupplementalAddressDesignator
+		;
+	rdfs:label "mailbox designator" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "designator for a mail box other than a U.S. Post Office box" ;
+	fibo-fnd-utl-av:preferredDesignation "BOX" ;
+	.
+
+fibo-fnd-plc-uspsa:North
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Norte"@es ,
+		"North"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for North" ;
+	lcc-lr:hasTag "N" ;
+	.
+
+fibo-fnd-plc-uspsa:Northeast
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Noreste"@es ,
+		"Northeast"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for Northeast" ;
+	lcc-lr:hasTag "NE" ;
+	.
+
+fibo-fnd-plc-uspsa:Northwest
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Noroeste"@es ,
+		"Northwest"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for Northwest" ;
+	lcc-lr:hasTag
+		"NO" ,
+		"NW"
+		;
+	.
+
+fibo-fnd-plc-uspsa:OverseasMilitaryAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-plc-adr:hasAddressLine1 ;
+			owl:someValuesFrom rdfs:Literal ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-plc-loc:hasCityName ;
+			owl:someValuesFrom [
+				a rdfs:Datatype ;
+				owl:oneOf (
+					"APO"
+					"FPO"
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "overseas military address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:disjointWith fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	skos:definition "delivery address whose delivery address line uses an abbreviation for the unit or command such as 'CMR', 'PSC', or 'UNIT', or  'HC', followed by the unit identifier, followed by 'BOX' followed by box number, in place of a street address, either 'APO' or 'FPO' as the literal value for the city and the appropriate armed forces subdivision code in place of a subdivision (state) code" ;
+	.
+
+fibo-fnd-plc-uspsa:PrivateMailBoxAddress
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	rdfs:label "private mail box address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "delivery address provided by a commercial mail receiving company that includes a supplementary address line containing the abbreviation 'PMB' or the pound \"#\" symbol followed by the mailbox number; alternatively, 'PMB' or '#\" and the mailbox number can be appended to the street address" ;
+	.
+
+fibo-fnd-plc-uspsa:PuertoRicoAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:ConventionalStreetAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:Urbanization ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "Puerto Rico address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "delivery address for a delivery point in Puerto Rico that may include a supplementary address line containing the abbreviation 'URB' followed by the name of the urbanization area that is appropriate for that address" ;
+	.
+
+fibo-fnd-plc-uspsa:RuralRoute
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:SupplementalAddressComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:hasValue fibo-fnd-plc-uspsa:RuralRouteDesignator ;
+		]
+		;
+	rdfs:label "highway contract route address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "mail route outside the city or township limits in a rural area associated with an address" ;
+	.
+
+fibo-fnd-plc-uspsa:RuralRouteAddress
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddress ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:Mailbox ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:RuralRoute ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "rural route address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	owl:disjointWith fibo-fnd-plc-adr:ConventionalStreetAddress ;
+	skos:definition "delivery address whose delivery address line uses the abbreviation 'RR', followed by the route identifier, followed by 'BOX' followed by box number, in place of a street address" ;
+	.
+
+fibo-fnd-plc-uspsa:RuralRouteDesignator
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:SupplementalAddressDesignator
+		;
+	rdfs:label "rural route designator" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "designator for a mail route outside the city or township limits in a rural area" ;
+	fibo-fnd-utl-av:preferredDesignation "RR" ;
+	.
+
+fibo-fnd-plc-uspsa:South
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"South"@en ,
+		"Sur"@es
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for South" ;
+	lcc-lr:hasTag "S" ;
+	.
+
+fibo-fnd-plc-uspsa:Southeast
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Southeast"@en ,
+		"Sureste"@es
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for Southeast" ;
+	lcc-lr:hasTag "SE" ;
+	.
+
+fibo-fnd-plc-uspsa:Southwest
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Southwest"@en ,
+		"Suroeste"@es
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for Southwest" ;
+	lcc-lr:hasTag
+		"SO" ,
+		"SW"
+		;
+	.
+
+fibo-fnd-plc-uspsa:StandardizedAddress
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-adr:PhysicalAddress ;
+	rdfs:label "standardized address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "delivery address that is fully spelled out, abbreviated by using the Postal Service standard abbreviations or as given in the current Postal Service ZIP+4 file" ;
+	.
+
+fibo-fnd-plc-uspsa:USPostOfficeBoxDesignator
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:PostOfficeBoxDesignator
+		;
+	rdfs:label "post office box designator" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "designator for a U.S. Post Office box" ;
+	fibo-fnd-utl-av:preferredDesignation "PO BOX" ;
+	.
+
+fibo-fnd-plc-uspsa:USPostalServiceAddressIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-plc-adr:PhysicalAddressIdentifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:DeliveryPointCode ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass fibo-fnd-plc-uspsa:ZIPPlus4Code ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "U.S. Postal Service address identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "combined with the ZIP + 4 code, the delivery point code provides a unique identifier for every deliverable address served by the USPS" ;
+	fibo-fnd-utl-av:explanatoryNote "The delivery point digits are almost never printed on mail in human-readable form; instead they are encoded in the POSTNET delivery point barcode (DPBC) or as part of the newer Intelligent Mail Barcode (IMB)." ;
+	.
+
+fibo-fnd-plc-uspsa:Urbanization
+	a owl:Class ;
+	rdfs:subClassOf lcc-cr:CountrySubdivision ;
+	rdfs:label "urbanization" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "an area, sector, or development within a larger geographic area" ;
+	fibo-fnd-utl-av:explanatoryNote "This URB descriptor, commonly used in urban areas of Puerto Rico, is an important part of the addressing format, as it describes the location of a given street." ;
+	.
+
+fibo-fnd-plc-uspsa:West
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:GeographicDirectionalSymbol
+		;
+	rdfs:label
+		"Oeste"@es ,
+		"West"@en
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "geographic directional symbol for West" ;
+	lcc-lr:hasTag
+		"O" ,
+		"W"
+		;
+	.
+
+fibo-fnd-plc-uspsa:ZIPCode
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-adr:Postcode ;
+	rdfs:label "Zip Code" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "five-digit code code assigned to a delivery address indicating the state and post office or postal zone" ;
+	.
+
+fibo-fnd-plc-uspsa:ZIPPlus4Code
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-plc-adr:Postcode ;
+	rdfs:label "ZIP+4 Code" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	skos:definition "nine-digit number consisting of five digits, a hyphen, and four digits, which the USPS describes by its trademark ZIP+4" ;
+	fibo-fnd-utl-av:explanatoryNote "The correct format for a numeric ZIP+4 code is five digits, a hyphen, and four digits. The first five digits represent the 5-digit ZIP Code; the sixth and seventh digits (the first two after the hyphen) identify an area known as a sector; the eighth and ninth digits identify a smaller area known as a segment. Together, the final four digits identify geographic units such as a side of a street between intersections, both sides of a street between intersections, a building, a floor or group of floors in a building, a firm within a building, a span of boxes on a rural route, or a group of Post Office boxes to which a single USPS employee makes delivery." ;
+	.
+
+fibo-fnd-plc-uspsa:ZipCodeScheme
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:CodeSet ,
+		lcc-lr:IdentificationScheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasMember ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-fnd-plc-uspsa:ZIPCode
+					fibo-fnd-plc-uspsa:ZIPPlus4Code
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "zip code scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	rdfs:seeAlso <https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf> ;
+	skos:definition "system used in the U.S. to facilitate the delivery of mail, consisting of a five- or nine-digit code Zone Improvement Plan (ZIP) printed directly after the address, the first five digits (initial code) indicating the state and post office or postal zone, the last four (expanded code) the box section or number, portion of a rural route, building, or other specific delivery location" ;
+	.
+
+fibo-fnd-plc-uspsa:hasUrbanization
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:comprises ;
+	rdfs:label "has urbanization" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/> ;
+	rdfs:range fibo-fnd-plc-uspsa:Urbanization ;
+	skos:definition "indicates  area, sector, or development within a geographic area relevant to a delivery address" ;
+	.
+

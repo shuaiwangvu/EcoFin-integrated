@@ -1,0 +1,461 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CommoditiesContracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CommoditiesContracts/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-der-drc-bsc: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-drc-comm: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> .
+@prefix fibo-der-drc-ff: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> .
+@prefix fibo-der-drc-opt: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> .
+@prefix fibo-der-drc-swp: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-arr-arr: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-pas-pas: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/>
+	a owl:Ontology ;
+	rdfs:label "Commodities Contracts Ontology"@en ;
+	dct:abstract "This ontology specifies core concepts for commodities-based derivatives and spot contracts, including the definitions of the most common categories of underlying negotiable commodities, corresponding to those outlined in the ISO 10962 CFI standard. Note that the ontology does not include any specific units of measure for these commodities. The intent is that FIBO users would select one of the many available units ontologies to use in specifying the details of individual contracts." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2015-2021 EDM Council, Inc." ,
+		"Copyright (c) 2015-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/>
+		;
+	sm:fileAbbreviation "fibo-der-drc-comm" ;
+	sm:filename "CommoditiesContracts.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:changeNote "The https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts.rdf version of this ontology was modified to fix spelling errors." ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-der-drc-comm:AgriculturalResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "agricultural resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is obtained via some agricultural process, including forestry, fishing, livestock, grain, dairy, corn, cocoa, soybeans, sugar, coffee"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:BaseMetal
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:Metal ;
+	rdfs:label "base metal"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	owl:disjointWith fibo-fnd-pas-pas:PreciousMetal ;
+	skos:definition "common metal that tarnishes, oxidizes, or corrodes relatively quickly when exposed to air or moisture, that is widely used in commercial and industrial applications, such as construction and manufacturing"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Base metals or alloys include metals other than precious metals, such as copper, lead, zinc, tin, iron, steel, or brass. Note that iron and steel are included under metal and metal products in some classification schemes - see https://fred.stlouisfed.org/series/WPU101 for example."@en ;
+	.
+
+fibo-der-drc-comm:BasketOfCommodities
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-pas-fpas:WeightedBasket ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-arr:hasConstituent ;
+			owl:someValuesFrom fibo-der-drc-comm:CommodityBasketConstituent ;
+		]
+		;
+	rdfs:label "basket of commodities" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "custom basket whose constituents consist of one or more negotiable commodities" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:explanatoryNote "A commodity basket may contain constituents from one of the potential underlying assets or from multiple underlying assets."@en ;
+	.
+
+fibo-der-drc-comm:Bullion
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:PreciousMetal ;
+	rdfs:label "bullion"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "physical precious metal that is officially recognized as being at least 99.5 percent pure"@en ;
+	skos:example "In the United States, bullion that is eligible for reference in a commodities contract may include U.S. gold Buffalo coins minted by the U.S. Mint that are 1 troy ounce, 0.5 ounce, 0.25 ounce, or 0.10 ounce; 1 ounce silver coins; certain platinum coins; and gold, silver, palladium, and platinum bullion that meet or exceed the fineness requirements of a regulated futures contract. Bullion must also be certified by an approved certifier, typically identified by an exchange, including but not limited to the U.S. Mint."@en ;
+	fibo-fnd-utl-av:explanatoryNote 'Physical metals fall into two categories: (1) bullion, which are coins, ingots or bars of a specific weight and purity; and (2) "numismatic" or collectible coins, which can be rare or old coins, or special proofs that are newly minted as collectibles. If a particular asset is identified as "numismatic" or "collectible", it is, by definition, not considered bullion aside from its melt value.'@en ;
+	.
+
+fibo-der-drc-comm:CommodityBasketConstituent
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-pas-fpas:WeightedBasketConstituent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom fibo-fnd-pas-pas:NegotiableCommodity ;
+		]
+		;
+	rdfs:label "commodity basket constituent" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "component of a custom commodity basket whose relative importance with respect to other basket constituents is known" ;
+	.
+
+fibo-der-drc-comm:CommodityDerivative
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:CommodityInstrument ,
+		fibo-fbc-fi-fi:DerivativeInstrument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:onClass fibo-der-drc-comm:CommodityUnderlyingAsset ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "commodity derivative" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "derivative instrument whose primary underlying notional item is a physical commodity, or the price, or related index, or any other aspect related to a physical commodity"@en ;
+	.
+
+fibo-der-drc-comm:CommodityForward
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:CommodityDerivative ,
+		fibo-der-drc-ff:Forward
+		;
+	rdfs:label "commodity forward"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "forward contract in which a buyer and seller agree upon delivery of a specified quality and quantity of goods at a specified future date"@en ;
+	fibo-fnd-utl-av:adaptedFrom
+		"CFTC glossary"@en ,
+		"ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en
+		;
+	fibo-fnd-utl-av:explanatoryNote 'Commodity forwards are often settled via cash transactions in many industries, including for the purposes of commodity merchandising. Terms may be more "personalized" than is the case with standardized futures contracts (i.e., delivery time and amount are as determined between seller and buyer). A price may be agreed upon in advance, or there may be agreement that the price will be determined at the time of delivery. A forward contract is a private and customizable agreement that settles at the end of the agreement and is traded over-the-counter.'@en ;
+	.
+
+fibo-der-drc-comm:CommodityFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:CommodityDerivative ,
+		fibo-fbc-fi-fi:Future
+		;
+	rdfs:label "commodity future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	owl:disjointWith fibo-der-drc-ff:FinancialFuture ;
+	skos:definition "futures contract to buy or sell a predetermined amount of a commodity at a specific price on a specific date in the future"@en ;
+	fibo-fnd-utl-av:adaptedFrom
+		"CFTC glossary"@en ,
+		"ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en
+		;
+	fibo-fnd-utl-av:explanatoryNote "A commodity future is an agreement to purchase or sell a commodity for delivery in the future: (1) at a price that is determined at initiation of the contract; (2) that obligates each party to the contract to fulfill the contract at the specified price; (3) that is used to assume or shift price risk; and (4) that may be satisfied by delivery or offset."@en ;
+	.
+
+fibo-der-drc-comm:CommodityOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:CommodityDerivative ,
+		fibo-der-drc-opt:VanillaOption
+		;
+	rdfs:label "commodity option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "option where the option buyer has the right to buy or sell specified commodities or commodity related index at a fixed price or formula, on or before a specified date"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:CommodityReturnLeg
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-swp:ReturnLeg ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-drc-comm:CommodityUnderlyingAsset ;
+		]
+		;
+	rdfs:label "commodity return leg"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "leg of a commodity return swap in which the return is based on a physical commodity, or the price, or behavior of the price, or any other aspect related to a physical commodity"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The cash flows from a commodity may be negative as you have a cost from holding the commodity but there are no interim cash flows, so it equates to a negative interest rate. So a commodity swap is like a TRS in that it is based on the return on the increase in value."@en ;
+	.
+
+fibo-der-drc-comm:CommoditySpotContract
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:CommodityInstrument ,
+		fibo-fbc-fi-fi:SpotContract ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:involves ;
+			owl:someValuesFrom fibo-fnd-pas-pas:NegotiableCommodity ;
+		]
+		;
+	rdfs:label "commodity spot contract"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "The contract defined for or implied in a Commodities spot transaction."@en ;
+	.
+
+fibo-der-drc-comm:CommoditySwap
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:CommodityDerivative ,
+		fibo-der-drc-swp:ReturnSwap ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-swp:hasReturnLeg ;
+			owl:someValuesFrom fibo-der-drc-comm:CommodityReturnLeg ;
+		]
+		;
+	rdfs:label "commodity swap"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "commodity derivative that includes, without limitation, any swap for which the primary underlying notional item is a physical commodity, or the price, or behavior of the price, or the level of a commodity index, or other aspect related to a physical commodity"@en ;
+	fibo-fnd-utl-av:adaptedFrom
+		"CFTC glossary"@en ,
+		"ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en
+		;
+	fibo-fnd-utl-av:explanatoryNote "Commodity swaps typically involve the exchange of a floating commodity price for a set price over an agreed-upon period."@en ;
+	.
+
+fibo-der-drc-comm:CommodityUnderlyingAsset
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-bsc:Underlier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:someValuesFrom fibo-fnd-pas-pas:NegotiableCommodity ;
+		]
+		;
+	rdfs:label "commodity underlying asset" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "underlier of a commodity derivative, including, but not limited to, the negotiable commodity itself"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The underlying of a commodity swap may include a physical commodity, or the price, or behavior of the price, or any other aspect of a physical commodity."@en ;
+	.
+
+fibo-der-drc-comm:EnergyResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "energy resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is an energy-related product, or a derivative of an energy-related product, including electricity, renewable energy, or any power/energy delivered through a utility network of provider; diesel fuel, fuel oil, gas oil, gasoline, heating oil, jet fuel, kerosene, natural gas, oil (Brent, Tapis, Dubai, WTI)"@en ;
+	skos:scopeNote "Note that the concept of an energy resource overlaps with generated resource and extraction resource but is not identical to either."@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:EnergyTransmissionRights
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:EnergyResource ;
+	rdfs:label "energy transmission rights"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "rights to the transmission of power across an electricity distribution network"@en ;
+	.
+
+fibo-der-drc-comm:EnvironmentalResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "environmental resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity including offset credits"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:ExtractionResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "extraction resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is a mineral resource obtained via withdrawal from the natural environment"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:explanatoryNote "These resources include ores, which contain commercially valuable amounts of metals, such as iron and aluminum, as well as precious metals, such as silver, gold, and platinum; precious stones, such as diamonds; building stones, such as granite; and solid fuels, such as coal and oil shale."@en ;
+	.
+
+fibo-der-drc-comm:FertilizerResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "fertilizer resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that includes ammonia, diammonium phosphate (DAP), potash, sulphur, urea, urea and ammonium nitrate (UAN)"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:FreightResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "freight resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is a freight index route"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:GasCommodity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:EnergyResource ,
+		fibo-der-drc-comm:ExtractionResource
+		;
+	rdfs:label "gas commodity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "extraction resource that is natural gas"@en ;
+	.
+
+fibo-der-drc-comm:GeneratedResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "generated resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity obtained via some generation process, including electricity, renewable energy, or any power/energy delivered through a utility network or provider"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:GrainCommodity
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:AgriculturalResource ;
+	rdfs:label "grain commodity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "agricultural resource that is a small, hard seed, of a food plant, especially of a cereal plant, such as wheat, corn, rye, oats, rice, and millet"@en ;
+	.
+
+fibo-der-drc-comm:IndustrialResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "industrial resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is obtained via some industrial process, including construction and manufacturing"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:MeatCommodity
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:AgriculturalResource ;
+	rdfs:label "meat commodity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "agricultural resource derived from the flesh of an animal (especially a mammal), such as pork bellies"@en ;
+	.
+
+fibo-der-drc-comm:Metal
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:ExtractionResource ;
+	rdfs:label "metal"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "material that, when freshly prepared, polished, or fractured, shows a lustrous appearance, and conducts electricity and heat relatively well"@en ;
+	skos:example "Examples include precious or industrial metal, such as aluminium, copper, gold, lead, nickel, platinum, silver, tin, zinc."@en ;
+	fibo-fnd-utl-av:adaptedFrom
+		"ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ,
+		"https://en.wikipedia.org/wiki/Metal"@en
+		;
+	.
+
+fibo-der-drc-comm:OilCommodity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:GeneratedResource ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-comm:hasGrade ;
+			owl:someValuesFrom fibo-der-drc-comm:OilGrade ;
+		]
+		;
+	rdfs:label "oil commodity"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "generated resource that is a viscous liquid derived from petroleum, including for use as fuel, or as a lubricant, and the manufacture of many types of paints, plastics, and other materials"@en ;
+	.
+
+fibo-der-drc-comm:OilGrade
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-arr-cls:Classifier ;
+	rdfs:label "oil grade"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "measure of the viscosity of oil during operation"@en ;
+	.
+
+fibo-der-drc-comm:PaperResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "paper resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity that is a paper product, including containerboard, newsprint, pulp, recovered paper"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:PolypropyleneResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "polypropylene resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity including plastics"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:ServiceResource
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-pas-pas:NegotiableCommodity ;
+	rdfs:label "service resource"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "negotiable commodity involving services such as transportation, communications, and trade"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-comm:WeatherDerivative
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-comm:CommodityDerivative ,
+		fibo-fbc-fi-fi:DerivativeInstrument
+		;
+	rdfs:label "weather derivative" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	skos:definition "derivative instrument whose primary underlying notional item is based on something related to the weather, for example, the average temperature in Chicago in January"@en ;
+	fibo-fnd-utl-av:adaptedFrom "CFTC glossary, https://www.cftc.gov/LearnAndProtect/EducationCenter/CFTCGlossary/glossary_wxyz.html"@en ;
+	fibo-fnd-utl-av:explanatoryNote
+		"In the CFI standard, weather is classified as an environmental resource."@en ,
+		"Such a derivative can be used to hedge risks related to the demand for heating fuel or electricity. The underlying 'asset' is not a negotiable commodity per se, but because the weather can impact the prices and other things related to other commodities, weather derivatives are treated as commodity derivatives for regulatory purposes."@en
+		;
+	.
+
+fibo-der-drc-comm:hasGrade
+	a owl:ObjectProperty ;
+	rdfs:label "has grade"@en ;
+	rdfs:domain fibo-der-drc-comm:OilCommodity ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/> ;
+	rdfs:range fibo-der-drc-comm:OilGrade ;
+	skos:definition "The grade of oil e.g. Brent Crude."@en ;
+	.
+
+fibo-fnd-pas-pas:PreciousMetal
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-comm:Metal ;
+	.
+

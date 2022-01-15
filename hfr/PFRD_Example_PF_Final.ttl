@@ -1,0 +1,44 @@
+# baseURI: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Final.ttl
+# imports: http://hedgefundontology.com/hfr/form/PFFormFiling.ttl
+# imports: http://topbraid.org/sxml
+# prefix: pfrd-samp-final
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pfrd-samp-final: <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Final.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance#> .
+
+<http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Final.ttl>
+  rdf:type owl:Ontology ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/author> "Jurgen Ziemer"^^xsd:string ;
+  rdfs:comment """A Final filing can contain simply the FilingType and the Signatures section. It can optionally also include
+Related persons. Please refer sample file EXAMPLE_PF_FINAL.xml. Example 2 shows a Final filing."""^^xsd:string ;
+  rdfs:comment "The instances in this ontology file are reverse engineered from the IARD sample XML sample file."^^xsd:string ;
+  rdfs:isDefinedBy <https://www.iard.com/pfrd/usersupport> ;
+  owl:imports <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "The ontology version of the SEC provided sample Final Filing type This filing type is for advisers, who are no longer required to file Form PF."^^xsd:string ;
+.
+pfrd-samp-final:Document
+  rdf:type sxml:Document ;
+  sxml:root pfrd-samp-final:r ;
+.
+pfrd-samp-final:r
+  rdf:type <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#PFXMLFiling> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#filingTypeRef> <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#PFXMLFT_PF-FINAL> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#pFSection1aItemASignatureFirmAndRelatedPersonsRef> pfrd-samp-final:r-1 ;
+  sxml:prefix "xsi"^^xsd:string ;
+.
+pfrd-samp-final:r-1
+  rdf:type <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#PFSection1aItemASignatureMainType> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#emailAddress> "johnsmith@example.com"^^<http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#EmailTypeDatatype> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#individualName> "John Smith"^^<http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#StringRestricted128TypeDatatype> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#signature> "/S/ (Signature of John Smith)"^^<http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#StringRestricted128TypeDatatype> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#signatureDate> "2012-03-03"^^xsd:date ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#telephoneNumber> "555-555-5555"^^<http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#StringRestricted27TypeDatatype> ;
+  <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#title> "Director"^^<http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#StringRestricted128TypeDatatype> ;
+  <http://www.topbraid.org/2007/05/composite.owl#index> "1"^^xsd:int ;
+.

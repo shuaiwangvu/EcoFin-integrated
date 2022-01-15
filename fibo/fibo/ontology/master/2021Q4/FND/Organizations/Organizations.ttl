@@ -1,0 +1,335 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/Organizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/AgentsAndPeople/Agents/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/GoalsAndObjectives/Objectives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/Organizations/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-aap-agt: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-gao-obj: <https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/> .
+@prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/>
+	a owl:Ontology ;
+	rdfs:label "Organizations Ontology" ;
+	dct:abstract "This ontology defines high-level concepts for organizations and related terms, for use in other FIBO ontology elements.  It is purposefully underspecified to facilitate mapping to specific organization ontologies, such as the emerging W3C organization ontology, organization from a BMM or BPMN perspective, organization from a records management (RMS) perspective, and so forth." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2013-2021 EDM Council, Inc." ,
+		"Copyright (c) 2013-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-org-org" ;
+	sm:filename "Organizations.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/AgentsAndPeople/Agents/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/GoalsAndObjectives/Objectives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/Organizations/> ;
+	skos:changeNote
+		"The http://www.omg.org/spec/EDMC-FIBO/FND/20160201/Organizations/Organizations.rdf version of this ontology was modified per the FIBO 2.0 RFC, to revise the definition of Organization per ISO 6523." ,
+		"""The http://www.omg.org/spec/FIBO/Foundations/20130601/Organizations/Organizations.owl version of the ontology was revised in advance of the September 2013 New Brunswick, NJ meeting, as follows:
+   (1) to use slash style URI/IRIss (also called 303 URIs, vs. hash style) as required to support server side processing 
+   (2) to use version-independent IRIs for all definitions internally as opposed to version-specific IRIs
+   (3) to change the file suffix from .owl to .rdf to increase usability in RDF tools
+   (4) to use 4-level abbreviations and corresponding namespace prefixes for all FIBO ontologies, reflecting a family/specification/module/ontology structure
+   (5) to incorporate changes to the specification metadata to support documentation at the family, specification, module, and ontology level, similar to the abbreviations.""" ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified per the issue resolutions identified in the FIBO FND 1.0 FTF report and in https://spec.edmcouncil.org/fibo/ontology/FND/1.0/AboutFND-1.0/." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified per the issue resolutions identified in the FIBO FND 1.1 RTF report, to revise a restriction on Organization to reference PhysicalAddress (vs. PostalAddress)." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified to allow the Organizations ontology to import Parties, rather than the other way around, to simplify the class hierarchy for ease of use in data mapping and alignment, including moving OrganizationMember from Parties to Organizations, and to add the basis for structured organization name representation." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified to reflect the merge of Goals and Objectives." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified to revise the definition of Organization to broaden its scope to individuals that may or may not be people and eliminate duplication with concepts in LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations.rdf version of this ontology was modified to to move basic organization sub-unit and identifier definitions to FND from BE due to their fundamental nature and reusability and add links to the W3C organization ontology to provide hints as to which classes in this ontology map to the W3C ontology. Note that mappings are approximate and thus we used seeAlso rather than OWL equivalence relations."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-org-org:MemberBearingOrganization
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:PartyInRole ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:isPlayedBy ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty lcc-lr:hasMember ;
+				owl:someValuesFrom fibo-fnd-pty-pty:IndependentParty ;
+			] ;
+		]
+		;
+	rdfs:label "member-bearing organization" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	skos:definition "role of a group or organization that has members that are people or other organizations" ;
+	.
+
+fibo-fnd-org-org:Membership
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:Situation ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-org-org:hasMembership ;
+			owl:someValuesFrom fibo-fnd-org-org:MemberBearingOrganization ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-org-org:hasOrganizationMember ;
+			owl:someValuesFrom fibo-fnd-org-org:OrganizationMember ;
+		]
+		;
+	rdfs:label "membership"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#class-membership> ;
+	skos:definition "situation, corresponding to an n-ary relation, in which some group or organization has at least one member (person or organization) for some period of time" ;
+	.
+
+fibo-fnd-org-org:Organization
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:IndependentParty ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:hasPart ;
+			owl:allValuesFrom fibo-fnd-org-org:Organization ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasMember ;
+			owl:allValuesFrom fibo-fnd-pty-pty:IndependentParty ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-aap-agt:hasStructuredName ;
+			owl:onClass fibo-fnd-org-org:OrganizationName ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-gao-obj:hasGoal ;
+			owl:someValuesFrom fibo-fnd-gao-obj:Goal ;
+		]
+		;
+	rdfs:label "organization"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:Organization> ;
+	skos:definition "collection of one or more people, or groups of people formed together into a community or other social, commercial or political structure to act, or that is designated to act, towards some purpose, such as to meet a need or pursue collective goals on a continuing basis" ;
+	skos:example "This may be a business entity, government, international organization, not-for-profit, academic institution, or other unincorporated and/or informal social organization." ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en" ;
+	.
+
+fibo-fnd-org-org:OrganizationIdentificationScheme
+	a owl:Class ;
+	rdfs:subClassOf lcc-lr:IdentificationScheme ;
+	rdfs:label "organization identification scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	skos:definition "identification scheme dedicated to the unique identification of organizations" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en"^^xsd:anyURI ;
+	.
+
+fibo-fnd-org-org:OrganizationIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:identifies ;
+			owl:onClass fibo-fnd-org-org:Organization ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:isMemberOf ;
+			owl:onClass fibo-fnd-org-org:OrganizationIdentificationScheme ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "organization identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	skos:definition "identifier assigned to an organization within an organization identification scheme, and unique within that scheme" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en"^^xsd:anyURI ;
+	.
+
+fibo-fnd-org-org:OrganizationMember
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:PartyInRole ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:isPlayedBy ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty lcc-lr:isMemberOf ;
+				owl:allValuesFrom fibo-fnd-org-org:Organization ;
+			] ;
+		]
+		;
+	rdfs:label "organization member" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:Role> ;
+	skos:definition "party (person or organization) that has a membership role with respect to some organization" ;
+	.
+
+fibo-fnd-org-org:OrganizationName
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-pty:ContextualName ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-aap-agt:isStructuredNameOf ;
+			owl:onClass fibo-fnd-org-org:Organization ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasLegalName ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+			owl:onDataRange fibo-fnd-aap-agt:Text ;
+		]
+		;
+	rdfs:label "organization name" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	skos:definition "designation by which some organization is known in some context" ;
+	.
+
+fibo-fnd-org-org:OrganizationPartIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:identifies ;
+			owl:onClass fibo-fnd-org-org:OrganizationalSubUnit ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "organization part identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	skos:definition "identifier allocated to a particular organizational sub-unit" ;
+	fibo-fnd-utl-av:abbreviation "OPI" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en"^^xsd:anyURI ;
+	fibo-fnd-utl-av:synonym "organization sub-unit identifier" ;
+	.
+
+fibo-fnd-org-org:OrganizationalSubUnit
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-org-org:Organization ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:isPartOf ;
+			owl:allValuesFrom fibo-fnd-org-org:Organization ;
+		]
+		;
+	rdfs:label "organizational sub-unit" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:OrganizationalUnit> ;
+	skos:definition "any department, service, and other entity within a larger organization that only has full recognition within the context of that organization, but requires identification for some purpose" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso.org/obp/ui/#iso:std:iso-iec:6523:-1:ed-1:v1:en"^^xsd:anyURI ;
+	fibo-fnd-utl-av:explanatoryNote "In other words, it is not a legal entity in its own right." ;
+	fibo-fnd-utl-av:synonym "organization part" ;
+	.
+
+fibo-fnd-org-org:hasMembership
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-pty-pty:hasActor ;
+	rdfs:label "has membership role" ;
+	rdfs:domain fibo-fnd-org-org:Membership ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:MemberBearingOrganization ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:organization> ;
+	owl:inverseOf fibo-fnd-org-org:isMembershipPartyIn ;
+	skos:definition "identifies the organization acting in the role of having members in an organizational membership situation" ;
+	.
+
+fibo-fnd-org-org:hasOrganizationMember
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-pty-pty:hasUndergoer ;
+	rdfs:label "has organization member" ;
+	rdfs:domain fibo-fnd-org-org:Membership ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:OrganizationMember ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:member> ;
+	owl:inverseOf fibo-fnd-org-org:isOrganizationMember ;
+	skos:definition "indicates the party that is the member in an organizational membership situation" ;
+	.
+
+fibo-fnd-org-org:hasSubUnit
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-cr:hasPart ;
+	rdfs:label "has sub-unit" ;
+	rdfs:domain fibo-fnd-org-org:Organization ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:OrganizationalSubUnit ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:hasSubOrganization> ;
+	owl:inverseOf fibo-fnd-org-org:isSubUnitOf ;
+	skos:definition "relates an organization to a part of that organization" ;
+	.
+
+fibo-fnd-org-org:isMembershipPartyIn
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-pty-pty:actsIn ;
+	rdfs:label "is membership party in" ;
+	rdfs:domain fibo-fnd-org-org:MemberBearingOrganization ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:Membership ;
+	skos:definition "indicates the context of membership in which the party plays the role of having members" ;
+	.
+
+fibo-fnd-org-org:isOrganizationMember
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-pty-pty:undergoes ;
+	rdfs:label "is organization member" ;
+	rdfs:domain fibo-fnd-org-org:OrganizationMember ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:Membership ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:role> ;
+	skos:definition "indicates the context of membership in which some party is an organization member" ;
+	.
+
+fibo-fnd-org-org:isSubUnitOf
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-cr:isPartOf ;
+	rdfs:label "is sub-unit of" ;
+	rdfs:domain fibo-fnd-org-org:OrganizationalSubUnit ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> ;
+	rdfs:range fibo-fnd-org-org:Organization ;
+	rdfs:seeAlso <https://www.w3.org/TR/vocab-org/#org:subOrganizationOf> ;
+	skos:definition "relates a part of an organization to the larger entity" ;
+	.
+

@@ -1,0 +1,47 @@
+# baseURI: http://hedgefundontology.com/hfr/Hedge_Fund_Reasoning.ttl
+# imports: http://finregont.com/fro/ref/Judging_Contracts_Core.ttl
+# imports: http://fundontology.com/fr/Fund_Reasoning.ttl
+# imports: http://fundontology.com/fr/spin/Rules_IAA_spin.ttl
+# imports: http://hedgefundontology.com/hfr/form/PFFormFiling.ttl
+# imports: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl
+# imports: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl
+# imports: http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl
+# imports: http://spinrdf.org/spl
+# prefix: hfr-fund-reas
+
+@prefix Hedge_Fund_Reasoning: <http://hedgefundontology.com/hfr/Hedge_Fund_Reasoning#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-rel-rel: <http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/> .
+@prefix hfr-fund-reas: <http://hedgefundontology.com/hfr/Hedge_Fund_Reasoning.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fundontology.com/fr/data/FundSampleData.ttl#Manchester_Family_Office_adviser>
+  fibo-fnd-rel-rel:isClassifiedBy <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#IAA_misc_Family_office> ;
+.
+<http://hedgefundontology.com/hfr/Hedge_Fund_Reasoning.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "The data triples in this ontology instantiate FinRegOnt classes USC_Title, USC_Chapter,  USC_Paragraph etc. along with their properties. They are loaded from USC-2015-title12-chapter17, reverse engineered from the original data in Office of the Law Revision Counsel XML file."^^xsd:string ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  owl:imports <http://finregont.com/fro/ref/Judging_Contracts_Core.ttl> ;
+  owl:imports <http://fundontology.com/fr/Fund_Reasoning.ttl> ;
+  owl:imports <http://fundontology.com/fr/spin/Rules_IAA_spin.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  skos:definition "United States Code: CHAPTER 17— BANK HOLDING COMPANIES"^^xsd:string ;
+.

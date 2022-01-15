@@ -1,0 +1,762 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesIssuance/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/OwnershipAndControl/Executives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegulatoryAgencies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/ClientsAndAccounts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/AccountingEquity/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Agreements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Documents/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesIssuance/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-ra: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-pas-caa: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-aeq: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/AccountingEquity/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-agr-agr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/> .
+@prefix fibo-fnd-agr-ctr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix fibo-fnd-arr-doc: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-law-jur: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-sec-sec-iss: <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/>
+	a owl:Ontology ;
+	rdfs:label "Securities Issuance Ontology" ;
+	dct:abstract "This ontology defines the fundamental concepts for issuing securities, including securities offering, offering document, offering statement, securities underwriter, prospectus, and so forth." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2016-2021 EDM Council, Inc." ,
+		"Copyright (c) 2018-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-sec-sec-iss" ;
+	sm:filename "SecuritiesIssuance.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/OwnershipAndControl/Executives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegulatoryAgencies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/ClientsAndAccounts/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/AccountingEquity/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Agreements/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Documents/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesIssuance/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to add book entry form as a kind of registered security, make registered security a class with two individuals, namely book entry and 'bearer and registered', and clean up definitions to eliminate ambiguity where possible and conform to ISO 704." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to add the concept of the form the security is issued in, namely bearer or registered." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to clarify the definition of isIssuedInForm." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to eliminate duplication of concepts in LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to refactor conversion terms as a child of redemption provision, move redemption provision to financial instruments, and eliminate the unnecessary securities contract terms class." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/ version of this ontology was modified to refine the concept of a securities underwriter."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fbc-fi-fi:FinancialInstrument
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty fibo-sec-sec-iss:hasFinancialInstrumentShortName ;
+		owl:onClass fibo-sec-sec-iss:FinancialInstrumentShortName ;
+		owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+fibo-fbc-fi-fi:Issuer
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty fibo-sec-sec-iss:hasIssuerShortName ;
+		owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		owl:onDataRange xsd:string ;
+	] ;
+	.
+
+fibo-fbc-fi-fi:Security
+	a owl:Class ;
+	rdfs:subClassOf
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:isRegisteredWith ;
+			owl:onClass fibo-fbc-fct-ra:RegistrationAuthority ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:isIssuedInForm ;
+			owl:onClass fibo-sec-sec-iss:SecurityForm ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+fibo-sec-sec-iss:BearerAndRegisteredForm
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-arr-doc:Certificate ,
+		fibo-sec-sec-iss:RegisteredForm
+		;
+	rdfs:label "bearer and registered form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "form of a security that may be issued in both bearer and registered form but with the same identification number" ;
+	.
+
+fibo-sec-sec-iss:BearerForm
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-arr-doc:Certificate ,
+		fibo-sec-sec-iss:SecurityForm
+		;
+	rdfs:label "bearer form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "form of a security that is not registered in the books of the issuer or of the registrar and is payable to the person possessing the stock or bond certificate" ;
+	fibo-fnd-utl-av:explanatoryNote "Unlike normal registered instruments, no record is kept of who owns bearer instruments or of transactions involving the transfer of ownership." ;
+	.
+
+fibo-sec-sec-iss:BestEffortsOffering
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:SecuritiesOffering ;
+	rdfs:label "best efforts offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "securities offering whereby investment bankers commit to doing their best to sell the securities offered, but do not assume the full risk of an underwriter" ;
+	fibo-fnd-utl-av:adaptedFrom "Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ;
+	fibo-fnd-utl-av:explanatoryNote "In a best efforts offering, the agreement is strictly an agency arrangement, with no obligation on the part of the agent to purchase the securities. They act as a broker, in other words." ;
+	.
+
+fibo-sec-sec-iss:BookEntryForm
+	a
+		owl:NamedIndividual ,
+		fibo-sec-sec-iss:RegisteredForm
+		;
+	rdfs:label "book entry form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "form of a security in which ownership is recorded electronically by a central depository" ;
+	fibo-fnd-utl-av:synonym "registered form" ;
+	.
+
+fibo-sec-sec-iss:ConversionTerms
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:RedemptionProvision ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Security ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:specifiesConversionInto ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Security ;
+		]
+		;
+	rdfs:label "conversion terms" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "contract terms specifying when and how a security may be converted to another security (usually of the same issuer)" ;
+	.
+
+fibo-sec-sec-iss:ConvertibleSecurity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:Security ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:hasContractualElement ;
+			owl:someValuesFrom fibo-sec-sec-iss:ConversionTerms ;
+		]
+		;
+	rdfs:label "convertible security" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "security that can be converted into another security" ;
+	skos:example
+		"Convertible securities may be convertible bonds or preferred stocks that pay regular interest and can be converted into shares of common stock (sometimes conditioned on the stock price appreciating to a predetermined level)." ,
+		"Warrants are equity convertible securities. They give the owner the option to buy newly issued shares at a determined exercise price and date."
+		;
+	.
+
+fibo-sec-sec-iss:ExemptIssuer
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:Issuer ;
+	rdfs:label "exempt issuer" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "issuer that issues securities that are excused from certain regulatory reporting requirements" ;
+	skos:example "In general, these include governments and issuers of tax exempt securities such as municipalities, banks and depository institutions, and authorized insurance companies, railroads and public utilities, and certain non-profit organizations." ;
+	fibo-fnd-utl-av:adaptedFrom "http://www.investopedia.com/exam-guide/series-66/regulation-of-securities/exempt-securities.asp"^^xsd:anyURI ;
+	.
+
+fibo-sec-sec-iss:ExemptOffering
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-sec-sec-iss:PublicOffering ,
+		[
+			a owl:Class ;
+			owl:unionOf (
+				[
+					a owl:Restriction ;
+					owl:onProperty fibo-fnd-rel-rel:isIssuedBy ;
+					owl:someValuesFrom fibo-sec-sec-iss:ExemptIssuer ;
+				]
+				[
+					a owl:Restriction ;
+					owl:onProperty fibo-fnd-rel-rel:embodies ;
+					owl:someValuesFrom fibo-sec-sec-iss:ExemptTransaction ;
+				]
+			) ;
+		]
+		;
+	rdfs:label "exempt offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "public offering involving securities that are excused from certain regulatory reporting requirements" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ,
+		"http://www.investopedia.com/exam-guide/series-66/regulation-of-securities/exempt-securities.asp"^^xsd:anyURI
+		;
+	fibo-fnd-utl-av:explanatoryNote "Such an offering may be considered exempt either because the issuer is exempt or the transaction specific to the offering is exempt." ;
+	.
+
+fibo-sec-sec-iss:ExemptTransaction
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:SecuritiesTransaction ;
+	rdfs:label "exempt transaction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "securities transaction for which there is no requirement to register the transaction with a regulatory agency" ;
+	skos:example "Examples include non-issuer transactions in outstanding securities, other isolated non-issuer transactions, certain unsolicited  / de minimis transactions, fiduciary transactions, transactions with financial institutions, private placement transactions that meet certain conditions, and so forth." ;
+	fibo-fnd-utl-av:adaptedFrom "http://www.investopedia.com/terms/e/exempttransaction.asp"^^xsd:anyURI ;
+	.
+
+fibo-sec-sec-iss:FinancialInstrumentShortName
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:hasInstrumentDescription ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:hasIssuerShortName ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "financial instrument short name" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "abbreviated name for a financial instrument within a defined structure as specified in ISO 18774" ;
+	fibo-fnd-utl-av:abbreviation "FISN" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18774:2015(E), Securities and related financial instruments - Financial Instrument Short Name (FISN)" ;
+	.
+
+fibo-sec-sec-iss:FirmCommitmentOffering
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:SecuritiesOffering ;
+	rdfs:label "firm commitment offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	owl:disjointWith fibo-sec-sec-iss:BestEffortsOffering ;
+	skos:definition "securities offering whereby the underwriter purchases the securities outright for their own account" ;
+	fibo-fnd-utl-av:adaptedFrom "Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ;
+	.
+
+fibo-sec-sec-iss:MiscellaneousForm
+	a
+		owl:NamedIndividual ,
+		fibo-sec-sec-iss:SecurityForm
+		;
+	rdfs:label "miscellaneous form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "form of a security that is not categorized" ;
+	fibo-fnd-utl-av:explanatoryNote "Miscellaneous form is used to describe securities wherein the form is not stated as being bearer or registered." ;
+	.
+
+fibo-sec-sec-iss:OfferingDocument
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-be-fct-pub:Publication ,
+		fibo-fnd-arr-doc:LegalDocument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-doc:hasDateOfIssuance ;
+			owl:onClass fibo-fnd-dt-fd:Date ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-doc:hasExpirationDate ;
+			owl:onClass fibo-fnd-dt-fd:Date ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:isEvidenceFor ;
+			owl:onClass fibo-sec-sec-iss:SecuritiesOffering ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Security ;
+		]
+		;
+	rdfs:label "offering document" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "legal document that states the objectives, risks and terms of an investment" ;
+	fibo-fnd-utl-av:adaptedFrom "EDM Council" ;
+	fibo-fnd-utl-av:explanatoryNote "There are many variations, including offering memorandum, which is typically used in the context of a private placement, offering statement, which has slightly different meanings depending on the context (for securities, for bonds, etc.) and so forth.  This concept is intended to act as a more abstract parent for these more nuanced concepts." ;
+	.
+
+fibo-sec-sec-iss:OfferingStatement
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:OfferingDocument ;
+	rdfs:label "offering statement" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "offering memorandum that conforms to Regulation A, Offering Statement, of the Securities Act of 1933" ;
+	fibo-fnd-utl-av:explanatoryNote "See https://www.sec.gov/about/forms/form1-a.pdf for the actual form detail" ;
+	.
+
+fibo-sec-sec-iss:PrivateOffering
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-sec-sec-iss:SecuritiesOffering ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:isEvidencedBy ;
+			owl:someValuesFrom fibo-sec-sec-iss:PrivatePlacementMemorandum ;
+		]
+		;
+	rdfs:label "private offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "offering of securities made privately to a limited number of qualified potential investors" ;
+	fibo-fnd-utl-av:adaptedFrom "EDM Council / Quarule" ;
+	fibo-fnd-utl-av:explanatoryNote "Unlike a public offering, a private placement does not have to be registered with a regulatory agency if the securities are purchased for investment rather than resale." ;
+	fibo-fnd-utl-av:synonym "private placement" ;
+	.
+
+fibo-sec-sec-iss:PrivatePlacementMemorandum
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:OfferingDocument ;
+	rdfs:label "private placement memorandum" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "legal document stating the objectives, risks and terms of investment involved with a private placement" ;
+	fibo-fnd-utl-av:abbreviation "PPM" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ,
+		"http://www.investopedia.com/terms/o/offeringmemorandum.asp"^^xsd:anyURI
+		;
+	fibo-fnd-utl-av:explanatoryNote "An offering memorandum serves to provide buyers with information on the offering and to protect the sellers from the liability associated with selling unregistered securities. It includes information such as the financial statements, management biographies, a detailed description of the business, etc." ;
+	fibo-fnd-utl-av:synonym "offering memorandum" ;
+	.
+
+fibo-sec-sec-iss:Prospectus
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:OfferingDocument ;
+	rdfs:label "prospectus" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:seeAlso "http://www.investopedia.com/terms/p/prospectus.asp"^^xsd:anyURI ;
+	skos:definition "formal, written offering document to sell securities that provides the facts an investor needs to make an informed investment decision" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ,
+		"The Securities Act of 1933, as amended 5 April 2012, see http://www.sec.gov/about/laws/sa33.pdf"
+		;
+	fibo-fnd-utl-av:explanatoryNote
+		"A prospectus may specify the facts about an offering of securities, mutual funds, or limited partnerships for investments in oil, gas, equipment leasing, or other kinds of limited partnerships." ,
+		"In the United States, a prospectus may be a formal legal document, required by and filed with the Securities and Exchange Commission, if it provides details about an investment offering for sale to the public."
+		;
+	.
+
+fibo-sec-sec-iss:PublicOffering
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-sec-sec-iss:SecuritiesOffering ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:isEvidencedBy ;
+			owl:someValuesFrom fibo-sec-sec-iss:Prospectus ;
+		]
+		;
+	rdfs:label "public offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "offering of securities for sale to the investment public, after compliance with registration requirements of the relevant regulatory authorities" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ,
+		"http://www.nasdaq.com/investing/glossary/p/http%3a%2f%2fwww.nasdaq.com%2finvesting%2fglossary%2fp%2fpublic-offering"^^xsd:anyURI
+		;
+	fibo-fnd-utl-av:explanatoryNote "In the US, public offerings generally require approval of the Securities Exchange Commission and/or relevant state regulators, unless the issuer is an exempt issuer, and are usually conducted by an investment banker or a syndicate made up of several investment bankers, at a price agreed upon between the issuer and the investment bankers." ;
+	.
+
+fibo-sec-sec-iss:RegisteredForm
+	a owl:Class ;
+	rdfs:subClassOf fibo-sec-sec-iss:SecurityForm ;
+	rdfs:label "registered form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "form of a security whereby ownership is recorded in the name of the owner on the books of the issuer or the issuer's registrar and can only be transferred to another owner when endorsed by the registered owner" ;
+	fibo-fnd-utl-av:explanatoryNote "With registered securities, a ledger is kept by the issuing company or agent which records the owners of all the securities. Transfer of ownership can only occur when names are changed in the ledger." ;
+	.
+
+fibo-sec-sec-iss:SecuritiesOffering
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-pas-fpas:Offering ,
+		fibo-fnd-agr-agr:Agreement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-pty:hasPartyInRole ;
+			owl:onClass fibo-fbc-pas-fpas:ThirdPartyAgent ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-sec-sec-iss:isUnderwrittenBy ;
+			owl:onClass fibo-sec-sec-iss:SecurityUnderwriter ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-pas-fpas:hasOfferingPrice ;
+			owl:onClass fibo-fnd-acc-cur:MonetaryPrice ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:hasGoverningJurisdiction ;
+			owl:someValuesFrom fibo-fnd-law-jur:Jurisdiction ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-agr-ctr:isEvidencedBy ;
+			owl:someValuesFrom fibo-sec-sec-iss:OfferingDocument ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Security ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isIssuedBy ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-fbc-fi-fi:Issuer
+					fibo-fbc-pas-fpas:Offeror
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "securities offering" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "offering of a security (or securities) for sale" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"Barron's Dictionary of Finance and Investment Terms, Ninth Edition, 2014." ,
+		"http://www.investopedia.com/"^^xsd:anyURI
+		;
+	fibo-fnd-utl-av:explanatoryNote "If the offering is public, then it can only be made after regulatory registration requirements have been met. The securities may be new or a secondary offering of a previously issued security, and may include stock, multiple classes of equity shares, municipal or other government bonds, and so forth. Offerings, especially to the investment public, are typically made by an investment banker, or syndicate of investment bankers." ;
+	.
+
+fibo-sec-sec-iss:SecurityForm
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-agr-ctr:ContractDocument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-pas-caa:realizes ;
+			owl:someValuesFrom fibo-fnd-acc-aeq:FinancialAsset ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Security ;
+		]
+		;
+	rdfs:label "security form" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "nature of the proof of ownership of a security" ;
+	fibo-fnd-utl-av:explanatoryNote "Securities are typically issued in one of two forms, registered or bearer. Most securities issued today are in registered form, which enables the issuing firm or registrar to keep records of a security's owner and mail them any dividend, coupon, or other payments. Registered securities may be issued in book entry (digital only) or certificate (physical) form, but most today are entirely digital." ;
+	.
+
+fibo-sec-sec-iss:SecurityOfferingDistributionType
+	a rdfs:Datatype ;
+	rdfs:label "security offering distribution type" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	owl:equivalentClass [
+		a rdfs:Datatype ;
+		owl:oneOf (
+			"primary"
+			"secondary"
+		) ;
+	] ;
+	skos:definition "the type of distribution for a securities offering, including (1) primary offering - the original sale of a company's securities, in which the proceeds from the sale are received directly by the company, and (2) secondary offering - an offering of a security that has been issued previously" ;
+	.
+
+fibo-sec-sec-iss:SecurityUnderwriter
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fct-fse:Underwriter ,
+		fibo-fbc-pas-fpas:ThirdPartyAgent ,
+		fibo-fnd-agr-ctr:ContractThirdParty ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:isPlayedBy ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty fibo-fnd-pty-pty:isAPartyTo ;
+				owl:someValuesFrom fibo-sec-sec-iss:SecuritiesOffering ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:isPlayedBy ;
+			owl:someValuesFrom [
+				a owl:Restriction ;
+				owl:onProperty fibo-fnd-pty-pty:isAPartyTo ;
+				owl:someValuesFrom fibo-sec-sec-iss:SecurityUnderwritingArrangement ;
+			] ;
+		]
+		;
+	rdfs:label "security underwriter" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "party that has purchased from an issuer with a view to, or sells for an issuer in connection with, the distribution of any security, or participates or has a direct or indirect participation in any such undertaking, or participates or has a participation in the direct or indirect underwriting of any such undertaking" ;
+	fibo-fnd-utl-av:adaptedFrom "Section 3a of the Investment Company Act of 1940 as amended in January, 2012, https://www.sec.gov/about/laws/ica40.pdf" ;
+	.
+
+fibo-sec-sec-iss:SecurityUnderwritingArrangement
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fct-fse:UnderwritingArrangement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-pty:hasPartyInRole ;
+			owl:someValuesFrom fibo-sec-sec-iss:SecurityUnderwriter ;
+		]
+		;
+	rdfs:label "security underwriting arrangement" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	skos:definition "underwriting agreement between an organization (typically an investment bank) and a securities issuer that commits the underwriter to assuming risk involved in buying a new issue of securities and reselling it to the public" ;
+	fibo-fnd-utl-av:adaptedFrom "Barron's Dictionary of Business and Economics Terms, Fifth Edition, 2012" ;
+	fibo-fnd-utl-av:explanatoryNote "Sales may be made either directly or through third-party dealers." ;
+	.
+
+fibo-sec-sec-iss:hasActualClosingDate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDate ;
+	rdfs:label "has actual closing date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fnd-dt-fd:ExplicitDate ;
+	skos:definition "indicates the date on which an offering or transaction officially closes, in contrast with an intended closing date" ;
+	.
+
+fibo-sec-sec-iss:hasAnnouncementDate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDate ;
+	rdfs:label "has announcement date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fnd-dt-fd:Date ;
+	skos:definition "indicates the first day the public will receive information regarding a new security issue" ;
+	fibo-fnd-utl-av:explanatoryNote "An announcement date may also refer to the release of a corporate event or new financial news, such as interest rate changes or earnings reports." ;
+	.
+
+fibo-sec-sec-iss:hasFinancialInstrumentShortName
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-lr:isIdentifiedBy ;
+	rdfs:label "has financial instrument short name" ;
+	rdfs:domain fibo-fbc-fi-fi:FinancialInstrument ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-sec-sec-iss:FinancialInstrumentShortName ;
+	skos:definition "relates a security to its ISO 18774-compliant short name, which includes an issuer short name, abbreviated instrument characteristics, and abbreviated instrument description per the ISO standard" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18774:2015(E), Securities and related financial instruments - Financial Instrument Short Name (FISN)" ;
+	.
+
+fibo-sec-sec-iss:hasFirstTradeDate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDate ;
+	rdfs:label "has first trade date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fnd-dt-fd:ExplicitDate ;
+	skos:definition "indicates the date on which a newly issued security starts trading" ;
+	.
+
+fibo-sec-sec-iss:hasFirstTradeSettlementDate
+	a owl:ObjectProperty ;
+	rdfs:label "has first trade settlement date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fnd-dt-fd:Date ;
+	skos:definition "indicates the date on which the first trade of a newly issued security is settled" ;
+	.
+
+fibo-sec-sec-iss:hasInstrumentDescription
+	a owl:DatatypeProperty ;
+	rdfs:label "has instrument description" ;
+	rdfs:domain [
+		a owl:Class ;
+		owl:unionOf (
+			fibo-fbc-fi-fi:FinancialInstrument
+			fibo-sec-sec-iss:FinancialInstrumentShortName
+		) ;
+	] ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range xsd:string ;
+	skos:definition "relates a financial instrument or FISN to an ISO 18774-compliant instrument description, that is, a collection of characteristics and attributes defining a financial instrument with a maximum length up to 19 alphanumeric characters" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18774:2015(E), Securities and related financial instruments - Financial Instrument Short Name (FISN)" ;
+	.
+
+fibo-sec-sec-iss:hasIssuerShortName
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:hasFormalName ;
+	rdfs:label "has issuer short name" ;
+	rdfs:domain [
+		a owl:Class ;
+		owl:unionOf (
+			fibo-fbc-fi-fi:Issuer
+			fibo-sec-sec-iss:FinancialInstrumentShortName
+		) ;
+	] ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range xsd:string ;
+	skos:definition "relates a security issuer or FISN to an ISO 18774-compliant issuer short name, that is, an abbreviation of the official issuer name, limited to a maximum of 15 alphanumeric characters" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18774:2015(E), Securities and related financial instruments - Financial Instrument Short Name (FISN)" ;
+	.
+
+fibo-sec-sec-iss:hasSeries
+	a owl:DatatypeProperty ;
+	rdfs:label "has series" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range xsd:string ;
+	skos:definition "indicates the series identified by the issuer in the event that the instrument is issued in several series (also known as tranches)" ;
+	.
+
+fibo-sec-sec-iss:hasSubscriptionAmount
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasAmount ;
+	rdfs:label "has subscription amount" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range xsd:integer ;
+	skos:definition "indicates a number of shares or units" ;
+	.
+
+fibo-sec-sec-iss:hasSubscriptionPeriod
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDatePeriod ;
+	rdfs:label "has subscription period" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fnd-dt-fd:DatePeriod ;
+	skos:definition "indicates a period of time in which investors can commit to purchase shares (or units) to be issued" ;
+	.
+
+fibo-sec-sec-iss:isIssuedInForm
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf
+		fibo-fbc-pas-caa:isRealizedBy ,
+		fibo-fnd-agr-ctr:isEvidencedBy
+		;
+	rdfs:label "is issued in form" ;
+	rdfs:domain fibo-fbc-fi-fi:Security ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-sec-sec-iss:SecurityForm ;
+	skos:definition "indicates the form in which the security is issued, typically in registered form" ;
+	.
+
+fibo-sec-sec-iss:isOverAllotted
+	a owl:DatatypeProperty ;
+	rdfs:label "is over-allotted" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range xsd:boolean ;
+	skos:definition "indicates whether or not the subscription is over-subscribed" ;
+	.
+
+fibo-sec-sec-iss:isRegisteredWith
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fbc-fct-ra:isRegisteredBy ;
+	rdfs:label "is registered" ;
+	rdfs:domain fibo-fbc-fi-fi:Security ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fbc-fct-ra:RegistrationAuthority ;
+	skos:definition "indicates the registration authority for a given security, i.e., in the name of the owner on the books of the issuer, with the issuer's registrar, with a third-party transfer agent, with a broker-dealer, or other competent party" ;
+	.
+
+fibo-sec-sec-iss:isUnderwrittenBy
+	a owl:ObjectProperty ;
+	rdfs:label "is underwritten by" ;
+	rdfs:domain fibo-sec-sec-iss:SecuritiesOffering ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fbc-fct-fse:Underwriter ;
+	skos:definition "relates an offering to an underwriter involved in raising capital for or distributing the instruments that are the subject of the offering" ;
+	.
+
+fibo-sec-sec-iss:specifiesConversionInto
+	a owl:ObjectProperty ;
+	rdfs:label "specifies conversion into" ;
+	rdfs:domain fibo-sec-sec-iss:ConversionTerms ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-fbc-fi-fi:Security ;
+	skos:definition "specifies a security that will replace a convertible security under the terms of the agreement" ;
+	.
+
+fibo-sec-sec-iss:underwrites
+	a owl:ObjectProperty ;
+	rdfs:label "underwrites" ;
+	rdfs:domain fibo-fbc-fct-fse:Underwriter ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/> ;
+	rdfs:range fibo-sec-sec-iss:SecuritiesOffering ;
+	owl:inverseOf fibo-sec-sec-iss:isUnderwrittenBy ;
+	skos:definition "identifies one or more underwriters involved in raising capital for or distributing the instruments that are the subject of the offering" ;
+	fibo-fnd-utl-av:adaptedFrom "http://www.investopedia.com/terms/u/underwriting.asp"^^xsd:anyURI ;
+	fibo-fnd-utl-av:explanatoryNote "Underwriting is the process by which investment bankers raise investment capital from investors on behalf of corporations and governments that are issuing either equity or debt securities." ;
+	.
+

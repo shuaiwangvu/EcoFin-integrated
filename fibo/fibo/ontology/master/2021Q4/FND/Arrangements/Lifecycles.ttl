@@ -1,0 +1,273 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Lifecycles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/BusinessDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/Occurrences/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Lifecycles/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-arr-lif: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> .
+@prefix fibo-fnd-dt-oc: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/>
+	a owl:Ontology ;
+	rdfs:label "Lifecycles Ontology" ;
+	dct:abstract "This ontology defines a set of basic concepts for lifecycles, including the various stages and events that make up a given lifecycle, for use in describing product, trade, instrument, production, and other lifecycles in FIBO." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2017-2021 EDM Council, Inc." ,
+		"Copyright (c) 2017-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-arr-lif" ;
+	sm:filename "Lifecycles.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/BusinessDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/Occurrences/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Lifecycles/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles.rdf version of this ontology was revised to add lifecycle stage as the superclass of maturity level." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles.rdf version of this ontology was revised to define lifecycle status, normalize definitions per ISO 704 and eliminate duplication with concepts in LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles.rdf version of this ontology was revised to eliminate references to external dictionary sites that no longer resolve." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles.rdf version of this ontology was revised to replace hasDefinition with isDefinedIn to clarify intent."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-arr-lif:Lifecycle
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Arrangement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:hasStage ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStage ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:isLifecycleOf ;
+			owl:someValuesFrom owl:Thing ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:defines ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStage ;
+		]
+		;
+	rdfs:label "lifecycle" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "arrangement that compares the cyclical nature of families, organizations, processes, products, marketing, and order management, portfolio management or other systems with the cradle to grave life stages (birth, growth, maturity, decay, and death) of living organisms" ;
+	skos:example "The product life cycle describes the period of time over which an item is developed, brought to market and eventually removed from the market. The cycle is broken into four stages: introduction, growth, maturity and decline. The idea of the product life cycle is used in marketing to decide when it is appropriate to advertise, reduce prices, explore new markets or create new packaging." ;
+	.
+
+fibo-fnd-arr-lif:LifecycleEvent
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:OccurrenceKind ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStage ;
+		]
+		;
+	rdfs:label "lifecycle event" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "kind of event that occurs during one or more stages of a lifecycle" ;
+	skos:example "a call notification or coupon payment as a part of a bond lifecycle" ;
+	.
+
+fibo-fnd-arr-lif:LifecycleEventOccurrence
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:Occurrence ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:exemplifies ;
+			owl:onClass fibo-fnd-arr-lif:LifecycleEvent ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStageOccurrence ;
+		]
+		;
+	rdfs:label "lifecycle event occurrence" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "realization of an event in a stage of a lifecycle" ;
+	.
+
+fibo-fnd-arr-lif:LifecycleOccurrence
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:Occurrence ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:exemplifies ;
+			owl:onClass fibo-fnd-arr-lif:Lifecycle ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:hasStage ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStageOccurrence ;
+		]
+		;
+	rdfs:label "lifecycle occurrence" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "realization of a lifecycle" ;
+	.
+
+fibo-fnd-arr-lif:LifecycleStage
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:isStageOf ;
+			owl:someValuesFrom fibo-fnd-arr-lif:Lifecycle ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleEvent ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isDefinedIn ;
+			owl:someValuesFrom fibo-fnd-arr-lif:Lifecycle ;
+		]
+		;
+	rdfs:label "lifecycle stage" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "phase in a lifecycle" ;
+	skos:example "a research and development phase of a product lifecycle, the introduction phase in a marketing lifecycle, a growth stage in an economic lifecycle, or the origination phase in the lifecycle of a loan" ;
+	.
+
+fibo-fnd-arr-lif:LifecycleStageOccurrence
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-dt-oc:Occurrence ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-dt-oc:exemplifies ;
+			owl:onClass fibo-fnd-arr-lif:LifecycleStage ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:isStageOf ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleOccurrence ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleEventOccurrence ;
+		]
+		;
+	rdfs:label "lifecycle stage occurrence" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "realization of a phase in a given lifecycle" ;
+	.
+
+fibo-fnd-arr-lif:LifecycleStatus
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:Classifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-lif:hasStage ;
+			owl:someValuesFrom fibo-fnd-arr-lif:LifecycleStageOccurrence ;
+		]
+		;
+	rdfs:label "lifecycle status" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	skos:definition "classifier indicating the position or state of something at a particular point in its life-cycle" ;
+	.
+
+fibo-fnd-arr-lif:hasLifecycle
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:isCharacterizedBy ;
+	rdfs:label "has lifecycle" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	rdfs:range fibo-fnd-arr-lif:Lifecycle ;
+	skos:definition "relates something, such as a product, trade, or related process, to a lifecycle that characterizes it" ;
+	.
+
+fibo-fnd-arr-lif:hasStage
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-cr:hasPart ;
+	rdfs:label "has stage" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			fibo-fnd-arr-lif:LifecycleStage
+			fibo-fnd-arr-lif:LifecycleStageOccurrence
+		) ;
+	] ;
+	skos:definition "relates something, such as a product or trade lifecycle or related process, to a phase or stage in that lifecycle" ;
+	.
+
+fibo-fnd-arr-lif:isLifecycleOf
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:characterizes ;
+	rdfs:label "is lifecycle of" ;
+	rdfs:domain fibo-fnd-arr-lif:Lifecycle ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	owl:inverseOf fibo-fnd-arr-lif:hasLifecycle ;
+	skos:definition "relates a lifecycle to something it characterizes" ;
+	.
+
+fibo-fnd-arr-lif:isStageOf
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-cr:isPartOf ;
+	rdfs:label "is stage of" ;
+	rdfs:domain [
+		a owl:Class ;
+		owl:unionOf (
+			fibo-fnd-arr-lif:LifecycleStage
+			fibo-fnd-arr-lif:LifecycleStageOccurrence
+		) ;
+	] ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/> ;
+	owl:inverseOf fibo-fnd-arr-lif:hasStage ;
+	skos:definition "relates a stage in a product or trade lifecycle or process to the lifecycle or process that it is a stage of" ;
+	.
+
+fibo-fnd-utl-av:MaturityLevel
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-arr-lif:LifecycleStage ;
+	.
+

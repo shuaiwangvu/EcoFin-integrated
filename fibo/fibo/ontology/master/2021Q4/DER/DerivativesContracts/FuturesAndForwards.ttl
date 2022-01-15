@@ -1,0 +1,409 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/InstrumentPricing/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/EconomicIndicators/EconomicIndicators/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/MarketIndices/BasketIndices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/Bonds/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/DebtInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/TradedShortTermDebt/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Equities/EquityInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesListings/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-der-drc-bsc: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-drc-ff: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> .
+@prefix fibo-der-drc-swp: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/> .
+@prefix fibo-der-sbd-sbd: <https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/> .
+@prefix fibo-fbc-fct-mkt: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/> .
+@prefix fibo-fbc-fct-ra: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-fi-ip: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/InstrumentPricing/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-ei-ei: <https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/> .
+@prefix fibo-ind-mkt-bas: <https://spec.edmcouncil.org/fibo/ontology/IND/MarketIndices/BasketIndices/> .
+@prefix fibo-sec-dbt-bnd: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/> .
+@prefix fibo-sec-dbt-dbti: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtInstruments/> .
+@prefix fibo-sec-dbt-tstd: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/TradedShortTermDebt/> .
+@prefix fibo-sec-eq-eq: <https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/EquityInstruments/> .
+@prefix fibo-sec-sec-bsk: <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Baskets/> .
+@prefix fibo-sec-sec-lst: <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesListings/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/>
+	a owl:Ontology ;
+	rdfs:label "Futures and Forwards Ontology"@en ;
+	dct:abstract "This ontology defines concepts for derivative contracts, including forwards and futures, representing a commitment to sell or purchase the underlier at a defined price at a given time in the future." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2015-2021 EDM Council, Inc." ,
+		"Copyright (c) 2015-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/BE/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/IND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/SEC/>
+		;
+	sm:fileAbbreviation "fibo-der-drc-ff" ;
+	sm:filename "FuturesAndForwards.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/InstrumentPricing/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Agreements/Contracts/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/EconomicIndicators/EconomicIndicators/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/MarketIndices/BasketIndices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/Bonds/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/DebtInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Debt/TradedShortTermDebt/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Equities/EquityInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/Baskets/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/SEC/Securities/SecuritiesListings/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards.rdf version of this ontology was modified to eliminate references to hasContractSize, clean up unnecessary restrictions on Future and Forward, and eliminate the redundant listing class." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards.rdf version of this ontology was modified to move designated contract market to the markets ontology in FBC and revise the definition of a CurrencyFuture to eliminate an unnecessary superclass and restriction due to the release of CurrencyContracts and to revise the definition of a dividend future to reference the listed share that it tracks rather than the dividend itself."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-der-drc-ff:BasketFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-sec-bsk:MixedBasket ;
+		]
+		;
+	rdfs:label "basket future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is a basket of securities and/or indices"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:BondFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:DebtInstrumentFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-dbt-bnd:Bond ;
+		]
+		;
+	rdfs:label "bond future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one bond"@en ;
+	.
+
+fibo-der-drc-ff:CurrencyFuture
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-ff:FinancialFuture ;
+	rdfs:label "currency future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is an agreement to exchange a specified amount of one currency for another at some point in the future based on pricing stated in the contract"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:synonym
+		"foreign exchange future"@en ,
+		"forex future"@en
+		;
+	.
+
+fibo-der-drc-ff:DebtInstrumentFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		fibo-der-sbd-sbd:DebtInstrumentDerivative ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-fbc-fi-fi:DebtInstrument ;
+		]
+		;
+	rdfs:label "debt instrument future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one debt instrument"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:DividendFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		fibo-der-sbd-sbd:EquityDerivative ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-eq-eq:ListedShare ;
+		]
+		;
+	rdfs:label "dividend future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one stock dividend"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:EquityFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		fibo-der-sbd-sbd:EquityDerivative ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-eq-eq:ListedShare ;
+		]
+		;
+	rdfs:label "equity future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one equity security, specifically a publicly issued and traded share"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:FinancialFuture
+	a owl:Class ;
+	rdfs:subClassOf fibo-fbc-fi-fi:Future ;
+	rdfs:label "financial future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract based on underlying assets excluding commodities"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:Forward
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-bsc:OverTheCounterInstrument ,
+		fibo-fbc-fi-fi:DerivativeInstrument
+		;
+	rdfs:label "forward"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "derivative instrument that is privately negotiated between parties to buy the underlier at a specified future date at the price specified in the contract"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Unlike futures contracts (which are processed through a clearing firm), forward contracts are non-standardized. Further, the two parties must bear each other's credit risk, which is not the case with a futures contract. Also, since the contracts are not exchange traded, there is no mark-to-market requirement, which allows a buyer to avoid almost all capital outflow initially (though some counterparties might set collateral requirements). The forward price makes the forward contract have no value when the contract is written. However, if the value of the underlying commodity changes, the value of the forward contract becomes positive or negative, depending on the position held. Forwards are priced in a manner similar to futures. Like in the case of a futures contract, the first step in pricing a forward is to add the spot price to the cost of carry (interest forgone, convenience yield, storage costs and interest/dividend received on the underlying). Unlike a futures contract though, the price may also include a premium for counterparty credit risk, and the fact that there is not daily marking to market process to minimize default risk. If there is no allowance for these credit risks, then the forward price will equal the futures price."@en ;
+	fibo-fnd-utl-av:synonym "forward contract"@en ;
+	.
+
+fibo-der-drc-ff:FutureOnFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Future ;
+		]
+		;
+	rdfs:label "future on future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one (other) futures contract"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:FutureOnOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Option ;
+		]
+		;
+	rdfs:label "future on option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one option contract"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:FutureOnSwap
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-drc-swp:Swap ;
+		]
+		;
+	rdfs:label "future on swap"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one swap contract"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	.
+
+fibo-der-drc-ff:IndexFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-ind-ei-ei:EconomicIndicator
+					fibo-ind-mkt-bas:ReferenceIndex
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "index future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract whose underlying asset is at least one reference index or economic indicator"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:explanatoryNote "For each index there may be a different multiple for determining the price of the futures contract."@en ;
+	.
+
+fibo-der-drc-ff:InterestRateFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:FinancialFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					fibo-fbc-fi-fi:CashInstrument
+					fibo-sec-dbt-dbti:FixedIncomeSecurity
+				) ;
+			] ;
+		]
+		;
+	rdfs:label "interest rate future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract with an interest-bearing instrument as the underlying asset"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Most interest rate futures that trade on American exchanges use U.S. Treasury securities, such as Treasury bills, Treasury bonds, certificates of deposit, Treasury notes, and Ginnie Mae securities, as the underlying asset."@en ;
+	.
+
+fibo-der-drc-ff:MoneyMarketFuture
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-ff:DebtInstrumentFuture ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-sec-dbt-tstd:MoneyMarketInstrument ;
+		]
+		;
+	rdfs:label "money market future"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "futures contract with a money market instrument as the underlying asset"@en ;
+	.
+
+fibo-der-drc-ff:StandardizedFuturesListingTerms
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-bsc:DerivativeTerms ,
+		fibo-fbc-fi-fi:StandardizedTerms ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-be-fct-pub:hasPublisher ;
+			owl:someValuesFrom fibo-fbc-fct-mkt:DesignatedContractMarket ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-sec-sec-lst:Listing ;
+		]
+		;
+	rdfs:label "standardized futures listing terms"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "contract terms established by a derivatives exchange that apply to any listing of a futures contract on that exchange."@en ;
+	fibo-fnd-utl-av:explanatoryNote "Individual listings will take on these standard terms but they are not contractual terms of the futures contract, they are facts about that listing on that exchange."@en ;
+	.
+
+fibo-der-drc-ff:StandardizedFuturesTerms
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-bsc:DerivativeTerms ,
+		fibo-fbc-fi-fi:StandardizedTerms ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fct-ra:specifies ;
+			owl:someValuesFrom fibo-fbc-pas-fpas:SettlementTerms ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:appliesTo ;
+			owl:someValuesFrom fibo-fbc-fi-fi:Future ;
+		]
+		;
+	rdfs:label "standardized futures terms"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	skos:definition "contract terms established by a derivatives exchange that apply to any futures contract traded on that exchange"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Standard symbology for the commodities are standardized by the exchanges as part of their standard contracts, for example trading in standard bushels, commonly defined kinds of oil and so on. These give the units in which lot sizes are described and defined."@en ;
+	.
+
+fibo-der-drc-ff:hasConversionFactor
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-qt-qtu:hasNumericValue ;
+	rdfs:label "has conversion factor"@en ;
+	rdfs:domain fibo-der-drc-ff:BondFuture ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	rdfs:range xsd:decimal ;
+	skos:definition "indicates the price of the delivered bond/note ($1 par value) to yield a fixed rate. The conversion factor is used to calculate a final delivery price."@en ;
+	.
+
+fibo-der-drc-ff:hasMultiple
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-qt-qtu:hasNumericValue ;
+	rdfs:label "has multiple"@en ;
+	rdfs:domain fibo-der-drc-ff:IndexFuture ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> ;
+	rdfs:range xsd:decimal ;
+	skos:definition "indicates the multiple for determining the price of the futures contract in relation to the underlying index rate"@en ;
+	.
+
+fibo-fbc-fi-fi:Future
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty fibo-fbc-fi-ip:hasLotSize ;
+		owl:someValuesFrom xsd:decimal ;
+	] ;
+	fibo-fnd-utl-av:explanatoryNote "A futures contract obligates the buyer to pay the seller a predetermined price based on the market value of the underlier, unless the contract is sold before settlement date which may happen if a trader waits to take a profit or cut a loss. This contrasts with options trading in which the option buyer may choose whether or not to exercise the option. Futures are distinguished from generic forward contracts in that they contain standardized terms, trade on a formal exchange, are regulated by overseeing agencies, and are guaranteed by clearing houses. Also, in order to insure that payment will occur, futures have a margin requirement that must be settled daily. Finally, by making an offsetting trade, taking delivery of goods, or arranging for an exchange of goods, futures contracts can be closed. Hedgers often trade futures for the purpose of keeping price risk in check."@en ;
+	fibo-fnd-utl-av:synonym "futures contract"@en ;
+	.
+

@@ -1,0 +1,4530 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CA/
+# imports: https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-uspsai: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-3166-2-ca: <https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CA/> .
+@prefix lcc-3166-2-us: <https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/>
+	a owl:Ontology ;
+	rdfs:label "U.S. Postal Service Addresses Individuals Ontology" ;
+	dct:abstract "This ontology augments the U.S. Postal Service Address ontology with individuals for various street suffixes, military and U.S. Department of State specific individuals, and preferred designations for state and territory codes." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "http://www.w3.org/standards/techs/owl#w3c_all"^^xsd:anyURI ;
+	sm:contributor "Thematix Partners LLC" ;
+	sm:copyright
+		"Copyright (c) 2019-2020 EDM Council, Inc." ,
+		"Copyright (c) 2019-2020 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-plc-uspsai" ;
+	sm:filename "USPostalServiceAddressIndividuals.rdf" ;
+	rdfs:seeAlso
+		<https://about.usps.com/who/profile/> ,
+		<https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf>
+		;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CA/> ,
+		<https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-plc-uspsai:AA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the state designation for Armed Forces Americas, excluding Canada" ;
+	fibo-fnd-utl-av:preferredDesignation "AA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesAmericas ;
+	lcc-lr:hasTag "AA" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesAmericas ;
+	.
+
+fibo-fnd-plc-uspsai:AB
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AB" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Alberta" ;
+	fibo-fnd-utl-av:preferredDesignation "AB" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Alberta ;
+	lcc-lr:hasTag "AB" ;
+	lcc-lr:identifies lcc-3166-2-ca:Alberta ;
+	.
+
+fibo-fnd-plc-uspsai:AE
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the state designation for Armed Forces Europe, the Middle East, and Canada" ;
+	fibo-fnd-utl-av:preferredDesignation "AE" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesEurope ;
+	lcc-lr:hasTag "AE" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesEurope ;
+	.
+
+fibo-fnd-plc-uspsai:AK
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AK" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Alaska" ;
+	fibo-fnd-utl-av:preferredDesignation "AK" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Alaska ;
+	lcc-lr:hasTag "AK" ;
+	lcc-lr:identifies lcc-3166-2-us:Alaska ;
+	.
+
+fibo-fnd-plc-uspsai:AL
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AL" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Alabama" ;
+	fibo-fnd-utl-av:preferredDesignation "AL" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Alabama ;
+	lcc-lr:hasTag "AL" ;
+	lcc-lr:identifies lcc-3166-2-us:Alabama ;
+	.
+
+fibo-fnd-plc-uspsai:AP
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AP" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the state designation for Armed Forces Pacific" ;
+	fibo-fnd-utl-av:preferredDesignation "AP" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesPacific ;
+	lcc-lr:hasTag "AP" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesPacific ;
+	.
+
+fibo-fnd-plc-uspsai:AR
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AR" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Arkansas" ;
+	fibo-fnd-utl-av:preferredDesignation "AR" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Arkansas ;
+	lcc-lr:hasTag "AR" ;
+	lcc-lr:identifies lcc-3166-2-us:Arkansas ;
+	.
+
+fibo-fnd-plc-uspsai:AS
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AS" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for American Samoa" ;
+	fibo-fnd-utl-av:preferredDesignation "AS" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:AmericanSamoa ;
+	lcc-lr:hasTag "AS" ;
+	lcc-lr:identifies lcc-3166-2-us:AmericanSamoa ;
+	.
+
+fibo-fnd-plc-uspsai:AZ
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "AZ" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Arizona" ;
+	fibo-fnd-utl-av:preferredDesignation "AZ" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Arizona ;
+	lcc-lr:hasTag "AZ" ;
+	lcc-lr:identifies lcc-3166-2-us:Arizona ;
+	.
+
+fibo-fnd-plc-uspsai:Alley
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "alley" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "narrow passageway between or behind buildings" ;
+	fibo-fnd-utl-av:commonDesignation
+		"ALLEE" ,
+		"ALLEY" ,
+		"ALLY" ,
+		"ALY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ALY" ;
+	.
+
+fibo-fnd-plc-uspsai:Annex
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "annex" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "addition appended to something else, such as another street" ;
+	fibo-fnd-utl-av:commonDesignation
+		"ANEX" ,
+		"ANNEX" ,
+		"ANNX" ,
+		"ANX"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ANX" ;
+	.
+
+fibo-fnd-plc-uspsai:Arcade
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "arcade" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "arched or covered passageway, usually with shops on each side" ;
+	fibo-fnd-utl-av:commonDesignation
+		"ARC" ,
+		"ARCADE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ARC" ;
+	.
+
+fibo-fnd-plc-uspsai:ArmedForcesAmericas
+	a
+		owl:NamedIndividual ,
+		lcc-cr:CountrySubdivision
+		;
+	rdfs:label "Armed Forces Americas" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "state designation for Armed Forces Americas, excluding Canada" ;
+	lcc-cr:hasEnglishShortName "Armed Forces Americas"@en ;
+	lcc-cr:isClassifiedBy lcc-3166-2-us:State ;
+	lcc-cr:isSubregionOf lcc-3166-1:UnitedStatesOfAmerica ;
+	.
+
+fibo-fnd-plc-uspsai:ArmedForcesEurope
+	a
+		owl:NamedIndividual ,
+		lcc-cr:CountrySubdivision
+		;
+	rdfs:label "Armed Forces Europe" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "state designation for Armed Forces Europe, the Middle East, and Canada" ;
+	lcc-cr:hasEnglishShortName "Armed Forces Europe, the Middle East, and Canada"@en ;
+	lcc-cr:isClassifiedBy lcc-3166-2-us:State ;
+	lcc-cr:isSubregionOf lcc-3166-1:UnitedStatesOfAmerica ;
+	.
+
+fibo-fnd-plc-uspsai:ArmedForcesPacific
+	a
+		owl:NamedIndividual ,
+		lcc-cr:CountrySubdivision
+		;
+	rdfs:label "Armed Forces Pacific" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "state designation for Armed Forces Pacific" ;
+	lcc-cr:hasEnglishShortName "Armed Forces Pacific"@en ;
+	lcc-cr:isClassifiedBy lcc-3166-2-us:State ;
+	lcc-cr:isSubregionOf lcc-3166-1:UnitedStatesOfAmerica ;
+	.
+
+fibo-fnd-plc-uspsai:Avenue
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "avenue" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "broad road in a town or city, typically having trees at regular intervals along its sides" ;
+	fibo-fnd-utl-av:commonDesignation
+		"AV" ,
+		"AVE" ,
+		"AVEN" ,
+		"AVENU" ,
+		"AVENUE" ,
+		"AVN" ,
+		"AVNUE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "AVE" ;
+	.
+
+fibo-fnd-plc-uspsai:BC
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "BC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for British Columbia" ;
+	fibo-fnd-utl-av:preferredDesignation "BC" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:BritishColumbia ;
+	lcc-lr:hasTag "BC" ;
+	lcc-lr:identifies lcc-3166-2-ca:BritishColumbia ;
+	.
+
+fibo-fnd-plc-uspsai:Bayou
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bayou" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "creek, secondary watercourse, or minor river that is tributary to another body of water" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BAYOO" ,
+		"BAYOU"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BYU" ;
+	.
+
+fibo-fnd-plc-uspsai:Beach
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "beach" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "shore of a body of water covered by sand, gravel, or larger rock fragments" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BCH" ,
+		"BEACH"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BCH" ;
+	.
+
+fibo-fnd-plc-uspsai:Bend
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bend" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "curve, especially a sharp one, in a road, river, racecourse, or path" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BEND" ,
+		"BND"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BND" ;
+	.
+
+fibo-fnd-plc-uspsai:Bluff
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bluff" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "broad, rounded cliff" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BLF" ,
+		"BLUF" ,
+		"BLUFF"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BLF" ;
+	.
+
+fibo-fnd-plc-uspsai:Bluffs
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bluffs" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "multiple broad, rounded cliffs" ;
+	fibo-fnd-utl-av:commonDesignation "BLUFFS" ;
+	fibo-fnd-utl-av:preferredDesignation "BLFS" ;
+	.
+
+fibo-fnd-plc-uspsai:Bottom
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bottom" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "deepest or lowest part of something, such as the bottom of a hill" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BOT" ,
+		"BOTTM" ,
+		"BOTTOM" ,
+		"BTM"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BTM" ;
+	.
+
+fibo-fnd-plc-uspsai:Boulevard
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "boulevard" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "broad thoroughfare in a city, usually having areas at the sides or center for trees, grass, or flowers" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BLVD" ,
+		"BOUL" ,
+		"BOULEVARD" ,
+		"BOULV"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BLVD" ;
+	.
+
+fibo-fnd-plc-uspsai:Branch
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "branch" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "division of a road or path" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BR" ,
+		"BRANCH" ,
+		"BRNCH"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BR" ;
+	.
+
+fibo-fnd-plc-uspsai:Bridge
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bridge" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "structure carrying a road, path, railroad, or canal across a river, ravine, road, railroad, or other obstacle" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BRDGE" ,
+		"BRG" ,
+		"BRIDGE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BRG" ;
+	.
+
+fibo-fnd-plc-uspsai:Brook
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "brook" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "small, natural freshwater stream" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BRK" ,
+		"BROOK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BRK" ;
+	.
+
+fibo-fnd-plc-uspsai:Brooks
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "brooks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "multiple small, natural freshwater streams" ;
+	fibo-fnd-utl-av:commonDesignation "BROOKS" ;
+	fibo-fnd-utl-av:preferredDesignation "BRKS" ;
+	.
+
+fibo-fnd-plc-uspsai:Burg
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "burg" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "city or town (informal)" ;
+	fibo-fnd-utl-av:commonDesignation "BURG" ;
+	fibo-fnd-utl-av:preferredDesignation "BG" ;
+	.
+
+fibo-fnd-plc-uspsai:Burgs
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "burgs" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "multiple cities or towns (informal)" ;
+	fibo-fnd-utl-av:commonDesignation "BURGS" ;
+	fibo-fnd-utl-av:preferredDesignation "BGS" ;
+	.
+
+fibo-fnd-plc-uspsai:Bypass
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "bypass" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "road passing around a town or its center to provide an alternative route for through traffic" ;
+	fibo-fnd-utl-av:commonDesignation
+		"BYP" ,
+		"BYPA" ,
+		"BYPAS" ,
+		"BYPASS" ,
+		"BYS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "BYP" ;
+	.
+
+fibo-fnd-plc-uspsai:CA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "CA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for California" ;
+	fibo-fnd-utl-av:preferredDesignation "CA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:California ;
+	lcc-lr:hasTag "CA" ;
+	lcc-lr:identifies lcc-3166-2-us:California ;
+	.
+
+fibo-fnd-plc-uspsai:CO
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "CO" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Colorado" ;
+	fibo-fnd-utl-av:preferredDesignation "CO" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Colorado ;
+	lcc-lr:hasTag "CO" ;
+	lcc-lr:identifies lcc-3166-2-us:Colorado ;
+	.
+
+fibo-fnd-plc-uspsai:CT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "CT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Connecticut" ;
+	fibo-fnd-utl-av:preferredDesignation "CT" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Connecticut ;
+	lcc-lr:hasTag "CT" ;
+	lcc-lr:identifies lcc-3166-2-us:Connecticut ;
+	.
+
+fibo-fnd-plc-uspsai:Camp
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "camp" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CAMP" ,
+		"CMP" ,
+		"CP"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CP" ;
+	.
+
+fibo-fnd-plc-uspsai:Canyon
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "canyon" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CANYN" ,
+		"CANYON" ,
+		"CNYN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CYN" ;
+	.
+
+fibo-fnd-plc-uspsai:Cape
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "cape" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CAPE" ,
+		"CPE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CPE" ;
+	.
+
+fibo-fnd-plc-uspsai:Causeway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "causeway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CAUSEWAY" ,
+		"CAUSWA" ,
+		"CSWY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CSWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Center
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "center" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CEN" ,
+		"CENT" ,
+		"CENTER" ,
+		"CENTR" ,
+		"CENTRE" ,
+		"CNTER" ,
+		"CNTR" ,
+		"CTR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CTR" ;
+	.
+
+fibo-fnd-plc-uspsai:Centers
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "centers" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CENTERS" ;
+	fibo-fnd-utl-av:preferredDesignation "CTRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Circle
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "circle" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CIR" ,
+		"CIRC" ,
+		"CIRCL" ,
+		"CIRCLE" ,
+		"CRCL" ,
+		"CRCLE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CIR" ;
+	.
+
+fibo-fnd-plc-uspsai:Circles
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "circles" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CIRCLES" ;
+	fibo-fnd-utl-av:preferredDesignation "CIRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Cliff
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "cliff" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CLF" ,
+		"CLIFF"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CLF" ;
+	.
+
+fibo-fnd-plc-uspsai:Cliffs
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "cliffs" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CLFS" ,
+		"CLIFFS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CLFS" ;
+	.
+
+fibo-fnd-plc-uspsai:Club
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "club" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CLB" ,
+		"CLUB"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CLB" ;
+	.
+
+fibo-fnd-plc-uspsai:Common
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "common" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "COMMON" ;
+	fibo-fnd-utl-av:preferredDesignation "CMN" ;
+	.
+
+fibo-fnd-plc-uspsai:Commons
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "commons" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "COMMONS" ;
+	fibo-fnd-utl-av:preferredDesignation "CMNS" ;
+	.
+
+fibo-fnd-plc-uspsai:Corner
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "corner" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"COR" ,
+		"CORNER"
+		;
+	fibo-fnd-utl-av:preferredDesignation "COR" ;
+	.
+
+fibo-fnd-plc-uspsai:Corners
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "corners" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CORNERS" ,
+		"CORS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CORS" ;
+	.
+
+fibo-fnd-plc-uspsai:Course
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "course" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"COURSE" ,
+		"CRSE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CRSE" ;
+	.
+
+fibo-fnd-plc-uspsai:Court
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "court" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"COURT" ,
+		"CT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CT" ;
+	.
+
+fibo-fnd-plc-uspsai:Courts
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "courts" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"COURTS" ,
+		"CTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Cove
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "cove" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"COVE" ,
+		"CV"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CV" ;
+	.
+
+fibo-fnd-plc-uspsai:Coves
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "coves" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "COVES" ;
+	fibo-fnd-utl-av:preferredDesignation "CVS" ;
+	.
+
+fibo-fnd-plc-uspsai:Creek
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "creek" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CREEK" ,
+		"CRK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CRK" ;
+	.
+
+fibo-fnd-plc-uspsai:Crescent
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "crescent" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CRES" ,
+		"CRESCENT" ,
+		"CRSENT" ,
+		"CRSNT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "CRES" ;
+	.
+
+fibo-fnd-plc-uspsai:Crest
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "crest" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CREST" ;
+	fibo-fnd-utl-av:preferredDesignation "CRST" ;
+	.
+
+fibo-fnd-plc-uspsai:Crossing
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "crossing" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"CROSSING" ,
+		"CRSSNG" ,
+		"XING"
+		;
+	fibo-fnd-utl-av:preferredDesignation "XING" ;
+	.
+
+fibo-fnd-plc-uspsai:Crossroad
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "crossroad" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CROSSROAD" ;
+	fibo-fnd-utl-av:preferredDesignation "XRD" ;
+	.
+
+fibo-fnd-plc-uspsai:Crossroads
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "crossroads" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CROSSROADS" ;
+	fibo-fnd-utl-av:preferredDesignation "XRDS" ;
+	.
+
+fibo-fnd-plc-uspsai:Curve
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "curve" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "CURVE" ;
+	fibo-fnd-utl-av:preferredDesignation "CURV" ;
+	.
+
+fibo-fnd-plc-uspsai:DC
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "DC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for the District of Colombia" ;
+	fibo-fnd-utl-av:preferredDesignation "DC" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:DistrictOfColumbia ;
+	lcc-lr:hasTag "DC" ;
+	lcc-lr:identifies lcc-3166-2-us:DistrictOfColumbia ;
+	.
+
+fibo-fnd-plc-uspsai:DE
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "DE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Delaware" ;
+	fibo-fnd-utl-av:preferredDesignation "DE" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Delaware ;
+	lcc-lr:hasTag "DE" ;
+	lcc-lr:identifies lcc-3166-2-us:Delaware ;
+	.
+
+fibo-fnd-plc-uspsai:Dale
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "dale" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"DALE" ,
+		"DL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "DL" ;
+	.
+
+fibo-fnd-plc-uspsai:Dam
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "dam" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"DAM" ,
+		"DM"
+		;
+	fibo-fnd-utl-av:preferredDesignation "DM" ;
+	.
+
+fibo-fnd-plc-uspsai:Divide
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "divide" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"DIV" ,
+		"DIVIDE" ,
+		"DV" ,
+		"DVD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "DV" ;
+	.
+
+fibo-fnd-plc-uspsai:Drive
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "drive" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"DR" ,
+		"DRIV" ,
+		"DRIVE" ,
+		"DRV"
+		;
+	fibo-fnd-utl-av:preferredDesignation "DR" ;
+	.
+
+fibo-fnd-plc-uspsai:Drives
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "drives" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "DRIVES" ;
+	fibo-fnd-utl-av:preferredDesignation "DRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Estate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "estate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"EST" ,
+		"ESTATE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "EST" ;
+	.
+
+fibo-fnd-plc-uspsai:Estates
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "estates" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"ESTATES" ,
+		"ESTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ESTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Expressway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "expressway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"EXP" ,
+		"EXPR" ,
+		"EXPRESS" ,
+		"EXPRESSWAY" ,
+		"EXPW" ,
+		"EXPY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "EXPY" ;
+	.
+
+fibo-fnd-plc-uspsai:Extension
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "extension" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"EXT" ,
+		"EXTENSION" ,
+		"EXTN" ,
+		"EXTNSN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "EXT" ;
+	.
+
+fibo-fnd-plc-uspsai:Extensions
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "extensions" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "EXTS" ;
+	fibo-fnd-utl-av:preferredDesignation "EXTS" ;
+	.
+
+fibo-fnd-plc-uspsai:FL
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "FL" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Florida" ;
+	fibo-fnd-utl-av:preferredDesignation "FL" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Florida ;
+	lcc-lr:hasTag "FL" ;
+	lcc-lr:identifies lcc-3166-2-us:Florida ;
+	.
+
+fibo-fnd-plc-uspsai:Fall
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "fall" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "FALL" ;
+	fibo-fnd-utl-av:preferredDesignation "FALL" ;
+	.
+
+fibo-fnd-plc-uspsai:Falls
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "falls" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FALLS" ,
+		"FLS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FLS" ;
+	.
+
+fibo-fnd-plc-uspsai:Ferry
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ferry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FERRY" ,
+		"FRRY" ,
+		"FRY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRY" ;
+	.
+
+fibo-fnd-plc-uspsai:Field
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "field" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FIELD" ,
+		"FLD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FLD" ;
+	.
+
+fibo-fnd-plc-uspsai:Fields
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "fields" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FIELDS" ,
+		"FLDS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FLDS" ;
+	.
+
+fibo-fnd-plc-uspsai:Flat
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "flat" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FLAT" ,
+		"FLT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FLT" ;
+	.
+
+fibo-fnd-plc-uspsai:Flats
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "flats" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FLATS" ,
+		"FLTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FLTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Ford
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ford" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FORD" ,
+		"FRD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRD" ;
+	.
+
+fibo-fnd-plc-uspsai:Fords
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "fords" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "FORDS" ;
+	fibo-fnd-utl-av:preferredDesignation "FRDS" ;
+	.
+
+fibo-fnd-plc-uspsai:Forest
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "forest" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FOREST" ,
+		"FORESTS" ,
+		"FRST"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRST" ;
+	.
+
+fibo-fnd-plc-uspsai:Forge
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "forge" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FORG" ,
+		"FORGE" ,
+		"FRG"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRG" ;
+	.
+
+fibo-fnd-plc-uspsai:Forges
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "forges" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "FORGES" ;
+	fibo-fnd-utl-av:preferredDesignation "FRGS" ;
+	.
+
+fibo-fnd-plc-uspsai:Fork
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "fork" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FORK" ,
+		"FRK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRK" ;
+	.
+
+fibo-fnd-plc-uspsai:Forks
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "forks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FORKS" ,
+		"FRKS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FRKS" ;
+	.
+
+fibo-fnd-plc-uspsai:Fort
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "fort" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FORT" ,
+		"FRT" ,
+		"FT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FT" ;
+	.
+
+fibo-fnd-plc-uspsai:Freeway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "freeway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"FREEWAY" ,
+		"FREEWY" ,
+		"FRWAY" ,
+		"FRWY" ,
+		"FWY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "FWY" ;
+	.
+
+fibo-fnd-plc-uspsai:GA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "GA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Georgia" ;
+	fibo-fnd-utl-av:preferredDesignation "GA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Georgia ;
+	lcc-lr:hasTag "GA" ;
+	lcc-lr:identifies lcc-3166-2-us:Georgia ;
+	.
+
+fibo-fnd-plc-uspsai:GU
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "GU" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Guam" ;
+	fibo-fnd-utl-av:preferredDesignation "GU" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Guam ;
+	lcc-lr:hasTag "GU" ;
+	lcc-lr:identifies lcc-3166-2-us:Guam ;
+	.
+
+fibo-fnd-plc-uspsai:Garden
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "garden" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GARDEN" ,
+		"GARDN" ,
+		"GRDEN" ,
+		"GRDN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GDN" ;
+	.
+
+fibo-fnd-plc-uspsai:Gardens
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "gardens" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GARDENS" ,
+		"GDNS" ,
+		"GRDNS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GDNS" ;
+	.
+
+fibo-fnd-plc-uspsai:Gateway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "gateway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GATEWAY" ,
+		"GATEWY" ,
+		"GATWAY" ,
+		"GTWAY" ,
+		"GTWY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GTWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Glen
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "glen" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GLEN" ,
+		"GLN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GLN" ;
+	.
+
+fibo-fnd-plc-uspsai:Glens
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "glens" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "GLENS" ;
+	fibo-fnd-utl-av:preferredDesignation "GLNS" ;
+	.
+
+fibo-fnd-plc-uspsai:Green
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "green" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GREEN" ,
+		"GRN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GRN" ;
+	.
+
+fibo-fnd-plc-uspsai:Greens
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "greens" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "GREENS" ;
+	fibo-fnd-utl-av:preferredDesignation "GRNS" ;
+	.
+
+fibo-fnd-plc-uspsai:Grove
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "grove" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"GROV" ,
+		"GROVE" ,
+		"GRV"
+		;
+	fibo-fnd-utl-av:preferredDesignation "GRV" ;
+	.
+
+fibo-fnd-plc-uspsai:Groves
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "groves" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "GROVES" ;
+	fibo-fnd-utl-av:preferredDesignation "GRVS" ;
+	.
+
+fibo-fnd-plc-uspsai:HI
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "HI" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Hawaii" ;
+	fibo-fnd-utl-av:preferredDesignation "HI" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Hawaii ;
+	lcc-lr:hasTag "HI" ;
+	lcc-lr:identifies lcc-3166-2-us:Hawaii ;
+	.
+
+fibo-fnd-plc-uspsai:Harbor
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "harbor" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HARB" ,
+		"HARBOR" ,
+		"HARBR" ,
+		"HBR" ,
+		"HRBOR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HBR" ;
+	.
+
+fibo-fnd-plc-uspsai:Harbors
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "harbors" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "HARBORS" ;
+	fibo-fnd-utl-av:preferredDesignation "HBRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Haven
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "haven" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HAVEN" ,
+		"HVN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HVN" ;
+	.
+
+fibo-fnd-plc-uspsai:Heights
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "heights" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HT" ,
+		"HTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Highway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "highway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HIGHWAY" ,
+		"HIGHWY" ,
+		"HIWAY" ,
+		"HIWY" ,
+		"HWAY" ,
+		"HWY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Hill
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "hill" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HILL" ,
+		"HL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HL" ;
+	.
+
+fibo-fnd-plc-uspsai:Hills
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "hills" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HILLS" ,
+		"HLS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HLS" ;
+	.
+
+fibo-fnd-plc-uspsai:Hollow
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "hollow" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"HLLW" ,
+		"HOLLOW" ,
+		"HOLLOWS" ,
+		"HOLW" ,
+		"HOLWS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "HOLW" ;
+	.
+
+fibo-fnd-plc-uspsai:IA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "IA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Iowa" ;
+	fibo-fnd-utl-av:preferredDesignation "IA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Iowa ;
+	lcc-lr:hasTag "IA" ;
+	lcc-lr:identifies lcc-3166-2-us:Iowa ;
+	.
+
+fibo-fnd-plc-uspsai:ID
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "ID" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Idaho" ;
+	fibo-fnd-utl-av:preferredDesignation "ID" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Idaho ;
+	lcc-lr:hasTag "ID" ;
+	lcc-lr:identifies lcc-3166-2-us:Idaho ;
+	.
+
+fibo-fnd-plc-uspsai:IL
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "IL" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Illinois" ;
+	fibo-fnd-utl-av:preferredDesignation "IL" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Illinois ;
+	lcc-lr:hasTag "IL" ;
+	lcc-lr:identifies lcc-3166-2-us:Illinois ;
+	.
+
+fibo-fnd-plc-uspsai:IN
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "IN" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Indiana" ;
+	fibo-fnd-utl-av:preferredDesignation "IN" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Indiana ;
+	lcc-lr:hasTag "IN" ;
+	lcc-lr:identifies lcc-3166-2-us:Indiana ;
+	.
+
+fibo-fnd-plc-uspsai:Inlet
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "inlet" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "INLT" ;
+	fibo-fnd-utl-av:preferredDesignation "INLT" ;
+	.
+
+fibo-fnd-plc-uspsai:Island
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "island" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"IS" ,
+		"ISLAND" ,
+		"ISLND"
+		;
+	fibo-fnd-utl-av:preferredDesignation "IS" ;
+	.
+
+fibo-fnd-plc-uspsai:Islands
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "islands" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"ISLANDS" ,
+		"ISLNDS" ,
+		"ISS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ISS" ;
+	.
+
+fibo-fnd-plc-uspsai:Isle
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "isle" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"ISLE" ,
+		"ISLES"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ISLE" ;
+	.
+
+fibo-fnd-plc-uspsai:Junction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "junction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"JCT" ,
+		"JCTION" ,
+		"JCTN" ,
+		"JUNCTION" ,
+		"JUNCTN" ,
+		"JUNCTON"
+		;
+	fibo-fnd-utl-av:preferredDesignation "JCT" ;
+	.
+
+fibo-fnd-plc-uspsai:Junctions
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "junctions" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"JCTNS" ,
+		"JCTS" ,
+		"JUNCTIONS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "JCTS" ;
+	.
+
+fibo-fnd-plc-uspsai:KS
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "KS" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Kansas" ;
+	fibo-fnd-utl-av:preferredDesignation "KS" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Kansas ;
+	lcc-lr:hasTag "KS" ;
+	lcc-lr:identifies lcc-3166-2-us:Kansas ;
+	.
+
+fibo-fnd-plc-uspsai:KY
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "KY" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Kentucky" ;
+	fibo-fnd-utl-av:preferredDesignation "KY" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Kentucky ;
+	lcc-lr:hasTag "KY" ;
+	lcc-lr:identifies lcc-3166-2-us:Kentucky ;
+	.
+
+fibo-fnd-plc-uspsai:Key
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "key" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"KEY" ,
+		"KY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "KY" ;
+	.
+
+fibo-fnd-plc-uspsai:Keys
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "keys" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"KEYS" ,
+		"KYS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "KYS" ;
+	.
+
+fibo-fnd-plc-uspsai:Knoll
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "knoll" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"KNL" ,
+		"KNOL" ,
+		"KNOLL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "KNL" ;
+	.
+
+fibo-fnd-plc-uspsai:Knolls
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "knolls" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"KNLS" ,
+		"KNOLLS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "KNLS" ;
+	.
+
+fibo-fnd-plc-uspsai:LA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "LA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Louisiana" ;
+	fibo-fnd-utl-av:preferredDesignation "LA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Louisiana ;
+	lcc-lr:hasTag "LA" ;
+	lcc-lr:identifies lcc-3166-2-us:Louisiana ;
+	.
+
+fibo-fnd-plc-uspsai:Lake
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lake" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LAKE" ,
+		"LK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LK" ;
+	.
+
+fibo-fnd-plc-uspsai:Lakes
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lakes" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LAKES" ,
+		"LKS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LKS" ;
+	.
+
+fibo-fnd-plc-uspsai:Land
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "land" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "LAND" ;
+	fibo-fnd-utl-av:preferredDesignation "LAND" ;
+	.
+
+fibo-fnd-plc-uspsai:Landing
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "landing" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LANDING" ,
+		"LNDG" ,
+		"LNDNG"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LNDG" ;
+	.
+
+fibo-fnd-plc-uspsai:Lane
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lane" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LANE" ,
+		"LN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LN" ;
+	.
+
+fibo-fnd-plc-uspsai:Light
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "light" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LGT" ,
+		"LIGHT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LGT" ;
+	.
+
+fibo-fnd-plc-uspsai:Lights
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lights" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "LIGHTS" ;
+	fibo-fnd-utl-av:preferredDesignation "LGTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Loaf
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "loaf" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LF" ,
+		"LOAF"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LF" ;
+	.
+
+fibo-fnd-plc-uspsai:Lock
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lock" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LCK" ,
+		"LOCK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LCK" ;
+	.
+
+fibo-fnd-plc-uspsai:Locks
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "locks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LCKS" ,
+		"LOCKS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LCKS" ;
+	.
+
+fibo-fnd-plc-uspsai:Lodge
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "lodge" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LDG" ,
+		"LDGE" ,
+		"LODG" ,
+		"LODGE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LDG" ;
+	.
+
+fibo-fnd-plc-uspsai:Loop
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "loop" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"LOOP" ,
+		"LOOPS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "LOOP" ;
+	.
+
+fibo-fnd-plc-uspsai:MA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Massachusetts" ;
+	fibo-fnd-utl-av:preferredDesignation "MA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Massachusetts ;
+	lcc-lr:hasTag "MA" ;
+	lcc-lr:identifies lcc-3166-2-us:Massachusetts ;
+	.
+
+fibo-fnd-plc-uspsai:MB
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MB" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Manitoba" ;
+	fibo-fnd-utl-av:preferredDesignation "MB" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Manitoba ;
+	lcc-lr:hasTag "MB" ;
+	lcc-lr:identifies lcc-3166-2-ca:Manitoba ;
+	.
+
+fibo-fnd-plc-uspsai:MD
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MD" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Maryland" ;
+	fibo-fnd-utl-av:preferredDesignation "MD" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Maryland ;
+	lcc-lr:hasTag "MD" ;
+	lcc-lr:identifies lcc-3166-2-us:Maryland ;
+	.
+
+fibo-fnd-plc-uspsai:ME
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "ME" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Maine" ;
+	fibo-fnd-utl-av:preferredDesignation "ME" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Maine ;
+	lcc-lr:hasTag "ME" ;
+	lcc-lr:identifies lcc-3166-2-us:Maine ;
+	.
+
+fibo-fnd-plc-uspsai:MI
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MI" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Michigan" ;
+	fibo-fnd-utl-av:preferredDesignation "MI" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Michigan ;
+	lcc-lr:hasTag "MI" ;
+	lcc-lr:identifies lcc-3166-2-us:Michigan ;
+	.
+
+fibo-fnd-plc-uspsai:MN
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MN" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Minnesota" ;
+	fibo-fnd-utl-av:preferredDesignation "MN" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Minnesota ;
+	lcc-lr:hasTag "MN" ;
+	lcc-lr:identifies lcc-3166-2-us:Minnesota ;
+	.
+
+fibo-fnd-plc-uspsai:MO
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MO" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Missouri" ;
+	fibo-fnd-utl-av:preferredDesignation "MO" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Missouri ;
+	lcc-lr:hasTag "MO" ;
+	lcc-lr:identifies lcc-3166-2-us:Missouri ;
+	.
+
+fibo-fnd-plc-uspsai:MP
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MP" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for the outlying area of Northern Mariana Islands" ;
+	fibo-fnd-utl-av:preferredDesignation "MP" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NorthernMarianaIslands ;
+	lcc-lr:hasTag "MP" ;
+	lcc-lr:identifies lcc-3166-2-us:NorthernMarianaIslands ;
+	.
+
+fibo-fnd-plc-uspsai:MS
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MS" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Mississippi" ;
+	fibo-fnd-utl-av:preferredDesignation "MS" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Mississippi ;
+	lcc-lr:hasTag "MS" ;
+	lcc-lr:identifies lcc-3166-2-us:Mississippi ;
+	.
+
+fibo-fnd-plc-uspsai:MT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "MT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Montana" ;
+	fibo-fnd-utl-av:preferredDesignation "MT" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Montana ;
+	lcc-lr:hasTag "MT" ;
+	lcc-lr:identifies lcc-3166-2-us:Montana ;
+	.
+
+fibo-fnd-plc-uspsai:Mall
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mall" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MALL" ;
+	fibo-fnd-utl-av:preferredDesignation "MALL" ;
+	.
+
+fibo-fnd-plc-uspsai:Manor
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "manor" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MANOR" ,
+		"MNR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MNR" ;
+	.
+
+fibo-fnd-plc-uspsai:Manors
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "manors" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MANORS" ,
+		"MNRS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MNRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Meadow
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "meadow" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MEADOW" ;
+	fibo-fnd-utl-av:preferredDesignation "MDW" ;
+	.
+
+fibo-fnd-plc-uspsai:Meadows
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "meadows" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MDW" ,
+		"MDWS" ,
+		"MEADOWS" ,
+		"MEDOWS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MDWS" ;
+	.
+
+fibo-fnd-plc-uspsai:Mews
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mews" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MEWS" ;
+	fibo-fnd-utl-av:preferredDesignation "MEWS" ;
+	.
+
+fibo-fnd-plc-uspsai:Mill
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mill" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MILL" ;
+	fibo-fnd-utl-av:preferredDesignation "ML" ;
+	.
+
+fibo-fnd-plc-uspsai:Mills
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mills" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MILLS" ;
+	fibo-fnd-utl-av:preferredDesignation "MLS" ;
+	.
+
+fibo-fnd-plc-uspsai:Mission
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mission" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MISSN" ,
+		"MSSN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MSN" ;
+	.
+
+fibo-fnd-plc-uspsai:Motorway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "motorway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "MOTORWAY" ;
+	fibo-fnd-utl-av:preferredDesignation "MTWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Mount
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mount" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MNT" ,
+		"MOUNT" ,
+		"MT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MT" ;
+	.
+
+fibo-fnd-plc-uspsai:Mountain
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mountain" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MNTAIN" ,
+		"MNTN" ,
+		"MOUNTAIN" ,
+		"MOUNTIN" ,
+		"MTIN" ,
+		"MTN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MTN" ;
+	.
+
+fibo-fnd-plc-uspsai:Mountains
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "mountains" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"MNTNS" ,
+		"MOUNTAINS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "MTNS" ;
+	.
+
+fibo-fnd-plc-uspsai:NB
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NB" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for New Brunswick" ;
+	fibo-fnd-utl-av:preferredDesignation "NB" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:NewBrunswick ;
+	lcc-lr:hasTag "NB" ;
+	lcc-lr:identifies lcc-3166-2-ca:NewBrunswick ;
+	.
+
+fibo-fnd-plc-uspsai:NC
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for North Carolina" ;
+	fibo-fnd-utl-av:preferredDesignation "NC" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NorthCarolina ;
+	lcc-lr:hasTag "NC" ;
+	lcc-lr:identifies lcc-3166-2-us:NorthCarolina ;
+	.
+
+fibo-fnd-plc-uspsai:ND
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "ND" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for North Dakota" ;
+	fibo-fnd-utl-av:preferredDesignation "ND" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NorthDakota ;
+	lcc-lr:hasTag "ND" ;
+	lcc-lr:identifies lcc-3166-2-us:NorthDakota ;
+	.
+
+fibo-fnd-plc-uspsai:NE
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Nebraska" ;
+	fibo-fnd-utl-av:preferredDesignation "NE" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Nebraska ;
+	lcc-lr:hasTag "NE" ;
+	lcc-lr:identifies lcc-3166-2-us:Nebraska ;
+	.
+
+fibo-fnd-plc-uspsai:NH
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NH" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for New Hampshire" ;
+	fibo-fnd-utl-av:preferredDesignation "NH" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NewHampshire ;
+	lcc-lr:hasTag "NH" ;
+	lcc-lr:identifies lcc-3166-2-us:NewHampshire ;
+	.
+
+fibo-fnd-plc-uspsai:NJ
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NJ" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for New Jersey" ;
+	fibo-fnd-utl-av:preferredDesignation "NJ" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NewJersey ;
+	lcc-lr:hasTag "NJ" ;
+	lcc-lr:identifies lcc-3166-2-us:NewJersey ;
+	.
+
+fibo-fnd-plc-uspsai:NL
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NL" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Newfoundland and Labrador" ;
+	fibo-fnd-utl-av:preferredDesignation "NL" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:NewfoundlandAndLabrador ;
+	lcc-lr:hasTag "NL" ;
+	lcc-lr:identifies lcc-3166-2-ca:NewfoundlandAndLabrador ;
+	.
+
+fibo-fnd-plc-uspsai:NM
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NM" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for New Mexico" ;
+	fibo-fnd-utl-av:preferredDesignation "NM" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NewMexico ;
+	lcc-lr:hasTag "NM" ;
+	lcc-lr:identifies lcc-3166-2-us:NewMexico ;
+	.
+
+fibo-fnd-plc-uspsai:NS
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NS" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Nova Scotia" ;
+	fibo-fnd-utl-av:preferredDesignation "NS" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:NovaScotia ;
+	lcc-lr:hasTag "NS" ;
+	lcc-lr:identifies lcc-3166-2-ca:NovaScotia ;
+	.
+
+fibo-fnd-plc-uspsai:NT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Northwest Territories" ;
+	fibo-fnd-utl-av:preferredDesignation "NT" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:NorthwestTerritories ;
+	lcc-lr:hasTag "NT" ;
+	lcc-lr:identifies lcc-3166-2-ca:NorthwestTerritories ;
+	.
+
+fibo-fnd-plc-uspsai:NU
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NU" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Nunavut" ;
+	fibo-fnd-utl-av:preferredDesignation "NU" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Nunavut ;
+	lcc-lr:hasTag "NU" ;
+	lcc-lr:identifies lcc-3166-2-ca:Nunavut ;
+	.
+
+fibo-fnd-plc-uspsai:NV
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NV" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Nevada" ;
+	fibo-fnd-utl-av:preferredDesignation "NV" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Nevada ;
+	lcc-lr:hasTag "NV" ;
+	lcc-lr:identifies lcc-3166-2-us:Nevada ;
+	.
+
+fibo-fnd-plc-uspsai:NY
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "NY" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for New York" ;
+	fibo-fnd-utl-av:preferredDesignation "NY" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:NewYork ;
+	lcc-lr:hasTag "NY" ;
+	lcc-lr:identifies lcc-3166-2-us:NewYork ;
+	.
+
+fibo-fnd-plc-uspsai:Neck
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "neck" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"NCK" ,
+		"NECK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "NCK" ;
+	.
+
+fibo-fnd-plc-uspsai:OH
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "OH" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Ohio" ;
+	fibo-fnd-utl-av:preferredDesignation "OH" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Ohio ;
+	lcc-lr:hasTag "OH" ;
+	lcc-lr:identifies lcc-3166-2-us:Ohio ;
+	.
+
+fibo-fnd-plc-uspsai:OK
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "OK" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Oklahoma" ;
+	fibo-fnd-utl-av:preferredDesignation "OK" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Oklahoma ;
+	lcc-lr:hasTag "OK" ;
+	lcc-lr:identifies lcc-3166-2-us:Oklahoma ;
+	.
+
+fibo-fnd-plc-uspsai:ON
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "ON" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Ontario" ;
+	fibo-fnd-utl-av:preferredDesignation "ON" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Ontario ;
+	lcc-lr:hasTag "ON" ;
+	lcc-lr:identifies lcc-3166-2-ca:Ontario ;
+	.
+
+fibo-fnd-plc-uspsai:OR
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "OR" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Oregon" ;
+	fibo-fnd-utl-av:preferredDesignation "OR" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Oregon ;
+	lcc-lr:hasTag "OR" ;
+	lcc-lr:identifies lcc-3166-2-us:Oregon ;
+	.
+
+fibo-fnd-plc-uspsai:Orchard
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "orchard" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"ORCH" ,
+		"ORCHARD" ,
+		"ORCHRD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ORCH" ;
+	.
+
+fibo-fnd-plc-uspsai:Oval
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "oval" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"OVAL" ,
+		"OVL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "OVAL" ;
+	.
+
+fibo-fnd-plc-uspsai:Overpass
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "overpass" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "OVERPASS" ;
+	fibo-fnd-utl-av:preferredDesignation "OPAS" ;
+	.
+
+fibo-fnd-plc-uspsai:PA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "PA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Pennsylvania" ;
+	fibo-fnd-utl-av:preferredDesignation "PA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Pennsylvania ;
+	lcc-lr:hasTag "PA" ;
+	lcc-lr:identifies lcc-3166-2-us:Pennsylvania ;
+	.
+
+fibo-fnd-plc-uspsai:PE
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "PE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Prince Edward Island" ;
+	fibo-fnd-utl-av:preferredDesignation "PE" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:PrinceEdwardIsland ;
+	lcc-lr:hasTag "PE" ;
+	lcc-lr:identifies lcc-3166-2-ca:PrinceEdwardIsland ;
+	.
+
+fibo-fnd-plc-uspsai:PR
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "PR" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Puerto Rico" ;
+	fibo-fnd-utl-av:preferredDesignation "PR" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:PuertoRico ;
+	lcc-lr:hasTag "PR" ;
+	lcc-lr:identifies lcc-3166-2-us:PuertoRico ;
+	.
+
+fibo-fnd-plc-uspsai:Park
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "park" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PARK" ,
+		"PRK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PARK" ;
+	.
+
+fibo-fnd-plc-uspsai:Parks
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "parks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "PARKS" ;
+	fibo-fnd-utl-av:preferredDesignation "PARK" ;
+	.
+
+fibo-fnd-plc-uspsai:Parkway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "parkway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PARKWAY" ,
+		"PARKWY" ,
+		"PKWAY" ,
+		"PKWY" ,
+		"PKY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PKWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Parkways
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "parkways" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PARKWAYS" ,
+		"PKWYS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PKWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Pass
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "pass" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "PASS" ;
+	fibo-fnd-utl-av:preferredDesignation "PASS" ;
+	.
+
+fibo-fnd-plc-uspsai:Passage
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "passage" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "PASSAGE" ;
+	fibo-fnd-utl-av:preferredDesignation "PSGE" ;
+	.
+
+fibo-fnd-plc-uspsai:Path
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "path" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PATH" ,
+		"PATHS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PATH" ;
+	.
+
+fibo-fnd-plc-uspsai:Pike
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "pike" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PIKE" ,
+		"PIKES"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PIKE" ;
+	.
+
+fibo-fnd-plc-uspsai:Pine
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "pine" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "PINE" ;
+	fibo-fnd-utl-av:preferredDesignation "PNE" ;
+	.
+
+fibo-fnd-plc-uspsai:Pines
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "pines" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PINES" ,
+		"PNES"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PNES" ;
+	.
+
+fibo-fnd-plc-uspsai:Place
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "place" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "PL" ;
+	fibo-fnd-utl-av:preferredDesignation "PL" ;
+	.
+
+fibo-fnd-plc-uspsai:Plain
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "plain" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PLAIN" ,
+		"PLN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PLN" ;
+	.
+
+fibo-fnd-plc-uspsai:Plains
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "plains" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PLAINS" ,
+		"PLNS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PLNS" ;
+	.
+
+fibo-fnd-plc-uspsai:Plaza
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "plaza" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PLAZA" ,
+		"PLZ" ,
+		"PLZA"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PLZ" ;
+	.
+
+fibo-fnd-plc-uspsai:Point
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "point" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"POINT" ,
+		"PT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PT" ;
+	.
+
+fibo-fnd-plc-uspsai:Points
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "points" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"POINTS" ,
+		"PTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Port
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "port" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PORT" ,
+		"PRT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PRT" ;
+	.
+
+fibo-fnd-plc-uspsai:Ports
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ports" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PORTS" ,
+		"PRTS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PRTS" ;
+	.
+
+fibo-fnd-plc-uspsai:Prairie
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "prairie" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"PR" ,
+		"PRAIRIE" ,
+		"PRR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "PR" ;
+	.
+
+fibo-fnd-plc-uspsai:QC
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "QC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Quebec" ;
+	fibo-fnd-utl-av:preferredDesignation "QC" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Quebec ;
+	lcc-lr:hasTag "QC" ;
+	lcc-lr:identifies lcc-3166-2-ca:Quebec ;
+	.
+
+fibo-fnd-plc-uspsai:RI
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "RI" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Rhode Island" ;
+	fibo-fnd-utl-av:preferredDesignation "RI" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:RhodeIsland ;
+	lcc-lr:hasTag "RI" ;
+	lcc-lr:identifies lcc-3166-2-us:RhodeIsland ;
+	.
+
+fibo-fnd-plc-uspsai:Radial
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "radial" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RAD" ,
+		"RADIAL" ,
+		"RADIEL" ,
+		"RADL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RADL" ;
+	.
+
+fibo-fnd-plc-uspsai:Ramp
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ramp" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "RAMP" ;
+	fibo-fnd-utl-av:preferredDesignation "RAMP" ;
+	.
+
+fibo-fnd-plc-uspsai:Ranch
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ranch" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RANCH" ,
+		"RANCHES" ,
+		"RNCH" ,
+		"RNCHS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RNCH" ;
+	.
+
+fibo-fnd-plc-uspsai:Rapid
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "rapid" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RAPID" ,
+		"RPD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RPD" ;
+	.
+
+fibo-fnd-plc-uspsai:Rapids
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "rapids" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RAPIDS" ,
+		"RPDS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RPDS" ;
+	.
+
+fibo-fnd-plc-uspsai:Rest
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "rest" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"REST" ,
+		"RST"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RST" ;
+	.
+
+fibo-fnd-plc-uspsai:Ridge
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ridge" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RDG" ,
+		"RDGE" ,
+		"RIDGE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RDG" ;
+	.
+
+fibo-fnd-plc-uspsai:Ridges
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ridges" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RDGS" ,
+		"RIDGES"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RDGS" ;
+	.
+
+fibo-fnd-plc-uspsai:River
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "river" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RIV" ,
+		"RIVER" ,
+		"RIVR" ,
+		"RVR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RIV" ;
+	.
+
+fibo-fnd-plc-uspsai:Road
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "road" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RD" ,
+		"ROAD"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RD" ;
+	.
+
+fibo-fnd-plc-uspsai:Roads
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "roads" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"RDS" ,
+		"ROADS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "RDS" ;
+	.
+
+fibo-fnd-plc-uspsai:Route
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "route" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "ROUTE" ;
+	fibo-fnd-utl-av:preferredDesignation "RTE" ;
+	.
+
+fibo-fnd-plc-uspsai:Row
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "row" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "ROW" ;
+	fibo-fnd-utl-av:preferredDesignation "ROW" ;
+	.
+
+fibo-fnd-plc-uspsai:Rue
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "rue" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "RUE" ;
+	fibo-fnd-utl-av:preferredDesignation "RUE" ;
+	.
+
+fibo-fnd-plc-uspsai:Run
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "run" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "RUN" ;
+	fibo-fnd-utl-av:preferredDesignation "RUN" ;
+	.
+
+fibo-fnd-plc-uspsai:SC
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "SC" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for South Carolina" ;
+	fibo-fnd-utl-av:preferredDesignation "SC" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:SouthCarolina ;
+	lcc-lr:hasTag "SC" ;
+	lcc-lr:identifies lcc-3166-2-us:SouthCarolina ;
+	.
+
+fibo-fnd-plc-uspsai:SD
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "SD" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for South Dakota" ;
+	fibo-fnd-utl-av:preferredDesignation "SD" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:SouthDakota ;
+	lcc-lr:hasTag "SD" ;
+	lcc-lr:identifies lcc-3166-2-us:SouthDakota ;
+	.
+
+fibo-fnd-plc-uspsai:SK
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "SK" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Saskatchewan" ;
+	fibo-fnd-utl-av:preferredDesignation "SK" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Saskatchewan ;
+	lcc-lr:hasTag "SK" ;
+	lcc-lr:identifies lcc-3166-2-ca:Saskatchewan ;
+	.
+
+fibo-fnd-plc-uspsai:Shoal
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "shoal" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SHL" ,
+		"SHOAL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SHL" ;
+	.
+
+fibo-fnd-plc-uspsai:Shoals
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "shoals" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SHLS" ,
+		"SHOALS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SHLS" ;
+	.
+
+fibo-fnd-plc-uspsai:Shore
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "shore" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SHOAR" ,
+		"SHORE" ,
+		"SHR"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SHR" ;
+	.
+
+fibo-fnd-plc-uspsai:Shores
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "shores" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SHOARS" ,
+		"SHORES" ,
+		"SHRS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SHRS" ;
+	.
+
+fibo-fnd-plc-uspsai:Skyway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "skyway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "SKYWAY" ;
+	fibo-fnd-utl-av:preferredDesignation "SKWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Spring
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "spring" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SPG" ,
+		"SPNG" ,
+		"SPRING" ,
+		"SPRNG"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SPG" ;
+	.
+
+fibo-fnd-plc-uspsai:Springs
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "springs" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SPGS" ,
+		"SPNGS" ,
+		"SPRINGS" ,
+		"SPRNGS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SPGS" ;
+	.
+
+fibo-fnd-plc-uspsai:Spur
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "spur" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "SPUR" ;
+	fibo-fnd-utl-av:preferredDesignation "SPUR" ;
+	.
+
+fibo-fnd-plc-uspsai:Spurs
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "spurs" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "SPURS" ;
+	fibo-fnd-utl-av:preferredDesignation "SPUR" ;
+	.
+
+fibo-fnd-plc-uspsai:Square
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "square" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SQ" ,
+		"SQR" ,
+		"SQRE" ,
+		"SQU" ,
+		"SQUARE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SQ" ;
+	.
+
+fibo-fnd-plc-uspsai:Squares
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "squares" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SQRS" ,
+		"SQUARES"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SQS" ;
+	.
+
+fibo-fnd-plc-uspsai:Station
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "station" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"STA" ,
+		"STATION" ,
+		"STATN" ,
+		"STN"
+		;
+	fibo-fnd-utl-av:preferredDesignation "STA" ;
+	.
+
+fibo-fnd-plc-uspsai:Stravenue
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "stravenue" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"STRA" ,
+		"STRAV" ,
+		"STRAVEN" ,
+		"STRAVENUE" ,
+		"STRAVN" ,
+		"STRVN" ,
+		"STRVNUE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "STRA" ;
+	.
+
+fibo-fnd-plc-uspsai:Stream
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "stream" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"STREAM" ,
+		"STREME" ,
+		"STRM"
+		;
+	fibo-fnd-utl-av:preferredDesignation "STRM" ;
+	.
+
+fibo-fnd-plc-uspsai:Street
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "street" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"ST" ,
+		"STR" ,
+		"STREET" ,
+		"STRT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "ST" ;
+	.
+
+fibo-fnd-plc-uspsai:Streets
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "streets" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "STREETS" ;
+	fibo-fnd-utl-av:preferredDesignation "STS" ;
+	.
+
+fibo-fnd-plc-uspsai:Summit
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "summit" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"SMT" ,
+		"SUMIT" ,
+		"SUMITT" ,
+		"SUMMIT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "SMT" ;
+	.
+
+fibo-fnd-plc-uspsai:TN
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "TN" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Tennessee" ;
+	fibo-fnd-utl-av:preferredDesignation "TN" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Tennessee ;
+	lcc-lr:hasTag "TN" ;
+	lcc-lr:identifies lcc-3166-2-us:Tennessee ;
+	.
+
+fibo-fnd-plc-uspsai:TX
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "TX" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Texas" ;
+	fibo-fnd-utl-av:preferredDesignation "TX" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Texas ;
+	lcc-lr:hasTag "TX" ;
+	lcc-lr:identifies lcc-3166-2-us:Texas ;
+	.
+
+fibo-fnd-plc-uspsai:Terrace
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "terrace" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TER" ,
+		"TERR" ,
+		"TERRACE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TER" ;
+	.
+
+fibo-fnd-plc-uspsai:Throughway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "throughway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "THROUGHWAY" ;
+	fibo-fnd-utl-av:preferredDesignation "TRWY" ;
+	.
+
+fibo-fnd-plc-uspsai:Trace
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "trace" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TRACE" ,
+		"TRACES" ,
+		"TRCE"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TRCE" ;
+	.
+
+fibo-fnd-plc-uspsai:Track
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "track" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TRACK" ,
+		"TRACKS" ,
+		"TRAK" ,
+		"TRK" ,
+		"TRKS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TRAK" ;
+	.
+
+fibo-fnd-plc-uspsai:Trafficway
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "trafficway" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "TRAFFICWAY" ;
+	fibo-fnd-utl-av:preferredDesignation "TRFY" ;
+	.
+
+fibo-fnd-plc-uspsai:Trail
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "trail" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TRAIL" ,
+		"TRAILS" ,
+		"TRL" ,
+		"TRLS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TRL" ;
+	.
+
+fibo-fnd-plc-uspsai:Trailer
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "trailer" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TRAILER" ,
+		"TRLR" ,
+		"TRLRS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TRLR" ;
+	.
+
+fibo-fnd-plc-uspsai:Tunnel
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "tunnel" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TUNEL" ,
+		"TUNL" ,
+		"TUNLS" ,
+		"TUNNEL" ,
+		"TUNNELS" ,
+		"TUNNL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TUNL" ;
+	.
+
+fibo-fnd-plc-uspsai:Turnpike
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "turnpike" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"TRNPK" ,
+		"TURNPIKE" ,
+		"TURNPK"
+		;
+	fibo-fnd-utl-av:preferredDesignation "TPKE" ;
+	.
+
+fibo-fnd-plc-uspsai:UM
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "UM" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for the United States Minor Outlying Islands" ;
+	fibo-fnd-utl-av:preferredDesignation "UM" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:UnitedStatesMinorOutlyingIslands ;
+	lcc-lr:hasTag "UM" ;
+	lcc-lr:identifies lcc-3166-2-us:UnitedStatesMinorOutlyingIslands ;
+	.
+
+fibo-fnd-plc-uspsai:US-AA
+	a
+		owl:NamedIndividual ,
+		lcc-cr:GeographicRegionIdentifier
+		;
+	rdfs:label "US-AA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "subdivision code for the state designation for Armed Forces Americas, excluding Canada" ;
+	fibo-fnd-utl-av:preferredDesignation "AA" ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesAmericas ;
+	lcc-lr:hasTag "US-AA" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesAmericas ;
+	.
+
+fibo-fnd-plc-uspsai:US-AE
+	a
+		owl:NamedIndividual ,
+		lcc-cr:GeographicRegionIdentifier
+		;
+	rdfs:label "US-AE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "subdivision code for the state designation for Armed Forces Europe, the Middle East, and Canada" ;
+	fibo-fnd-utl-av:preferredDesignation "AE" ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesEurope ;
+	lcc-lr:hasTag "US-AE" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesEurope ;
+	.
+
+fibo-fnd-plc-uspsai:US-AP
+	a
+		owl:NamedIndividual ,
+		lcc-cr:GeographicRegionIdentifier
+		;
+	rdfs:label "US-AP" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "subdivision code for the state designation for Armed Forces Pacific" ;
+	fibo-fnd-utl-av:preferredDesignation "AP" ;
+	lcc-lr:denotes fibo-fnd-plc-uspsai:ArmedForcesPacific ;
+	lcc-lr:hasTag "US-AP" ;
+	lcc-lr:identifies fibo-fnd-plc-uspsai:ArmedForcesPacific ;
+	.
+
+fibo-fnd-plc-uspsai:UT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "UT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Utah" ;
+	fibo-fnd-utl-av:preferredDesignation "UT" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Utah ;
+	lcc-lr:hasTag "UT" ;
+	lcc-lr:identifies lcc-3166-2-us:Utah ;
+	.
+
+fibo-fnd-plc-uspsai:Underpass
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "underpass" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "UNDERPASS" ;
+	fibo-fnd-utl-av:preferredDesignation "UPAS" ;
+	.
+
+fibo-fnd-plc-uspsai:Union
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "union" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"UN" ,
+		"UNION"
+		;
+	fibo-fnd-utl-av:preferredDesignation "UN" ;
+	.
+
+fibo-fnd-plc-uspsai:Unions
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "unions" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "UNIONS" ;
+	fibo-fnd-utl-av:preferredDesignation "UNS" ;
+	.
+
+fibo-fnd-plc-uspsai:VA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "VA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Virginia" ;
+	fibo-fnd-utl-av:preferredDesignation "VA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Virginia ;
+	lcc-lr:hasTag "VA" ;
+	lcc-lr:identifies lcc-3166-2-us:Virginia ;
+	.
+
+fibo-fnd-plc-uspsai:VI
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "VI" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for the U.S. Virgin Islands" ;
+	fibo-fnd-utl-av:preferredDesignation "VI" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:VirginIslands ;
+	lcc-lr:hasTag "VI" ;
+	lcc-lr:identifies lcc-3166-2-us:VirginIslands ;
+	.
+
+fibo-fnd-plc-uspsai:VT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "VT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Vermont" ;
+	fibo-fnd-utl-av:preferredDesignation "VT" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Vermont ;
+	lcc-lr:hasTag "VT" ;
+	lcc-lr:identifies lcc-3166-2-us:Vermont ;
+	.
+
+fibo-fnd-plc-uspsai:Valley
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "valley" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VALLEY" ,
+		"VALLY" ,
+		"VLLY" ,
+		"VLY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VLY" ;
+	.
+
+fibo-fnd-plc-uspsai:Valleys
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "valleys" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VALLEYS" ,
+		"VLYS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VLYS" ;
+	.
+
+fibo-fnd-plc-uspsai:Viaduct
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "viaduct" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VDCT" ,
+		"VIA" ,
+		"VIADCT" ,
+		"VIADUCT"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VIA" ;
+	.
+
+fibo-fnd-plc-uspsai:View
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "view" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VIEW" ,
+		"VW"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VW" ;
+	.
+
+fibo-fnd-plc-uspsai:Views
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "views" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VIEWS" ,
+		"VWS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VWS" ;
+	.
+
+fibo-fnd-plc-uspsai:Village
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "village" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VILL" ,
+		"VILLAG" ,
+		"VILLAGE" ,
+		"VILLG" ,
+		"VILLIAGE" ,
+		"VLG"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VLG" ;
+	.
+
+fibo-fnd-plc-uspsai:Villages
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "villages" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VILLAGES" ,
+		"VLGS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VLGS" ;
+	.
+
+fibo-fnd-plc-uspsai:Ville
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ville" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VILLE" ,
+		"VL"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VL" ;
+	.
+
+fibo-fnd-plc-uspsai:Vista
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "vista" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"VIS" ,
+		"VIST" ,
+		"VISTA" ,
+		"VST" ,
+		"VSTA"
+		;
+	fibo-fnd-utl-av:preferredDesignation "VIS" ;
+	.
+
+fibo-fnd-plc-uspsai:WA
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "WA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Washington" ;
+	fibo-fnd-utl-av:preferredDesignation "WA" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Washington ;
+	lcc-lr:hasTag "WA" ;
+	lcc-lr:identifies lcc-3166-2-us:Washington ;
+	.
+
+fibo-fnd-plc-uspsai:WI
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "WI" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Wisconsin" ;
+	fibo-fnd-utl-av:preferredDesignation "WI" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Wisconsin ;
+	lcc-lr:hasTag "WI" ;
+	lcc-lr:identifies lcc-3166-2-us:Wisconsin ;
+	.
+
+fibo-fnd-plc-uspsai:WV
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "WV" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for West Virginia" ;
+	fibo-fnd-utl-av:preferredDesignation "WV" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:WestVirginia ;
+	lcc-lr:hasTag "WV" ;
+	lcc-lr:identifies lcc-3166-2-us:WestVirginia ;
+	.
+
+fibo-fnd-plc-uspsai:WY
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "WY" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "US-specific code for the designation for Wyoming" ;
+	fibo-fnd-utl-av:preferredDesignation "WY" ;
+	lcc-cr:isUsedBy lcc-3166-1:UnitedStatesOfAmerica ;
+	lcc-lr:denotes lcc-3166-2-us:Wyoming ;
+	lcc-lr:hasTag "WY" ;
+	lcc-lr:identifies lcc-3166-2-us:Wyoming ;
+	.
+
+fibo-fnd-plc-uspsai:Walk
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "walk" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "WALK" ;
+	fibo-fnd-utl-av:preferredDesignation "WALK" ;
+	.
+
+fibo-fnd-plc-uspsai:Walks
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "walks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "WALKS" ;
+	fibo-fnd-utl-av:preferredDesignation "WALK" ;
+	.
+
+fibo-fnd-plc-uspsai:Wall
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "wall" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "WALL" ;
+	fibo-fnd-utl-av:preferredDesignation "WALL" ;
+	.
+
+fibo-fnd-plc-uspsai:Way
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "way" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"WAY" ,
+		"WY"
+		;
+	fibo-fnd-utl-av:preferredDesignation "WAY" ;
+	.
+
+fibo-fnd-plc-uspsai:Ways
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "ways" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "WAYS" ;
+	fibo-fnd-utl-av:preferredDesignation "WAYS" ;
+	.
+
+fibo-fnd-plc-uspsai:Well
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "well" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation "WELL" ;
+	fibo-fnd-utl-av:preferredDesignation "WL" ;
+	.
+
+fibo-fnd-plc-uspsai:Wells
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:StreetSuffix
+		;
+	rdfs:label "wells" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	fibo-fnd-utl-av:commonDesignation
+		"WELLS" ,
+		"WLS"
+		;
+	fibo-fnd-utl-av:preferredDesignation "WLS" ;
+	.
+
+fibo-fnd-plc-uspsai:YT
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:RegionSpecificIdentifier
+		;
+	rdfs:label "YT" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/> ;
+	skos:definition "Canadian and US-specific code for the designation for Yukon" ;
+	fibo-fnd-utl-av:preferredDesignation "YT" ;
+	lcc-cr:isUsedBy
+		lcc-3166-1:Canada ,
+		lcc-3166-1:UnitedStatesOfAmerica
+		;
+	lcc-lr:denotes lcc-3166-2-ca:Yukon ;
+	lcc-lr:hasTag "YT" ;
+	lcc-lr:identifies lcc-3166-2-ca:Yukon ;
+	.
+
+lcc-3166-1:FM
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "FM" ;
+	.
+
+lcc-3166-1:GU
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "GU" ;
+	.
+
+lcc-3166-1:MH
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MH" ;
+	.
+
+lcc-3166-1:PW
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PW" ;
+	.
+
+lcc-3166-2-ca:CA-AB
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AB" ;
+	.
+
+lcc-3166-2-ca:CA-BC
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "BC" ;
+	.
+
+lcc-3166-2-ca:CA-MB
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MB" ;
+	.
+
+lcc-3166-2-ca:CA-NB
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NB" ;
+	.
+
+lcc-3166-2-ca:CA-NL
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NL" ;
+	.
+
+lcc-3166-2-ca:CA-NS
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NS" ;
+	.
+
+lcc-3166-2-ca:CA-NT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NT" ;
+	.
+
+lcc-3166-2-ca:CA-NU
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NU" ;
+	.
+
+lcc-3166-2-ca:CA-ON
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "ON" ;
+	.
+
+lcc-3166-2-ca:CA-PE
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PE" ;
+	.
+
+lcc-3166-2-ca:CA-QC
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "QC" ;
+	.
+
+lcc-3166-2-ca:CA-SK
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SK" ;
+	.
+
+lcc-3166-2-ca:CA-YT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "YT" ;
+	.
+
+lcc-3166-2-us:US-AK
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AK" ;
+	.
+
+lcc-3166-2-us:US-AL
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AL" ;
+	.
+
+lcc-3166-2-us:US-AR
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AR" ;
+	.
+
+lcc-3166-2-us:US-AS
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AS" ;
+	.
+
+lcc-3166-2-us:US-AZ
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "AZ" ;
+	.
+
+lcc-3166-2-us:US-CA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "CA" ;
+	.
+
+lcc-3166-2-us:US-CO
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "CO" ;
+	.
+
+lcc-3166-2-us:US-CT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "CT" ;
+	.
+
+lcc-3166-2-us:US-DC
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "DC" ;
+	.
+
+lcc-3166-2-us:US-DE
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "DE" ;
+	.
+
+lcc-3166-2-us:US-FL
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "FL" ;
+	.
+
+lcc-3166-2-us:US-GA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "GA" ;
+	.
+
+lcc-3166-2-us:US-GU
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "GU" ;
+	.
+
+lcc-3166-2-us:US-HI
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "HI" ;
+	.
+
+lcc-3166-2-us:US-IA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "IA" ;
+	.
+
+lcc-3166-2-us:US-ID
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "ID" ;
+	.
+
+lcc-3166-2-us:US-IL
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "IL" ;
+	.
+
+lcc-3166-2-us:US-IN
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "IN" ;
+	.
+
+lcc-3166-2-us:US-KS
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "KS" ;
+	.
+
+lcc-3166-2-us:US-KY
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "KY" ;
+	.
+
+lcc-3166-2-us:US-LA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "LA" ;
+	.
+
+lcc-3166-2-us:US-MA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MA" ;
+	.
+
+lcc-3166-2-us:US-MD
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MD" ;
+	.
+
+lcc-3166-2-us:US-ME
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "ME" ;
+	.
+
+lcc-3166-2-us:US-MI
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MI" ;
+	.
+
+lcc-3166-2-us:US-MN
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MN" ;
+	.
+
+lcc-3166-2-us:US-MO
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MO" ;
+	.
+
+lcc-3166-2-us:US-MP
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MP" ;
+	.
+
+lcc-3166-2-us:US-MS
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MS" ;
+	.
+
+lcc-3166-2-us:US-MT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "MT" ;
+	.
+
+lcc-3166-2-us:US-NC
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NC" ;
+	.
+
+lcc-3166-2-us:US-ND
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "ND" ;
+	.
+
+lcc-3166-2-us:US-NE
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NE" ;
+	.
+
+lcc-3166-2-us:US-NH
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NH" ;
+	.
+
+lcc-3166-2-us:US-NJ
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NJ" ;
+	.
+
+lcc-3166-2-us:US-NM
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NM" ;
+	.
+
+lcc-3166-2-us:US-NV
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NV" ;
+	.
+
+lcc-3166-2-us:US-NY
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "NY" ;
+	.
+
+lcc-3166-2-us:US-OH
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "OH" ;
+	.
+
+lcc-3166-2-us:US-OK
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "OK" ;
+	.
+
+lcc-3166-2-us:US-OR
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "OR" ;
+	.
+
+lcc-3166-2-us:US-PA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PA" ;
+	.
+
+lcc-3166-2-us:US-PR
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "PR" ;
+	.
+
+lcc-3166-2-us:US-RI
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "RI" ;
+	.
+
+lcc-3166-2-us:US-SC
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SC" ;
+	.
+
+lcc-3166-2-us:US-SD
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "SD" ;
+	.
+
+lcc-3166-2-us:US-TN
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "TN" ;
+	.
+
+lcc-3166-2-us:US-TX
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "TX" ;
+	.
+
+lcc-3166-2-us:US-UM
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "UM" ;
+	.
+
+lcc-3166-2-us:US-UT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "UT" ;
+	.
+
+lcc-3166-2-us:US-VA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "VA" ;
+	.
+
+lcc-3166-2-us:US-VI
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "VI" ;
+	.
+
+lcc-3166-2-us:US-VT
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "VT" ;
+	.
+
+lcc-3166-2-us:US-WA
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "WA" ;
+	.
+
+lcc-3166-2-us:US-WI
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "WI" ;
+	.
+
+lcc-3166-2-us:US-WV
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "WV" ;
+	.
+
+lcc-3166-2-us:US-WY
+	a owl:NamedIndividual ;
+	fibo-fnd-utl-av:preferredDesignation "WY" ;
+	.
+

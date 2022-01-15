@@ -1,0 +1,360 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/Corporations/Corporations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/CorporateBodies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/FormalOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-ge-usj: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-be-le-cb: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-be-le-usee: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/>
+	a owl:Ontology ;
+	rdfs:label "US Example Entities" ;
+	dct:abstract "This ontology includes example entities that are companies in the US that issue stock and that are represented in the Dow Jones Industrial Average (DJIA), to demonstrate how to begin to model those entities in FIBO." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2020-2021 EDM Council, Inc." ,
+		"Copyright (c) 2020-2021 Object Management Group, Inc."
+		;
+	sm:fileAbbreviation "fibo-be-le-usee" ;
+	sm:filename "USExampleEntities.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/Corporations/Corporations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/CorporateBodies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/FormalOrganizations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities.rdf version of this ontology was revised to make incorporation and registration dates explicit dates and to replace references to the legacy LCC UnitedStates country representation with UnitedStatesOfAmerica." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities.rdf version of this ontology was revised to replace uses of hasTag in Relations with hasTag from LCC, as the more complex union of datatypes in the Relations concept is not needed here." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities.rdf version of this ontology was revised to update the LEI format to use the form published by the GLEIF at data.world."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+<https://rdf.gleif.org/L1/L-2572IBTT8CCZW6AU4141-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "The Proctor & Gamble Company legal entity identifier" ;
+	skos:definition "legal entity identifier for The Proctor & Gamble Company" ;
+	lcc-lr:hasTag "2572IBTT8CCZW6AU4141" ;
+	lcc-lr:identifies fibo-be-le-usee:TheProctorAndGambleCompany-US-OH ;
+	.
+
+<https://rdf.gleif.org/L1/L-5493006MHB84DD0ZWV18-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "Alphabet Inc. legal entity identifier" ;
+	skos:definition "legal entity identifier for Alphabet Inc." ;
+	lcc-lr:hasTag "5493006MHB84DD0ZWV18" ;
+	lcc-lr:identifies fibo-be-le-usee:AlphabetInc-US-CA ;
+	.
+
+<https://rdf.gleif.org/L1/L-HWUPKR0MPOU8FGXBT394-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "Apple Inc. legal entity identifier" ;
+	skos:definition "legal entity identifier for Apple Inc." ;
+	lcc-lr:hasTag "HWUPKR0MPOU8FGXBT394" ;
+	lcc-lr:identifies fibo-be-le-usee:AppleInc-US-CA ;
+	.
+
+<https://rdf.gleif.org/L1/L-QEKMOTMBBKA8I816DO57-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "The Home Depot, Inc. legal entity identifier" ;
+	skos:definition "legal entity identifier for The Home Depot, Inc." ;
+	lcc-lr:hasTag "QEKMOTMBBKA8I816DO57" ;
+	lcc-lr:identifies fibo-be-le-usee:TheHomeDepotInc-US-DE ;
+	.
+
+<https://rdf.gleif.org/L1/L-UWJKFUJFZ02DKWI3RY53-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "The Coca-Cola Company legal entity identifier" ;
+	skos:definition "legal entity identifier for The Coca-Cola Company" ;
+	lcc-lr:hasTag "UWJKFUJFZ02DKWI3RY53" ;
+	lcc-lr:identifies fibo-be-le-usee:TheCoca-ColaCompany-US-DE ;
+	.
+
+<https://rdf.gleif.org/L1/L-VGRQXHF3J8VDLUA7XE92-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "International Business Machines Corporation legal entity identifier" ;
+	skos:definition "legal entity identifier for International Business Machines Corporation" ;
+	lcc-lr:hasTag "VGRQXHF3J8VDLUA7XE92" ;
+	lcc-lr:identifies fibo-be-le-usee:InternationalBusinessMachinesCorporation-US-NY ;
+	.
+
+fibo-be-le-usee:AlphabetInc-US-CA
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "Alphabet Inc. US-CA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for Alphabet Inc., a Delaware stock corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:AlphabetIncIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfDelawareJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "Alphabet Inc." ;
+	.
+
+fibo-be-le-usee:AlphabetIncBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "Alphabet Inc. business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "registration identifier assigned by the Delaware Department of Corporations for Alphabet Inc." ;
+	lcc-lr:hasTag "5786925" ;
+	lcc-lr:identifies fibo-be-le-usee:AlphabetInc-US-CA ;
+	.
+
+fibo-be-le-usee:AlphabetIncIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "Alphabet Inc. incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that Alphabet Inc. was first registered as a corporation in the State of Delaware" ;
+	fibo-fnd-dt-fd:hasDateValue "2015-07-23" ;
+	.
+
+fibo-be-le-usee:AppleInc-US-CA
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "Apple Inc. US-CA" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for Apple Inc., a California stock corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:AppleIncIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfCaliforniaJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "Apple Inc." ;
+	.
+
+fibo-be-le-usee:AppleIncBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "Apple Inc. business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	rdfs:seeAlso <https://businessfilings.sos.ca.gov/frmDetail.asp?CorpID=00806592> ;
+	skos:definition "registration identifier assigned by the California Department of Corporations for Apple Inc." ;
+	lcc-lr:hasTag "C0806592" ;
+	lcc-lr:identifies fibo-be-le-usee:AppleInc-US-CA ;
+	.
+
+fibo-be-le-usee:AppleIncIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "Apple Inc. incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that Apple Inc. was first registered as a corporation in the State of California" ;
+	fibo-fnd-dt-fd:hasDateValue "1977-01-03" ;
+	.
+
+fibo-be-le-usee:InternationalBusinessMachinesCorporation-US-NY
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "International Business Machines Corporation US-NY" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for International Business Machines Corporation, a New York domestic business corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:InternationalBusinessMachinesCorporationIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfNewYorkJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "International Business Machines Corporation" ;
+	.
+
+fibo-be-le-usee:InternationalBusinessMachinesCorporationBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "International Business Machines Corporation business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "registration identifier assigned by the New York Division of Corporations for International Business Machines Corporation" ;
+	lcc-lr:hasTag "30059" ;
+	lcc-lr:identifies fibo-be-le-usee:InternationalBusinessMachinesCorporation-US-NY ;
+	.
+
+fibo-be-le-usee:InternationalBusinessMachinesCorporationIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "International Business Machines Corporation incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that International Business Machines Corporation was first registered as a corporation in the State of New York" ;
+	fibo-fnd-dt-fd:hasDateValue "1911-06-16" ;
+	.
+
+fibo-be-le-usee:TheCoca-ColaCompany-US-DE
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "The Coca-Cola Company US-DE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for The Coca-Cola Company, a Delaware corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:TheCoca-ColaCompanyIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfDelawareJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "The Coca-Cola Company" ;
+	.
+
+fibo-be-le-usee:TheCoca-ColaCompanyBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "The Coca-Cola Company business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "registration identifier assigned by the Delaware Division of Corporations for The Coca-Cola Company" ;
+	lcc-lr:hasTag "88529" ;
+	lcc-lr:identifies fibo-be-le-usee:TheCoca-ColaCompany-US-DE ;
+	.
+
+fibo-be-le-usee:TheCoca-ColaCompanyIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "The Coca-Cola Company incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that The Coca-Cola Company was first registered as a corporation in the State of Delaware" ;
+	fibo-fnd-dt-fd:hasDateValue "1919-09-05" ;
+	.
+
+fibo-be-le-usee:TheHomeDepotBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "The Home Depot, Inc. business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "registration identifier assigned by the Delaware Division of Corporations for The Home Depot, Inc." ;
+	lcc-lr:hasTag "856429" ;
+	lcc-lr:identifies fibo-be-le-usee:TheHomeDepotInc-US-DE ;
+	.
+
+fibo-be-le-usee:TheHomeDepotInc-US-DE
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "The Home Depot, Inc. US-DE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for The Home Depot, Inc., a Delaware corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:TheHomeDepotIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfDelawareJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "The Home Depot, Inc." ;
+	.
+
+fibo-be-le-usee:TheHomeDepotIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "The Home Depot, Inc. incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that The Home Depot, Inc. was first registered as a corporation in the State of Delaware" ;
+	fibo-fnd-dt-fd:hasDateValue "1978-06-29" ;
+	.
+
+fibo-be-le-usee:TheProctorAndGambleCompany-US-OH
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:PubliclyHeldCompany ,
+		fibo-be-le-cb:ForProfitCorporation
+		;
+	rdfs:label "The Proctor & Gamble Company US-OH" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "publicly held company and for profit corporation legal entity for The Proctor & Gamble Company, an Ohio corporation" ;
+	fibo-be-corp-corp:hasDateOfIncorporation fibo-be-le-usee:TheProctorAndGambleCompanyIncorporationDate ;
+	fibo-be-le-cb:isIncorporatedIn fibo-be-ge-usj:StateOfOhioJurisdiction ;
+	fibo-fnd-org-fm:isDomiciledIn lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-rel-rel:hasLegalName "The Proctor & Gamble Company" ;
+	.
+
+fibo-be-le-usee:TheProctorAndGambleCompanyBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "The Proctor & Gamble Company business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "registration identifier assigned by the Ohio Department of Corporations for The Proctor & Gamble Company" ;
+	lcc-lr:hasTag "20677" ;
+	lcc-lr:identifies fibo-be-le-usee:TheProctorAndGambleCompany-US-OH ;
+	.
+
+fibo-be-le-usee:TheProctorAndGambleCompanyIncorporationDate
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "The Proctor & Gamble Company incorporation date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/NorthAmericanEntities/USExampleEntities/> ;
+	skos:definition "date that The Proctor & Gamble Company was first registered as a corporation in the State of Ohio" ;
+	fibo-fnd-dt-fd:hasDateValue "1905-05-05" ;
+	.
+

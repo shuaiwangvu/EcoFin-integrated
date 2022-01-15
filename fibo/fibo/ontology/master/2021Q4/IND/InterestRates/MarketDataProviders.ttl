@@ -1,0 +1,330 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/MarketDataProviders/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/Corporations/Corporations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/CorporateBodies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessCentersIndividuals/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessRegistries/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/BusinessDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/MarketDataProviders/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-le-cb: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-fbc-dae-dbt: <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/> .
+@prefix fibo-fbc-fct-bci: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessCentersIndividuals/> .
+@prefix fibo-fbc-fct-breg: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/> .
+@prefix fibo-fbc-fct-cajrga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/> .
+@prefix fibo-fbc-fct-eufseind: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/> .
+@prefix fibo-fbc-fct-eurga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-ra: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/> .
+@prefix fibo-fbc-fct-usfsind: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntitiesIndividuals/> .
+@prefix fibo-fbc-fct-usjrga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-dt-bd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-ir-ir: <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> .
+@prefix fibo-ind-ir-mdp: <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-3166-2-us: <https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/>
+	a owl:Ontology ;
+	rdfs:label "Market Data Providers Ontology" ;
+	dct:abstract "This ontology provides reference data for a number of international market data providers, including, but not limited to, those that publish interest rate benchmarks referenced in the published FpML benchmark reference." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2020-2021 EDM Council, Inc." ,
+		"Copyright (c) 2020-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-ind-ir-mdp" ;
+	sm:filename "MarketDataProviders.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/Corporations/Corporations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/CorporateBodies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessCentersIndividuals/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessRegistries/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/BusinessDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/MarketDataProviders/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders.rdf version of this ontology was revised to clean up the LEI data." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders.rdf version of this ontology was revised to replace references to the legacy LCC UnitedStates country representation with UnitedStatesOfAmerica." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders.rdf version of this ontology was revised to replace uses of hasTag in Relations with hasTag from LCC, as the more complex union of datatypes in the Relations concept is not needed here." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders.rdf version of this ontology was revised to update the LEI URIs to the new form published by the GLEIF on data.world."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+<https://rdf.gleif.org/L1/L-TF1LXM1YNB81WKUH5G19-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "BGC Partners, Inc. legal entity identifier" ;
+	skos:definition "legal entity identifier for BGC Partners, Inc." ;
+	lcc-lr:hasTag "TF1LXM1YNB81WKUH5G19" ;
+	lcc-lr:identifies fibo-ind-ir-mdp:BGCPartnersInc-US-DE ;
+	.
+
+fibo-fbc-fct-eurga:EuropeanBankingRegulatoryAgencyAndCentralBank
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:InterestRateAuthority
+		;
+	.
+
+fibo-fbc-fct-cajrga:CanadianBankingRegulatoryAgencyAndCentralBank
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:InterestRateAuthority
+		;
+	.
+
+fibo-fbc-fct-usfsind:BloombergLP
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider
+		;
+	.
+
+fibo-fbc-fct-usfsind:ThomsonReuters
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider
+		;
+	.
+
+fibo-fbc-fct-usjrga:BoardOfGovernorsOfTheFederalReserveSystem
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:InterestRateAuthority
+		;
+	.
+
+fibo-ind-ir-mdp:BGCPartnersInc-US-DE
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-cb:StockCorporation
+		;
+	rdfs:label "BGC Partners, Inc. US-DE" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "legal entity that is a Delaware Corporation" ;
+	fibo-be-le-fbo:hasHeadquartersAddress fibo-ind-ir-mdp:BGCPartnersIncHeadquartersAddress ;
+	fibo-fbc-fct-breg:hasPriorLegalName "Cantor Fitzgerald" ;
+	fibo-fbc-fct-fse:hasDateEstablished fibo-ind-ir-mdp:BGCPartnersIncDateEstablished ;
+	fibo-fbc-pas-fpas:hasLegalAgent fibo-fbc-fct-usjrga:CorporationServiceCompany ;
+	fibo-fnd-rel-rel:hasLegalName "BGC Partners, Inc. US-DE" ;
+	.
+
+fibo-ind-ir-mdp:BGCPartnersIncBusinessEntityIdentifier
+	a
+		owl:NamedIndividual ,
+		fibo-be-corp-corp:RegistrationIdentifier
+		;
+	rdfs:label "BGC Partners, Inc. business entity identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "Delaware Division of Corporations business entity identifier for BGC Partners, Inc. b" ;
+	fibo-fbc-fct-ra:isRegisteredIn fibo-fbc-fct-usjrga:DelawareBusinessEntitiesRegistry ;
+	lcc-lr:hasTag "3051512" ;
+	lcc-lr:identifies fibo-ind-ir-mdp:BGCPartnersInc-US-DE ;
+	.
+
+fibo-ind-ir-mdp:BGCPartnersIncDateEstablished
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:Date
+		;
+	rdfs:label "BGC Partners, Inc. date established" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "date that BGC Partners, Inc. was incorporated with the Delaware Division of Corporations" ;
+	fibo-fnd-dt-fd:hasDateValue "1999-06-03" ;
+	.
+
+fibo-ind-ir-mdp:BGCPartnersIncHeadquartersAddress
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:ConventionalStreetAddress
+		;
+	rdfs:label "BGC Partners, Inc. headquarters address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "registered address identified as the headquarters address for BGC Partners, Inc." ;
+	fibo-fnd-plc-adr:hasAddressLine1 "55 Water Street" ;
+	fibo-fnd-plc-adr:hasPostalCode "10041" ;
+	fibo-fnd-plc-loc:hasCountry lcc-3166-1:UnitedStatesOfAmerica ;
+	fibo-fnd-plc-loc:hasMunicipality fibo-fbc-fct-bci:New_York ;
+	fibo-fnd-plc-loc:hasSubdivision lcc-3166-2-us:NewYork ;
+	.
+
+fibo-ind-ir-mdp:BGCPartnersIncLegalEntityIdentifierRegistryEntry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:LegalEntityIdentifierRegistryEntry
+		;
+	rdfs:label "BGC Partners, Inc. legal entity identifier registry entry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "legal entity identifier registry entry for BGC Partners, Inc." ;
+	fibo-fbc-fct-breg:hasInitialRegistrationDate "2012-06-06T15:55:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRegistrationStatus fibo-fbc-fct-breg:IssuedStatus ;
+	fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate "2021-05-17T15:24:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRenewalDate "2022-05-17T15:31:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasValidationLevel fibo-fbc-fct-breg:EntityValidationLevelFullyCorroborated ;
+	fibo-fnd-rel-rel:comprises <https://rdf.gleif.org/L1/L-TF1LXM1YNB81WKUH5G19-LEI> ;
+	.
+
+fibo-ind-ir-mdp:EuropeanMoneyMarketsInstituteBenchmarkPublisher
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:InterestRateAuthority
+		;
+	rdfs:label "European Money Markets Institute (EMMI) benchmark publisher" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "individual representing the European Money Markets Institute (EMMI) functional entity that is an international financial information publisher, responsible for the publication of euro-based benchmarks, including Euribor" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-eufseind:EuropeanMoneyMarketsInstitute ;
+	fibo-fnd-utl-av:adaptedFrom "http://www.emmi-benchmarks.eu/"^^xsd:anyURI ;
+	.
+
+fibo-ind-ir-mdp:FederalReserveBoardH.15RateResetTimeOfDay
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-dae-dbt:RateResetTimeOfDay
+		;
+	rdfs:label "Federal Reserve Board H.15 rate reset time of day" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "the time of day that the Federal Reserve Board publishes Selected Interest Rates (Daily) in Schedule H.15" ;
+	fibo-fnd-dt-bd:hasBusinessDayAdjustment fibo-fbc-fct-bci:NewYorkFederalReserveBusinessDay ;
+	fibo-fnd-dt-fd:hasTimeValue "T16:15:00" ;
+	fibo-fnd-plc-loc:hasBusinessCenter fibo-fbc-fct-bci:New_York ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.federalreserve.gov/releases/h15/"^^xsd:anyURI ;
+	.
+
+fibo-ind-ir-mdp:FenicsMarketData
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider
+		;
+	rdfs:label "Fenics Market Data" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "Fenics Market Data functional entity that is a financial service and market data provider and division of BGC Partners" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-ind-ir-mdp:BGCPartnersInc-US-DE ;
+	fibo-fnd-rel-rel:wasFormerlyKnownAs "BGCantor Market Data, L.P." ;
+	.
+
+fibo-ind-ir-mdp:ICEBenchmarkPublisher
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:InterestRateAuthority
+		;
+	rdfs:label "ICE benchmark publisher" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "the ICE Benchmark Administration functional entity that is an international financial information publisher, responsible for the publication of ICE LIBOR, ICE Swap Rate, LBMA Gold Price and ISDA SIMM benchmarks" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-usfsind:ICEBenchmarkAdministration ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.theice.com/index"^^xsd:anyURI ;
+	.
+
+fibo-ind-ir-mdp:ReferenceBanks
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider ,
+		lcc-lr:Collection
+		;
+	rdfs:label "reference banks" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "market data provider of interest rate benchmarks representing a group of one or more banks that either individually, or in aggregate, provide quoted rates that contribute to the benchmark" ;
+	fibo-fnd-utl-av:explanatoryNote "With respect to LIBOR, for example, the Bank of England will request the principal London office of each of the Reference Banks to provide a quotation of its rate. If at least two such quotations are provided, the rate for such date will be the arithmetic mean of the quotations. If fewer than two quotations are provided as requested, the rate for such date will be the arithmetic mean of the rates quoted by major banks in New York City selected by the Bank, at approximately 11:00 a.m. New York City time for loans in U.S. Dollars to leading European banks for such Interest Period and in an amount approximately equal to the amount requested LIBOR-Reference Banks Loan." ;
+	.
+
+fibo-ind-ir-mdp:ReferenceDealers
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider ,
+		lcc-lr:Collection
+		;
+	rdfs:label "reference dealers" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "market data provider of interest rate benchmarks representing a group of one or more swap dealers that either individually, or in aggregate, provide quoted rates that contribute to the benchmark" ;
+	.
+
+fibo-ind-ir-mdp:SwapMarker
+	a
+		owl:NamedIndividual ,
+		fibo-ind-ir-ir:MarketDataProvider
+		;
+	rdfs:label "Swap Marker" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "market data provider of interest rate benchmarks" ;
+	.
+
+fibo-ind-ir-mdp:Tradition
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-pas-fpas:FinancialServiceProvider ,
+		fibo-ind-ir-ir:MarketDataProvider
+		;
+	rdfs:label "Tradition" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/> ;
+	skos:definition "Tradition functional entity that is a financial service and market data provider and division of Compagnie Financiere Tradition" ;
+	.
+

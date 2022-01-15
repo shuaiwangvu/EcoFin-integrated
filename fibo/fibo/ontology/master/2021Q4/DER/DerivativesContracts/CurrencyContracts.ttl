@@ -1,0 +1,278 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CurrencyContracts/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/RateDerivatives/RateDerivatives/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/ForeignExchange/ForeignExchange/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CurrencyContracts/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-der-drc-bsc: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/> .
+@prefix fibo-der-drc-cur: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> .
+@prefix fibo-der-drc-ff: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/> .
+@prefix fibo-der-drc-opt: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/> .
+@prefix fibo-der-drc-swp: <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/> .
+@prefix fibo-der-rtd-rtd: <https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-fx-fx: <https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/ForeignExchange/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/>
+	a owl:Ontology ;
+	rdfs:label "Currency Contracts Ontology"@en ;
+	dct:abstract "This ontology defines concepts common to currency spot contracts and foreign exchange derivatives (forwards, options and swaps)." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2015-2021 EDM Council, Inc." ,
+		"Copyright (c) 2015-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/IND/> ,
+		<https://www.omg.org/spec/LCC/>
+		;
+	sm:fileAbbreviation "fibo-der-drc-cur" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/DerivativesBasics/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/FuturesAndForwards/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Options/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/Swaps/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/RateDerivatives/RateDerivatives/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FinancialInstruments/FinancialInstruments/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/ForeignExchange/ForeignExchange/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/DER/DerivativesContracts/CurrencyContracts/> ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-der-drc-cur:CurrencyDerivative
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-rtd-rtd:RateBasedDerivativeInstrument ,
+		fibo-fbc-fi-fi:CurrencyInstrument ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-cur:hasBuyingCurrency ;
+			owl:onClass fibo-fnd-acc-cur:Currency ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-cur:hasSellingCurrency ;
+			owl:onClass fibo-fnd-acc-cur:Currency ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-der-rtd-rtd:ForeignExchangeRateObservable ;
+		]
+		;
+	rdfs:label "currency derivative"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "agreement to deliver and settle a given amount of money in one currency, in exchange for a given amount in another currency at an agreed rate of exchange"@en ;
+	fibo-fnd-utl-av:abbreviation "FX derivative"@en ;
+	fibo-fnd-utl-av:synonym
+		"foreign exchange derivative"@en ,
+		"forex derivative"@en
+		;
+	.
+
+fibo-der-drc-cur:CurrencyForward
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-cur:CurrencyDerivative ,
+		fibo-der-drc-ff:Forward ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-cur:hasForwardExchangeRate ;
+			owl:someValuesFrom fibo-fnd-acc-cur:ExchangeRate ;
+		]
+		;
+	rdfs:label "currency forward"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "agreement to deliver and settle a given amount of money in one currency, in exchange for a given amount in another currency, at an agreed date in the future and at an agreed rate of exchange"@en ;
+	fibo-fnd-utl-av:synonym
+		"FX forward"@en ,
+		"foreign exchange forward"@en
+		;
+	.
+
+fibo-der-drc-cur:CurrencyForwardOutright
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-cur:CurrencyForward ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:hasPart ;
+			owl:someValuesFrom fibo-der-drc-cur:CurrencySpotContract ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:hasPart ;
+			owl:someValuesFrom fibo-der-drc-cur:CurrencySwap ;
+		]
+		;
+	rdfs:label "currency forward outright"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "forward contract in a foreign exchange market that locks in the price at which an entity must buy or sell a currency on a future date"@en ;
+	fibo-fnd-utl-av:explanatoryNote "The holders of a currency forward are obligated to buy or sell the currency at a specified price, at a specified quantity and on a specified future date. These contracts cannot be transferred. Jan 10 Review Notes Outright Forward is the term for the professional markets. Spot + Swap where Swap is 2 simultaneous transactions."@en ;
+	fibo-fnd-utl-av:synonym
+		"forward outright"@en ,
+		"outright forward currency transaction"@en
+		;
+	.
+
+fibo-der-drc-cur:CurrencyOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-cur:CurrencyDerivative ,
+		fibo-der-drc-opt:VanillaOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:onClass fibo-ind-fx-fx:CurrencySpotBuyRate ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-opt:hasStrikeRate ;
+			owl:someValuesFrom fibo-fnd-acc-cur:ExchangeRate ;
+		]
+		;
+	rdfs:label "currency option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "option giving the buyer (holder) the right, but not the obligation, to buy or sell currency at a specified exchange rate during a specified period of time"@en ;
+	fibo-fnd-utl-av:abbreviation "FX option"@en ;
+	fibo-fnd-utl-av:explanatoryNote "For this right, a premium is paid to the broker, which will vary depending on the number of contracts purchased. Currency options are one of the best ways for corporations or individuals to hedge against adverse movements in exchange rates. Investors can hedge against foreign currency risk by purchasing a currency option put or call. For example, assume that an investor believes that the USD/EUR rate is going to increase from 0.80 to 0.90 (meaning that it will become more expensive for a European investor to buy U.S dollars). In this case, the investor would want to buy a call option on USD/EUR so that he or she could stand to gain from an increase in the exchange rate (or the USD rise)."@en ;
+	fibo-fnd-utl-av:synonym
+		"foreign exchange option"@en ,
+		"forex option"@en
+		;
+	.
+
+fibo-der-drc-cur:CurrencySpotContract
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fi-fi:CurrencyInstrument ,
+		fibo-fbc-fi-fi:SpotContract ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-cur:hasSpotExchangeRate ;
+			owl:someValuesFrom fibo-fnd-acc-cur:ExchangeRate ;
+		]
+		;
+	rdfs:label "currency spot contract"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "foreign-exchange contract for immediate delivery"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Spot rates represent the price that a buyer expects to pay for a foreign currency in another currency at the time of the quote. Though the spot exchange rate is said to be settled immediately, the globally accepted settlement cycle for foreign-exchange contracts is two days. Foreign-exchange contracts are therefore settled on the second day after the day the deal is made."@en ;
+	fibo-fnd-utl-av:synonym "foreign exchange spot contract"@en ;
+	.
+
+fibo-der-drc-cur:CurrencySwap
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-cur:CurrencyDerivative ,
+		fibo-der-drc-swp:Swap ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-swp:hasLeg ;
+			owl:someValuesFrom fibo-der-drc-cur:CurrencyForward ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-swp:hasLeg ;
+			owl:someValuesFrom fibo-der-drc-cur:CurrencySpotContract ;
+		]
+		;
+	rdfs:label "currency swap"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "foreign exchange agreement between two parties to exchange a given amount of one currency for another currency for spot delivery or for forward delivery at an agreed rate after a specified period of time"@en ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, 2019."@en ;
+	.
+
+fibo-der-drc-cur:CurrencyVolatilityOption
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-der-drc-cur:CurrencyOption ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-der-drc-bsc:hasUnderlier ;
+			owl:someValuesFrom fibo-ind-fx-fx:CurrencySpotVolatility ;
+		]
+		;
+	rdfs:label "currency volatility option"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	skos:definition "currency option whose underlying asset is based on the volatility of a foreign exchange rate"@en ;
+	.
+
+fibo-der-drc-cur:hasBuyingCurrency
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasDealtCurrency ;
+	rdfs:label "has buying currency"@en ;
+	rdfs:domain fibo-der-drc-cur:CurrencyDerivative ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	rdfs:range fibo-fnd-acc-cur:Currency ;
+	skos:definition "indicates the currency purchased with respect to a foreign exchange derivative"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Note that the buying and selling currencies could be the same under certain circumstances."@en ;
+	.
+
+fibo-der-drc-cur:hasForwardExchangeRate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-qt-qtu:hasQuantityValue ;
+	rdfs:label "has forward exchange rate"@en ;
+	rdfs:domain fibo-der-drc-cur:CurrencyForward ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	rdfs:range fibo-fnd-acc-cur:ExchangeRate ;
+	skos:definition "rate of exchange between two currencies as specified in a forward contract"@en ;
+	.
+
+fibo-der-drc-cur:hasSellingCurrency
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-acc-cur:hasBaseCurrency ;
+	rdfs:label "has selling currency"@en ;
+	rdfs:domain fibo-der-drc-cur:CurrencyDerivative ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	rdfs:range fibo-fnd-acc-cur:Currency ;
+	skos:definition "indicates the currency sold with respect to a foreign exchange derivative"@en ;
+	fibo-fnd-utl-av:explanatoryNote "Note that the buying and selling currencies could be the same under certain circumstances."@en ;
+	.
+
+fibo-der-drc-cur:hasSpotExchangeRate
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-qt-qtu:hasQuantityValue ;
+	rdfs:label "has spot exchange rate"@en ;
+	rdfs:domain fibo-der-drc-cur:CurrencySpotContract ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/> ;
+	rdfs:range fibo-fnd-acc-cur:ExchangeRate ;
+	skos:definition "rate of exchange between two currencies as specified in a spot contract"@en ;
+	.
+
+fibo-der-drc-ff:CurrencyFuture
+	a owl:Class ;
+	rdfs:subClassOf fibo-der-drc-cur:CurrencyDerivative ;
+	.
+

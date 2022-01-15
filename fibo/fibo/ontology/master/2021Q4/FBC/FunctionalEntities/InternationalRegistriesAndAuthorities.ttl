@@ -1,0 +1,467 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessRegistries/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegulatoryAgencies/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/VirtualPlaces/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-ge-ge: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-le-lei: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/> .
+@prefix fibo-fbc-fct-bci: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessCentersIndividuals/> .
+@prefix fibo-fbc-fct-breg: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-ireg: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> .
+@prefix fibo-fbc-fct-mkt: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/> .
+@prefix fibo-fbc-fct-ra: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-plc-adr: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/> .
+@prefix fibo-fnd-plc-loc: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/> .
+@prefix fibo-fnd-plc-vrt: <https://spec.edmcouncil.org/fibo/ontology/FND/Places/VirtualPlaces/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/>
+	a owl:Ontology ;
+	rdfs:label "International Registries and Authorities Ontology" ;
+	dct:abstract "This ontology extends the Business Registries ontology to define commonly referenced international registration authorities and related registry details, where the multi-national responsibilities for registering and/or managing various identifiers needed in banking applications occur, such as SWIFT.  These individuals and in some cases, such as registry entries, are managed independently to reduce the import footprint for applications that do not require them, in other words, to support modularity needs of FIBO users." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2015-2021 EDM Council, Inc." ,
+		"Copyright (c) 2015-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessCentersIndividuals/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fbc-fct-ireg" ;
+	sm:filename "InternationalRegistriesAndAuthorities.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/BusinessRegistries/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/Markets/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegistrationAuthorities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/RegulatoryAgencies/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Addresses/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/Locations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Places/VirtualPlaces/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:changeNote "The https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities.rdf version of this ontology was revised to add details for the Global LEI Foundation and fix spelling errors." ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+<https://rdf.gleif.org/L1/L-506700GE1G29325QX363-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "Global Legal Entity Identifier Foundation legal entity identifier" ;
+	skos:definition "identifier and link to the official legal entity identifier registry entry for the Global Legal Entity Identifier Foundation as published in the Global LEI Index" ;
+	fibo-fbc-fct-ra:isRegisteredIn fibo-fbc-fct-ireg:GlobalLEIIndex ;
+	lcc-lr:hasTag "506700GE1G29325QX363" ;
+	lcc-lr:identifies fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundation ;
+	.
+
+<https://rdf.gleif.org/L1/L-HB7FFAZI0OMZ8PP8OE26-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "Society for Worldwide Interbank Financial Telecommunication (SWIFT) legal entity identifier" ;
+	skos:definition "identifier and link to the official legal entity identifier registry entry for the Society for Worldwide Interbank Financial Telecommunication (SWIFT)" ;
+	fibo-fbc-fct-ra:isRegisteredIn fibo-fbc-fct-ireg:GlobalLEIIndex ;
+	lcc-lr:hasTag "HB7FFAZI0OMZ8PP8OE26" ;
+	lcc-lr:identifies fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunication ;
+	.
+
+<https://rdf.gleif.org/L1/L-UXIATLMNPCXXT5KR1S08-LEI>
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-lei:LegalEntityIdentifier
+		;
+	rdfs:label "Bank for International Settlements legal entity identifier" ;
+	skos:definition "identifier and link to the official legal entity identifier registry entry for the Bank for International Settlements" ;
+	fibo-fbc-fct-ra:isRegisteredIn fibo-fbc-fct-ireg:GlobalLEIIndex ;
+	lcc-lr:hasTag "UXIATLMNPCXXT5KR1S08" ;
+	lcc-lr:identifies fibo-fbc-fct-ireg:BankForInternationalSettlements ;
+	.
+
+fibo-fbc-fct-ireg:BankForInternationalSettlements
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:Instrumentality
+		;
+	rdfs:label
+		"Bank for International Settlements"@en ,
+		"Bank für Internationalen Zahlungsausgleich"@de ,
+		"Banque Des Reglements Internationaux"@fr
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "international financial organization that serves central banks in their pursuit of monetary and financial stability, helping to foster international cooperation in those areas and acting as a bank for central banks" ;
+	fibo-be-le-fbo:hasHeadquartersAddress fibo-fbc-fct-ireg:BankForInternationalSettlementsAddress ;
+	fibo-be-le-lei:hasLegalAddress fibo-fbc-fct-ireg:BankForInternationalSettlementsAddress ;
+	fibo-fnd-plc-vrt:hasWebsite "https://www.bis.org/"^^xsd:anyURI ;
+	fibo-fnd-rel-rel:hasLegalName "Bank für Internationalen Zahlungsausgleich"@de ;
+	fibo-fnd-utl-av:abbreviation "BIS" ;
+	fibo-fnd-utl-av:adaptedFrom "Office of Financial Research (OFR) Annual Report, 2012, Glossary" ;
+	fibo-fnd-utl-av:explanatoryNote "Established in 1930, the BIS is owned by 63 central banks, representing countries from around the world that together account for about 95 percent of world GDP. Its head office is in Basel, Switzerland and it has two representative offices: in Hong Kong SAR and in Mexico City, as well as Innovation Hub Centres around the world." ;
+	.
+
+fibo-fbc-fct-ireg:BankForInternationalSettlementsAddress
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:ConventionalStreetAddress
+		;
+	rdfs:label "Bank for International Settlements address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Tower building address for the Bank for International Settlements (BIS)" ;
+	fibo-fnd-plc-adr:hasAddressLine1 "Centralbahnplatz 2" ;
+	fibo-fnd-plc-adr:hasPostalCode "4051" ;
+	fibo-fnd-plc-loc:hasCountry lcc-3166-1:Switzerland ;
+	fibo-fnd-plc-loc:hasMunicipality fibo-fbc-fct-bci:Basel ;
+	.
+
+fibo-fbc-fct-ireg:BankForInternationalSettlementsAsBankingServicesProvider
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-fse:Bank
+		;
+	rdfs:label "Bank for International Settlements as banking services provider"@en ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	rdfs:seeAlso <https://www.bis.org/> ;
+	skos:definition "Bank for International Settlements role as a banking services provider to central banks and other monetary authorities" ;
+	fibo-fbc-fct-fse:hasDateEstablished fibo-fbc-fct-ireg:BankForInternationalSettlementsDateEstablished ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-ireg:BankForInternationalSettlements ;
+	fibo-fnd-utl-av:adaptedFrom "Office of Financial Research (OFR) Annual Report, 2012, Glossary" ;
+	fibo-fnd-utl-av:explanatoryNote "The Bank for International Settlements offers a wide range of financial services specifically designed to assist central banks and other official monetary institutions in the management of their foreign exchange reserves. BIS facilitates international financial cooperation and endeavors to make monetary policy more predictable and transparent. Its customers are central banks and international organizations; they do not accept deposits from, or provide financial services to, private individuals or corporate entities." ;
+	.
+
+fibo-fbc-fct-ireg:BankForInternationalSettlementsDateEstablished
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDate
+		;
+	rdfs:label "Bank for International Settlements date established" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "date that Bank for International Settlements was established to offer financial services to BIS member central banks" ;
+	fibo-fnd-dt-fd:hasDateValue "1930-05-01" ;
+	.
+
+fibo-fbc-fct-ireg:BankForInternationalSettlementsLegalEntityIdentifierRegistryEntry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:LegalEntityIdentifierRegistryEntry
+		;
+	rdfs:label "Bank for International Settlements legal entity identifier registry entry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Global LEI Index registry entry for Bank for International Settlements (BIS)" ;
+	fibo-fbc-fct-breg:hasInitialRegistrationDate "2012-06-06T08:55:00-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRegistrationStatus fibo-fbc-fct-breg:IssuedStatus ;
+	fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate "2021-06-29T14:31:00-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRenewalDate "2022-06-25T07:42:00-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasValidationLevel fibo-fbc-fct-breg:EntityValidationLevelFullyCorroborated ;
+	fibo-fnd-rel-rel:comprises <https://rdf.gleif.org/L1/L-UXIATLMNPCXXT5KR1S08-LEI> ;
+	.
+
+fibo-fbc-fct-ireg:BusinessIdentifierCodeDataRecord
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fct-breg:BusinessRegistryEntry ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isIncludedIn ;
+			owl:hasValue fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistry ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fct-breg:isSelfMaintained ;
+			owl:someValuesFrom xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom fibo-fbc-fct-fse:BusinessIdentifierCode ;
+		]
+		;
+	rdfs:label "business identifier code data record" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "entry in a registry that conforms to ISO 9362 for the management of BIC codes and related registration information" ;
+	fibo-fnd-utl-av:abbreviation "BIC data record" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.swift.com/standards/data-standards/bic"^^xsd:anyURI ;
+	.
+
+fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistrationAuthority
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:BusinessRegistrationAuthority ,
+		fibo-fbc-pas-fpas:FinancialServiceProvider
+		;
+	rdfs:label "Business Identifier Code registration authority" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "registration authority and financial service provider, appointed by the International Standards Organization (ISO), that is the official registration authority (RA) for ISO 9362, Banking - Banking telecommunication messages - Business identifier code (BIC)" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunication ;
+	fibo-fnd-rel-rel:manages fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistry ;
+	fibo-fnd-utl-av:abbreviation
+		"BIC RA" ,
+		"BIC registration authority"
+		;
+	fibo-fnd-utl-av:adaptedFrom "https://www.swift.com/standards/data-standards/bic"^^xsd:anyURI ;
+	fibo-fnd-utl-av:synonym "BIC code registrar" ;
+	.
+
+fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:BusinessRegistry
+		;
+	rdfs:label "business identifier code registry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "registry for registering and maintaining information about bank and other business identifier codes that conform to ISO 9362" ;
+	fibo-fnd-rel-rel:isManagedBy fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistrationAuthority ;
+	fibo-fnd-utl-av:abbreviation "BIC registry" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.swift.com/standards/data-standards/bic"^^xsd:anyURI ;
+	.
+
+fibo-fbc-fct-ireg:GLEIFLegalEntityIdentifierRegistryEntry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:LegalEntityIdentifierRegistryEntry
+		;
+	rdfs:label "Global Legal Entity Identifier Foundation (GLEIF) legal entity identifier registry entry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Global LEI Index registry entry for Global Legal Entity Identifier Foundation (GLEIF)" ;
+	fibo-fbc-fct-breg:hasInitialRegistrationDate "2018-03-15T22:13:33-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRegistrationStatus fibo-fbc-fct-breg:IssuedStatus ;
+	fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate "2021-07-15T05:29:06-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRenewalDate "2022-03-15T16:00:00-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasValidationLevel fibo-fbc-fct-breg:EntityValidationLevelFullyCorroborated ;
+	fibo-fnd-rel-rel:comprises <https://rdf.gleif.org/L1/L-506700GE1G29325QX363-LEI> ;
+	.
+
+fibo-fbc-fct-ireg:GlobalLEIIndex
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:LegalEntityIdentifierRegistry
+		;
+	rdfs:label "Global LEI Index" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "registry that contains historical and current LEI records including related reference data in one authoritative, central repository" ;
+	fibo-fnd-utl-av:explanatoryNote "The reference data provides the information on a legal entity identifiable with an LEI. The Global LEI Index is the only global online source that provides open, standardized and high quality legal entity reference data." ;
+	.
+
+fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundation
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-fbo:NotForProfitOrganization
+		;
+	rdfs:label "Global Legal Entity Identifier Foundation" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Global Legal Entity Identifier Foundation (GLEIF) legal entity, tasked to support the implementation and use of the Legal Entity Identifier (LEI)" ;
+	fibo-be-le-fbo:hasHeadquartersAddress fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundationAddress ;
+	fibo-be-le-lei:hasLegalAddress fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundationAddress ;
+	fibo-fnd-plc-vrt:hasWebsite "https://www.gleif.org/en/"^^xsd:anyURI ;
+	fibo-fnd-rel-rel:hasLegalName "Global Legal Entity Identifier Foundation" ;
+	fibo-fnd-utl-av:abbreviation "GLEIF" ;
+	.
+
+fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundationAddress
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:ConventionalStreetAddress
+		;
+	rdfs:label "Global Legal Entity Identifier Foundation address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "physical address of the Global Legal Entity Identifier Foundation (GLEIF)" ;
+	fibo-fnd-plc-adr:hasAddressLine1 "St. Alban-Vorstadt 5" ;
+	fibo-fnd-plc-adr:hasPostalCode "4052" ;
+	fibo-fnd-plc-loc:hasCountry lcc-3166-1:Switzerland ;
+	fibo-fnd-plc-loc:hasMunicipality fibo-fbc-fct-bci:Basel ;
+	.
+
+fibo-fbc-fct-ireg:IBANRegistrationAuthority
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-ra:RegistrationAuthority ,
+		fibo-fbc-pas-fpas:FinancialServiceProvider
+		;
+	rdfs:label "IBAN registration authority" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "ISO 13616:2007, International Bank Account Number (IBAN) Registration Authority (RA) and financial service provider, appointed by the International Standards Organization (ISO), that is the official registration authority (RA) for ISO 13616:2007, Financial services - International bank account number (IBAN)" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunication ;
+	fibo-fnd-rel-rel:manages fibo-fbc-fct-ireg:BusinessIdentifierCodeRegistry ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.swift.com/standards/data-standards/iban"^^xsd:anyURI ;
+	.
+
+fibo-fbc-fct-ireg:LegalEntityIdentfierRegistrationAuthority
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-ra:RegistrationAuthority
+		;
+	rdfs:label "Legal Entity Identifier registration authority" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "registration authority appointed by the International Standards Organization (ISO) that is the official registration authority (RA) for ISO 17442, Financial services - Legal entity identifier (LEI)" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-ireg:GlobalLegalEntityIdentifierFoundation ;
+	fibo-fnd-rel-rel:manages fibo-fbc-fct-ireg:GlobalLEIIndex ;
+	.
+
+fibo-fbc-fct-ireg:MICRegistrationAuthority
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-ra:RegistrationAuthority ,
+		fibo-fbc-pas-fpas:FinancialServiceProvider
+		;
+	rdfs:label "MIC registration authority" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "ISO 10383, Market Identifier Code (MIC) Registration Authority (RA) and financial service provider, appointed by the International Standards Organization (ISO), that is the official registration authority (RA) for ISO 10383, Codes for exchanges and market identification (MIC)" ;
+	fibo-fnd-rel-rel:hasIdentity fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunication ;
+	fibo-fnd-rel-rel:manages fibo-fbc-fct-ireg:MarketIdentifierCodeRegistry ;
+	fibo-fnd-utl-av:abbreviation "MIC RA" ;
+	fibo-fnd-utl-av:adaptedFrom
+		"https://www.anna-web.org/standards/mic-iso-10383/"^^xsd:anyURI ,
+		"https://www.iso20022.org/10383/iso-10383-market-identifier-codes"^^xsd:anyURI
+		;
+	fibo-fnd-utl-av:synonym "ISO 10383 Registration Authority" ;
+	.
+
+fibo-fbc-fct-ireg:MarketIdentifierCodeRegistry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-ra:Registry
+		;
+	rdfs:label "market identifier code registry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "registry for registering and maintaining information for market identifier codes that conform to ISO 10383" ;
+	fibo-fnd-rel-rel:isManagedBy fibo-fbc-fct-ireg:MICRegistrationAuthority ;
+	fibo-fnd-utl-av:abbreviation "MIC registry" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso20022.org/10383/iso-10383-market-identifier-codes"^^xsd:anyURI ;
+	.
+
+fibo-fbc-fct-ireg:MarketIdentifierCodeRegistryEntry
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-fct-ra:RegistryEntry ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isIncludedIn ;
+			owl:hasValue fibo-fbc-fct-ireg:MarketIdentifierCodeRegistry ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fct-mkt:hasMarketIdentifierCodeStatus ;
+			owl:onClass fibo-fbc-fct-mkt:MarketIdentifierCodeStatus ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fbc-fct-breg:hasInitialRegistrationDate ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom fibo-fbc-fct-mkt:MarketIdentifier ;
+		]
+		;
+	rdfs:label "market identifier code registry entry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "entry in a market identifier code registry that conforms to ISO 10383" ;
+	fibo-fnd-utl-av:abbreviation "MIC registry entry" ;
+	fibo-fnd-utl-av:adaptedFrom "https://www.iso20022.org/10383/iso-10383-market-identifier-codes"^^xsd:anyURI ;
+	.
+
+fibo-fbc-fct-ireg:SWIFTLegalEntityIdentifierRegistryEntry
+	a
+		owl:NamedIndividual ,
+		fibo-fbc-fct-breg:LegalEntityIdentifierRegistryEntry
+		;
+	rdfs:label "Society for Worldwide Interbank Financial Telecommunication (SWIFT) legal entity identifier registry entry" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Global LEI Index registry entry for the Society for Worldwide Interbank Financial Telecommunication (SWIFT)" ;
+	fibo-fbc-fct-breg:hasInitialRegistrationDate "2012-06-06T08:54:00-07:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRegistrationStatus fibo-fbc-fct-breg:IssuedStatus ;
+	fibo-fbc-fct-breg:hasRegistrationStatusRevisionDate "2021-02-12T13:35:00-08:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasRenewalDate "2022-01-20T00:21:00-08:00"^^xsd:dateTime ;
+	fibo-fbc-fct-breg:hasValidationLevel fibo-fbc-fct-breg:EntityValidationLevelFullyCorroborated ;
+	fibo-fnd-rel-rel:comprises <https://rdf.gleif.org/L1/L-HB7FFAZI0OMZ8PP8OE26-LEI> ;
+	.
+
+fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunication
+	a
+		owl:NamedIndividual ,
+		fibo-be-le-fbo:NotForProfitOrganization
+		;
+	rdfs:label "Society for Worldwide Interbank Financial Telecommunication" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "Society for Worldwide Interbank Financial Telecommunication (SWIFT) legal entity, which is a global member-owned cooperative and the world's leading provider of secure financial messaging services" ;
+	fibo-be-le-fbo:hasHeadquartersAddress fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunicationAddress ;
+	fibo-be-le-lei:hasLegalAddress fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunicationAddress ;
+	fibo-fnd-plc-vrt:hasWebsite "https://www.swift.com/"^^xsd:anyURI ;
+	fibo-fnd-rel-rel:hasLegalName "Society for Worldwide Interbank Financial Telecommunication SCRL/CVBA" ;
+	fibo-fnd-utl-av:abbreviation "SWIFT" ;
+	.
+
+fibo-fbc-fct-ireg:SocietyForWorldwideInterbankFinancialTelecommunicationAddress
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-plc-adr:ConventionalStreetAddress
+		;
+	rdfs:label "Society for Worldwide Interbank Financial Telecommunication address" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/> ;
+	skos:definition "corporate address for the Society for Worldwide Interbank Financial Telecommunication (SWIFT)" ;
+	fibo-fnd-plc-adr:hasAddressLine1 "Avenue Adèle 1" ;
+	fibo-fnd-plc-adr:hasPostalCode "1310" ;
+	fibo-fnd-plc-loc:hasCityName "La Hulpe" ;
+	fibo-fnd-plc-loc:hasCountry lcc-3166-1:Belgium ;
+	.
+

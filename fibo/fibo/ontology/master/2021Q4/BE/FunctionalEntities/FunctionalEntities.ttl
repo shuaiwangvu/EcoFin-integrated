@@ -1,0 +1,270 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/FunctionalEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/FormalOrganizations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-org-fm: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/> .
+@prefix fibo-fnd-org-org: <https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/> .
+@prefix fibo-fnd-pas-pas: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-pty-pty: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/>
+	a owl:Ontology ;
+	rdfs:label "Functional Entities Ontology" ;
+	dct:abstract "This ontology defines the fundamental concepts for entities defined by their function, such as the relationship to the various forms which one or another functionally-defined entity may take. It also includes a number of basic types of entity defined by function, such as business and non-profit. The concepts in this ontology are intended to be extensible in other ontologies which may be dedicated to specific kinds of functionally-defined business entity or organization." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2013-2021 EDM Council, Inc." ,
+		"Copyright (c) 2013-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-be-fct-fct" ;
+	sm:filename "FunctionalEntities.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/FormalBusinessOrganizations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Organizations/FormalOrganizations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Parties/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Parties/Roles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/ProductsAndServices/ProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified by the FIBO 2.0 revision to address missing labels and definitions on the deprecated sole proprietorship class to match those in the equivalent class." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified per the issue resolutions identified in the FIBO BE 1.0 FTF report." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified per the issue resolutions identified in the FIBO BE 1.1 RTF report. Changes include deprecation of the SoleProprietorship class and making it equivalent to the class with the same name in the Sole Proprietorships ontology. This version also introduces a new FunctionalEntity class, as the parent of FunctionalBusinessEntity in this ontology and as the parent of Government in the GovernmentEntities ontology." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to add the concept of an association." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to address a circular definition on association." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to eliminate deprecated elements." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to eliminate duplication of concepts in LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to generalize certain unions where they were no longer required and eliminate an unused import." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to reflect the move of some organization-specific concepts from BE to FND." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities.rdf version of this ontology was modified to revise and extend the definition of merchant, to support merchant category codes as needed for representation of credit card transactions, merge business and functional business entity and eliminate commerce and commercial activity (which are not used anywhere in FIBO), and to clean up definitions and make them ISO 704 compliant."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-be-fct-fct:Association
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-be-le-fbo:NotForProfitOrganization ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-pty-rl:playsRole ;
+			owl:someValuesFrom fibo-be-fct-fct:CooperativeSociety ;
+		]
+		;
+	rdfs:label "association" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "not-for-profit organization that is owned by and acts on behalf of its members" ;
+	fibo-fnd-utl-av:explanatoryNote "Associations include trade or business associations, industry sector-specific groups, and professional associations, among others. They also commonly include cooperative farms and markets." ;
+	.
+
+fibo-be-fct-fct:CooperativeSociety
+	a owl:Class ;
+	rdfs:subClassOf fibo-be-fct-fct:FunctionalBusinessEntity ;
+	rdfs:label "cooperative society" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "organization owned by and operated for the benefit of those using its services" ;
+	skos:example "In agriculture, there are broadly three types of cooperatives: a machinery pool, a manufacturing/marketing cooperative, and a credit union" ;
+	fibo-fnd-utl-av:synonym "cooperative" ;
+	.
+
+fibo-be-fct-fct:FamilyOffice
+	a owl:Class ;
+	rdfs:subClassOf fibo-be-fct-fct:FunctionalBusinessEntity ;
+	rdfs:label "family office" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "organization that assumes the day-to-day administration and management of a family's affairs" ;
+	fibo-fnd-utl-av:explanatoryNote "Family offices are often privately held companies set up to handle investment and wealth management for wealthy families." ;
+	.
+
+fibo-be-fct-fct:FunctionalBusinessEntity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-be-fct-fct:FunctionalEntity ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:onClass fibo-fnd-org-fm:FormalOrganization ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "functional business entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "functional entity defined in terms of the nature of the commercial activity it conducts" ;
+	.
+
+fibo-be-fct-fct:FunctionalEntity
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-pty-rl:ThingInRole ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:hasIdentity ;
+			owl:onClass fibo-fnd-pty-pty:IndependentParty ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "functional entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "party defined in terms of a function it performs" ;
+	.
+
+fibo-be-fct-fct:Merchant
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-be-fct-fct:FunctionalBusinessEntity ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:isClassifiedBy ;
+			owl:someValuesFrom fibo-be-fct-fct:MerchantCategoryCode ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:isIdentifiedBy ;
+			owl:someValuesFrom fibo-be-fct-fct:MerchantIdentifier ;
+		]
+		;
+	rdfs:label "merchant" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "party engaged in the purchase and sales of goods produced by others for profit" ;
+	.
+
+fibo-be-fct-fct:MerchantCategoryCode
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:IndustrySectorClassifier ,
+		lcc-lr:CodeElement ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isDefinedIn ;
+			owl:onClass fibo-be-fct-fct:MerchantCategoryCodeScheme ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:hasTag ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-be-fct-fct:hasMerchantCategoryDescription ;
+			owl:someValuesFrom xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:classifies ;
+			owl:someValuesFrom fibo-be-fct-fct:Merchant ;
+		]
+		;
+	rdfs:label "merchant category code" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "code used internationally to classify a merchant" ;
+	fibo-fnd-utl-av:abbreviation "MCC" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18245:2003 Retail financial services - Merchant category codes" ;
+	fibo-fnd-utl-av:explanatoryNote
+		"Merchant categories are organized by the type of business, trade or services supplied.  Certain category codes including those for very large businesses, such as airlines and some hotel chains, may be delineated to the point of identifying the business. Merchant category codes and/or the descriptions of the service categories are frequently used in credit card and other banking transactions for analysis, transaction classification, such as for use in promotional rewards, and sometimes tax-related purposes." ,
+		"Values are specified only for those merchant categories that are generally expected to originate retail financial transactions.  Criteria for establishing a new category code includes (a) the merchant category is reasonable and substantially different from all other merchant categories currently represented in the list of code values; (b) the merchant category is separate and distinct from all other industries currently represented in the list of code values; (c) the proposal describes a merchant category or industry, and not a process; (d) the minimum annual sales volume of merchants included in the merchant category, taken as a whole, is USD 10 million; and (e) sufficient justification for the addition of a new code value is found."
+		;
+	.
+
+fibo-be-fct-fct:MerchantCategoryCodeScheme
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:IndustrySectorClassificationScheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:defines ;
+			owl:someValuesFrom fibo-be-fct-fct:MerchantCategoryCode ;
+		]
+		;
+	rdfs:label "merchant category code scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "scheme defining a set of codes for classifying merchant services" ;
+	fibo-fnd-utl-av:adaptedFrom "ISO 18245:2003 Retail financial services - Merchant category codes" ;
+	fibo-fnd-utl-av:explanatoryNote "ISO 18245 provides a set of merchant category codes that are used internationally.  Some countries, regional governments, banks, and other large organizations extend the basic codes with custom additions to fit business needs." ;
+	.
+
+fibo-be-fct-fct:MerchantIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-lr:identifies ;
+			owl:onClass fibo-be-fct-fct:Merchant ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "merchant identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	skos:definition "unique identifier for a merchant that is used, for example, for transaction interchange purposes" ;
+	.
+
+fibo-be-fct-fct:hasMerchantCategoryDescription
+	a owl:DatatypeProperty ;
+	rdfs:label "has merchant category description" ;
+	rdfs:domain fibo-be-fct-fct:MerchantCategoryCode ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> ;
+	rdfs:range xsd:string ;
+	skos:definition "provides a text description of the sector to which the code applies" ;
+	.
+
+fibo-fnd-org-org:OrganizationIdentifier
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty fibo-fnd-rel-rel:isIssuedBy ;
+		owl:onClass [
+			a owl:Class ;
+			owl:unionOf (
+				fibo-be-fct-fct:FunctionalEntity
+				fibo-fnd-pty-rl:AgentInRole
+			) ;
+		] ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+fibo-fnd-pas-pas:ServiceProvider
+	a owl:Class ;
+	rdfs:subClassOf fibo-be-fct-fct:FunctionalEntity ;
+	.
+

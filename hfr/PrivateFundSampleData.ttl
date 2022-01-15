@@ -1,0 +1,152 @@
+# baseURI: http://hedgefundontology.com/hfr/data/PrivateFundSampleData.ttl
+# imports: http://finregont.com/fro/ref/owl2dl.ttl
+# imports: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl
+# prefix: hfr-samp-data
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <http://www.omg.org/spec/EDMC-FIBO/BE/Corporations/Corporations/> .
+@prefix fibo-be-oac-opty: <http://www.omg.org/spec/EDMC-FIBO/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-fbc-fct-fse: <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-rga: <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/RegulatoryAgencies/> .
+@prefix fibo-fnd-acc-cur: <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-rel-rel: <http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/> .
+@prefix fr-fin-ref: <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#> .
+@prefix fro-fin-ref: <http://finregont.com/fro/ref/FinancialReference.ttl#> .
+@prefix hfr-samp-data: <http://hedgefundontology.com/hfr/data/PrivateFundSampleData.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fundontology.com/fr/data/FundSampleData.ttl#Jacksonville_Advisors>
+  fibo-fnd-rel-rel:provides hfr-samp-data:WhitinghamWealthServices ;
+.
+<http://fundontology.com/fr/data/FundSampleData.ttl#The_New_Jacksonville_Advisers>
+  fibo-fnd-rel-rel:provides hfr-samp-data:WhitinghamWealthServices ;
+.
+<http://fundontology.com/fr/data/FundSampleData.ttl#WestHalifax_foreign_wealth>
+  fibo-fnd-rel-rel:provides hfr-samp-data:WhitinghamWealthServices ;
+.
+<http://hedgefundontology.com/hfr/data/PrivateFundSampleData.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "The advisers in this file are made up. The records populate FIBO Business Entity and related classes. The test data is constructed to trigger Investment Adviser Act Private Fund classifications and filing requirements."^^xsd:string ;
+  owl:imports <http://finregont.com/fro/ref/owl2dl.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl> ;
+  skos:definition "An ontololgy with example instances of fictitious Vermont hedge funds."^^xsd:string ;
+.
+hfr-samp-data:Investor_TheZiemers
+  rdf:type fibo-be-oac-opty:Investor ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_Qualified_Investor ;
+  rdfs:label "The Ziemer family"^^xsd:string ;
+.
+hfr-samp-data:WhitinghamWealthServices
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  rdfs:label "Whitingham Wealth Services"^^xsd:string ;
+.
+hfr-samp-data:WhitinghamWealth_advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Whitingham Wealth"^^xsd:string ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:WhitinghamWealth_advisers_AUM ;
+  <http://www.fundontology.com/fr/FundRegulation#advises> <http://fundontology.com/fr/data/FundSampleData.ttl#Investor_GreenMountainPensons> ;
+  fibo-fnd-rel-rel:manages hfr-samp-data:Whitingham_Alpha_fund ;
+  fibo-fnd-rel-rel:manages hfr-samp-data:Whitingham_Beta_fund ;
+  fibo-fnd-rel-rel:manages hfr-samp-data:Whitingham_Delta_fund ;
+  fibo-fnd-rel-rel:manages hfr-samp-data:Whitingham_Epsilon_fund ;
+  fibo-fnd-rel-rel:manages hfr-samp-data:Whitingham_Gamma_fund ;
+  fibo-fnd-rel-rel:provides hfr-samp-data:WhitinghamWealthServices ;
+  rdfs:comment "A fictitious Vermont Investment Manager"^^xsd:string ;
+  rdfs:label "Whitingham Wealth"^^xsd:string ;
+.
+hfr-samp-data:WhitinghamWealth_advisers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/CurrencyAmount/Currency/hasCurrency> <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Alpha_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "50000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Alpha_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fro-fin-ref:hasBusinessName "Whitingham Alpha fund"^^xsd:string ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:Whitingham_Alpha_AUM ;
+  fibo-be-oac-opty:hasInvestor hfr-samp-data:Investor_TheZiemers ;
+  fibo-fbc-fct-rga:isRegulatedBy <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/USJurisdiction/USRegulatoryAgencies/SecuritiesAndExchangeCommission> ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  rdfs:comment "A fictitious Vermont Hedge Fund"^^xsd:string ;
+  rdfs:label "Whitingham Alpha fund"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Beta_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fro-fin-ref:hasBusinessName "Whitingham Beta fund"^^xsd:string ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:Whitingham_Beta_fund_AUM ;
+  fibo-be-oac-opty:hasInvestor hfr-samp-data:Investor_TheZiemers ;
+  fibo-fbc-fct-rga:isRegulatedBy <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/USJurisdiction/USRegulatoryAgencies/SecuritiesAndExchangeCommission> ;
+  rdfs:comment "A fictitious Vermont Hedge Fund"^^xsd:string ;
+  rdfs:label "Whitingham Beta fund"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Beta_fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "110000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Delta_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fro-fin-ref:hasBusinessName "Whitingham Delta fund"^^xsd:string ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:Whitingham_Delta_fund_AUM ;
+  fibo-be-oac-opty:hasInvestor hfr-samp-data:Investor_TheZiemers ;
+  fibo-fbc-fct-rga:isRegulatedBy <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/USJurisdiction/USRegulatoryAgencies/SecuritiesAndExchangeCommission> ;
+  rdfs:comment "A fictitious Vermont Hedge Fund"^^xsd:string ;
+  rdfs:label "Whitingham Delta fund"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Delta_fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "330000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Epsilon_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fro-fin-ref:hasBusinessName "Whitingham Epsilon fund"^^xsd:string ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:Whitingham_Epsilon_fund_AUM ;
+  fibo-be-oac-opty:hasInvestor hfr-samp-data:Investor_TheZiemers ;
+  fibo-fbc-fct-rga:isRegulatedBy <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/USJurisdiction/USRegulatoryAgencies/SecuritiesAndExchangeCommission> ;
+  rdfs:comment "A fictitious Vermont Hedge Fund"^^xsd:string ;
+  rdfs:label "Whitingham Epsilon fund"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Epsilon_fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1100000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Whitingham Epsilon AUM"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Gamma_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount hfr-samp-data:Whitingham_Gamma_fund_AUM ;
+  fibo-fbc-fct-rga:isRegulatedBy <http://www.omg.org/spec/EDMC-FIBO/FBC/FunctionalEntities/USJurisdiction/USRegulatoryAgencies/SecuritiesAndExchangeCommission> ;
+  rdfs:comment "A fictitious Vermont Hedge Fund"^^xsd:string ;
+  rdfs:label "Whitingham Gamma fund"^^xsd:string ;
+.
+hfr-samp-data:Whitingham_Gamma_fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "70000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency <http://www.omg.org/spec/EDMC-FIBO/FND/Accounting/ISO4217-CurrencyCodes/USDollar> ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+.

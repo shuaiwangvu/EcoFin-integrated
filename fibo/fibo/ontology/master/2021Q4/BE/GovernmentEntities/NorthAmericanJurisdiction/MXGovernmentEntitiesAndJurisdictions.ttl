@@ -1,0 +1,143 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
+# imports: https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MX/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-ge-ge: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/> .
+@prefix fibo-be-ge-mxj: <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> .
+@prefix fibo-fnd-law-jur: <https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-3166-1: <https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> .
+@prefix lcc-3166-2-mx: <https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MX/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/>
+	a owl:Ontology ;
+	rdfs:label "Mexican Government Entities and Jurisdictions Ontology" ;
+	dct:abstract "This ontology provides the set of basic federal government, provincial, and territory level entities and jurisdictions for use in other Mexico-specific FIBO ontologies." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference/"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2020-2021 EDM Council, Inc." ,
+		"Copyright (c) 2020-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-be-ge-mxj" ;
+	sm:filename "MXGovernmentEntitiesAndJurisdictions.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/GovernmentEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LEIEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/LegalEntities/LegalPersons/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Law/Jurisdiction/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ,
+		<https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MX/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> ;
+	skos:changeNote "The http://www.omg.org/spec/EDMC-FIBO/BE/20200701/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions.rdf version of this ontology was modified to replace 'hasPartialSovereigntyOver' with 'hasSharedSovereigntyOver'." ;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-be-ge-mxj:FederalGovernmentOfMexico
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:FederalGovernment
+		;
+	rdfs:label
+		"Federal Government of Mexico"@en ,
+		"Gobierno Federal de México"@es-MX
+		;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <http://www.gob.mx/> ;
+	skos:definition "federal presidential constitutional republic with shared sovereignty over the republic with the governments of the 31 individual Mexican states, which functions per the Constitution of the United Mexican States" ;
+	fibo-be-ge-ge:hasJurisdiction fibo-be-ge-mxj:MexicanJurisdiction ;
+	fibo-fnd-rel-rel:governs lcc-3166-1:Mexico ;
+	fibo-fnd-utl-av:synonym "Gobierno de la República"@es-MX ;
+	.
+
+fibo-be-ge-mxj:MexicanEntity
+	a
+		owl:NamedIndividual ,
+		fibo-be-ge-ge:FederatedSovereignty
+		;
+	rdfs:label "Mexican entity" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <http://www.gob.mx/> ;
+	skos:definition "federated sovereignty and polity that is Mexico" ;
+	fibo-be-ge-ge:hasFullSovereigntyOver lcc-3166-1:Mexico ;
+	fibo-be-ge-ge:hasSharedSovereigntyOver
+		lcc-3166-2-mx:Aguascalientes ,
+		lcc-3166-2-mx:BajaCalifornia ,
+		lcc-3166-2-mx:BajaCaliforniaSur ,
+		lcc-3166-2-mx:Campeche ,
+		lcc-3166-2-mx:Chiapas ,
+		lcc-3166-2-mx:Chihuahua ,
+		lcc-3166-2-mx:CiudadDeMexico ,
+		lcc-3166-2-mx:CoahuilaDeZaragoza ,
+		lcc-3166-2-mx:Colima ,
+		lcc-3166-2-mx:Durango ,
+		lcc-3166-2-mx:Guanajuato ,
+		lcc-3166-2-mx:Guerrero ,
+		lcc-3166-2-mx:Hidalgo ,
+		lcc-3166-2-mx:Jalisco ,
+		lcc-3166-2-mx:Mexico ,
+		lcc-3166-2-mx:MichoacanDeOcampo ,
+		lcc-3166-2-mx:Morelos ,
+		lcc-3166-2-mx:Nayarit ,
+		lcc-3166-2-mx:NuevoLeon ,
+		lcc-3166-2-mx:Oaxaca ,
+		lcc-3166-2-mx:Puebla ,
+		lcc-3166-2-mx:Queretaro ,
+		lcc-3166-2-mx:QuintanaRoo ,
+		lcc-3166-2-mx:SanLuisPotosi ,
+		lcc-3166-2-mx:Sinaloa ,
+		lcc-3166-2-mx:Sonora ,
+		lcc-3166-2-mx:Tabasco ,
+		lcc-3166-2-mx:Tamaulipas ,
+		lcc-3166-2-mx:Tlaxcala ,
+		lcc-3166-2-mx:VeracruzDeIgnacioDeLaLlave ,
+		lcc-3166-2-mx:Yucatan ,
+		lcc-3166-2-mx:Zacatecas
+		;
+	fibo-be-ge-ge:isRepresentedBy fibo-be-ge-mxj:FederalGovernmentOfMexico ;
+	.
+
+fibo-be-ge-mxj:MexicanJurisdiction
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-law-jur:Jurisdiction
+		;
+	rdfs:label "Mexican jurisdiction" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/> ;
+	rdfs:seeAlso <https://www.scjn.gob.mx/> ;
+	skos:definition "jurisdiction of the Supreme Court of Justice of the Nation, including the system of courts that interprets and applies the law at the federal level in Mexico" ;
+	fibo-be-ge-ge:isJurisdictionOf fibo-be-ge-mxj:FederalGovernmentOfMexico ;
+	fibo-fnd-law-jur:hasReach lcc-3166-1:Mexico ;
+	fibo-fnd-utl-av:explanatoryNote "The Supreme Court of Justice of the Nation (SCJN) is the Mexican institution serving as the country's federal high court and the spearhead organisation for the judiciary of the Mexican Federal Government. It consists of eleven magistrates, known as ministers of the court, one of whom is designated the court's president." ;
+	.
+

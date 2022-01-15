@@ -1,0 +1,174 @@
+# baseURI: http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl
+# imports: http://finregont.com/fro/ref/Judging_Contracts_Core.ttl
+# imports: http://fundontology.com/fr/Fund_Reasoning.ttl
+# imports: http://fundontology.com/fr/spin/Rules_IAA_spin.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF.ttl
+# imports: http://hedgefundontology.com/hfr/data/PrivateFundSampleData.ttl
+# imports: http://hedgefundontology.com/hfr/form/PFFormFiling.ttl
+# imports: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl
+# imports: http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl
+# prefix: hfr-rule-iaa
+
+@prefix : <http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl#> .
+@prefix Rules_Investment_Adviser_Act_Private_Fund: <http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fr-rule-iaa: <http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl#> .
+@prefix hfr-rule-iaa: <http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl#> .
+@prefix jc-core: <http://judo.googlecode.com/svn/tunk/Judging_Contracts_Core.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fr-rule-iaa:LR_USC_Required_to_Register_Private_Fund
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies hfr-rule-iaa:Required_toFile_Form_PF ;
+  lkif-expr:medium <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-28> ;
+  rdfs:label "USC IAA 202(a)(11)"^^xsd:string ;
+.
+fr-rule-iaa:Relevant_Ex_USC_IAA_202_203_Required_to_Register_Private_Fund
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)"^^xsd:string ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#PrivateFundAdviser> ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_Required_to_Register_Private_Fund ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+.
+<http://hedgefundontology.com/hfr/rule/Rules_Investment_Adviser_Act_Private_Fund.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "The data triples in this ontology instantiate FinRegOnt classes USC_Title, USC_Chapter,  USC_Paragraph etc. along with their properties. They are loaded from USC-2015-title12-chapter17, reverse engineered from the original data in Office of the Law Revision Counsel XML file."^^xsd:string ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  owl:imports <http://finregont.com/fro/ref/Judging_Contracts_Core.ttl> ;
+  owl:imports <http://fundontology.com/fr/Fund_Reasoning.ttl> ;
+  owl:imports <http://fundontology.com/fr/spin/Rules_IAA_spin.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PrivateFundSampleData.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Financial_Reference.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl> ;
+  skos:definition "Defined classes and SPARQL rules to implement filing requirements for Hedge Funds under the Investment Adviser Act."^^xsd:string ;
+.
+hfr-rule-iaa:Defined_Private_Fund
+  rdf:type fr-rule-iaa:Legal_Status_Defined ;
+  rdfs:label "Private Fund"^^xsd:string ;
+.
+hfr-rule-iaa:Required_toFile_Form_PF
+  rdf:type fr-rule-iaa:Filing_Consequence ;
+  lkif-expr:medium <http://hedgefundontology.com/hfr/ref/Hedge_Fund_Legal_Reference.ttl#myForm_PF> ;
+  rdfs:label "Private Fund"^^xsd:string ;
+.
+hfr-rule-iaa:SEC_Large_Private_Fund_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+  rdfs:subClassOf <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#InvestmentAdviser> ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#PrivateFundAdviser>
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#hasAssetUnderManagementMonetaryAmount> ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/MonetaryAmount>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasAmount> ;
+                      owl:someValuesFrom [
+                          rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:decimal ;
+                          owl:withRestrictions (
+                              [
+                                xsd:minExclusive "2000000000"^^xsd:decimal ;
+                              ]
+                            ) ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+.
+hfr-rule-iaa:SEC_Smaller_Private_Fund_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+  rdfs:subClassOf <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#InvestmentAdviser> ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#PrivateFundAdviser>
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#hasAssetUnderManagementMonetaryAmount> ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/MonetaryAmount>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasAmount> ;
+                      owl:someValuesFrom [
+                          rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:decimal ;
+                          owl:withRestrictions (
+                              [
+                                xsd:minInclusive "150000000"^^xsd:decimal ;
+                              ]
+                              [
+                                xsd:maxExclusive "2000000000"^^xsd:decimal ;
+                              ]
+                            ) ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+.
+hfr-rule-iaa:SEC_Tiny_Private_Fund_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service"^^xsd:string ;
+  rdfs:subClassOf <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#InvestmentAdviser> ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#PrivateFundAdviser>
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#hasAssetUnderManagementMonetaryAmount> ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/MonetaryAmount>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty <http://spec.edmcouncil.org/fibo/FND/Accounting/CurrencyAmount/hasAmount> ;
+                      owl:someValuesFrom [
+                          rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:decimal ;
+                          owl:withRestrictions (
+                              [
+                                xsd:maxExclusive "150000000"^^xsd:decimal ;
+                              ]
+                            ) ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+.

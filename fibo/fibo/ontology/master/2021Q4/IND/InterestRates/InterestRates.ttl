@@ -1,0 +1,591 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/Indicators/Indicators/
+# imports: https://www.omg.org/spec/LCC/Countries/CountryRepresentation/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-fbc-dae-dbt: <https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-qt-qtu: <https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix fibo-ind-ind-ind: <https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/> .
+@prefix fibo-ind-ir-ir: <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> .
+@prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/>
+	a owl:Ontology ;
+	rdfs:label "Interest Rates Ontology" ;
+	dct:abstract "This ontology provides the basic types of interest rate which are recognized in the financial markets, and the relationships between these where applicable. These include bank base rates, inter-bank offer rates, overnight rates of interest and the US Federal Funds rate which is widely used as a rate of reference. It also includes the concept of a market rate spread between two interest rates." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "http://www.w3.org/standards/techs/owl#w3c_all"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2014-2020 EDM Council, Inc." ,
+		"Copyright (c) 2014-2020 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		<https://spec.edmcouncil.org/fibo/ontology/BE/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FBC/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/FND/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/> ,
+		<https://www.omg.org/spec/LCC/>
+		;
+	sm:fileAbbreviation "fibo-ind-ir-ir" ;
+	sm:filename "InterestRates.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/BE/FunctionalEntities/Publishers/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/DebtAndEquities/Debt/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/FunctionalEntities/FinancialServicesEntities/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FBC/ProductsAndServices/FinancialProductsAndServices/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Accounting/CurrencyAmount/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/ClassificationSchemes/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Quantities/QuantitiesAndUnits/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/Indicators/Indicators/> ,
+		<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/IND/InterestRates/InterestRates/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates.rdf version of this ontology was modified per the FIBO 2.0 RFC, including adding support for reference rates from FpML." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates.rdf version of this ontology was modified per the issue resolutions identified in the FIBO IND 1.0 FTF 1 report." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates.rdf version of this ontology was modified per the issue resolutions identified in the FIBO IND 1.0 FTF 2 report." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates.rdf version of this ontology was modified to add the notion of a classifier for reference rates, so that we can differentiate between kinds of rates and the rates themselves, clean up definitions to conform with ISO 704, merge classes referenced in interest rate publishers to eliminate potential circular references, and eliminate duplication of concepts in LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates.rdf version of this ontology was modified to eliminate deprecated elements."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fbc-dae-dbt:FloatingInterestRate
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty fibo-fbc-dae-dbt:isBasedOn ;
+		owl:onClass fibo-ind-ir-ir:ReferenceInterestRate ;
+		owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	] ;
+	.
+
+fibo-ind-ir-ir:BaseRate
+	a owl:Class ;
+	rdfs:subClassOf fibo-ind-ir-ir:ReferenceInterestRate ;
+	rdfs:label "base rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "basic rate of interest on which the actual rate a bank charges on loans to its customers is calculated" ;
+	fibo-fnd-utl-av:abbreviation "BBR" ;
+	fibo-fnd-utl-av:explanatoryNote "Typically, the bank base rate is a reference rate set by a central bank. Banks that are regulated by a given central bank cannot lend below the base rate to their customers. The bank base rate is determined on an ongoing basis and represents the central bank's judgement of the price of short-term funds on their interbank market." ;
+	fibo-fnd-utl-av:synonym "bank base rate" ;
+	.
+
+fibo-ind-ir-ir:EighteenMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "eighteen months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly eighteen months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P18M" ;
+	.
+
+fibo-ind-ir-ir:FifteenYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "fifteen years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly fifteen years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P15Y" ;
+	.
+
+fibo-ind-ir-ir:FiveYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "five years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly five years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P5Y" ;
+	.
+
+fibo-ind-ir-ir:FortyEightMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "forty-eight months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly forty-eight months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P48M" ;
+	.
+
+fibo-ind-ir-ir:FourYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "four years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly four years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P4Y" ;
+	.
+
+fibo-ind-ir-ir:InterbankBidRate
+	a owl:Class ;
+	rdfs:subClassOf fibo-ind-ir-ir:InterbankRate ;
+	rdfs:label "interbank bid rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "interbank rate that is the interest rate at which participating banks are willing to borrow deposits from other banks" ;
+	fibo-fnd-utl-av:explanatoryNote "Unlike an interbank offered rate, which is the rate at which banks lend money, an interbank bid rate is the rate at which banks ask to borrow." ;
+	.
+
+fibo-ind-ir-ir:InterbankMidRate
+	a owl:Class ;
+	rdfs:subClassOf fibo-ind-ir-ir:InterbankRate ;
+	rdfs:label "interbank mid rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "interbank rate that represents the mid-point between bid and offer rates" ;
+	.
+
+fibo-ind-ir-ir:InterbankOfferedRate
+	a owl:Class ;
+	rdfs:subClassOf fibo-ind-ir-ir:InterbankRate ;
+	rdfs:label "interbank offered rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "interbank rate that is the interest rate at which participating banks lend money" ;
+	.
+
+fibo-ind-ir-ir:InterbankRate
+	a owl:Class ;
+	rdfs:subClassOf fibo-ind-ir-ir:ReferenceInterestRate ;
+	rdfs:label "interbank rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "reference rate that is the rate of interest charged on short-term loans between banks" ;
+	fibo-fnd-utl-av:explanatoryNote "Banks borrow and lend money in the interbank market in order to manage liquidity and meet the requirements placed on them. The interest rate charged depends on the availability of money in the market, on prevailing rates and on the specific terms of the contract, such as term length." ;
+	.
+
+fibo-ind-ir-ir:InterestRateAuthority
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fbc-pas-fpas:FinancialServiceProvider ,
+		fibo-ind-ind-ind:FinancialInformationPublisher ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:produces ;
+			owl:someValuesFrom fibo-ind-ir-ir:ReferenceInterestRate ;
+		]
+		;
+	rdfs:label "interest rate authority" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "financial service provider/publisher responsible for specifying some benchmark interest rate" ;
+	skos:example "This is typically a bank, central bank in the case of the publication of bank interest rates, or the committee responsible for publishing interbank rates, such as EURIBOR." ;
+	.
+
+fibo-ind-ir-ir:InterestRateBenchmark
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-qt-qtu:QuantityKind ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasRateResetTimeOfDay ;
+			owl:onClass fibo-fnd-dt-fd:DateTime ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasTenor ;
+			owl:onClass fibo-fnd-dt-fd:Duration ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isProducedBy ;
+			owl:onClass fibo-ind-ind-ind:FinancialInformationPublisher ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isProvidedBy ;
+			owl:onClass fibo-ind-ir-ir:MarketDataProvider ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasReferenceCurrency ;
+			owl:onClass fibo-fnd-acc-cur:Currency ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty lcc-cr:classifies ;
+			owl:someValuesFrom fibo-ind-ir-ir:ReferenceInterestRate ;
+		]
+		;
+	rdfs:label "interest rate benchmark" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "classifier for regularly updated interest rates that are publicly accessible, typically set by a central bank or group of financial institutions" ;
+	fibo-fnd-utl-av:explanatoryNote "Benchmark rates, such as EURIBOR, the Fed Funds rate, and many others including those identified as FpML rates, are used as benchmarks for a variety of debt instruments." ;
+	.
+
+fibo-ind-ir-ir:InterestRateBenchmarkClassificationScheme
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-cls:ClassificationScheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:defines ;
+			owl:someValuesFrom fibo-ind-ir-ir:InterestRateBenchmark ;
+		]
+		;
+	rdfs:label "interest rate benchmark classification scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "scheme for classifying interest rate benchmarks, such as the FpML classification scheme" ;
+	.
+
+fibo-ind-ir-ir:MarketDataProvider
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-ind-ind-ind:FinancialInformationPublisher ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-be-fct-pub:publishes ;
+			owl:onClass fibo-ind-ind-ind:MarketRate ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "market data provider" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "publisher of data relevant to financial markets" ;
+	fibo-fnd-utl-av:explanatoryNote "Market data providers include exchanges and independent data vendors, among others. Market valuation and related control and risk processes typically require explicit documentation of the source for a given market rate, such as an interest rate benchmark, exchange rate, stock prices, and so forth." ;
+	.
+
+fibo-ind-ir-ir:NineMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "nine months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly nine months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P9M" ;
+	.
+
+fibo-ind-ir-ir:OneDay
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "one day" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly one day, or 24 hours, such as for an overnight rate" ;
+	fibo-fnd-dt-fd:hasDurationValue "P1D" ;
+	.
+
+fibo-ind-ir-ir:OneHundredEightyMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "one hundred eighty months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly one hundred eighty months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P180M" ;
+	.
+
+fibo-ind-ir-ir:OneMonth
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "one month" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly one month, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P1M" ;
+	.
+
+fibo-ind-ir-ir:OneWeek
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "one week" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly one week, or 7 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P7D" ;
+	.
+
+fibo-ind-ir-ir:OneYear
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "one year" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly one year" ;
+	fibo-fnd-dt-fd:hasDurationValue "P1Y" ;
+	.
+
+fibo-ind-ir-ir:OvernightRate
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-ind-ir-ir:ReferenceInterestRate ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasTenor ;
+			owl:hasValue fibo-ind-ir-ir:OneDay ;
+		]
+		;
+	rdfs:label "overnight rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "reference rate that is an interest rate at which a depository institution lends funds to another depository institution (short-term), or the interest rate the central bank charges a financial institution to borrow money overnight" ;
+	fibo-fnd-utl-av:explanatoryNote "The overnight rate is the lowest available interest rate, and as such, it is only available to the most creditworthy institutions. It is the underlying rate for Overnight Interest Rate Swaps (IOS)." ;
+	.
+
+fibo-ind-ir-ir:ReferenceInterestRate
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-acc-cur:InterestRate ,
+		fibo-ind-ind-ind:MarketRate ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasTenor ;
+			owl:allValuesFrom fibo-fnd-dt-fd:Duration ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasRateResetTimeOfDay ;
+			owl:onClass fibo-fnd-dt-fd:DateTime ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-ind-ir-ir:hasReferenceCurrency ;
+			owl:onClass fibo-fnd-acc-cur:Currency ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-qt-qtu:hasQuantityKind ;
+			owl:someValuesFrom fibo-ind-ir-ir:InterestRateBenchmark ;
+		]
+		;
+	rdfs:label "reference interest rate" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "market rate that is a rate of interest paid by or agreed among some bank or set of banks" ;
+	fibo-fnd-utl-av:explanatoryNote "The reference rate is a moving index such as EURIBOR, the prime rate or the rate on benchmark U.S. Treasuries." ;
+	.
+
+fibo-ind-ir-ir:SixMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "six months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly six months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P6M" ;
+	.
+
+fibo-ind-ir-ir:SixtyMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "sixty months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly sixty months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P60M" ;
+	.
+
+fibo-ind-ir-ir:SpecificProviderInterestRateBenchmark
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-ind-ir-ir:InterestRateBenchmark ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isProvidedBy ;
+			owl:onClass fibo-ind-ir-ir:MarketDataProvider ;
+			owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "specific-provider interest rate benchmark" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "interest rate benchmark that is made available by a specific market data provider for reference purposes" ;
+	fibo-fnd-utl-av:explanatoryNote "Benchmarks, such as those published by Bloomberg, Thomson-Reuters, and others, are usually quoted as of a specific date and time of day." ;
+	.
+
+fibo-ind-ir-ir:TenYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "ten years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly ten years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P10Y" ;
+	.
+
+fibo-ind-ir-ir:ThirtySixMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "thirty-six months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly thirty-six months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P36M" ;
+	.
+
+fibo-ind-ir-ir:ThirtyYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "thirty years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly thirty years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P30Y" ;
+	.
+
+fibo-ind-ir-ir:ThreeHundredSixtyMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "three hundred sixty months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly three hundred sixty months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P360M" ;
+	.
+
+fibo-ind-ir-ir:ThreeMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "three months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly three months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P3M" ;
+	.
+
+fibo-ind-ir-ir:ThreeYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "three years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly three years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P3Y" ;
+	.
+
+fibo-ind-ir-ir:TwelveMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "twelve months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly twelve months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P12M" ;
+	.
+
+fibo-ind-ir-ir:TwentyFourMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "twenty-four months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly twenty-four months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P24M" ;
+	.
+
+fibo-ind-ir-ir:TwentyYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "twenty years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly twenty years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P20Y" ;
+	.
+
+fibo-ind-ir-ir:TwoMonths
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "two months" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly two months, regardless of the length in days of a given calendar month, but typically 30 days" ;
+	fibo-fnd-dt-fd:hasDurationValue "P2M" ;
+	.
+
+fibo-ind-ir-ir:TwoYears
+	a
+		owl:NamedIndividual ,
+		fibo-fnd-dt-fd:ExplicitDuration
+		;
+	rdfs:label "two years" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	skos:definition "duration of exactly two years" ;
+	fibo-fnd-dt-fd:hasDurationValue "P2Y" ;
+	.
+
+fibo-ind-ir-ir:hasRateResetTimeOfDay
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDateTime ;
+	rdfs:label "has rate reset time of day" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	rdfs:range fibo-fnd-dt-fd:DateTime ;
+	skos:definition "indicates the time of day when a change in a benchmark rate is published, typically the same time every business day" ;
+	.
+
+fibo-ind-ir-ir:hasReferenceCurrency
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf lcc-lr:has ;
+	rdfs:label "has reference currency" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	rdfs:range fibo-fnd-acc-cur:Currency ;
+	skos:definition "relates something to the currency it is based on" ;
+	.
+
+fibo-ind-ir-ir:hasTenor
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasDuration ;
+	rdfs:label "has tenor" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/> ;
+	rdfs:range fibo-fnd-dt-fd:Duration ;
+	skos:definition "indicates the length of time for which a given rate, such as an interbank rate, exchange rate, other market rate is quoted, or a debt instrument has remaining prior to maturity or expiration" ;
+	fibo-fnd-utl-av:explanatoryNote "The tenor of most financial instruments declines over time, while the maturity remains constant. Risk associated with a given asset tends to decline with the reduction of the time remaining to maturity. The tenor of an interest rate swap can also refer to the frequency with which coupon payments are exchanged." ;
+	.
+

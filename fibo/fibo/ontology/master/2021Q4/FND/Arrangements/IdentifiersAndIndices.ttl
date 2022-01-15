@@ -1,0 +1,179 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/
+# imports: https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-arr-arr: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/> .
+@prefix fibo-fnd-arr-id: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix lcc-lr: <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/>
+	a owl:Ontology ;
+	rdfs:label "Identifiers and Indices Ontology" ;
+	dct:abstract "This ontology defines abstract concepts for representation of identifiers, identification schemes, indices and indexing schemes for use in other FIBO ontology elements." ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2014-2021 EDM Council, Inc." ,
+		"Copyright (c) 2014-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-fnd-arr-id" ;
+	sm:filename "IdentifiersAndIndices.rdf" ;
+	owl:imports
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/Arrangements/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/DatesAndTimes/FinancialDates/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Relations/Relations/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Utilities/AnnotationVocabulary/> ,
+		<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/>
+		;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/2021Q4/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:changeNote
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices.rdf version of this ontology was introduced as a part of the issue resolutions identified in the FIBO FND 1.0 FTF report and in https://spec.edmcouncil.org/fibo/ontology/FND/1.0/AboutFND-1.0/. It was further revised in the FTF in advance of the Long Beach meeting to promote Collection to the top level in the hierarchy, resulting in https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices.rdf version of this ontology was revised for the FIBO 2.0 RFC to incorporate mappings to LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices.rdf version of this ontology was revised to add the concept of a time-constrained, reassignable identifier as well as the concept of a composite identifier." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices.rdf version of this ontology was revised to eliminate duplication of concepts with LCC." ,
+		"The https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices.rdf version of this ontology was revised to replace hasDefinition with isDefinedIn to clarify intent."
+		;
+	fibo-fnd-utl-av:hasMaturityLevel fibo-fnd-utl-av:Release ;
+	.
+
+fibo-fnd-arr-id:CompositeIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:onClass lcc-lr:CodeElement ;
+			owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:comprises ;
+			owl:someValuesFrom lcc-lr:Identifier ;
+		]
+		;
+	rdfs:label "composite identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:definition "identifier that is constructed from at least one other identifier and potentially from one or more codes" ;
+	skos:example "An ISIN international financial instrument identifier is an example of a composite identifier." ;
+	.
+
+fibo-fnd-arr-id:Index
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-rel-rel:Reference ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-id:isIndexTo ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:isDefinedIn ;
+			owl:onClass fibo-fnd-arr-id:IndexingScheme ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "index" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:definition "indirect shortcut derived from and pointing into, a greater volume of values, data, information or knowledge" ;
+	fibo-fnd-utl-av:definitionOrigin "http://en.wikipedia.org/wiki/Index"^^xsd:anyURI ;
+	.
+
+fibo-fnd-arr-id:IndexingScheme
+	a owl:Class ;
+	rdfs:subClassOf
+		fibo-fnd-arr-arr:Scheme ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-rel-rel:defines ;
+			owl:someValuesFrom fibo-fnd-arr-id:Index ;
+		]
+		;
+	rdfs:label "indexing scheme" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:definition "system for indexing values, data, information, or knowledge" ;
+	.
+
+fibo-fnd-arr-id:ReassignableIdentifier
+	a owl:Class ;
+	rdfs:subClassOf
+		lcc-lr:Identifier ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-id:hasAssignmentTerminationDate ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange fibo-fnd-dt-fd:CombinedDateTime ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty fibo-fnd-arr-id:hasInitialAssignmentDate ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange fibo-fnd-dt-fd:CombinedDateTime ;
+		]
+		;
+	rdfs:label "reassignable identifier" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:definition "identifier that uniquely identifies something for a given time period, and that may be reused to identify something else at a different point in time" ;
+	skos:example "ticker symbol, vehicle license number, such as a vanity plate that can be reassigned and moved from one car to another" ;
+	fibo-fnd-utl-av:explanatoryNote "If no assignment termination date is provided, the identifier is considered to be assigned and valid. If there is no initial assignment date, then the identifier is assumed to be assigned up until the termination date, if any." ;
+	.
+
+fibo-fnd-arr-id:hasAssignmentTerminationDate
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasObservedDateTime ;
+	rdfs:label "has assignment termination date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	rdfs:range fibo-fnd-dt-fd:CombinedDateTime ;
+	skos:definition "the date on which an identifier is released from its assignment to some resource" ;
+	.
+
+fibo-fnd-arr-id:hasInitialAssignmentDate
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf fibo-fnd-dt-fd:hasObservedDateTime ;
+	rdfs:label "has initial assignment date" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	rdfs:range fibo-fnd-dt-fd:CombinedDateTime ;
+	skos:definition "the date on which an identifier is first assigned to some resource" ;
+	.
+
+fibo-fnd-arr-id:isIndexTo
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf fibo-fnd-rel-rel:refersTo ;
+	rdfs:label "is index to" ;
+	rdfs:domain fibo-fnd-arr-id:Index ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+	skos:definition "that to which the index refers" ;
+	.
+
+lcc-lr:IdentificationScheme
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-arr-arr:Scheme ;
+	.
+
+lcc-lr:Identifier
+	a owl:Class ;
+	rdfs:subClassOf fibo-fnd-rel-rel:Reference ;
+	.
+

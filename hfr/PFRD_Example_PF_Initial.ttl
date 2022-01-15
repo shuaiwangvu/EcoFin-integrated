@@ -1,0 +1,895 @@
+# baseURI: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttl
+# imports: http://hedgefundontology.com/hfr/form/PFFormFiling.ttl
+# imports: http://topbraid.org/sxml
+# prefix: pfrd-samp-init
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pfrd-samp-init: <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttl#> .
+@prefix pfrd_sec: <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance#> .
+
+<http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttl>
+  rdf:type owl:Ontology ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/author> "Jurgen Ziemer"^^xsd:string ;
+  rdfs:comment """The Initial filing is identified by specifying PF-INIT in the filing type element:
+<FilingType>PF-INIT</FilingType>
+This filing type sets the reporting period type (Quarterly or Annual) and the first reporting period. Aside from
+the filing elements, an Initial filing has the same structure as an Updating or Amendment filing. Please refer
+sample file EXAMPLE_PF_INIT.xml. The Initial filing in Example 1 is for a hypothetical filer who is required to
+complete Section 1, but is not required to complete Section 2. This filer has already obtained a Private Fund ID
+for the hedge fund."""^^xsd:string ;
+  rdfs:comment "The instances in this ontology file are reverse engineered from the IARD sample XML sample file."^^xsd:string ;
+  rdfs:isDefinedBy <https://www.iard.com/pfrd/usersupport> ;
+  owl:imports <http://hedgefundontology.com/hfr/form/PFFormFiling.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "The ontology version of the SEC provided sample Initial Filing type This example is for advisers filing Form PF for the first time."^^xsd:string ;
+.
+pfrd-samp-init:r
+  rdf:type pfrd_sec:PFXMLFiling ;
+  pfrd_sec:filingTypeRef pfrd_sec:PFXMLFT_PF-INIT ;
+  pfrd_sec:pFFundsRef pfrd-samp-init:r-10 ;
+  pfrd_sec:pFSection1aItemAIdentInfoRef pfrd-samp-init:r-4 ;
+  pfrd_sec:pFSection1aItemARelatedPersonsRef pfrd-samp-init:r-5 ;
+  pfrd_sec:pFSection1aItemASignatureFirmAndRelatedPersonsRef pfrd-samp-init:r-6 ;
+  pfrd_sec:pFSection1aItemASignaturesRelatedPersonsRef pfrd-samp-init:r-7 ;
+  pfrd_sec:pFSection1aItemBFilersAssetsByFundTypeRef pfrd-samp-init:r-8 ;
+  pfrd_sec:pFSection1aItemCMiscellaneousItemsRef pfrd-samp-init:r-9 ;
+  pfrd_sec:pFSection1bItemAFundsIdentInfoRef pfrd-samp-init:r-11 ;
+  pfrd_sec:pFSection1bItemBFundsAssetsFinancingInvestorsRef pfrd-samp-init:r-12 ;
+  pfrd_sec:pFSection1bItemCFundsPerformanceRef pfrd-samp-init:r-13 ;
+  pfrd_sec:pFSection1cItemBHedgeFundsInfoRef pfrd-samp-init:r-14 ;
+  pfrd_sec:reportingPeriodEndDate "2012-03-31"^^xsd:date ;
+  pfrd_sec:reportingPeriodQuarterRef pfrd_sec:PFXMLFPQ_1 ;
+  pfrd_sec:reportingPeriodTypeRef pfrd_sec:PFXMLFPT_Q ;
+  sxml:prefix "xsi"^^xsd:string ;
+.
+pfrd-samp-init:r-10
+  rdf:type pfrd_sec:PFXMLFiling-pFFunds ;
+  pfrd_sec:pFFundRef pfrd-samp-init:r-10-0 ;
+  composite:index "10"^^xsd:int ;
+.
+pfrd-samp-init:r-10-0
+  rdf:type pfrd_sec:PFFundType ;
+  pfrd_sec:fundID "805-1111111111"^^pfrd_sec:FundIDTypeDatatype ;
+  pfrd_sec:fundName "SOME NAME 805-1111111111"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:fundTypeRef pfrd_sec:FTT_HEDGE ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-11
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1bItemAFundsIdentInfo ;
+  pfrd_sec:pFSection1bItemAFundIdentInfoRef pfrd-samp-init:r-11-0 ;
+  composite:index "11"^^xsd:int ;
+.
+pfrd-samp-init:r-11-0
+  rdf:type pfrd_sec:PFSection1bItemAFundIdentInfoType ;
+  pfrd_sec:fundID "805-1111111111"^^pfrd_sec:FundIDTypeDatatype ;
+  pfrd_sec:isMasterFund "false"^^xsd:boolean ;
+  pfrd_sec:isParallelFundsAggregated "false"^^xsd:boolean ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-12
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1bItemBFundsAssetsFinancingInvestors ;
+  pfrd_sec:pFSection1bItemBFundAssetsFinancingInvestorsRef pfrd-samp-init:r-12-0 ;
+  composite:index "12"^^xsd:int ;
+.
+pfrd-samp-init:r-12-0
+  rdf:type pfrd_sec:PFSection1bItemBFundAssetType ;
+  pfrd_sec:beneficiallyOwnedByBankingInstitutionsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByBrokerDealersPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByForeignInstitutionsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByGovernmentEntitiesPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByGovernmentPensionsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByInsuranceCompaniesPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByInvestmentCompaniesPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByNonProfitsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByNonUSIntermediariesPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByNonUSPersonsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByOthersPercent "0"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByPensionPlansPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByPrivateFundsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByTop5Percent "40"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:beneficiallyOwnedByUSPersonsPercent "1"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:borrowedFromNonUSFinancialInstitutionAmount "94"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:borrowedFromNonUSNonFinancialInstitutionAmount "96"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:borrowedFromUSFinancialInstitutionAmount "93"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:borrowedFromUSNonFinancialInstitutionAmount "95"^^pfrd_sec:PercentTypeDatatype ;
+  pfrd_sec:borrowedTotalAmount "90"^^pfrd_sec:UnsignedLongRestricted15TypeDatatype ;
+  pfrd_sec:costBasedAssetsAmount "123456789123456"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:costBasedLiabilitiesAmount "45"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:derivativesPositionsValue "123456789123456"^^pfrd_sec:UnsignedLongRestricted15TypeDatatype ;
+  pfrd_sec:equityValueInOtherFunds "133"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel1AssetsAmount "34"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel1LiabilitiesAmount "40"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel2AssetsAmount "123456789123456"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel2LiabilitiesAmount "42"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel3AssetsAmount "43"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fairValueLevel3LiabilitiesAmount "44"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:fundID "805-1111111111"^^pfrd_sec:FundIDTypeDatatype ;
+  pfrd_sec:grossAssetValue "134"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:hasDerivativesPositions "true"^^xsd:boolean ;
+  pfrd_sec:netAssetValue "137"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:parallelManagedAccountValue "0"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-13
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1bItemCFundsPerformance ;
+  pfrd_sec:pFSection1bItemCFundPerformanceRef pfrd-samp-init:r-13-0 ;
+  composite:index "13"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0
+  rdf:type pfrd_sec:PFSection1bItemCFundPerformanceType ;
+  pfrd_sec:fundID "805-1111111111"^^pfrd_sec:FundIDTypeDatatype ;
+  pfrd_sec:grossValueMonth10Ref pfrd-samp-init:r-13-0-38 ;
+  pfrd_sec:grossValueMonth11Ref pfrd-samp-init:r-13-0-41 ;
+  pfrd_sec:grossValueMonth12Ref pfrd-samp-init:r-13-0-44 ;
+  pfrd_sec:grossValueMonth1Ref pfrd-samp-init:r-13-0-2 ;
+  pfrd_sec:grossValueMonth2Ref pfrd-samp-init:r-13-0-5 ;
+  pfrd_sec:grossValueMonth3Ref pfrd-samp-init:r-13-0-8 ;
+  pfrd_sec:grossValueMonth4Ref pfrd-samp-init:r-13-0-14 ;
+  pfrd_sec:grossValueMonth5Ref pfrd-samp-init:r-13-0-17 ;
+  pfrd_sec:grossValueMonth6Ref pfrd-samp-init:r-13-0-20 ;
+  pfrd_sec:grossValueMonth7Ref pfrd-samp-init:r-13-0-26 ;
+  pfrd_sec:grossValueMonth8Ref pfrd-samp-init:r-13-0-29 ;
+  pfrd_sec:grossValueMonth9Ref pfrd-samp-init:r-13-0-32 ;
+  pfrd_sec:grossValueQuarter1Ref pfrd-samp-init:r-13-0-11 ;
+  pfrd_sec:grossValueQuarter2Ref pfrd-samp-init:r-13-0-23 ;
+  pfrd_sec:grossValueQuarter3Ref pfrd-samp-init:r-13-0-35 ;
+  pfrd_sec:grossValueQuarter4Ref pfrd-samp-init:r-13-0-47 ;
+  pfrd_sec:grossValueYearRef pfrd-samp-init:r-13-0-50 ;
+  pfrd_sec:lastFiscalDateMonth10Ref pfrd-samp-init:r-13-0-37 ;
+  pfrd_sec:lastFiscalDateMonth11Ref pfrd-samp-init:r-13-0-40 ;
+  pfrd_sec:lastFiscalDateMonth12Ref pfrd-samp-init:r-13-0-43 ;
+  pfrd_sec:lastFiscalDateMonth1Ref pfrd-samp-init:r-13-0-1 ;
+  pfrd_sec:lastFiscalDateMonth2Ref pfrd-samp-init:r-13-0-4 ;
+  pfrd_sec:lastFiscalDateMonth3Ref pfrd-samp-init:r-13-0-7 ;
+  pfrd_sec:lastFiscalDateMonth4Ref pfrd-samp-init:r-13-0-13 ;
+  pfrd_sec:lastFiscalDateMonth5Ref pfrd-samp-init:r-13-0-16 ;
+  pfrd_sec:lastFiscalDateMonth6Ref pfrd-samp-init:r-13-0-19 ;
+  pfrd_sec:lastFiscalDateMonth7Ref pfrd-samp-init:r-13-0-25 ;
+  pfrd_sec:lastFiscalDateMonth8Ref pfrd-samp-init:r-13-0-28 ;
+  pfrd_sec:lastFiscalDateMonth9Ref pfrd-samp-init:r-13-0-31 ;
+  pfrd_sec:lastFiscalDateQuarter1Ref pfrd-samp-init:r-13-0-10 ;
+  pfrd_sec:lastFiscalDateQuarter2Ref pfrd-samp-init:r-13-0-22 ;
+  pfrd_sec:lastFiscalDateQuarter3Ref pfrd-samp-init:r-13-0-34 ;
+  pfrd_sec:lastFiscalDateQuarter4Ref pfrd-samp-init:r-13-0-46 ;
+  pfrd_sec:lastFiscalDateYearRef pfrd-samp-init:r-13-0-49 ;
+  pfrd_sec:netValueMonth10Ref pfrd-samp-init:r-13-0-39 ;
+  pfrd_sec:netValueMonth11Ref pfrd-samp-init:r-13-0-42 ;
+  pfrd_sec:netValueMonth12Ref pfrd-samp-init:r-13-0-45 ;
+  pfrd_sec:netValueMonth1Ref pfrd-samp-init:r-13-0-3 ;
+  pfrd_sec:netValueMonth2Ref pfrd-samp-init:r-13-0-6 ;
+  pfrd_sec:netValueMonth3Ref pfrd-samp-init:r-13-0-9 ;
+  pfrd_sec:netValueMonth4Ref pfrd-samp-init:r-13-0-15 ;
+  pfrd_sec:netValueMonth5Ref pfrd-samp-init:r-13-0-18 ;
+  pfrd_sec:netValueMonth6Ref pfrd-samp-init:r-13-0-21 ;
+  pfrd_sec:netValueMonth7Ref pfrd-samp-init:r-13-0-27 ;
+  pfrd_sec:netValueMonth8Ref pfrd-samp-init:r-13-0-30 ;
+  pfrd_sec:netValueMonth9Ref pfrd-samp-init:r-13-0-33 ;
+  pfrd_sec:netValueQuarter1Ref pfrd-samp-init:r-13-0-12 ;
+  pfrd_sec:netValueQuarter2Ref pfrd-samp-init:r-13-0-24 ;
+  pfrd_sec:netValueQuarter3Ref pfrd-samp-init:r-13-0-36 ;
+  pfrd_sec:netValueQuarter4Ref pfrd-samp-init:r-13-0-48 ;
+  pfrd_sec:netValueYearRef pfrd-samp-init:r-13-0-51 ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-1
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-01-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-10
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-03-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "10"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-11
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "5"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "11"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-12
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "12"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-13
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-04-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "13"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-14
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "14"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-15
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "15"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-16
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-05-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "16"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-17
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "17"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-18
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "18"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-19
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-06-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "19"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-2
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "2"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-20
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "20"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-21
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "21"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-22
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-06-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "22"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-23
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "6"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "23"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-24
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "24"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-25
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-07-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "25"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-26
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "3"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "26"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-27
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "27"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-28
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-08-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "28"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-29
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "3"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "29"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-3
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "-1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "3"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-30
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "30"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-31
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-09-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "31"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-32
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "3"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "32"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-33
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "33"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-34
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-09-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "34"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-35
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "9"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "35"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-36
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "3"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "36"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-37
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-10-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "37"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-38
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "38"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-39
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "39"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-4
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-02-28"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-40
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-11-30"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "40"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-41
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "41"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-42
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "42"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-43
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-12-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "43"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-44
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "44"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-45
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "45"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-46
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-12-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "46"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-47
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "4"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "47"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-48
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "0"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "48"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-49
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-12-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "49"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-5
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "5"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-50
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "24"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "50"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-51
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "4"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "51"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-6
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "6"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-7
+  rdf:type pfrd_sec:DateNAExType ;
+  pfrd_sec:value "2011-03-31"^^pfrd_sec:DateNAExType-valueDatatype ;
+  composite:index "7"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-8
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "2"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "8"^^xsd:int ;
+.
+pfrd-samp-init:r-13-0-9
+  rdf:type pfrd_sec:DecimalNAExRestricted10p2Type ;
+  pfrd_sec:value "1"^^pfrd_sec:DecimalNAExRestricted10p2Type-valueDatatype ;
+  composite:index "9"^^xsd:int ;
+.
+pfrd-samp-init:r-14
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1cItemBHedgeFundsInfo ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoRef pfrd-samp-init:r-14-0 ;
+  composite:index "14"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoType ;
+  pfrd_sec:counterPartiesDollarRef pfrd-samp-init:r-14-0-14 ;
+  pfrd_sec:counterPartiesPercentRef pfrd-samp-init:r-14-0-15 ;
+  pfrd_sec:derivativesTradedCCPClearedPercentRef pfrd-samp-init:r-14-0-7 ;
+  pfrd_sec:derivativesTradedExchangePercentRef pfrd-samp-init:r-14-0-6 ;
+  pfrd_sec:derivativesTradedNotCCPClearedPercentRef pfrd-samp-init:r-14-0-8 ;
+  pfrd_sec:derivativesTradedOTCPercentRef pfrd-samp-init:r-14-0-5 ;
+  pfrd_sec:fundID "805-1111111111"^^pfrd_sec:FundIDTypeDatatype ;
+  pfrd_sec:otherTransactionPercent "11"^^pfrd_sec:UnsignedDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:repoTradedCCPClearedPercentRef pfrd-samp-init:r-14-0-9 ;
+  pfrd_sec:repoTradedNotCCPClearedPercentRef pfrd-samp-init:r-14-0-10 ;
+  pfrd_sec:repoTradedTriPartyRepoPercentRef pfrd-samp-init:r-14-0-11 ;
+  pfrd_sec:securitiesTradedExchangePercentRef pfrd-samp-init:r-14-0-4 ;
+  pfrd_sec:securitiesTradedOTCPercentRef pfrd-samp-init:r-14-0-3 ;
+  pfrd_sec:strategiesRef pfrd-samp-init:r-14-0-13 ;
+  pfrd_sec:strategyHighFrequencyTradingPercentRef pfrd_sec:HFTST_1 ;
+  pfrd_sec:strategyTypeSMRef pfrd_sec:TST_M ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-10
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "9"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "10"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-11
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "10"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "11"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoType-strategies ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-0 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-1 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-10 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-11 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-12 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-13 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-14 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-15 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-16 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-17 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-18 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-19 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-2 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-20 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-21 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-3 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-4 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-5 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-6 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-7 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-8 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoStrategyRef pfrd-samp-init:r-14-0-13-9 ;
+  composite:index "13"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-0
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "1"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "1"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_1 ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-1
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "2"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "2"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_2 ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-10
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "11"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "11"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_11 ;
+  composite:index "10"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-11
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "21"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "12"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_12 ;
+  composite:index "11"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-12
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "13"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "31"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_13 ;
+  composite:index "12"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-13
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "14"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "41"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_14 ;
+  composite:index "13"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-14
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "51"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "15"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_15 ;
+  composite:index "14"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-15
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "16"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "61"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_16 ;
+  composite:index "15"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-16
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "17"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "71"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_17 ;
+  composite:index "16"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-17
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "18"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "81"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_18 ;
+  composite:index "17"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-18
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "19"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "91"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_19 ;
+  composite:index "18"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-19
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "12"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "21"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_20 ;
+  composite:index "19"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-2
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "3"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "3"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_3 ;
+  composite:index "2"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-20
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "21"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "21"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_21 ;
+  composite:index "20"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-21
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "100"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "100"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyOtherDescription "TEST OTHER text"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_22 ;
+  composite:index "21"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-3
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "4"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "4"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_4 ;
+  composite:index "3"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-4
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "5"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "5"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_5 ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-5
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "61"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "61"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_6 ;
+  composite:index "5"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-6
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "71"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "71"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_7 ;
+  composite:index "6"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-7
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "81"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "81"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_8 ;
+  composite:index "7"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-8
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "91"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "91"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_9 ;
+  composite:index "8"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-13-9
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoStrategyType ;
+  pfrd_sec:strategyCapitalPercent "10"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyChecked "true"^^xsd:boolean ;
+  pfrd_sec:strategyNAVPercent "10"^^pfrd_sec:PositiveDecimalRestricted15p4TypeDatatype ;
+  pfrd_sec:strategyTypeRef pfrd_sec:SNT_10 ;
+  composite:index "9"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-14
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoType-counterPartiesDollar ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoCounterPartyRef pfrd-samp-init:r-14-0-14-0 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoCounterPartyRef pfrd-samp-init:r-14-0-14-1 ;
+  composite:index "14"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-14-0
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoCounterPartyDollarType ;
+  pfrd_sec:counterpartyAffiliatedInstitutionCodeRef pfrd_sec:MFIT_28 ;
+  pfrd_sec:counterpartyExposureRef pfrd-samp-init:r-14-0-14-0-3 ;
+  pfrd_sec:counterpartyLegalName "test name"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyTypeRef pfrd_sec:PFSIBHFICPDTT_Dollar ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-14-0-3
+  rdf:type pfrd_sec:PositiveDecimalNAExRestricted15p0Type ;
+  pfrd_sec:value "27987987179"^^pfrd_sec:PositiveDecimalNAExRestricted15p0Type-valueDatatype ;
+  composite:index "3"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-14-1
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoCounterPartyDollarType ;
+  pfrd_sec:counterpartyAffiliatedInstitutionCodeRef pfrd_sec:MFIT_32 ;
+  pfrd_sec:counterpartyAffiliatedInstitutionOtherName "Other Name"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyExposureRef pfrd-samp-init:r-14-0-14-1-4 ;
+  pfrd_sec:counterpartyLegalName "test name 2"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyTypeRef pfrd_sec:PFSIBHFICPDTT_Dollar ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-14-1-4
+  rdf:type pfrd_sec:PositiveDecimalNAExRestricted15p0Type ;
+  pfrd_sec:value "NA"^^pfrd_sec:PositiveDecimalNAExRestricted15p0Type-valueDatatype ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-15
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoType-counterPartiesPercent ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoCounterPartyRef pfrd-samp-init:r-14-0-15-0 ;
+  pfrd_sec:pFSection1cItemBHedgeFundInfoCounterPartyRef pfrd-samp-init:r-14-0-15-1 ;
+  composite:index "15"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-15-0
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoCounterPartyPercentType ;
+  pfrd_sec:counterpartyAffiliatedInstitutionCodeRef pfrd_sec:MFIT_28 ;
+  pfrd_sec:counterpartyExposureRef pfrd-samp-init:r-14-0-15-0-3 ;
+  pfrd_sec:counterpartyLegalName "Test 1"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyTypeRef pfrd_sec:PFSIBHFICPPTT_Percent ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-15-0-3
+  rdf:type pfrd_sec:UnsignedDecimalNAExRestricted15p0Type ;
+  pfrd_sec:value "15"^^pfrd_sec:UnsignedDecimalNAExRestricted15p0Type-valueDatatype ;
+  composite:index "3"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-15-1
+  rdf:type pfrd_sec:PFSection1cItemBHedgeFundInfoCounterPartyPercentType ;
+  pfrd_sec:counterpartyAffiliatedInstitutionCodeRef pfrd_sec:MFIT_32 ;
+  pfrd_sec:counterpartyAffiliatedInstitutionOtherName "Some Other Name"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyExposureRef pfrd-samp-init:r-14-0-15-1-4 ;
+  pfrd_sec:counterpartyLegalName "Test 2"^^pfrd_sec:StringRestricted256TypeDatatype ;
+  pfrd_sec:counterpartyTypeRef pfrd_sec:PFSIBHFICPPTT_Percent ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-15-1-4
+  rdf:type pfrd_sec:UnsignedDecimalNAExRestricted15p0Type ;
+  pfrd_sec:value "16"^^pfrd_sec:UnsignedDecimalNAExRestricted15p0Type-valueDatatype ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-3
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "2"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "3"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-4
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "3"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-5
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "4"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "5"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-6
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "5"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "6"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-7
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "6"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "7"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-8
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "7"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "8"^^xsd:int ;
+.
+pfrd-samp-init:r-14-0-9
+  rdf:type pfrd_sec:PercentNAType ;
+  pfrd_sec:value "8"^^pfrd_sec:PercentNAType-valueDatatype ;
+  composite:index "9"^^xsd:int ;
+.
+pfrd-samp-init:r-4
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemAIdentInfo ;
+  pfrd_sec:largeTraderID "22"^^pfrd_sec:StringRestricted15TypeDatatype ;
+  pfrd_sec:largeTraderIDSuffix "333"^^pfrd_sec:StringRestricted5TypeDatatype ;
+  pfrd_sec:nFAFirmID "1111111"^^pfrd_sec:NFAFirmIDTypeDatatype ;
+  composite:index "4"^^xsd:int ;
+.
+pfrd-samp-init:r-5
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemARelatedPersons ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-5-0 ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-5-1 ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-5-2 ;
+  composite:index "5"^^xsd:int ;
+.
+pfrd-samp-init:r-5-0
+  rdf:type pfrd_sec:PFSection1aItemARelatedPersonType ;
+  pfrd_sec:cRDNumber "555555"^^pfrd_sec:PositiveIntRestricted8TypeDatatype ;
+  pfrd_sec:largeTraderID "bbbb-bbbb"^^pfrd_sec:StringRestricted15TypeDatatype ;
+  pfrd_sec:largeTraderIDSuffix "cccc"^^pfrd_sec:StringRestricted5TypeDatatype ;
+  pfrd_sec:legalName "SMITH RELATED EXAMPLE CORP"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:relatedPersonTypeRef pfrd_sec:RPTT_RGSTD_ERA ;
+  pfrd_sec:sECNumber "55555"^^pfrd_sec:PositiveIntRestricted8TypeDatatype ;
+  pfrd_sec:sECNumberTypeRef pfrd_sec:SECNTT_801 ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-5-1
+  rdf:type pfrd_sec:PFSection1aItemARelatedPersonType ;
+  pfrd_sec:largeTraderID "cccccc"^^pfrd_sec:StringRestricted15TypeDatatype ;
+  pfrd_sec:largeTraderIDSuffix "dddd"^^pfrd_sec:StringRestricted5TypeDatatype ;
+  pfrd_sec:legalName "CPO/CTA INC."^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:nFAFirmID "9999999"^^pfrd_sec:NFAFirmIDTypeDatatype ;
+  pfrd_sec:relatedPersonTypeRef pfrd_sec:RPTT_CPO_CTA ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-5-2
+  rdf:type pfrd_sec:PFSection1aItemARelatedPersonType ;
+  pfrd_sec:largeTraderID "aaaaaaaaaaaaaaa"^^pfrd_sec:StringRestricted15TypeDatatype ;
+  pfrd_sec:largeTraderIDSuffix "aaaaa"^^pfrd_sec:StringRestricted5TypeDatatype ;
+  pfrd_sec:legalName "My Relying Adviser Name"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:relatedPersonTypeRef pfrd_sec:RPTT_RELY_SPV ;
+  composite:index "2"^^xsd:int ;
+.
+pfrd-samp-init:r-6
+  rdf:type pfrd_sec:PFSection1aItemASignatureMainType ;
+  pfrd_sec:emailAddress "johnsmith@example.com"^^pfrd_sec:EmailTypeDatatype ;
+  pfrd_sec:individualName "John Smith"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:signature "/S/(Signature of John Smith)"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:signatureDate "2012-03-31"^^xsd:date ;
+  pfrd_sec:telephoneNumber "555-555-5555"^^pfrd_sec:StringRestricted27TypeDatatype ;
+  pfrd_sec:title "Chairman"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  composite:index "6"^^xsd:int ;
+.
+pfrd-samp-init:r-7
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemASignaturesRelatedPersons ;
+  pfrd_sec:pFSection1aItemASignatureRef pfrd-samp-init:r-7-0 ;
+  composite:index "7"^^xsd:int ;
+.
+pfrd-samp-init:r-7-0
+  rdf:type pfrd_sec:PFSection1aItemASignatureRltdPrsnType ;
+  pfrd_sec:emailAddress "johnsmith@example.com"^^pfrd_sec:EmailTypeDatatype ;
+  pfrd_sec:individualName "John Smith"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:linkedRelatedPersonListRef pfrd-samp-init:r-7-0-6 ;
+  pfrd_sec:signature "/S/ (Signature of John Smith)"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  pfrd_sec:signatureDate "2012-03-01"^^xsd:date ;
+  pfrd_sec:telephoneNumber "555-555-5555"^^pfrd_sec:StringRestricted27TypeDatatype ;
+  pfrd_sec:title "Chairman"^^pfrd_sec:StringRestricted128TypeDatatype ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-7-0-6
+  rdf:type pfrd_sec:PFSection1aItemASignatureRltdPrsnType-linkedRelatedPersonList ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-7-0-6-0 ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-7-0-6-1 ;
+  pfrd_sec:pFSection1aItemARelatedPersonRef pfrd-samp-init:r-7-0-6-2 ;
+  composite:index "6"^^xsd:int ;
+.
+pfrd-samp-init:r-7-0-6-0
+  rdf:type pfrd_sec:PFSection1aItemASignatureRltdPrsnType-linkedRelatedPersonList-pFSection1aItemARelatedPerson ;
+  pfrd_sec:cRDNumber "555555"^^pfrd_sec:PositiveIntRestricted8TypeDatatype ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-7-0-6-1
+  rdf:type pfrd_sec:PFSection1aItemASignatureRltdPrsnType-linkedRelatedPersonList-pFSection1aItemARelatedPerson ;
+  pfrd_sec:nFAFirmID "9999999"^^pfrd_sec:NFAFirmIDTypeDatatype ;
+  composite:index "1"^^xsd:int ;
+.
+pfrd-samp-init:r-7-0-6-2
+  rdf:type pfrd_sec:PFSection1aItemASignatureRltdPrsnType-linkedRelatedPersonList-pFSection1aItemARelatedPerson ;
+  pfrd_sec:legalName "My Relying Adviser Name"^^xsd:string ;
+  composite:index "2"^^xsd:int ;
+.
+pfrd-samp-init:r-8
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemBFilersAssetsByFundType ;
+  pfrd_sec:assetsFundsRef pfrd-samp-init:r-8-0 ;
+  composite:index "8"^^xsd:int ;
+.
+pfrd-samp-init:r-8-0
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemBFilersAssetsByFundType-assetsFunds ;
+  pfrd_sec:filersAssetsFundDataRef pfrd-samp-init:r-8-0-0 ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-8-0-0
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemBFilersAssetsByFundType-assetsFunds-filersAssetsFundData ;
+  pfrd_sec:fundTypeRef pfrd_sec:AFFTT_HEDGE ;
+  pfrd_sec:netAssetsFunds "2"^^pfrd_sec:LongRestricted15TypeDatatype ;
+  pfrd_sec:regulatoryAssetsFunds "1"^^pfrd_sec:UnsignedLongRestricted15TypeDatatype ;
+  composite:index "0"^^xsd:int ;
+.
+pfrd-samp-init:r-9
+  rdf:type pfrd_sec:PFXMLFiling-pFSection1aItemCMiscellaneousItems ;
+  pfrd_sec:pFSection1aItemCMiscellaneousRef pfrd-samp-init:r-9-0 ;
+  composite:index "9"^^xsd:int ;
+.
+pfrd-samp-init:r-9-0
+  rdf:type pfrd_sec:PFSection1aItemCMiscellaneousType ;
+  pfrd_sec:description "My explanation for Q1"^^pfrd_sec:StringRestricted10000TypeDatatype ;
+  pfrd_sec:questionNumber "1"^^pfrd_sec:StringRestricted15TypeDatatype ;
+  composite:index "0"^^xsd:int ;
+.
+<http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttlDocument>
+  rdf:type sxml:Document ;
+  sxml:root pfrd-samp-init:r ;
+.

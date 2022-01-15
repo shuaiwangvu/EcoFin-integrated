@@ -1,0 +1,38 @@
+# baseURI: http://hedgefundontology.com/hfr/data/PFRD_Example_PF.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Amended.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Final.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Transition.ttl
+# imports: http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Updating.ttl
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hedgefundontology.com/hfr/data/PFRD_Example_PF.ttl>
+  rdf:type owl:Ontology ;
+  dcterms:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment """The ontology contains no instances - only includes.
+The SEC example is for SMITH RELATED EXAMPLE CORP, Chairman John Smith. It has SMITH initial, updating, amending, transition and final filings.
+The ontology treats PFRD filings as staging. The data is imported into PFRD Form filing as is. There are 5 instances of class pfrd-sec:PFXMLFiling:
+pfrd-samp-amend:r
+pfrd-samp-final:r
+pfrd-samp-init:r
+pfrd-samp-trans:r
+pfrd-samp-upd:r 
+All have the same local name \"r\" generated in the import. The namespace differentiates the 5 records for SMITH corp.
+ 
+"""^^xsd:string ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Amended.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Final.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Initial.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Transition.ttl> ;
+  owl:imports <http://hedgefundontology.com/hfr/data/PFRD_Example_PF_Updating.ttl> ;
+  skos:definition "A configuration ontology to include all SEC filing examples."^^xsd:string ;
+.
