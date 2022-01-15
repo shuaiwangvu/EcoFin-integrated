@@ -30,9 +30,9 @@ fig, axs = plt.subplots(2)
 fig.set_figwidth(6)
 fig.set_figheight(10)
 
-files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
-kg_name = {'fibo-skos':'FIBO-SKOS', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'stw-mappings':'STW(mappings)', 'jel':'JEL', 'fund':'Fund'}
-# files = []
+# files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mappings', 'alignment']
+kg_name = {'fibo-vD':'FIBO-vD', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'jel':'JEL', 'fund':'Fund', 'stw-mappings':'STW(mappings)', 'alignment':'alignment'}
 in_degree_map = {}
 out_degree_map = {}
 
@@ -164,12 +164,12 @@ for n in collect_big_in.keys():
 collect_big_out = {k: v for k, v in sorted(collect_big_out.items(), key=lambda item: item[1])}
 for n in collect_big_out.keys():
 	print (n, ' has out-degree ', collect_big_out[n])
-	triples, cardinality = hdt_kg.search_triples(n, "", "")
-	l = 0
-	for s,p,o in triples:
-		p = str(p)
-		if 'definition' in p or 'label' in p:
-			print (n, p, o)
-		l += 1
-		if l > 20:
-			break
+	# triples, cardinality = hdt_kg.search_triples(n, "", "")
+	# l = 0
+	# for s,p,o in triples:
+	# 	p = str(p)
+	# 	if 'definition' in p or 'label' in p:
+	# 		print (n, p, o)
+	# 	l += 1
+	# 	if l > 20:
+	# 		break

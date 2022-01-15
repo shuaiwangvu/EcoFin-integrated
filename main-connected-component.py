@@ -23,8 +23,8 @@ skos_closeMatch = "http://www.w3.org/2004/02/skos/core#closeMatch"
 subPropertyOf = 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf'
 inv = 'http://www.w3.org/2002/07/owl#inverseOf'
 
-files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
-# files = []
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mappings', 'alignment']
+
 
 for file in files:
 	path_to_file = './data/'+file+'.hdt'

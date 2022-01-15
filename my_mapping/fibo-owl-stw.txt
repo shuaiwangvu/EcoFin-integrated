@@ -1,0 +1,5 @@
+https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection|http://www.w3.org/2004/02/skos/core#Collection|=|0.74|CLS
+https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-NL/Country|http://zbw.eu/namespaces/zbw-extensions/country|=|1.0|INST
+https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Country|http://zbw.eu/namespaces/zbw-extensions/country|=|1.0|INST
+https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GB/Country|http://zbw.eu/namespaces/zbw-extensions/country|=|1.0|INST
+https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/war|http://zbw.eu/namespaces/zbw-extensions/ware|=|0.9|INST

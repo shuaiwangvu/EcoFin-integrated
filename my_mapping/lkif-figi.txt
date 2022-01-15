@@ -1,0 +1,1 @@
+http://www.estrellaproject.org/lkif-core/norm.owl#Code|http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code|=|0.77|CLS

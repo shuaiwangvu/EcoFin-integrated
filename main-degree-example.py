@@ -30,8 +30,8 @@ fig, axs = plt.subplots(2)
 fig.set_figwidth(6)
 fig.set_figheight(10)
 
-files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
-kg_name = {'fibo-skos':'FIBO-SKOS', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'stw-mappings':'STW(mappings)', 'jel':'JEL', 'fund':'Fund'}
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
+kg_name = {'fibo-vD':'FIBO-vD', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'stw-mappings':'STW(mappings)', 'jel':'JEL', 'fund':'Fund'}
 # files = []
 in_degree_map = {}
 out_degree_map = {}

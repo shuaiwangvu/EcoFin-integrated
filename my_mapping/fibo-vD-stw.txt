@@ -1,0 +1,12 @@
+http://www.w3.org/2004/02/skos/core#ConceptScheme|http://www.w3.org/2004/02/skos/core#ConceptScheme|=|0.7|CLS
+http://www.w3.org/2004/02/skos/core#Concept|http://www.w3.org/2004/02/skos/core#Concept|=|0.7|CLS
+http://www.w3.org/2004/02/skos/core#notation|http://www.w3.org/2004/02/skos/core#notation|=|1.0|DPROP
+http://www.w3.org/2004/02/skos/core#broaderTransitive|http://www.w3.org/2004/02/skos/core#broaderTransitive|=|1.0|OPROP
+http://www.w3.org/2004/02/skos/core#broader|http://www.w3.org/2004/02/skos/core#broader|=|1.0|OPROP
+http://www.w3.org/2004/02/skos/core#narrowerTransitive|http://www.w3.org/2004/02/skos/core#narrowerTransitive|=|1.0|OPROP
+http://www.w3.org/2004/02/skos/core#related|http://www.w3.org/2004/02/skos/core#related|=|1.0|OPROP
+http://www.w3.org/2004/02/skos/core#narrower|http://www.w3.org/2004/02/skos/core#narrower|=|1.0|OPROP
+https://spec.edmcouncil.org/fibo/vocabulary/FND/Places/Locations/hasCountry|http://zbw.eu/namespaces/zbw-extensions/country|=|1.0|INST
+https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country|http://zbw.eu/namespaces/zbw-extensions/country|=|1.0|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FND/TransactionsExt/REATransactions/subject|http://zbw.eu/namespaces/zbw-extensions/subject|=|1.0|INST
+https://spec.edmcouncil.org/fibo/vocabulary/DER/CreditDerivatives/CreditDefaultSwaps/hasSubject|http://zbw.eu/namespaces/zbw-extensions/subject|=|1.0|INST

@@ -1,0 +1,2 @@
+http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy|https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isClassifiedBy|=|1.0|OPROP
+http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/has|https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/has|=|1.0|OPROP

@@ -1,0 +1,11 @@
+http://www.w3.org/2004/02/skos/core#member|http://www.estrellaproject.org/lkif-core/mereology.owl#member_of|=|0.91|OPROP
+https://spec.edmcouncil.org/fibo/vocabulary/FND/Law/LegalCapacity/Regulation|http://finregont.com/fro/ref/LegalReference.ttl#Regulation_AIFMD|=|0.88|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FND/Utilities/Analytics/Total|http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#AUM_Total|=|0.86|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/RegistrationAuthorities/isRegisteredIn|http://fundontology.com/fr/form/IAPDSECCompilationReport.ttl#FCT_Registered|=|0.92|INST
+https://spec.edmcouncil.org/fibo/vocabulary/MD/TemporalCore/SecurityTradingStatuses/Active|http://fundontology.com/fr/form/IAPDSECCompilationReport.ttl#SRST_ACTIVE|=|0.85|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/FederalReserveDistrict|http://finregont.com/fro/ref/US_LegalReference.ttl#Federal_Reserve|=|0.87|INST
+https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection|http://www.linkedmodel.org/schema/vaem#CollectionGraph|=|0.88|INST
+https://spec.edmcouncil.org/fibo/vocabulary/BP/SecuritiesIssuance/PrivateLabelMBSIssuance/RatingsAgency|http://fundontology.com/fr/data/FundSampleData.ttl#RatingAgency_SandP|=|0.87|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FND/Arrangements/Documents/Document|http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#Document|=|1.0|INST
+https://spec.edmcouncil.org/fibo/vocabulary/BE/FunctionalEntities/FunctionalEntities/FamilyOffice|http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#IAA_misc_Family_office|=|0.86|INST
+https://spec.edmcouncil.org/fibo/vocabulary/FND/Arrangements/Ratings/RatingAgency|http://fundontology.com/fr/data/FundSampleData.ttl#RatingAgency_Moodys|=|0.88|INST

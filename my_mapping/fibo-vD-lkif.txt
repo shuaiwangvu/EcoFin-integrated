@@ -1,0 +1,1 @@
+http://www.w3.org/2004/02/skos/core#member|http://www.estrellaproject.org/lkif-core/mereology.owl#member|=|1.0|OPROP
