@@ -25,6 +25,9 @@ In addition, it exports a plot of the connected components of the skos:exactMatc
 ### Transitive relations
 *main-transitive.py* examins the transitive relations and print them out. 
 
+### Paper
+https://github.com/shuaiwangvu/EcoFin-integrated/blob/main/EcoFinKG_paper.pdf
+
 Please report errors and comments at shuai.wang@vu.nl. Thank you!
 
 > Written with [StackEdit](https://stackedit.io/).
