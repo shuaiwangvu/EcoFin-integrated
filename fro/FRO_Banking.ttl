@@ -1,0 +1,27 @@
+# baseURI: http://finregont.com/fro/FRO_Banking.ttl
+# imports: http://finregont.com/fro/cfr/FRO_CFR_Banking.ttl
+# imports: http://finregont.com/fro/usc/FRO_USC_Banking.ttl
+# prefix: FRO_Banking
+
+@prefix FRO_Banking: <http://finregont.com/fro/FRO_Banking.ttl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://finregont.com/fro/FRO_Banking.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "A simple include of CFR and USC Banking." ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "Financial Regulation Ontology: Banking module" ;
+  owl:imports <http://finregont.com/fro/cfr/FRO_CFR_Banking.ttl> ;
+  owl:imports <http://finregont.com/fro/usc/FRO_USC_Banking.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+  skos:definition "Banking related Financial Regulation Ontology laws and regulations.  " ;
+.

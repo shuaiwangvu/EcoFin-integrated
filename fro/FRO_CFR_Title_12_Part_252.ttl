@@ -1,0 +1,2000 @@
+# baseURI: http://finregont.com/fro/cfr/FRO_CFR_Title_12_Part_252.ttl
+# imports: http://finregont.com/fro/cfr/Code_Federal_Regulations.ttl
+# prefix: fro-cfr-t12-p252
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fro-cfr: <http://finregont.com/fro/cfr/Code_Federal_Regulations.ttl#> .
+@prefix fro-cfr-t12-p252: <http://finregont.com/fro/cfr/FRO_CFR_Title_12_Part_252.ttl#> .
+@prefix fro-leg-ref: <http://finregont.com/fro/ref/LegalReference.ttl#> .
+@prefix lkif-mereo: <http://www.estrellaproject.org/lkif-core/mereology.owl#> .
+@prefix lkif-norm: <http://www.estrellaproject.org/lkif-core/norm.owl#> .
+@prefix lkif-proc: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix lkif-rel-places: <http://www.estrellaproject.org/lkif-core/relative-places.owl#> .
+@prefix lkif-role: <http://www.estrellaproject.org/lkif-core/role.owl#> .
+@prefix lkif-rules: <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#> .
+@prefix lkif-time: <http://www.estrellaproject.org/lkif-core/time.owl#> .
+@prefix lkif-time-mod: <http://www.estrellaproject.org/lkif-core/time-modification.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://finregont.com/fro/cfr/FRO_CFR_Title_12_Part_252.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The resources in this ontology instantiate FinRegOnt classes CFR_Title, CFR_Section,  CFR_Paragraph etc. along with their properties.  They are loaded from CFR-2015-title12-vol3-part225, reverse engineered from the original the original data in Government Publishing Office XML file." ;
+  rdfs:isDefinedBy <https://www.ecfr.gov> ;
+  rdfs:label "Financial Regulation Ontology: FRO CFR Ttile 12 Part 225 module" ;
+  owl:imports <http://finregont.com/fro/cfr/Code_Federal_Regulations.ttl> ;
+  skos:definition """Code of Federal Regulations:
+TITLE 12  - Banks and Banking
+Chapter II, Subchapter A - BOARD OF GOVERNORS OF THE FEDERAL RESERVE SYSTEM
+Part 225 - ENHANCED PRUDENTIAL STANDARDS (REGULATION YY)""" ;
+.
+fro-cfr-t12-p252:r-1-3-1
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "12 U.S.C. 321-338a, 1467a(g), 1818, 1831p-1, 1844(b), 1844(c), 5361, 5365, 5366." ;
+  fro-leg-ref:hasSequenceNumber 1 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-3-1> ;
+.
+fro-cfr-t12-p252:r-1-4-1
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "77 FR 62391, Oct. 12, 2012, unless otherwise noted." ;
+  fro-leg-ref:hasSequenceNumber 1 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-4-1> ;
+.
+fro-cfr-t12-p252:r-1-6-1
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.131" ;
+  fro-cfr:hasSectionSubject "Authority and purpose." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 1 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-1> ;
+.
+fro-cfr-t12-p252:r-1-6-1-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Authority." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "12 U.S.C. 321-338a, 1467a(g), 1818, 1831p-1, 1844(b), 1844(c), 5361, 5365, 5366." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-1 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-1-2> ;
+.
+fro-cfr-t12-p252:r-1-6-1-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Purpose." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "This subpart implements section 165(i)(1) of the Dodd-Frank Act (12 U.S.C. 5365(i)(1)), which requires the Board to conduct annual analyses of nonbank financial companies supervised by the Board and bank holding companies with $50 billion or more in total consolidated assets to evaluate whether such companies have the capital, on a total consolidated basis, necessary to absorb losses as a result of adverse economic conditions." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-1 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-1-3> ;
+.
+fro-cfr-t12-p252:r-1-6-2
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.132" ;
+  fro-cfr:hasSectionSubject "Definitions." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2> ;
+.
+fro-cfr-t12-p252:r-1-6-2-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) A nonbank financial company supervised by the Board." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-10> ;
+.
+fro-cfr-t12-p252:r-1-6-2-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Depository institution" ;
+  fro-cfr:hasParagraphText "(f)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 3 of the Federal Deposit Insurance Act (12 U.S.C. 1813(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-11> ;
+.
+fro-cfr-t12-p252:r-1-6-2-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Foreign banking organization" ;
+  fro-cfr:hasParagraphText "(g)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 211.21(o) of the Board's Regulation K (12 CFR 211.21(o))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-12> ;
+.
+fro-cfr-t12-p252:r-1-6-2-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Nonbank financial company supervised by the Board" ;
+  fro-cfr:hasParagraphText "(h)" ;
+  fro-cfr:hasParagraphText "means a nonbank financial company that the Financial Stability Oversight Council has determined under section 113 of the Dodd-Frank Act (12 U.S.C. 5323) shall be supervised by the Board and for which such determination is still in effect." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-13> ;
+.
+fro-cfr-t12-p252:r-1-6-2-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Planning horizon" ;
+  fro-cfr:hasParagraphText "(i)" ;
+  fro-cfr:hasParagraphText "means the period of at least nine quarters, beginning on the first day of a stress test cycle (on October 1) over which the relevant projections extend." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-14> ;
+.
+fro-cfr-t12-p252:r-1-6-2-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Pre-provision net revenue" ;
+  fro-cfr:hasParagraphText "(j)" ;
+  fro-cfr:hasParagraphText "means the sum of net interest income and non-interest income less expenses before adjusting for loss provisions." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-15> ;
+.
+fro-cfr-t12-p252:r-1-6-2-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Provision for loan and lease losses" ;
+  fro-cfr:hasParagraphText "(k)" ;
+  fro-cfr:hasParagraphText "means the provision for loan and lease losses as reported by the covered company on the FR Y-9C." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-16> ;
+.
+fro-cfr-t12-p252:r-1-6-2-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Regulatory capital ratio" ;
+  fro-cfr:hasParagraphText "(l)" ;
+  fro-cfr:hasParagraphText "means a capital ratio for which the Board established minimum requirements by regulation or order, including a company's leverage ratio and tier 1 and total risk-based capital ratios as calculated under the Board's regulations, including appendices A, D, E, and G to 12 CFR part 225 or any successor regulation." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-17> ;
+.
+fro-cfr-t12-p252:r-1-6-2-18
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Scenarios" ;
+  fro-cfr:hasParagraphText "(m)" ;
+  fro-cfr:hasParagraphText "are those sets of conditions that affect the U.S. economy or the financial condition of a covered company that the Board annually determines are appropriate for use in the supervisory stress tests, including, but not limited to, baseline, adverse, and severely adverse scenarios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 18 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-18> ;
+.
+fro-cfr-t12-p252:r-1-6-2-19
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Severely adverse scenario" ;
+  fro-cfr:hasParagraphText "(n)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company and that overall are more severe than those associated with the adverse scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 19 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-19> ;
+.
+fro-cfr-t12-p252:r-1-6-2-20
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Stress test cycle" ;
+  fro-cfr:hasParagraphText "(o)" ;
+  fro-cfr:hasParagraphText "means the period between October 1 of a calendar year and September 30 of the following calendar year. For the purposes of the stress test cycle commencing in 2012, such cycle will begin on November 15, 2012." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 20 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-20> ;
+.
+fro-cfr-t12-p252:r-1-6-2-21
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Subsidiary" ;
+  fro-cfr:hasParagraphText "(p)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(o) of the Board's Regulation Y (12 CFR 225.2)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 21 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-21> ;
+.
+fro-cfr-t12-p252:r-1-6-2-22
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Tier 1 common ratio" ;
+  fro-cfr:hasParagraphText "(q)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.8(c)(9) of the Board's Regulation Y (12 CFR 225.8(c)(9))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 22 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-22> ;
+.
+fro-cfr-t12-p252:r-1-6-2-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "For purposes of this subpart, the following definitions apply:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-3> ;
+.
+fro-cfr-t12-p252:r-1-6-2-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Adverse scenario" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company that are more adverse than those associated with the baseline scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-4> ;
+.
+fro-cfr-t12-p252:r-1-6-2-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Average total consolidated assets" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "means the average of the total consolidated assets as reported by a bank holding company on its Consolidated Financial Statements for Bank Holding Companies (FR Y-9C) for the four most recent consecutive quarters. If the bank holding company has not filed the FR Y-9C for each of the four most recent consecutive quarters, average total consolidated assets means the average of the company's total consolidated assets, as reported on the company's FR Y-9C, for the most recent quarter or consecutive quarters. Average total consolidated assets are measured on the as-of date of the most recent FR Y-9C used in the calculation of the average." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-5> ;
+.
+fro-cfr-t12-p252:r-1-6-2-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding company" ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(c) of the Board's Regulation Y (12 CFR 225.2(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-6> ;
+.
+fro-cfr-t12-p252:r-1-6-2-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Baseline scenario" ;
+  fro-cfr:hasParagraphText "(d)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company and that reflect the consensus views of the economic and financial outlook." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-7> ;
+.
+fro-cfr-t12-p252:r-1-6-2-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Covered company" ;
+  fro-cfr:hasParagraphText "(e)" ;
+  fro-cfr:hasParagraphText "means:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-8> ;
+.
+fro-cfr-t12-p252:r-1-6-2-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) A bank holding company (other than a foreign banking organization) with average total consolidated assets of $50 billion or more; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-2 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-2-9> ;
+.
+fro-cfr-t12-p252:r-1-6-3
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.133" ;
+  fro-cfr:hasSectionSubject "Applicability." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3> ;
+.
+fro-cfr-t12-p252:r-1-6-3-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Compliance date for bank holding companies that are covered companies as" ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "of November 15, 2012." ;
+  fro-cfr:hasParagraphText "(1)" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "Except as provided in paragraph (a)(2) or (a)(3) of this section, a bank holding company that is a covered company as of November 15, 2012, must comply with the requirements of this subpart beginning with the stress test cycle that commences on October 1, 2013, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-2> ;
+.
+fro-cfr-t12-p252:r-1-6-3-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "2009 Supervisory Capital Assessment Program." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A bank holding company that participated in the 2009 Supervisory Capital Assessment Program, or a successor to such a bank holding company, must comply with the requirements of this subpart beginning with the stress test cycle that commences on November 15, 2012, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-3> ;
+.
+fro-cfr-t12-p252:r-1-6-3-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "SR Letter 01-01." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "A U.S.-domiciled bank holding company that is a covered company as of November 15, 2012, and is a subsidiary of a foreign banking organization that is currently relying on Supervision and Regulation Letter SR 01-01 issued by the Board (as in effect on May 19, 2010) must comply with the requirements of this subpart beginning with the stress test cycle that commences on October 1, 2015, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-4> ;
+.
+fro-cfr-t12-p252:r-1-6-3-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies." ;
+  fro-cfr:hasParagraphEnumText "Compliance date for institutions that become covered companies after November 15, 2012." ;
+  fro-cfr:hasParagraphText "(1)" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A bank holding company that becomes a covered company after November 15, 2012, must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the bank holding company becomes a covered company, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-5> ;
+.
+fro-cfr-t12-p252:r-1-6-3-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Nonbank financial companies supervised by the Board." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A company that becomes a nonbank financial company supervised by the Board must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the company first becomes subject to the Board's minimum regulatory capital requirements, unless the Board accelerates or extends the compliance date." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-6> ;
+.
+fro-cfr-t12-p252:r-1-6-3-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Ongoing application." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "A bank holding company that is a covered company will remain subject to the requirements of this subpart unless and until its total consolidated assets fall below $50 billion for each of four consecutive quarters, as reported on the FR Y-9C. The calculation will be effective on the as-of date of the fourth consecutive FR Y-9C." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-3 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-3-7> ;
+.
+fro-cfr-t12-p252:r-1-6-4
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.134" ;
+  fro-cfr:hasSectionSubject "Annual analysis conducted by the Board." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-4> ;
+.
+fro-cfr-t12-p252:r-1-6-4-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(1) On an annual basis, the Board will conduct an analysis of each covered company's capital, on a total consolidated basis, taking into account all relevant exposures and activities of that covered company, to evaluate the ability of the covered company to absorb losses in specified economic and financial conditions." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-4 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-4-2> ;
+.
+fro-cfr-t12-p252:r-1-6-4-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) The analysis will include an assessment of the projected losses, net income, and pro forma capital levels and regulatory capital ratios, tier 1 common ratio, and other capital ratios for the covered company and use such analytical techniques that the Board determines are appropriate to identify, measure, and monitor risks of the covered company that may affect the financial stability of the United States." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-4 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-4-3> ;
+.
+fro-cfr-t12-p252:r-1-6-4-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(3) In conducting the analyses, the Board will coordinate with the appropriate primary financial regulatory agencies and the Federal Insurance Office, as appropriate." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-4 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-4-4> ;
+.
+fro-cfr-t12-p252:r-1-6-4-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Economic and financial scenarios related to the Board's analysis." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "The Board will conduct its analysis under this section using a minimum of three different scenarios, including a baseline scenario, adverse scenario, and severely adverse scenario. The Board will notify covered companies of the scenarios that the Board will apply to conduct the analysis for each stress test cycle by no later than November 15 of each year, except with respect to trading or any other components of the scenarios and any additional scenarios that the Board will apply to conduct the analysis, which will be communicated by no later than December 1." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-4 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-4-5> ;
+.
+fro-cfr-t12-p252:r-1-6-5
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.135" ;
+  fro-cfr:hasSectionSubject "Data and information required to be submitted in support of the Board's analyses." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5> ;
+.
+fro-cfr-t12-p252:r-1-6-5-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Regular submissions." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "Each covered company must submit to the Board such data, on a consolidated basis, that the Board determines is necessary in order for the Board to derive the relevant pro forma estimates of the covered company over the planning horizon under the scenarios described in § 252.134(b)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-5 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5-3> ;
+.
+fro-cfr-t12-p252:r-1-6-5-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional submissions required by the Board." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "The Board may require a covered company to submit any other information on a consolidated basis that the Board deems necessary in order to:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-5 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5-4> ;
+.
+fro-cfr-t12-p252:r-1-6-5-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) Ensure that the Board has sufficient information to conduct its analysis under this subpart; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-5 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5-5> ;
+.
+fro-cfr-t12-p252:r-1-6-5-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) Project a company's pre-provision net revenue, losses, provision for loan and lease losses, and net income; and, pro forma capital levels, regulatory capital ratios, tier 1 common ratio, and any other capital ratio specified by the Board under the scenarios described in section 252.134(b)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-5 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5-6> ;
+.
+fro-cfr-t12-p252:r-1-6-5-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Confidential treatment of information submitted." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "The confidentiality of information submitted to the Board under this subpart and related materials shall be determined in accordance with the Freedom of Information Act (5 U.S.C. 552(b)) and the Board's Rules Regarding Availability of Information (12 CFR part 261)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-5 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-5-7> ;
+.
+fro-cfr-t12-p252:r-1-6-6
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.136" ;
+  fro-cfr:hasSectionSubject "Review of the Board's analysis; publication of summary results." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-6> ;
+.
+fro-cfr-t12-p252:r-1-6-6-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Review of results." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "Based on the results of the analysis conducted under this subpart, the Board will conduct an evaluation to determine whether the covered company has the capital, on a total consolidated basis, necessary to absorb losses and continue its operation by maintaining ready access to funding, meeting its obligations to creditors and other counterparties, and continuing to serve as a credit intermediary under baseline, adverse and severely adverse scenarios, and any additional scenarios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-6 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-6-2> ;
+.
+fro-cfr-t12-p252:r-1-6-6-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Communication of results to covered companies." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "The Board will convey to a covered company a summary of the results of the Board's analyses of such covered company within a reasonable period of time, but no later than March 31." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-6 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-6-3> ;
+.
+fro-cfr-t12-p252:r-1-6-6-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Publication of results by the Board." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "By March 31 of each calendar year, the Board will disclose a summary of the results of the Board's analyses of a covered company." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-6 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-6-4> ;
+.
+fro-cfr-t12-p252:r-1-6-7
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.137" ;
+  fro-cfr:hasSectionSubject "Use requirement." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7> ;
+.
+fro-cfr-t12-p252:r-1-6-7-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "The board of directors and senior management of each covered company must consider the results of the analysis conducted by the Board under this subpart, as appropriate:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-7 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7-2> ;
+.
+fro-cfr-t12-p252:r-1-6-7-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) As part of the covered company's capital plan and capital planning process, including when making changes to the covered company's capital structure (including the level and composition of capital);" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-7 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7-3> ;
+.
+fro-cfr-t12-p252:r-1-6-7-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) When assessing the covered company's exposures, concentrations, and risk positions; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-7 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7-4> ;
+.
+fro-cfr-t12-p252:r-1-6-7-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(3) In the development or implementation of any plans of the covered company for recovery or resolution." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-7 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7-5> ;
+.
+fro-cfr-t12-p252:r-1-6-7-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Resolution plan updates." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "Each covered company must update its resolution plan as the Board determines appropriate, based on the results of the Board's analyses of the covered company under this subpart." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-6-7 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-6-7-6> ;
+.
+fro-cfr-t12-p252:r-1-7-1
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.141" ;
+  fro-cfr:hasSectionSubject "Authority and purpose." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 1 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-1> ;
+.
+fro-cfr-t12-p252:r-1-7-1-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Authority." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "12 U.S.C. 321-338a, 1467a(g), 1818, 1831p-1, 1844(b), 1844(c), 5361, 5365, 5366." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-1 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-1-2> ;
+.
+fro-cfr-t12-p252:r-1-7-1-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Purpose." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "This subpart implements section 165(i)(2) of the Dodd-Frank Act (12 U.S.C. 5365(i)(2)), which requires a covered company to conduct annual and semi-annual stress tests. This subpart also establishes definitions of stress test and related terms, methodologies for conducting stress tests, and reporting and disclosure requirements." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-1 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-1-3> ;
+.
+fro-cfr-t12-p252:r-1-7-2
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.142" ;
+  fro-cfr:hasSectionSubject "Definitions." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2> ;
+.
+fro-cfr-t12-p252:r-1-7-2-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) A nonbank financial company supervised by the Board." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-10> ;
+.
+fro-cfr-t12-p252:r-1-7-2-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Depository institution" ;
+  fro-cfr:hasParagraphText "(h)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 3 of the Federal Deposit Insurance Act (12 U.S.C. 1813(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-11> ;
+.
+fro-cfr-t12-p252:r-1-7-2-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Foreign banking organization" ;
+  fro-cfr:hasParagraphText "(i)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 211.21(o) of the Board's Regulation K (12 CFR 211.21(o))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-12> ;
+.
+fro-cfr-t12-p252:r-1-7-2-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Nonbank financial company supervised by the Board" ;
+  fro-cfr:hasParagraphText "(j)" ;
+  fro-cfr:hasParagraphText "means a nonbank financial company that the Financial Stability Oversight Council has determined under section 113 of the Dodd-Frank Act (12 U.S.C. 5323) shall be supervised by the Board and for which such determination is still in effect." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-13> ;
+.
+fro-cfr-t12-p252:r-1-7-2-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Planning horizon" ;
+  fro-cfr:hasParagraphText "(k)" ;
+  fro-cfr:hasParagraphText "means the period of at least nine quarters, beginning on the first day of a stress test cycle (on October 1 or April 1, as appropriate) over which the relevant projections extend." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-14> ;
+.
+fro-cfr-t12-p252:r-1-7-2-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Pre-provision net revenue" ;
+  fro-cfr:hasParagraphText "(l)" ;
+  fro-cfr:hasParagraphText "means the sum of net interest income and non-interest income less expenses before adjusting for loss provisions." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-15> ;
+.
+fro-cfr-t12-p252:r-1-7-2-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Provision for loan and lease losses" ;
+  fro-cfr:hasParagraphText "(m)" ;
+  fro-cfr:hasParagraphText "means the provision for loan and lease losses as reported by the covered company on the FR Y-9C." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-16> ;
+.
+fro-cfr-t12-p252:r-1-7-2-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Regulatory capital ratio" ;
+  fro-cfr:hasParagraphText "(n)" ;
+  fro-cfr:hasParagraphText "means a capital ratio for which the Board established minimum requirements by regulation or order, including a company's leverage ratio and tier 1 and total risk-based capital ratios as calculated under the Board's regulations, including appendices A, D, E, and G to 12 CFR part 225, and appendices A, B, E, and F to part 208 or any successor regulation." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-17> ;
+.
+fro-cfr-t12-p252:r-1-7-2-18
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Scenarios" ;
+  fro-cfr:hasParagraphText "(o)" ;
+  fro-cfr:hasParagraphText "are those sets of conditions that affect the U.S. economy or the financial condition of a covered company that the Board, or with respect to the mid-cycle stress test required under section 252.145 of this subpart, the covered company, annually determines are appropriate for use in the company-run stress tests, including, but not limited to, baseline, adverse, and severely adverse scenarios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 18 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-18> ;
+.
+fro-cfr-t12-p252:r-1-7-2-19
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Severely adverse scenario" ;
+  fro-cfr:hasParagraphText "(p)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company and that overall are more severe than those associated with the adverse scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 19 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-19> ;
+.
+fro-cfr-t12-p252:r-1-7-2-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "For purposes of this subpart, the following definitions apply:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-2> ;
+.
+fro-cfr-t12-p252:r-1-7-2-20
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Stress test" ;
+  fro-cfr:hasParagraphText "(q)" ;
+  fro-cfr:hasParagraphText "means a process to assess the potential impact of scenarios on the consolidated earnings, losses, and capital of a covered company over the planning horizon, taking into account its current condition, risks, exposures, strategies, and activities." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 20 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-20> ;
+.
+fro-cfr-t12-p252:r-1-7-2-21
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Stress test cycle" ;
+  fro-cfr:hasParagraphText "(r)" ;
+  fro-cfr:hasParagraphText "means the period between October 1 of a calendar year and September 30 of the following calendar year. For the purposes of the stress test cycle commencing in 2012," ;
+  fro-cfr:hasParagraphText "such cycle will begin on November 15, 2012." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 21 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-21> ;
+.
+fro-cfr-t12-p252:r-1-7-2-22
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Subsidiary" ;
+  fro-cfr:hasParagraphText "(s)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(o) the Board's Regulation Y (12 CFR 225.2)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 22 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-22> ;
+.
+fro-cfr-t12-p252:r-1-7-2-23
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Tier 1 common ratio" ;
+  fro-cfr:hasParagraphText "(t)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.8(c)(9) of the Board's Regulation Y (12 CFR 225.8(c)(9))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 23 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-23> ;
+.
+fro-cfr-t12-p252:r-1-7-2-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Adverse scenario" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company that are more adverse than those associated with the baseline scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-3> ;
+.
+fro-cfr-t12-p252:r-1-7-2-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Average total consolidated assets" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "means the average of the total consolidated assets as reported by a bank holding company on its Consolidated Financial Statements for Bank Holding Companies (FR Y-9C) for the four most recent consecutive quarters. If the bank holding company has not filed the FR Y-9C for each of the four most recent consecutive quarters, average total consolidated assets means the average of the company's total consolidated assets, as reported on the company's FR Y-9C, for the most recent quarter or consecutive quarters. Average total consolidated assets are measured on the as of date of the most recent FR Y-9C used in the calculation of the average." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-4> ;
+.
+fro-cfr-t12-p252:r-1-7-2-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding company" ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(c) of the Board's Regulation Y (12 CFR 225.2(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-5> ;
+.
+fro-cfr-t12-p252:r-1-7-2-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Baseline scenario" ;
+  fro-cfr:hasParagraphText "(d)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a covered company and that reflect the consensus views of the economic and financial outlook." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-6> ;
+.
+fro-cfr-t12-p252:r-1-7-2-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Capital action" ;
+  fro-cfr:hasParagraphText "(e)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.8(c)(1) of the Board's Regulation Y (12 CFR 225.8(c)(1))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-7> ;
+.
+fro-cfr-t12-p252:r-1-7-2-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Covered company" ;
+  fro-cfr:hasParagraphText "(g)" ;
+  fro-cfr:hasParagraphText "means:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-8> ;
+.
+fro-cfr-t12-p252:r-1-7-2-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) A bank holding company (other than a foreign banking organization) with average total consolidated assets of $50 billion or more; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-2 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-2-9> ;
+.
+fro-cfr-t12-p252:r-1-7-3
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.143" ;
+  fro-cfr:hasSectionSubject "Applicability." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3> ;
+.
+fro-cfr-t12-p252:r-1-7-3-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Compliance date for bank holding companies that are covered companies as of November 15, 2012" ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "Except as provided in paragraph (a)(2) or (a)(3) of this section, a bank holding company that is a covered company as of November 15, 2012, must comply with the requirements of this subpart beginning with the stress test cycle commencing on October 1, 2013, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-2> ;
+.
+fro-cfr-t12-p252:r-1-7-3-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "2009 Supervisory Capital Assessment Program." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A bank holding company that participated in the 2009 Supervisory Capital Assessment Program, or a successor to such a bank holding company, must comply with the requirements of this subpart beginning with the stress test cycle commencing on November 15, 2012, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-3> ;
+.
+fro-cfr-t12-p252:r-1-7-3-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "SR Letter 01-01." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "A U.S.-domiciled bank holding company that is a covered company as of November 15, 2012, and is a subsidiary of a foreign banking organization that is currently relying on Supervision and Regulation Letter SR 01-01 issued by the Board (as in effect on May 19, 2010) must comply with the requirements of this subpart beginning with the stress test cycle commencing on October 1, 2015, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-4> ;
+.
+fro-cfr-t12-p252:r-1-7-3-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies." ;
+  fro-cfr:hasParagraphEnumText "Compliance date for institutions that become covered companies after November 15, 2012" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A bank holding company that becomes a covered company after November 15, 2012, must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the bank holding company becomes a covered company, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-5> ;
+.
+fro-cfr-t12-p252:r-1-7-3-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Nonbank financial companies supervised by the Board." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A company that becomes a nonbank financial company supervised by the Board must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which company first becomes subject to the Board's minimum regulatory capital requirements, unless the Board accelerates or extends the compliance date." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-6> ;
+.
+fro-cfr-t12-p252:r-1-7-3-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Ongoing application." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "A bank holding company that is a covered company will remain subject to the requirements of this subpart unless and until its total consolidated assets fall below $50 billion for each of four consecutive quarters, as reported on the FR Y-9C. The calculation will be effective on the as-of date of the fourth consecutive FR Y-9C." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-3 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-3-7> ;
+.
+fro-cfr-t12-p252:r-1-7-4
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.144" ;
+  fro-cfr:hasSectionSubject "Annual stress test." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4> ;
+.
+fro-cfr-t12-p252:r-1-7-4-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "A covered company must conduct an annual stress test by January 5 during each stress test cycle based on data as of September 30 of the preceding calendar year, unless the time or the as of date is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-2> ;
+.
+fro-cfr-t12-p252:r-1-7-4-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "Scenarios provided by the Board." ;
+  fro-cfr:hasParagraphText "(1)" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under this section, a covered company must use the scenarios provided by the Board. Except as provided in paragraphs (b)(2) and (3) of this section, the Board will provide a description of the scenarios to each covered company no later than November 15 of that calendar year." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-3> ;
+.
+fro-cfr-t12-p252:r-1-7-4-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional components." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "(i) The Board may require a covered company with significant trading activity, as determined by the Board and specified in the Capital Assessments and Stress Testing report (FR Y-14), to include a trading and counterparty component in its adverse and severely adverse scenarios in the stress test required by this section. The data used in this component will be as of a date between October 1 and December 1 of that calendar year selected by the Board, and the Board will communicate the as-of date and a description of the component to the company no later than December 1 of the calendar year." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-4> ;
+.
+fro-cfr-t12-p252:r-1-7-4-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) The Board may require a covered company to include one or more additional components in its adverse and severely adverse scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-5> ;
+.
+fro-cfr-t12-p252:r-1-7-4-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional scenarios." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The Board may require a covered company to use one or more additional scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-6> ;
+.
+fro-cfr-t12-p252:r-1-7-4-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Notice and response." ;
+  fro-cfr:hasParagraphText "(4)" ;
+  fro-cfr:hasParagraphText "If the Board requires a covered company to include one or more additional components in its adverse and severely adverse scenarios under paragraph (b)(2)(ii) of this section or to use one or more additional scenarios under paragraph (b)(3) of this section, the Board will notify the company in writing no later than September 30. The notification will include a general description of the additional component(s) or additional scenario(s) and the basis for requiring the company to include the additional component(s) or additional scenario(s). Within 14 calendar days of receipt of a notification under this paragraph, the covered company may request in writing that the Board reconsider the requirement that the company include the additional component(s) or additional scenario(s), including an explanation as to why the reconsideration should be granted. The Board will respond in writing within 14 calendar days of receipt of the company's request. The Board will provide the covered company with a description of any additional component(s) or additional scenario(s) by December 1." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-4 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-4-7> ;
+.
+fro-cfr-t12-p252:r-1-7-5
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.145" ;
+  fro-cfr:hasSectionSubject "Mid-cycle stress test." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5> ;
+.
+fro-cfr-t12-p252:r-1-7-5-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Mid-cycle stress test requirement." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "In addition to the stress test required under section 252.144 of this subpart, a covered company must conduct a stress test by July 5 during each stress test cycle based on data as of March 31 of that calendar year, unless the time or the as-of date is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-5 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5-2> ;
+.
+fro-cfr-t12-p252:r-1-7-5-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "Scenarios related to mid-cycle stress tests" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A covered company must develop and employ a minimum of three scenarios, including a baseline scenario, adverse scenario, and severely adverse scenario, that are appropriate for its own risk profile and operations, in conducting the stress test required by this section." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-5 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5-3> ;
+.
+fro-cfr-t12-p252:r-1-7-5-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional components." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "The Board may require a covered company to include one or more additional components in its adverse and severely adverse scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-5 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5-4> ;
+.
+fro-cfr-t12-p252:r-1-7-5-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional scenarios." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The Board may require a covered company to use one or more additional scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-5 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5-5> ;
+.
+fro-cfr-t12-p252:r-1-7-5-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Notice and response." ;
+  fro-cfr:hasParagraphText "(4)" ;
+  fro-cfr:hasParagraphText "If the Board requires a covered company to include one or more additional components in its adverse and severely adverse scenarios under paragraph (b)(2) of this section or one or more additional scenarios under paragraph (b)(3) of this section, the Board will notify the company in writing no later than March 31. The notification will include a general description of the additional component(s) or additional scenario(s) and the basis for requiring the company to include the additional component(s) or additional scenario(s). Within 14 calendar days of receipt of a notification under this paragraph, the covered company may request in writing that the Board reconsider the requirement that the company include the additional component(s) or additional scenario(s), including an explanation as to why the reconsideration should be granted. The Board will respond in writing within 14 calendar days of receipt of the company's request. The Board will provide the covered company with a description of any additional component(s) or additional scenario(s) by June 1." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-5 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-5-6> ;
+.
+fro-cfr-t12-p252:r-1-7-6
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.146" ;
+  fro-cfr:hasSectionSubject "Methodologies and practices." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6> ;
+.
+fro-cfr-t12-p252:r-1-7-6-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) Payments on any other instrument that is eligible for inclusion in the numerator of a regulatory capital ratio equal to the stated dividend, interest, or principal due on such instrument during the quarter; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-10> ;
+.
+fro-cfr-t12-p252:r-1-7-6-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) An assumption of no redemption or repurchase of any capital instrument that is eligible for inclusion in the numerator of a regulatory capital ratio." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-11> ;
+.
+fro-cfr-t12-p252:r-1-7-6-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Controls and oversight of stress testing processes" ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "The senior management of a covered company must establish and maintain a system of controls, oversight, and documentation, including policies and procedures, that are designed to ensure that its stress testing processes are effective in meeting the requirements in this subpart. These policies and procedures must, at a minimum, describe the covered company's stress testing practices and methodologies, and processes for validating and updating the company's stress test practices and methodologies consistent with applicable laws, regulations, and supervisory guidance. Policies of covered companies must also describe processes for scenario development for the mid-cycle stress test required under § 252.145." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-12> ;
+.
+fro-cfr-t12-p252:r-1-7-6-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Oversight of stress testing processes." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "The board of directors, or a committee thereof, of a covered company must approve and review the policies and procedures of the stress testing processes as frequently as economic conditions or the condition of the covered company may warrant, but no less than annually. The board of directors and senior management of the covered company must receive a summary of the results of any stress test conducted under this subpart." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-13> ;
+.
+fro-cfr-t12-p252:r-1-7-6-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Role of stress testing results." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The board of directors and senior management of each covered company must consider the results of the analysis it conducts under this subpart, as appropriate:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-14> ;
+.
+fro-cfr-t12-p252:r-1-7-6-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) As part of the covered company's capital plan and capital planning process, including when making changes to the covered company's capital structure (including the level and composition of capital);" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-15> ;
+.
+fro-cfr-t12-p252:r-1-7-6-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) When assessing the covered company's exposures, concentrations, and risk positions; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-16> ;
+.
+fro-cfr-t12-p252:r-1-7-6-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) In the development or implementation of any plans of the covered company for recovery or resolution." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-17> ;
+.
+fro-cfr-t12-p252:r-1-7-6-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Potential impact on capital." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under §§ 252.144 and 252.145, for each quarter of the planning horizon, a covered company must estimate the following for each scenario required to be used:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-3> ;
+.
+fro-cfr-t12-p252:r-1-7-6-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) Losses, pre-provision net revenue, provision for loan and lease losses, and net income; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-4> ;
+.
+fro-cfr-t12-p252:r-1-7-6-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) The potential impact on pro forma regulatory capital levels and pro forma capital ratios (including regulatory capital ratios, the tier 1 common ratio, and any other capital ratios specified by the Board), incorporating the effects of any capital actions over the planning horizon and maintenance of an allowance for loan losses appropriate for credit exposures throughout the planning horizon." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-5> ;
+.
+fro-cfr-t12-p252:r-1-7-6-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Assumptions regarding capital actions." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under §§ 252.144 and 252.145, a covered company is required to make the following assumptions regarding its capital actions over the planning horizon—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-6> ;
+.
+fro-cfr-t12-p252:r-1-7-6-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) For the first quarter of the planning horizon, the covered company must take into account its actual capital actions as of the end of that quarter; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-7> ;
+.
+fro-cfr-t12-p252:r-1-7-6-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) For each of the second through ninth quarters of the planning horizon, the covered company must include in the projections of capital:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-8> ;
+.
+fro-cfr-t12-p252:r-1-7-6-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) Common stock dividends equal to the quarterly average dollar amount of common stock dividends that the company paid in the previous year (that is, the first quarter of the planning horizon and the preceding three calendar quarters);" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-6 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-6-9> ;
+.
+fro-cfr-t12-p252:r-1-7-7
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.147" ;
+  fro-cfr:hasSectionSubject "Reports of stress test results." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-7> ;
+.
+fro-cfr-t12-p252:r-1-7-7-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Reports to the Board of stress test results." ;
+  fro-cfr:hasParagraphText "(1) A covered company must report the results of the stress test required under section 252.144 to the Board by January 5 of each calendar year in the manner and form prescribed by the Board, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-7 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-7-2> ;
+.
+fro-cfr-t12-p252:r-1-7-7-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) A covered company must report the results of the stress test required" ;
+  fro-cfr:hasParagraphText "under section 252.145 to the Board by July 5 of each calendar year in the manner and form prescribed by the Board, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-7 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-7-3> ;
+.
+fro-cfr-t12-p252:r-1-7-7-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Confidential treatment of information submitted." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "The confidentiality of information submitted to the Board under this subpart and related materials shall be determined in accordance with applicable exemptions under the Freedom of Information Act (5 U.S.C. 552(b)) and the Board's Rules Regarding Availability of Information (12 CFR part 261)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-7 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-7-4> ;
+.
+fro-cfr-t12-p252:r-1-7-8
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.148" ;
+  fro-cfr:hasSectionSubject "Disclosure of stress test results." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8> ;
+.
+fro-cfr-t12-p252:r-1-7-8-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) Provision for loan and lease losses, realized losses or gains on available-for-sale and held-to-maturity securities, trading and counterparty losses, and other losses or gains;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-10> ;
+.
+fro-cfr-t12-p252:r-1-7-8-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) Net income before taxes;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-11> ;
+.
+fro-cfr-t12-p252:r-1-7-8-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iv) Loan losses (dollar amount and as a percentage of average portfolio balance) in the aggregate and by subportfolio, including: domestic closed-end first-lien mortgages; domestic junior lien mortgages and home equity lines of credit; commercial and industrial loans; commercial real estate loans; credit card exposures; other consumer loans; and all other loans; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-12> ;
+.
+fro-cfr-t12-p252:r-1-7-8-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(v) Pro forma regulatory capital ratios and the tier 1 common ratio and any other capital ratios specified by the Board;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-13> ;
+.
+fro-cfr-t12-p252:r-1-7-8-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(4) An explanation of the most significant causes for the changes in regulatory capital ratios and the tier 1 common ratio; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-14> ;
+.
+fro-cfr-t12-p252:r-1-7-8-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(5) With respect to a stress test conducted pursuant to section 165(i)(2) of the Dodd-Frank Act by an insured depository institution that is a subsidiary of the covered company and that is required to disclose a summary of its stress tests results under applicable regulations, changes in regulatory capital ratios and any other capital ratios specified by the Board of the depository institution subsidiary over the planning horizon, including an explanation of the most significant causes for the changes in regulatory capital ratios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-15> ;
+.
+fro-cfr-t12-p252:r-1-7-8-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Content of results." ;
+  fro-cfr:hasParagraphText "(1) The following disclosures required under paragraph (b) of this section must be on a cumulative basis over the planning horizon:" ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-16> ;
+.
+fro-cfr-t12-p252:r-1-7-8-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) Pre-provision net revenue and other revenue;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-17> ;
+.
+fro-cfr-t12-p252:r-1-7-8-18
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) Provision for loan and lease losses, realized losses/gains on available-for-sale and held-to-maturity securities, trading and counterparty losses, and other losses or gains;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 18 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-18> ;
+.
+fro-cfr-t12-p252:r-1-7-8-19
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) Net income before taxes; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 19 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-19> ;
+.
+fro-cfr-t12-p252:r-1-7-8-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "Public disclosure of results" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "(i) A covered company must disclose a summary of the results of the stress test required under section 252.144 in the period beginning on March 15 and ending on March 31, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-2> ;
+.
+fro-cfr-t12-p252:r-1-7-8-20
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iv) Loan losses in the aggregate and by subportfolio." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 20 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-20> ;
+.
+fro-cfr-t12-p252:r-1-7-8-21
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) The disclosure of pro forma regulatory capital ratios, the tier 1 common ratio, and any other capital ratios specified by the Board that is required under paragraph (b) of this section must include the beginning value, ending value, and minimum value of each ratio over the planning horizon." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 21 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-21> ;
+.
+fro-cfr-t12-p252:r-1-7-8-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) A covered company must disclose a summary of the results of the stress test required under section 252.145 in the period beginning on September 15 and ending on September 30, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-3> ;
+.
+fro-cfr-t12-p252:r-1-7-8-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Disclosure method." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "The summary required under this section may be disclosed on the Web site of a covered company, or in any other forum that is reasonably accessible to the public." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-4> ;
+.
+fro-cfr-t12-p252:r-1-7-8-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Summary of results." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A covered company must disclose, at a minimum, the following information regarding the severely adverse scenario:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-5> ;
+.
+fro-cfr-t12-p252:r-1-7-8-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) A description of the types of risks included in the stress test;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-6> ;
+.
+fro-cfr-t12-p252:r-1-7-8-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) A general description of the methodologies used in the stress test, including those employed to estimate losses, revenues, provision for loan and lease losses, and changes in capital positions over the planning horizon;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-7> ;
+.
+fro-cfr-t12-p252:r-1-7-8-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(3) Estimates of—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-8> ;
+.
+fro-cfr-t12-p252:r-1-7-8-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) Pre-provision net revenue and other revenue;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-7-8 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-7-8-9> ;
+.
+fro-cfr-t12-p252:r-1-8-2-1
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "77 FR 62402, Oct. 12, 2012, unless otherwise noted." ;
+  fro-leg-ref:hasSequenceNumber 1 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-2-1> ;
+.
+fro-cfr-t12-p252:r-1-8-3
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.151" ;
+  fro-cfr:hasSectionSubject "Authority and purpose." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-3> ;
+.
+fro-cfr-t12-p252:r-1-8-3-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Authority." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "12 U.S.C. 321-338a, 1467a(g), 1818, 1831o, 1831p-1, 1844(b), 1844(c), 3906-3909, 5365." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-3 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-3-2> ;
+.
+fro-cfr-t12-p252:r-1-8-3-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Purpose." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "This subpart implements section 165(i)(2) of the Dodd-Frank Act (12 U.S.C. 5365(i)(2)), which requires a bank holding company with total consolidated assets of greater than $10 billion but less than $50 billion and savings and loan holding companies and state member banks with total consolidated assets of greater than $10 billion to conduct annual stress tests. This subpart also establishes definitions of stress test and related terms, methodologies for conducting stress tests, and reporting and disclosure requirements." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-3 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-3-3> ;
+.
+fro-cfr-t12-p252:r-1-8-4
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.152" ;
+  fro-cfr:hasSectionSubject "Definitions." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4> ;
+.
+fro-cfr-t12-p252:r-1-8-4-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Capital action" ;
+  fro-cfr:hasParagraphText "(f)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.8(c)(1) of the Board's Regulation Y (12 CFR 225.8(c)(1))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-10> ;
+.
+fro-cfr-t12-p252:r-1-8-4-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Covered company subsidiary" ;
+  fro-cfr:hasParagraphText "(g)" ;
+  fro-cfr:hasParagraphText "means a state member bank that is a subsidiary of a covered company as defined in subpart F of this part." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-11> ;
+.
+fro-cfr-t12-p252:r-1-8-4-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Depository institution" ;
+  fro-cfr:hasParagraphText "(h)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 3 of the Federal Deposit Insurance Act (12 U.S.C. 1813(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-12> ;
+.
+fro-cfr-t12-p252:r-1-8-4-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Foreign banking organization" ;
+  fro-cfr:hasParagraphText "(i)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 211.21(o) of the Board's Regulation K (12 CFR 211.21(o))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-13> ;
+.
+fro-cfr-t12-p252:r-1-8-4-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Planning horizon" ;
+  fro-cfr:hasParagraphText "(j)" ;
+  fro-cfr:hasParagraphText "means the period of at least nine quarters, beginning on the first day of a stress test cycle (on October 1) over which the relevant projections extend." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-14> ;
+.
+fro-cfr-t12-p252:r-1-8-4-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Pre-provision net revenue" ;
+  fro-cfr:hasParagraphText "(k)" ;
+  fro-cfr:hasParagraphText "means the sum of net interest income and non-interest income less expenses before adjusting for loss provisions." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-15> ;
+.
+fro-cfr-t12-p252:r-1-8-4-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Provision for loan and lease losses" ;
+  fro-cfr:hasParagraphText "(l)" ;
+  fro-cfr:hasParagraphText "company, savings and loan holding company, or state member bank on the FR Y-9C or Call Report, as appropriate." ;
+  fro-cfr:hasParagraphText "means the provision for loan and lease losses as reported by the bank holding" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-16> ;
+.
+fro-cfr-t12-p252:r-1-8-4-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Regulatory capital ratio" ;
+  fro-cfr:hasParagraphText "(m)" ;
+  fro-cfr:hasParagraphText "means a capital ratio for which the Board established minimum requirements by regulation or order, including a company's leverage ratio and tier 1 and total risk-based capital ratios as calculated under the Board's regulations, including appendices A, D, E, and G to 12 CFR part 225 and appendices A, B, E, and F to 12 CFR part 208 or any successor regulation." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-17> ;
+.
+fro-cfr-t12-p252:r-1-8-4-18
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Savings and loan holding company" ;
+  fro-cfr:hasParagraphText "(n)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 238.2(m) of the Board's Regulation LL (12 CFR 238.2(m))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 18 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-18> ;
+.
+fro-cfr-t12-p252:r-1-8-4-19
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Scenarios" ;
+  fro-cfr:hasParagraphText "(o)" ;
+  fro-cfr:hasParagraphText "are those sets of conditions that affect the U.S. economy or the financial condition of a bank holding company, savings and loan holding company, or state member bank that the Board annually determines are appropriate for use in the company-run stress tests, including, but not limited to, baseline, adverse, and severely adverse scenarios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 19 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-19> ;
+.
+fro-cfr-t12-p252:r-1-8-4-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "For purposes of this subpart, the following definitions apply:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-2> ;
+.
+fro-cfr-t12-p252:r-1-8-4-20
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Severely adverse scenario" ;
+  fro-cfr:hasParagraphText "(p)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a bank holding company, savings and loan holding company, or state member bank and that overall are more severe than those associated with the adverse scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 20 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-20> ;
+.
+fro-cfr-t12-p252:r-1-8-4-21
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "State member bank" ;
+  fro-cfr:hasParagraphText "(q)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 208.2(g) of the Board's Regulation H (12 CFR 208.2(g))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 21 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-21> ;
+.
+fro-cfr-t12-p252:r-1-8-4-22
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Stress test" ;
+  fro-cfr:hasParagraphText "(r)" ;
+  fro-cfr:hasParagraphText "means a process to assess the potential impact of scenarios on the consolidated earnings, losses, and capital of a bank holding company, savings and loan holding company, or state member bank over the planning horizon, taking into account the current condition, risks, exposures, strategies, and activities." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 22 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-22> ;
+.
+fro-cfr-t12-p252:r-1-8-4-23
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Stress test cycle" ;
+  fro-cfr:hasParagraphText "(s)" ;
+  fro-cfr:hasParagraphText "means the period between October 1 of a calendar year and September 30 of the following calendar year. For the purposes of the stress test cycle commencing in 2012, such cycle will begin on November 15, 2012." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 23 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-23> ;
+.
+fro-cfr-t12-p252:r-1-8-4-24
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Subsidiary" ;
+  fro-cfr:hasParagraphText "(t)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(o) the Board's Regulation Y (12 CFR 225.2(o))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 24 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-24> ;
+.
+fro-cfr-t12-p252:r-1-8-4-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Adverse scenario" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a bank holding company, savings and loan holding company, or state member bank that are more adverse than those associated with the baseline scenario and may include trading or other additional components." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-3> ;
+.
+fro-cfr-t12-p252:r-1-8-4-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Asset threshold" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "means—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-4> ;
+.
+fro-cfr-t12-p252:r-1-8-4-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) For a bank holding company, average total consolidated assets of greater than $10 billion but less than $50 billion, and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-5> ;
+.
+fro-cfr-t12-p252:r-1-8-4-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) For a savings and loan holding company or state member bank, average total consolidated assets of greater than $10 billion." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-6> ;
+.
+fro-cfr-t12-p252:r-1-8-4-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Average total consolidated assets" ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "means the average of the total consolidated assets as reported by a bank holding company, savings and loan holding company, or state member bank on its Consolidated Financial Statements for Bank Holding Companies (FR Y-9C) or Consolidated Report of Condition and Income (Call Report), as applicable, for the four most recent consecutive quarters. If the bank holding company, savings and loan holding company, or state member bank has not filed the FR Y-9C or Call Report, as applicable, for each of the four most recent consecutive quarters, average total consolidated assets means the average of the company's total consolidated assets, as reported on the company's FR Y-9C or Call Report, as applicable, for the most recent quarter or consecutive quarters. Average total consolidated assets are measured on the as-of date of the most recent FR Y-9C or Call Report, as applicable, used in the calculation of the average." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-7> ;
+.
+fro-cfr-t12-p252:r-1-8-4-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding company" ;
+  fro-cfr:hasParagraphText "(d)" ;
+  fro-cfr:hasParagraphText "has the same meaning as in section 225.2(c) of the Board's Regulation Y (12 CFR 225.2(c))." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-8> ;
+.
+fro-cfr-t12-p252:r-1-8-4-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Baseline scenario" ;
+  fro-cfr:hasParagraphText "(e)" ;
+  fro-cfr:hasParagraphText "means a set of conditions that affect the U.S. economy or the financial condition of a bank holding company, savings and loan holding company, or state member bank, and that reflect the consensus views of the economic and financial outlook." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-4 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-4-9> ;
+.
+fro-cfr-t12-p252:r-1-8-5
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.153" ;
+  fro-cfr:hasSectionSubject "Applicability." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5> ;
+.
+fro-cfr-t12-p252:r-1-8-5-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Interaction with 12 CFR part 252, subpart G." ;
+  fro-cfr:hasParagraphText "(e)" ;
+  fro-cfr:hasParagraphText "Notwithstanding paragraph (d) of this section, a bank holding company or savings and loan holding company that becomes a covered company as defined in subpart G of this part and conducts a stress test pursuant to that subpart is not subject to the requirements of this subpart." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-10> ;
+.
+fro-cfr-t12-p252:r-1-8-5-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies" ;
+  fro-cfr:hasParagraphEnumText "Compliance date for bank holding companies and state member banks that meet the asset threshold on or before December 31, 2012" ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "Except as provided in paragraph (a)(1)(ii) of this section, a bank holding company that meets the asset threshold on or before December 31, 2012, must comply with the requirements of this subpart beginning with the stress test cycle that commences on October 1, 2013, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-cfr:hasParagraphText "—(i)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-2> ;
+.
+fro-cfr-t12-p252:r-1-8-5-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "SR Letter 01-01." ;
+  fro-cfr:hasParagraphText "(ii)" ;
+  fro-cfr:hasParagraphText "A U.S.-domiciled bank holding company that is a subsidiary of a foreign banking organization that is currently relying on Supervision and Regulation Letter SR 01-01 issued by the Board (as in effect on May 19, 2010) must comply with the requirements of this subpart beginning with the stress test cycle that commences on October 1, 2015, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-3> ;
+.
+fro-cfr-t12-p252:r-1-8-5-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "State member banks." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "(i) A state member bank that meets the asset threshold as of November 15, 2012, and is a subsidiary of a bank holding company that participated in the 2009 Supervisory Capital Assessment Program, or a successor to such bank holding company, must comply with the requirements of this subpart beginning with the stress test cycle that commences on November 15, 2012, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-4> ;
+.
+fro-cfr-t12-p252:r-1-8-5-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) A state member bank that meets the asset threshold on or before December 31, 2012, and is not described in paragraph (a)(2)(i) of this section must comply with the requirements of this subpart beginning with the stress test cycle that commences on October 1, 2013, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-5> ;
+.
+fro-cfr-t12-p252:r-1-8-5-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Compliance date for bank holding companies and state member banks that meet the asset threshold after December 31, 2012." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A bank holding company or state member bank that meets the asset threshold after December 31, 2012, must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the company meets the asset threshold," ;
+  fro-cfr:hasParagraphText "unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-6> ;
+.
+fro-cfr-t12-p252:r-1-8-5-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Compliance date for savings and loan holding companies." ;
+  fro-cfr:hasParagraphText "(1) A savings and loan holding company that meets the asset threshold on or before the date on which it is subject to minimum regulatory capital requirements must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the company becomes subject to the Board's minimum regulatory capital requirements, unless the Board accelerates or extends the compliance date." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-7> ;
+.
+fro-cfr-t12-p252:r-1-8-5-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) A savings and loan holding company that meets the asset threshold after the date on which it is subject to minimum regulatory capital requirements must comply with the requirements of this subpart beginning with the stress test cycle that commences in the calendar year after the year in which the company becomes subject to the Board's minimum regulatory capital requirements, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-8> ;
+.
+fro-cfr-t12-p252:r-1-8-5-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Ongoing application." ;
+  fro-cfr:hasParagraphText "(d)" ;
+  fro-cfr:hasParagraphText "A bank holding company, savings and loan holding company, or state member bank that meets the asset threshold will remain subject to the requirements of this subpart unless and until its total consolidated assets fall below $10 billion for each of four consecutive quarters, as reported on the FR Y-9C or Call Report, as applicable. The calculation will be effective on the as-of date of the fourth consecutive FR Y-9C or Call Report, as applicable." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-5 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-5-9> ;
+.
+fro-cfr-t12-p252:r-1-8-6
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.154" ;
+  fro-cfr:hasSectionSubject "Annual stress test." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6> ;
+.
+fro-cfr-t12-p252:r-1-8-6-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "General requirements" ;
+  fro-cfr:hasParagraphEnumText "Savings and loan holding companies with average total consolidated assets of $50 billion or more and state member banks that are covered company subsidiaries." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "A savings and loan holding company with average total consolidated assets of $50 billion or more or a state member bank that is a covered company subsidiary or must conduct a stress test by January 5 of each calendar year based on data as of September 30 of the preceding calendar year, unless the time or the as-of date is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-2> ;
+.
+fro-cfr-t12-p252:r-1-8-6-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies, savings and loan holding companies with total consolidated assets of less than $50 billion, and state member banks that are not covered company subsidiaries." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "Except as provided in paragraph (a)(1) of this section, a bank holding company, savings and loan holding company, or state member bank must conduct a stress test by March 31 of each calendar year using financial statement data as of September 30 of the preceding calendar year, unless the time or the as-of date is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-3> ;
+.
+fro-cfr-t12-p252:r-1-8-6-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "Scenarios provided by the Board" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under this section, a bank holding company, savings and loan holding company, or state member bank must use the scenarios provided by the Board. Except as provided in paragraphs (b)(2) and (3) of this section, the Board will provide a description of the scenarios to each bank holding company, savings and loan holding company, or state member bank no later than November 15 of that calendar year." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-4> ;
+.
+fro-cfr-t12-p252:r-1-8-6-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional components." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "(i) The Board may require a bank holding company, savings and loan holding company, or state member bank with significant trading activity, as determined by the Board and specified in the Capital Assessments and Stress Testing report (FR Y-14), to include a trading and counterparty component in its adverse and severely adverse scenarios in the stress test required by this section. The Board may also require a state member bank that is subject to 12 CFR part 208, Appendix E and that is a subsidiary of a bank holding company subject to this paragraph (b)(2)(i) or 12 CFR 252.144(b)(2)(i) to include a trading and counterparty component in the state member bank's adverse and severely adverse scenarios in the stress test required by this section. The data used in this component will be as of a date between October 1 and December 1" ;
+  fro-cfr:hasParagraphText "of that calendar year selected by the Board, and the Board will communicate the as-of date and a description of the component to the company no later than December 1 of the calendar year." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-5> ;
+.
+fro-cfr-t12-p252:r-1-8-6-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) The Board may require a bank holding company, savings and loan holding company, or state member bank to include one or more additional components in its adverse and severely adverse scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-6> ;
+.
+fro-cfr-t12-p252:r-1-8-6-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Additional scenarios." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The Board may require a bank holding company, savings and loan holding company, or state member bank to include one or more additional scenarios in the stress test required by this section based on the company's financial condition, size, complexity, risk profile, scope of operations, or activities, or risks to the U.S. economy." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-7> ;
+.
+fro-cfr-t12-p252:r-1-8-6-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Notice and response." ;
+  fro-cfr:hasParagraphText "(4)" ;
+  fro-cfr:hasParagraphText "If the Board requires a bank holding company, savings and loan holding company, or state member bank to include one or more additional components in its adverse and severely adverse scenarios under paragraph (b)(2)(ii) of this section or to use one or more additional scenarios under paragraph (b)(3) of this section, the Board will notify the company in writing no later than September 30. The notification will include a general description of the additional component(s) or additional scenario(s) and the basis for requiring the company to include the additional component(s) or additional scenario(s). Within 14 calendar days of receipt of a notification under this paragraph, the bank holding company, savings and loan holding company, or state member bank may request in writing that the Board reconsider the requirement that the company include the additional component(s) or additional scenario(s), including an explanation as to why the reconsideration should be granted. The Board will respond in writing within 14 calendar days of receipt of the company's request. The Board will provide the bank holding company, savings and loan holding company, or state member bank with a description of any additional component(s) or additional scenario(s) by December 1." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-6 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-6-8> ;
+.
+fro-cfr-t12-p252:r-1-8-7
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.155" ;
+  fro-cfr:hasSectionSubject "Methodologies and practices." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7> ;
+.
+fro-cfr-t12-p252:r-1-8-7-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) An assumption of no redemption or repurchase of any capital instrument that is eligible for inclusion in the numerator of a regulatory capital ratio." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-10> ;
+.
+fro-cfr-t12-p252:r-1-8-7-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Controls and oversight of stress testing processes" ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "The senior management of a bank holding company, savings and loan holding company, or state member bank must establish and maintain a system of controls, oversight, and documentation, including policies and procedures, that are designed to ensure that its stress testing processes are effective in meeting the requirements in this subpart. These policies and procedures must, at a minimum, describe the company's stress testing practices and methodologies, and processes for validating and updating the company's stress test practices and methodologies consistent with applicable laws, regulations, and supervisory guidance." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-11> ;
+.
+fro-cfr-t12-p252:r-1-8-7-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Oversight of stress testing processes." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "The board of directors, or a committee thereof, of a bank holding company, savings and loan holding company, or state member bank must approve and review the policies and procedures of the stress testing processes as frequently as economic conditions or the condition of the company may warrant, but no less than annually. The board of directors and senior management of the bank holding company, savings and loan holding company, or state member bank must receive a summary of the results of the stress test conducted under this section." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-12> ;
+.
+fro-cfr-t12-p252:r-1-8-7-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Role of stress testing results." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The board of directors and senior management of a bank holding company, savings and loan holding company, or state member bank must consider the results of the stress test in the normal course of business, including but not limited to, the banking organization's capital planning, assessment of capital adequacy, and risk management practices." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-13> ;
+.
+fro-cfr-t12-p252:r-1-8-7-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Potential impact on capital." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under § 252.154, for each quarter of the planning horizon, a bank holding company, savings and loan holding company, or state member bank must estimate the following for each scenario required to be used:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-2> ;
+.
+fro-cfr-t12-p252:r-1-8-7-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) Losses, pre-provision net revenue, provision for loan and lease losses, and net income; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-3> ;
+.
+fro-cfr-t12-p252:r-1-8-7-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) The potential impact on pro forma regulatory capital levels and pro forma capital ratios (including regulatory capital ratios and any other capital ratios specified by the Board), incorporating the effects of any capital actions over the planning horizon and maintenance of an allowance for loan losses appropriate for credit exposures throughout the planning horizon." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-4> ;
+.
+fro-cfr-t12-p252:r-1-8-7-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Assumptions regarding capital actions." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "In conducting a stress test under § 252.154 of this part, a bank holding company or savings and loan holding company is required to make the following assumptions regarding its capital actions over the planning horizon—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-5> ;
+.
+fro-cfr-t12-p252:r-1-8-7-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(1) For the first quarter of the planning horizon, the bank holding company or savings and loan holding company must take into account its actual capital actions as of the end of that quarter; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-6> ;
+.
+fro-cfr-t12-p252:r-1-8-7-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) For each of the second through ninth quarters of the planning horizon, the bank holding company or savings and loan holding company must include in the projections of capital—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-7> ;
+.
+fro-cfr-t12-p252:r-1-8-7-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) Common stock dividends equal to the quarterly average dollar amount of common stock dividends that the company paid in the previous year (that is, the first quarter of the planning horizon and the preceding three calendar quarters);" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-8> ;
+.
+fro-cfr-t12-p252:r-1-8-7-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) Payments on any other instrument that is eligible for inclusion in the numerator of a regulatory capital ratio equal to the stated dividend, interest, or principal due on such instrument during the quarter; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-7 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-7-9> ;
+.
+fro-cfr-t12-p252:r-1-8-8
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.156" ;
+  fro-cfr:hasSectionSubject "Reports of stress test results." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-8> ;
+.
+fro-cfr-t12-p252:r-1-8-8-2
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Reports to the Board of stress test results" ;
+  fro-cfr:hasParagraphEnumText "Savings and loan holding companies with average total consolidated assets of $50 billion or more and state member banks that are covered company subsidiaries." ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "A savings and loan holding company with average total consolidated assets of $50 billion or more or a state member bank that is a covered company subsidiary must report the results of the stress test to the Board by January 5 of each calendar year in the manner and form prescribed by the Board, unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-8 ;
+  fro-leg-ref:hasSequenceNumber 2 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-8-2> ;
+.
+fro-cfr-t12-p252:r-1-8-8-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies, savings and loan holding companies, and state member banks." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "Except as provided in paragraph (a)(1) of this section, a bank holding company, savings and loan holding company, or state member bank must report the results of the stress test to the Board by March 31 of each calendar year in the manner and form prescribed by the Board, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-8 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-8-3> ;
+.
+fro-cfr-t12-p252:r-1-8-8-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Contents of reports." ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "The report required under paragraph (a) of this section must include, under the baseline scenario, adverse scenario, severely adverse scenario, and any other scenario required under § 252.154(b)(3) of this part, a description of the types of risks being included in the stress test; a summary description of the methodologies used in the stress test; and, for each quarter of the planning horizon, estimates of aggregate losses, pre-provision net revenue, provision for loan and lease losses, net income, and regulatory capital ratios. In addition, the report must include an explanation of the most significant causes for the changes in regulatory capital ratios and any other information required by the Board. This paragraph will remain applicable until such time as the Board issues a reporting form to collect the results of the stress test required under § 252.154 of this part." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-8 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-8-4> ;
+.
+fro-cfr-t12-p252:r-1-8-8-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Confidential treatment of information submitted." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-cfr:hasParagraphText "The confidentiality of information submitted to the Board under this subpart and related materials shall be determined in accordance with applicable exemptions under the Freedom of Information Act (5 U.S.C. 552(b)) and the Board's Rules Regarding Availability of Information (12 CFR part 261)." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-8 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-8-5> ;
+.
+fro-cfr-t12-p252:r-1-8-9
+  rdf:type fro-cfr:CFR_Section ;
+  fro-cfr:hasSectionNumber "§ 252.157" ;
+  fro-cfr:hasSectionSubject "Disclosure of stress test results." ;
+  fro-leg-ref:divides fro-cfr:CFR_Title-12_Part-252 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9> ;
+.
+fro-cfr-t12-p252:r-1-8-9-10
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) Estimates of—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 10 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-10> ;
+.
+fro-cfr-t12-p252:r-1-8-9-11
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(A) Aggregate losses;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 11 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-11> ;
+.
+fro-cfr-t12-p252:r-1-8-9-12
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(B) Pre-provision net revenue;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 12 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-12> ;
+.
+fro-cfr-t12-p252:r-1-8-9-13
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(C) Provision for loan and lease losses;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 13 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-13> ;
+.
+fro-cfr-t12-p252:r-1-8-9-14
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(D) Net income; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 14 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-14> ;
+.
+fro-cfr-t12-p252:r-1-8-9-15
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(E) Pro forma regulatory capital ratios and any other capital ratios specified by the Board;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 15 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-15> ;
+.
+fro-cfr-t12-p252:r-1-8-9-16
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iv) An explanation of the most significant causes for the changes in regulatory capital ratios; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 16 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-16> ;
+.
+fro-cfr-t12-p252:r-1-8-9-17
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(v) With respect to a stress test conducted by an insured depository institution subsidiary of the bank holding company or savings and loan holding company pursuant to section 165(i)(2) of the Dodd-Frank Wall Street Reform and Consumer Protection Act, changes in regulatory capital ratios and any other capital ratios specified by the Board of the depository institution subsidiary over the planning horizon, including an explanation of the most significant causes for the changes in regulatory capital ratios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 17 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-17> ;
+.
+fro-cfr-t12-p252:r-1-8-9-18
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "State member banks that are subsidiaries of bank holding companies." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A state member bank that is a subsidiary of a bank holding company will satisfy the public disclosure requirements under section 165(i)(2) of the Dodd-Frank Wall Street Reform and Consumer Protection Act when the bank holding company publicly discloses summary results of its stress test pursuant to this section or section 252.148 of this part, unless the Board determines that the disclosures at the holding company level do not adequately capture the potential impact of the scenarios on the capital of the state member bank. In this case, the state member bank must make the same disclosure as required by paragraph (b)(3) of this section." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 18 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-18> ;
+.
+fro-cfr-t12-p252:r-1-8-9-19
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "State member banks that are not subsidiaries of bank holding companies." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "A state member bank that is not a subsidiary of a bank holding company must disclose, at a minimum, the following information regarding the severely adverse scenario:" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 19 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-19> ;
+.
+fro-cfr-t12-p252:r-1-8-9-20
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) A description of the types of risks being included in the stress test;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 20 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-20> ;
+.
+fro-cfr-t12-p252:r-1-8-9-21
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) A summary description of the methodologies used in the stress test;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 21 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-21> ;
+.
+fro-cfr-t12-p252:r-1-8-9-22
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iii) Estimates of—" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 22 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-22> ;
+.
+fro-cfr-t12-p252:r-1-8-9-23
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(A) Aggregate losses;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 23 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-23> ;
+.
+fro-cfr-t12-p252:r-1-8-9-24
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(B) Pre-provision net revenue" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 24 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-24> ;
+.
+fro-cfr-t12-p252:r-1-8-9-25
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(C) Provision for loan and lease losses;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 25 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-25> ;
+.
+fro-cfr-t12-p252:r-1-8-9-26
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(D) Net income; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 26 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-26> ;
+.
+fro-cfr-t12-p252:r-1-8-9-27
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(E) Pro forma regulatory capital ratios and any other capital ratios specified by the Board; and" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 27 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-27> ;
+.
+fro-cfr-t12-p252:r-1-8-9-28
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(iv) An explanation of the most significant causes for the changes in regulatory capital ratios." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 28 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-28> ;
+.
+fro-cfr-t12-p252:r-1-8-9-29
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Content of results." ;
+  fro-cfr:hasParagraphText "(1) The disclosure of aggregate losses, pre-provision net revenue, provision for loan and lease losses, and net income that is required under paragraph (b) of this section must be on a cumulative basis over the planning horizon." ;
+  fro-cfr:hasParagraphText "(c)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 29 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-29> ;
+.
+fro-cfr-t12-p252:r-1-8-9-3
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "In general." ;
+  fro-cfr:hasParagraphEnumText "Public disclosure of results" ;
+  fro-cfr:hasParagraphText "(a)" ;
+  fro-cfr:hasParagraphText "(i) Except as provided in paragraph (a)(1)(ii) or (b)(2) of this section, a bank holding company, savings and loan holding company, or state member bank must disclose a summary of the results of the stress test in the period beginning on June 15 and ending on June 30 unless that time is extended by the Board in writing." ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 3 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-3> ;
+.
+fro-cfr-t12-p252:r-1-8-9-30
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(2) The disclosure of pro forma regulatory capital ratios and any other capital ratios specified by the Board that is required under paragraph (b) of this section must include the beginning value, ending value and minimum value of each ratio over the planning horizon." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 30 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-30> ;
+.
+fro-cfr-t12-p252:r-1-8-9-4
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) Except as provided in paragraph (b)(2) of this section, a state member bank that is a covered company subsidiary or a savings and loan holding company with average total consolidated assets of $50 billion or more must disclose a summary of the results of the stress test in the period beginning on March 15 and ending on March 31, unless that time is extended by the Board in writing." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 4 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-4> ;
+.
+fro-cfr-t12-p252:r-1-8-9-5
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Initial disclosure." ;
+  fro-cfr:hasParagraphText "(2)" ;
+  fro-cfr:hasParagraphText "A bank holding company, savings and loan holding company, or state member bank that has total consolidated assets of less than $50 billion on or before December 31, 2012, must comply with the requirements of this section beginning with the stress test cycle commencing on October 1, 2014." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 5 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-5> ;
+.
+fro-cfr-t12-p252:r-1-8-9-6
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Disclosure method." ;
+  fro-cfr:hasParagraphText "(3)" ;
+  fro-cfr:hasParagraphText "The summary required under this section may be disclosed on the Web site of a bank holding company, savings and loan holding company, or state member bank, or in any other forum that is reasonably accessible to the public." ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 6 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-6> ;
+.
+fro-cfr-t12-p252:r-1-8-9-7
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphEnumText "Bank holding companies and savings and loan holding companies." ;
+  fro-cfr:hasParagraphEnumText "Summary of results" ;
+  fro-cfr:hasParagraphText "(b)" ;
+  fro-cfr:hasParagraphText "A bank holding company or savings and loan holding company must disclose, at a minimum, the following information regarding the severely adverse scenario:" ;
+  fro-cfr:hasParagraphText "—(1)" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 7 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-7> ;
+.
+fro-cfr-t12-p252:r-1-8-9-8
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(i) A description of the types of risks included in the stress test;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 8 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-8> ;
+.
+fro-cfr-t12-p252:r-1-8-9-9
+  rdf:type fro-cfr:CFR_Parapraph ;
+  fro-cfr:hasParagraphText "(ii) A summary description of the methodologies used in the stress test;" ;
+  fro-leg-ref:divides fro-cfr-t12-p252:r-1-8-9 ;
+  fro-leg-ref:hasSequenceNumber 9 ;
+  fro-leg-ref:hasSourceInstance <http://finregont.com/fro/cfr/CFR-2013-title12-vol4-part252.ttl#r-1-8-9-9> ;
+.

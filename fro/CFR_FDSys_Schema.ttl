@@ -1,0 +1,477 @@
+# baseURI: http://finregont.com/fro/cfr/CFR_FDSys_Schema.ttl
+# imports: http://finregont.com/fro/ref/AnnotationProperty.ttl
+# imports: http://topbraid.org/sxml
+# prefix: cfr-fdsys-s
+
+@prefix : <http://finregont.com/fro/cfr/CFR_FDSys_Schema.ttl#> .
+@prefix cfr-fdsys-s: <http://finregont.com/fro/cfr/CFR_FDSys_Schema.ttl#> .
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance#> .
+
+<http://finregont.com/fro/cfr/CFR_FDSys_Schema.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment """GPO’s Federal Digital System (FDsys) provides free online access to official publications from all three branches of the Federal Government.
+This ontology has classes for the FDSys elements:  TITLE, SECTION, P(aragraph) etc.
+Data properties composite:child/parent define the XML hierarchy. Individual FDSys Part ontologies import this file and place the instances as types of the classes defined here.""" ;
+  rdfs:isDefinedBy <https://www.gpo.gov/fdsys/bulkdata/CFR/resources/CFR-XML_User-Guide_v1.pdf> ;
+  rdfs:label "Financial Regulation Ontology: CFR FDSys Schema module" ;
+  owl:imports <http://finregont.com/fro/ref/AnnotationProperty.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  skos:definition "An OWL representation of the Government Publishing Office (GPS), Code of Federal Regulations XML schema." ;
+  skos:note """CFR_FDSys_Schema is just a transformation of the XML into simple Staging classes. There are no semantics and it is hard and error prone to SPARQL query the data.
+Code_Federal_Regulations has the target ontology design, populated from CFR_FSys_Schema instances.""" ;
+.
+cfr-fdsys-s:ANCESTORS
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:ANCESTORS ;
+  rdfs:label "ANCESTORS" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:AUTH
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:AUTH ;
+  rdfs:label "AUTH" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:BOXHD
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:BOXHD ;
+  rdfs:label "BOXHD" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:CDEF-GPOTABLE
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "CDEF" ;
+  rdfs:domain cfr-fdsys-s:GPOTABLE ;
+  rdfs:label "CDEF" ;
+.
+cfr-fdsys-s:CFRGRANULE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CFRGRANULE ;
+  rdfs:label "CFRGRANULE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:CFRTITLE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CFRTITLE ;
+  rdfs:label "CFRTITLE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:CFRTITLETEXT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CFRTITLETEXT ;
+  rdfs:label "CFRTITLETEXT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:CFR_FDSysElement
+  rdf:type owl:Class ;
+  rdfs:label "Section divides Part" ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "A collection class for FDSys elemnt classes." ;
+.
+cfr-fdsys-s:CHED
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CHED ;
+  rdfs:label "CHED" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:CITA
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CITA ;
+  rdfs:label "CITA" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Used for citations." ;
+.
+cfr-fdsys-s:COLS-GPOTABLE
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "COLS" ;
+  rdfs:domain cfr-fdsys-s:GPOTABLE ;
+  rdfs:label "COLS" ;
+.
+cfr-fdsys-s:CONTENTS
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:CONTENTS ;
+  rdfs:label "CONTENTS" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Contains table of contents entries." ;
+.
+cfr-fdsys-s:COVERONLY
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:COVERONLY ;
+  rdfs:label "COVERONLY" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:DATE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:DATE ;
+  rdfs:label "DATE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Used for date entry." ;
+.
+cfr-fdsys-s:DEEP-MATH
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "DEEP" ;
+  rdfs:domain cfr-fdsys-s:MATH ;
+  rdfs:label "DEEP" ;
+.
+cfr-fdsys-s:Document
+  rdf:type sxml:Document ;
+  rdf:type owl:NamedIndividual ;
+.
+cfr-fdsys-s:E
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:E ;
+  rdfs:label "E" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:EAR
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:EAR ;
+  rdfs:label "EAR" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:EDNOTE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:EDNOTE ;
+  rdfs:label "EDNOTE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:EFFDNOT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:EFFDNOT ;
+  rdfs:label "EFFDNOT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:EFFDNOTP
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:EFFDNOTP ;
+  rdfs:label "EFFDNOTP" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:ENT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:ENT ;
+  rdfs:label "ENT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:EXTRACT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:EXTRACT ;
+  rdfs:label "EXTRACT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:FDSYS
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:FDSYS ;
+  rdfs:label "FDSYS" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:FP
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:FP ;
+  rdfs:label "FP" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:FR
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:FR ;
+  rdfs:label "FR" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:FTNT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:FTNT ;
+  rdfs:label "FTNT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:FTREF
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:FTREF ;
+  rdfs:label "FTREF" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:GPOTABLE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:GPOTABLE ;
+  rdfs:label "GPOTABLE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:GRANULENUM
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:GRANULENUM ;
+  rdfs:label "GRANULENUM" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:H-CHED
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "H" ;
+  rdfs:domain cfr-fdsys-s:CHED ;
+  rdfs:label "H" ;
+.
+cfr-fdsys-s:HD
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:HD ;
+  rdfs:label "HD" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:HEADING
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:HEADING ;
+  rdfs:label "HEADING" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:HEADING-PARENT
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "HEADING" ;
+  rdfs:domain cfr-fdsys-s:PARENT ;
+  rdfs:label "HEADING" ;
+.
+cfr-fdsys-s:I-ENT
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "I" ;
+  rdfs:domain cfr-fdsys-s:ENT ;
+  rdfs:label "I" ;
+.
+cfr-fdsys-s:MATH
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:MATH ;
+  rdfs:label "MATH" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:MID
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:MID ;
+  rdfs:label "MID" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:NOTE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:NOTE ;
+  rdfs:label "NOTE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:OPTS-GPOTABLE
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "OPTS" ;
+  rdfs:domain cfr-fdsys-s:GPOTABLE ;
+  rdfs:label "OPTS" ;
+.
+cfr-fdsys-s:ORIGINALDATE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:ORIGINALDATE ;
+  rdfs:label "ORIGINALDATE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:P
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:P ;
+  rdfs:label "P" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:P-PRTPAGE
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "P" ;
+  rdfs:domain cfr-fdsys-s:PRTPAGE ;
+  rdfs:label "P" ;
+.
+cfr-fdsys-s:PARENT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:PARENT ;
+  rdfs:label "PARENT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:PART
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:PART ;
+  rdfs:label "PART" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Contains a major division within Chapters and Subchapters." ;
+.
+cfr-fdsys-s:PRTPAGE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:PRTPAGE ;
+  rdfs:label "PRTPAGE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:ParagraphTextNode
+  rdf:type owl:Class ;
+  rdfs:label "source Instance" ;
+  rdfs:subClassOf sxml:TextNode ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf [
+          rdf:type rdf:List ;
+          rdf:first sxml:TextNode ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first [
+                  rdf:type owl:Restriction ;
+                  owl:onProperty composite:parent ;
+                  owl:someValuesFrom cfr-fdsys-s:P ;
+                ] ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+.
+cfr-fdsys-s:RESERVED
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:RESERVED ;
+  rdfs:label "RESERVED" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:REVTXT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:REVTXT ;
+  rdfs:label "REVTXT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:ROW
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:ROW ;
+  rdfs:label "ROW" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:RUL-ROW
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "RUL" ;
+  rdfs:domain cfr-fdsys-s:ROW ;
+  rdfs:label "RUL" ;
+.
+cfr-fdsys-s:SECAUTH
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SECAUTH ;
+  rdfs:label "SECAUTH" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:SECHD
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SECHD ;
+  rdfs:label "SECHD" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Usually used for the words \"Section\" or \"Sec.\" when it appears as heading." ;
+.
+cfr-fdsys-s:SECTION
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SECTION ;
+  rdfs:label "SECTION" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Contains group or container tag for search and retrieval purposes." ;
+.
+cfr-fdsys-s:SECTNO
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SECTNO ;
+  rdfs:label "SECTNO" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Used for the code of Federal Regulations section number." ;
+.
+cfr-fdsys-s:SEQ-PARENT
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "SEQ" ;
+  rdfs:domain cfr-fdsys-s:PARENT ;
+  rdfs:label "SEQ" ;
+.
+cfr-fdsys-s:SOURCE-FP
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "SOURCE" ;
+  rdfs:domain cfr-fdsys-s:FP ;
+  rdfs:label "SOURCE" ;
+.
+cfr-fdsys-s:SOURCE-HD
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "SOURCE" ;
+  rdfs:domain cfr-fdsys-s:HD ;
+  rdfs:label "SOURCE" ;
+.
+cfr-fdsys-s:SPAN-MATH
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "SPAN" ;
+  rdfs:domain cfr-fdsys-s:MATH ;
+  rdfs:label "SPAN" ;
+.
+cfr-fdsys-s:STARS
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:STARS ;
+  rdfs:label "STARS" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:SU
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SU ;
+  rdfs:label "SU" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:SUBJECT
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:SUBJECT ;
+  rdfs:label "SUBJECT" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Subject of Section, usually follows Section Number." ;
+.
+cfr-fdsys-s:T-E
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "T" ;
+  rdfs:domain cfr-fdsys-s:E ;
+  rdfs:label "T" ;
+.
+cfr-fdsys-s:TDESC
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:TDESC ;
+  rdfs:label "TDESC" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:TITLE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:TITLE ;
+  rdfs:comment "Instances of the class are populated with the element under the tag." ;
+  rdfs:label "TITLE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+  skos:definition "Contains a major group of the publication." ;
+.
+cfr-fdsys-s:TNOTE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:TNOTE ;
+  rdfs:label "TNOTE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:TTITLE
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:TTITLE ;
+  rdfs:label "TTITLE" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+cfr-fdsys-s:VOL
+  rdf:type owl:Class ;
+  sxml:element cfr-fdsys-s:VOL ;
+  rdfs:label "VOL" ;
+  rdfs:subClassOf cfr-fdsys-s:CFR_FDSysElement ;
+.
+sxml:prefix
+  rdf:type owl:AnnotationProperty ;
+.
+sxml:root
+  rdf:type owl:AnnotationProperty ;
+.
+sxml:text
+  rdf:type owl:AnnotationProperty ;
+.
+xsi:noNamespaceSchemaLocation-CFRGRANULE
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "xsi:noNamespaceSchemaLocation" ;
+  rdfs:domain cfr-fdsys-s:CFRGRANULE ;
+  rdfs:label "xsi:noNamespaceSchemaLocation" ;
+.

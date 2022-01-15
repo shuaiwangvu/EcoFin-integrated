@@ -1,0 +1,526 @@
+# baseURI: http://finregont.com/fro/usc/United_States_Code.ttl
+# imports: http://finregont.com/fro/ref/US_LegalReference.ttl
+# prefix: fro-usc
+
+@prefix : <http://finregont.com/fro/usc/United_States_Code.ttl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fro-leg-ref: <http://finregont.com/fro/ref/LegalReference.ttl#> .
+@prefix fro-ref: <http://finregont.com/fro/ref/Reference.ttl#> .
+@prefix fro-usc: <http://finregont.com/fro/usc/United_States_Code.ttl#> .
+@prefix lkif-action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix lkif-mereo: <http://www.estrellaproject.org/lkif-core/mereology.owl#> .
+@prefix lkif-place: <http://www.estrellaproject.org/lkif-core/relative-places.owl#> .
+@prefix lkif-proc: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix lkif-role: <http://www.estrellaproject.org/lkif-core/role.owl#> .
+@prefix lkif-rules: <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#> .
+@prefix lkif-time: <http://www.estrellaproject.org/lkif-core/time.owl#> .
+@prefix lkif-time-mod: <http://www.estrellaproject.org/lkif-core/time-modification.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix usc-t12-ch17: <http://finregont.com/fro/usc/FRO_USC_Title_12_Chapter_17.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fro-leg-ref:Definitional_Expression_US_AdvisorAct
+  lkif-expr:held_by fro-leg-ref:OfficeLawRevisionCouncil ;
+  lkif-expr:medium fro-usc:USC_Release_Point_114-219 ;
+  lkif-proc:created_by fro-leg-ref:USC_114-219 ;
+.
+fro-leg-ref:Legislative_Body_US_Congress
+  lkif-action:actor_in fro-leg-ref:Act_of_Law_Dodd_Frank ;
+.
+fro-leg-ref:USC_114-156
+  lkif-proc:requirement fro-leg-ref:Act_of_Law_1940_InvestmentAdvisorAct ;
+.
+usc-t12-ch17:id81a43a40-1df7-11e6-87ee-8e4a3ab90f2a
+  rdf:type fro-usc:USC_Title ;
+  fro-leg-ref:divided_by usc-t12-ch17:id8317a06b-1df7-11e6-87ee-8e4a3ab90f2a ;
+  fro-leg-ref:hasSequenceNumber 0 ;
+  fro-leg-ref:refers_toNote usc-t12-ch17:id81a43a41-1df7-11e6-87ee-8e4a3ab90f2a ;
+  fro-ref:hasSourceInstance <http://finregont.com/fro/usc/USC-2015-title12-chapter17.ttl#r-1-0> ;
+  fro-usc:hasHeading "BANKS AND BANKING" ;
+  fro-usc:hasId "id81a43a40-1df7-11e6-87ee-8e4a3ab90f2a" ;
+  fro-usc:hasIdentifierText "/us/usc/t12" ;
+  fro-usc:hasNumberText "Title 12—" ;
+  lkif-expr:bears fro-leg-ref:Act_of_Law_1940_InvestmentAdvisorAct ;
+  lkif-expr:bears fro-leg-ref:USC_114-156 ;
+  lkif-mereo:member_of fro-usc:USC_Release_Point_114-219 ;
+.
+<http://finregont.com/fro/usc/United_States_Code.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://www.gnu.org/licenses/gpl.html" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "Lower level ontologies import this schema and populate with instances of USC Sections, Paragraphs, Notes and so forth. For example \"USC-2015-title12-chapter17.ttl\"" ;
+  rdfs:label "Financial Regulation Ontology: United States Code module" ;
+  rdfs:seeAlso <http://uscode.house.gov/download/download.shtml> ;
+  owl:imports <http://finregont.com/fro/ref/US_LegalReference.ttl> ;
+  skos:definition "An Ontology schema of the Unites States Code (USC)." ;
+.
+fro-usc:GovernmentPublication_US_Investment_Adviser_Act
+  rdf:type fro-leg-ref:GovernmentPublication ;
+  rdfs:label "Publication USC Release Point 114-219" ;
+.
+fro-usc:USC_114-153_2016_Title_12
+  lkif-mereo:member usc-t12-ch17:id81a43a40-1df7-11e6-87ee-8e4a3ab90f2a ;
+.
+fro-usc:USC_114-153_2016_Title_15
+  rdf:type fro-leg-ref:DocumentEdition ;
+  fro-leg-ref:hasEditionText "USC Edition 114-153 (2016)" ;
+  rdfs:label "USC Edition 114-153 (2016)" ;
+.
+fro-usc:USC_Chapeau
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Chapeau. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Chapeau" ;
+  rdfs:subClassOf fro-usc:USC_TextElement ;
+  skos:definition "Introductory text that comes before lower levels in a level hierarchy " ;
+  skos:note "The Chapeau is an anomynous element in the USC XML. It doesn't have an ID. FRO generates the URI from the import URI of the source." ;
+.
+fro-usc:USC_Chapter
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Chapter. Populated with Finance chapters under titles 12 and 15 from USC XML" ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Chapter" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom fro-usc:USC_Title ;
+    ] ;
+  skos:definition "A hierarchical level in a legislative document. " ;
+.
+fro-usc:USC_Clause
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC clauses. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Clause" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Subparagraph
+              fro-usc:USC_Subsection
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "A level below <subparagraph>. Usually numbered with lower-case Roman numerals." ;
+.
+fro-usc:USC_Component
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC elements. A super class for pieces in the United States Code." ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "United State Code - Element" ;
+  rdfs:subClassOf fro-usc:UnitedStatesCode ;
+  skos:definition "The fundamental unit of the hierarchy is the <level> element. A level is composed of (1) a <num> identification designation, (2) an optional <heading>, and (3) either primarily textual <content>, lower hierarchical <level> children, or a few other possible elements" ;
+.
+fro-usc:USC_Continuation
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Chapeau. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Continuation" ;
+  rdfs:subClassOf fro-usc:USC_TextElement ;
+  skos:definition "Closing text that comes after lower levels in a level hierarchy " ;
+  skos:note "The Continuation is an anomynous element in the USC XML. It doesn't have an ID. FRO generates the URI from the import URI of the source." ;
+.
+fro-usc:USC_Edition
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "We currently only have one edition. That means we don't store history of the Law. The USC_Title refers to the Edition." ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "United State Code - Element" ;
+  rdfs:subClassOf fro-usc:UnitedStatesCode ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:hasDate ;
+      owl:someValuesFrom xsd:date ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:hasEditionText ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+  skos:definition "The USC Edition is the version of the Law. Instance are Office of the Law Revision Council's Release Points" ;
+.
+fro-usc:USC_Item
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC items. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Item" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Clause
+              fro-usc:USC_Subclause
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "A level below <subclause>. Usually numbered with numbered with double lower-case letters." ;
+.
+fro-usc:USC_Level
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment """The FR ontology class for USC levels. A super class for the hierachical USC elements. (Title, Section, Paragraph etc.)
+Level elements have a system ID from the XML source a heading and identifier text.""" ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "United State Code - Level" ;
+  rdfs:subClassOf fro-usc:USC_Component ;
+  skos:definition "The fundamental unit of the hierarchy is the <level> element. A level is composed of (1) a <num> identification designation, (2) an optional <heading>, and (3) either primarily textual <content>, lower hierarchical <level> children, or a few other possible elements" ;
+.
+fro-usc:USC_Note
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC paragraphs. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Note" ;
+  rdfs:subClassOf fro-usc:USC_TextElement ;
+  skos:definition "A note is anything appearing after the text and source credit of a Code section. There are two main kinds of notes, statutory and editorial." ;
+.
+fro-usc:USC_Paragraph
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC paragraphs. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Paragraph" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Section
+              fro-usc:USC_Subsection
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "A level below <section>,often below a <subsection>. Usually numbered with Arabic numbers. " ;
+.
+fro-usc:USC_QuotedContent
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Chapeau. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Continuation" ;
+  rdfs:subClassOf fro-usc:USC_TextElement ;
+  skos:definition "Plain text quoted from another document or intended to be placed, as stated, in another document." ;
+  skos:note "The Continuation is an anomynous element in the USC XML. It doesn't have an ID. FRO generates the URI from the import URI of the source." ;
+.
+fro-usc:USC_Release_Point_114-219
+  rdf:type fro-usc:USC_Edition ;
+  fro-leg-ref:hasDate "2016-07-29"^^xsd:date ;
+  fro-leg-ref:hasEditionText "114-219" ;
+  rdfs:label "USC Release Point 114-219" ;
+.
+fro-usc:USC_Section
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Section. Populated with Finance sections under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Section" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Chapter
+              fro-usc:USC_Subchapter
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "The primary hierarchical level in a <title> or <bill>" ;
+.
+fro-usc:USC_SourceCredit
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC source credit. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Subparagraph" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  skos:definition "Text containing the source of a provision, usually surrounded by parentheses" ;
+.
+fro-usc:USC_Subchapter
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Subchapter. Populated with Finance subchapters under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Subchapter" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom fro-usc:USC_Chapter ;
+    ] ;
+  skos:definition "A level below <chapter> " ;
+.
+fro-usc:USC_Subclause
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC sub-clauses. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Subclause" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Clause
+              fro-usc:USC_Subparagraph
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "A level below <clause>. Usually numbered with upper-case Roman numerals." ;
+.
+fro-usc:USC_Subparagraph
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC sub-paragraphs. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Subparagraph" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              fro-usc:USC_Paragraph
+              fro-usc:USC_Section
+            ) ;
+        ] ;
+    ] ;
+  skos:definition "A level below <paragraph>. Usually numbered with upper-case letters. " ;
+.
+fro-usc:USC_Subsection
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Subsection. Populated with Finance content under titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Subsection" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fro-leg-ref:divides ;
+      owl:someValuesFrom fro-usc:USC_Section ;
+    ] ;
+  skos:definition "A level below <section>. Usually numbered with lower-case letters. " ;
+.
+fro-usc:USC_TextElement
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "Text elements don't have a system ID from the XML source. Their URI is the index from the XML import. Complex The have data properties for the concatenated text, optional reference and date.  " ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "United State Code - Text Element" ;
+  rdfs:subClassOf fro-usc:USC_Component ;
+  skos:definition "The FR ontology class for USC complext text blocks. A super class for the non-hierachical USC elements. (Chapeau, Continuation, Note,  Quoted Content)" ;
+.
+fro-usc:USC_Title
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The FR ontology class for USC Title. Populated with Finance titles 12 and 15 from USC XML." ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "United State Code - Title" ;
+  rdfs:subClassOf fro-usc:USC_Level ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty lkif-mereo:member_of ;
+      owl:someValuesFrom fro-leg-ref:DocumentEdition ;
+    ] ;
+  skos:definition "The United States Code (\"Code\") contains the general and permanent laws of the United States, arranged into 54 broad titles according to subject matter." ;
+.
+fro-usc:UnitedStatesCode
+  rdf:type owl:Class ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "In the Financial Regulation ontology this is a collection superclass. The distinct subclasses hold different USC hierarchy elements. E.g. Ttile, Chapter, Section ..." ;
+  rdfs:isDefinedBy <http://uscode.house.gov> ;
+  rdfs:label "United States Code" ;
+  rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/norm.owl#Statute> ;
+  skos:definition "The United States Code is a consolidation and codification by subject matter of the general and permanent laws of the United States. It is prepared by the Office of the Law Revision Counsel of the United States House of Representatives." ;
+.
+fro-usc:hasChapeauReferenceText
+  rdf:type owl:DatatypeProperty ;
+  sm:author "Jurgen Ziemer" ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Chapeau references into this data property." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Chapeau Reference Text" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasChapeauText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Chapeau text into this data property." ;
+  rdfs:domain fro-usc:USC_Chapeau ;
+  rdfs:label "Chapeau Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasElementText ;
+.
+fro-usc:hasContentText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Content texts into this data property." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Content Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-leg-ref:hasComponentText ;
+.
+fro-usc:hasContinuationText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Chapeau text into this data property." ;
+  rdfs:domain fro-usc:USC_Continuation ;
+  rdfs:label "Chapeau Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasElementText ;
+.
+fro-usc:hasElementText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "A super property for Chapeau, Content and Note-text." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Element Text" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasHeading
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology converts the USLM Heading(s) references into this data property." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Heading" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-leg-ref:hasComponentName ;
+.
+fro-usc:hasId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The ID element of the source USLM instance. A system generated identifier. E.g. \"fro-uslo:idd039fe6a-0c74-11e6-aa53-e455a13f2ad9\" is the ID for Title 15 - COMMERCE and TRADE" ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Element ID" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasIdentifierText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The business identifier for the USLM element. E.g. \"/us/usc/t15/s80a–3\" for Section. (Definition of investment company)" ;
+  rdfs:domain fro-usc:USC_Level ;
+  rdfs:label "Element Identifier (text)" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasNoteText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Note text fragments references into this data property." ;
+  rdfs:domain fro-usc:USC_Note ;
+  rdfs:label "Note Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasElementText ;
+.
+fro-usc:hasNoteTopic
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology converts the USLM Note topic references into this data property." ;
+  rdfs:domain fro-usc:USC_Note ;
+  rdfs:label "Note Topic" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasNoteType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain fro-usc:USC_Note ;
+  rdfs:label "Note Type" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasNumberText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology converts the USLM \"num\" element into this data property. It is the human readable reference. E.g. \"§ 80a–3.\"" ;
+  rdfs:domain fro-usc:USC_Level ;
+  rdfs:label "Element Number (text)" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasOrigin
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The reference (text) to the origin. The USC_QuotedContent origin refers to the original document part or the quote. For example: /us/pl/104/290/tII" ;
+  rdfs:domain fro-usc:USC_QuotedContent ;
+  rdfs:label "hasOrigin" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasReferenceText ;
+.
+fro-usc:hasQuotedContentText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Quoted Content text into this data property." ;
+  rdfs:domain fro-usc:USC_QuotedContent ;
+  rdfs:label "Chapeau Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasElementText ;
+.
+fro-usc:hasReferenceText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The FR ontology converts the USLM Reference into this data property. The format is identical to the hasIdentifierText." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "Reference Text" ;
+  rdfs:range xsd:string ;
+.
+fro-usc:hasSourceCreditText
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Financial Regulation Ontology denormalizes the USLM Chapeau text into this data property." ;
+  rdfs:domain fro-usc:USC_SourceCredit ;
+  rdfs:label "Source Credit Text" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf fro-usc:hasElementText ;
+.
+fro-usc:refers_toChapeau
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The data property points to the USC_Chapeau (range) that the instance (domain) refers to. For example: A USC_Clause may have a text that contains references." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "refers via Chapeau" ;
+  rdfs:range fro-usc:USC_Chapeau ;
+  rdfs:subPropertyOf fro-leg-ref:refers_to ;
+.
+fro-usc:refers_toContinuation
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The data property points to the USC_Continuation (range) that the instance (domain) refers to. For example: A USC_Clause may have a Element text that contains references." ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "refers via Chapeau" ;
+  rdfs:range fro-usc:USC_Continuation ;
+  rdfs:subPropertyOf fro-leg-ref:refers_to ;
+.
+fro-usc:refers_toLevel
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment """The data property points to the USC_Level (range) that the instance (domain) refers to.
+US code text elements contain references to other sections clauses etc. The text of the reference is the data property hasReference. This object property provides a link to the reference target.""" ;
+  rdfs:domain fro-usc:USC_Component ;
+  rdfs:label "refers to Level" ;
+  rdfs:range fro-usc:USC_Level ;
+  rdfs:subPropertyOf fro-leg-ref:refers_to ;
+.

@@ -1,0 +1,37 @@
+# baseURI: http://finregont.com/fro/Investment_Adviser_Act_USC_CFR.ttl
+# imports: http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275_Section1-7.ttl
+# imports: http://finregont.com/fro/usc/USC-2015-title15-chapter2D.ttl
+
+@prefix : <http://finregont.com/fro/Investment_Adviser_Act_USC_CFR.ttl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lkif-action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix lkif-mereo: <http://www.estrellaproject.org/lkif-core/mereology.owl#> .
+@prefix lkif-norm: <http://www.estrellaproject.org/lkif-core/norm.owl#> .
+@prefix lkif-proc: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix lkif-rules: <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#> .
+@prefix lkif-time: <http://www.estrellaproject.org/lkif-core/time.owl#> .
+@prefix lkif-time-mod: <http://www.estrellaproject.org/lkif-core/time-modification.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://finregont.com/fro/Investment_Adviser_Act_USC_CFR.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "This is an import of CFR-2012-title17-vol3-part275.ttl and  FRO_USC_Title_15_Chapter_2D.ttl" ;
+  rdfs:label "Financial Regulation Ontology: Investment Advisor Act USC/CFR module" ;
+  owl:imports <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275_Section1-7.ttl> ;
+  owl:imports <http://finregont.com/fro/usc/USC-2015-title15-chapter2D.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+  skos:definition """A Financial Regulation Ontology with Code of Federal Regulations (CFR) United States Code (USC) for the Investment Adviser Act (IAA). 
+USC Title 15, Chapter 2D
+CFR  Title 17, Part 275""" ;
+.

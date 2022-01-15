@@ -1,0 +1,784 @@
+# baseURI: http://finregont.com/fro/usc/USC_USLM_Schema.ttl
+# imports: http://finregont.com/fro/ref/AnnotationProperty.ttl
+# imports: http://topbraid.org/sxml
+# prefix: uslm
+
+@prefix : <http://finregont.com/fro/usc/USC_USLM_Schema.ttl#> .
+@prefix AnnotationProperty: <http://finregont.com/fro/ref/AnnotationProperty.ttl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix uslm: <http://finregont.com/fro/usc/USC_USLM_Schema.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance#> .
+
+<http://finregont.com/fro/usc/USC_USLM_Schema.ttl>
+  rdf:type owl:Ontology ;
+  dcterms:license "https://opensource.org/licenses/GPL-3.0" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "An OWL file reverse engineered with Topbraid Composer from the Office of the Law Revision council XML-schema. The Financial Regulation Ontology reverse engineered instance files (e.g. USC-2015-title12-chapter17.ttl) include USC_USLM_Schema.ttl" ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-User-Guide.pdf> ;
+  rdfs:label "Financial Regulation Ontology: United States Legislative Markup module" ;
+  owl:imports <http://finregont.com/fro/ref/AnnotationProperty.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  skos:definition """United States Legislative Markup
+The schema described in this User Guide is used to produce the United States Code in XML. The United States Code contains the general and permanent laws of the United States, organized into titles based on subject matter.""" ;
+.
+uslm:USC_USLM_Schema
+  rdf:type owl:Class ;
+  rdfs:comment "A collection class for ULSM schema elements" ;
+  rdfs:label "USC_USLM_Schema" ;
+  rdfs:subClassOf owl:Thing ;
+.
+uslm:chapeau
+  rdf:type owl:Class ;
+  sxml:element uslm:chapeau ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "chapeau" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition """Introductory text that comes before lower levels in a level hierarchy.|
+Interspersed between levels in a hierarchical level context can be placed such as an 
+	opening <chapeau>,
+	closing <continuation>, 
+	or a <proviso>. 
+It is also possible to have interstitial content modeled as <containment>, although the need should be very rare.""" ;
+.
+uslm:chapter
+  rdf:type owl:Class ;
+  sxml:element uslm:chapter ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "chapter" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A <chapter> is a hierarchical of a legislative document. " ;
+.
+uslm:class-chapeau
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:chapeau ;
+  rdfs:label "class" ;
+.
+uslm:class-clause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:clause ;
+  rdfs:label "class" ;
+.
+uslm:class-column
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:column ;
+  rdfs:label "class" ;
+.
+uslm:class-continuation
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:continuation ;
+  rdfs:label "class" ;
+.
+uslm:class-heading
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:heading ;
+  rdfs:label "class" ;
+.
+uslm:class-inline
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:inline ;
+  rdfs:label "class" ;
+.
+uslm:class-item
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:item ;
+  rdfs:label "class" ;
+.
+uslm:class-num
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:num ;
+  rdfs:label "class" ;
+.
+uslm:class-p
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:p ;
+  rdfs:label "class" ;
+.
+uslm:class-paragraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:paragraph ;
+  rdfs:label "class" ;
+.
+uslm:class-proviso
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:proviso ;
+  rdfs:label "class" ;
+.
+uslm:class-ref
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:ref ;
+  rdfs:label "class" ;
+.
+uslm:class-subclause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:subclause ;
+  rdfs:label "class" ;
+.
+uslm:class-subparagraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:subparagraph ;
+  rdfs:label "class" ;
+.
+uslm:class-subsection
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "class" ;
+  rdfs:domain uslm:subsection ;
+  rdfs:label "class" ;
+.
+uslm:clause
+  rdf:type owl:Class ;
+  sxml:element uslm:clause ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "clause" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <clause> is an optional below-section hierarchical level. Clauses are usually numbered with lower-case Roman numerals." ;
+.
+uslm:column
+  rdf:type owl:Class ;
+  sxml:element uslm:column ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "column" ;
+  rdfs:subClassOf uslm:uscDoc ;
+.
+uslm:content
+  rdf:type owl:Class ;
+  sxml:element uslm:content ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "content" ;
+  rdfs:subClassOf uslm:uscDoc ;
+.
+uslm:continuation
+  rdf:type owl:Class ;
+  sxml:element uslm:continuation ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "continuation" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition """Interspersed between levels in a hierarchical level context can be placed such as an 
+	opening <chapeau>,
+	closing <continuation>, 
+	or a <proviso>. 
+It is also possible to have interstitial content modeled as <containment>, although the need should be very rare.""" ;
+.
+uslm:date
+  rdf:type owl:Class ;
+  sxml:element uslm:date ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "date" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition """The @date attribute is used to associate dates with a note.
+This can be used to generate alerts.""" ;
+.
+uslm:date-date
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "date" ;
+  rdfs:domain uslm:date ;
+  rdfs:label "date" ;
+.
+uslm:docNumber
+  rdf:type owl:Class ;
+  sxml:element uslm:docNumber ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "docNumber" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "The <docNumber> is a property that contains a numeric designation assigned to this document. The document number should not contain any document prefix. Use the <docType> for the prefix." ;
+.
+uslm:docPublicationName
+  rdf:type owl:Class ;
+  sxml:element uslm:docPublicationName ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "docPublicationName" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "The <docPublicationName> is a property used to record the name of the publication that this document is part of. The values of the docPublicationName> are not defined." ;
+.
+uslm:header
+  rdf:type owl:Class ;
+  sxml:element uslm:header ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "header" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <layout> type can contain various types of elements as rows including headers, rows, TOC items, blocks, and contents. All elements, aside from <column> elements, are treated as rows when found directly within a layout structure." ;
+.
+uslm:heading
+  rdf:type owl:Class ;
+  sxml:element uslm:heading ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "heading" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <level> generally has a heading, but this is not required." ;
+.
+uslm:href-ref
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "href" ;
+  rdfs:domain uslm:ref ;
+  rdfs:label "href" ;
+.
+uslm:i
+  rdf:type owl:Class ;
+  sxml:element uslm:i ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "i" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "An iteration of USLM elements" ;
+.
+uslm:id-chapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:chapter ;
+  rdfs:label "id" ;
+.
+uslm:id-clause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:clause ;
+  rdfs:label "id" ;
+.
+uslm:id-item
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:item ;
+  rdfs:label "id" ;
+.
+uslm:id-note
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:note ;
+  rdfs:label "id" ;
+.
+uslm:id-notes
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:notes ;
+  rdfs:label "id" ;
+.
+uslm:id-paragraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:paragraph ;
+  rdfs:label "id" ;
+.
+uslm:id-section
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:section ;
+  rdfs:label "id" ;
+.
+uslm:id-sourceCredit
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:sourceCredit ;
+  rdfs:label "id" ;
+.
+uslm:id-subchapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:subchapter ;
+  rdfs:label "id" ;
+.
+uslm:id-subclause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:subclause ;
+  rdfs:label "id" ;
+.
+uslm:id-subparagraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:subparagraph ;
+  rdfs:label "id" ;
+.
+uslm:id-subsection
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:subsection ;
+  rdfs:label "id" ;
+.
+uslm:id-title
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:title ;
+  rdfs:label "id" ;
+.
+uslm:id-toc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "id" ;
+  rdfs:domain uslm:toc ;
+  rdfs:label "id" ;
+.
+uslm:identifier-chapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:chapter ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-clause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:clause ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-item
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:item ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-paragraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:paragraph ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-section
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:section ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-subchapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:subchapter ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-subclause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:subclause ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-subparagraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:subparagraph ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-subsection
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:subsection ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-title
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:title ;
+  rdfs:label "identifier" ;
+.
+uslm:identifier-uscDoc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "identifier" ;
+  rdfs:domain uslm:uscDoc ;
+  rdfs:label "identifier" ;
+.
+uslm:idref-ref
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "idref" ;
+  rdfs:domain uslm:ref ;
+  rdfs:label "idref" ;
+.
+uslm:inline
+  rdf:type owl:Class ;
+  sxml:element uslm:inline ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "inline" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A text fragment with special formatting (bold, underline etc)  within a larger text." ;
+.
+uslm:item
+  rdf:type owl:Class ;
+  sxml:element uslm:item ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "item" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " An <item> is a level usually below a subclause in the document hierarchy. Items are usually numbered with double lower-case letters." ;
+.
+uslm:lang-uscDoc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "xml:lang" ;
+  rdfs:domain uslm:uscDoc ;
+  rdfs:label "xml:lang" ;
+.
+uslm:layout
+  rdf:type owl:Class ;
+  sxml:element uslm:layout ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "layout" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A layout type is used to denote an area of text intended to be displayed in a column-oriented layout similar to a table. Use the <header>, <row>, and <column> elements to denote the rows and columns of the structure. A <layout> can be either row oriented or column oriented." ;
+.
+uslm:main
+  rdf:type owl:Class ;
+  sxml:element uslm:main ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "main" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "The primary part of the document is the main area. This contains the bulk of the document including any hierarchical levels, sections, table of contents, etc.   " ;
+.
+uslm:meta
+  rdf:type owl:Class ;
+  sxml:element uslm:meta ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "meta" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "All documents start with a meta area containing properties about the document. The information contained within this area is not official text in the document and should not be published other than as editorial notes.        " ;
+.
+uslm:note
+  rdf:type owl:Class ;
+  sxml:element uslm:note ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "note" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A <notes> element is a collection of note elements. Typically, rather than using the abstract <note>  element, the notes will be either <statutoryNote>                        elements or <editorialNote> elements." ;
+.
+uslm:notes
+  rdf:type owl:Class ;
+  sxml:element uslm:notes ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "notes" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A <notes> element is a collection of note elements. Typically, rather than using the abstract <note>  element, the notes will be either <statutoryNote>                        elements or <editorialNote> elements." ;
+.
+uslm:num
+  rdf:type owl:Class ;
+  sxml:element uslm:num ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "num" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "The num structure allows for an unlimited number of occurrences in simple sequence. This is to allow an item to be renumbered without creating a whole new parent item, typically a level or appendix structure.  Each <num> element should apply to a different temporal period. Notes will typically only follow a <num> when found in a repealed, omitted, spent, or otherwise removed section or level that is being noted." ;
+.
+uslm:origin-quotedContent
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "origin" ;
+  rdfs:domain uslm:quotedContent ;
+  rdfs:label "origin" ;
+.
+uslm:p
+  rdf:type owl:Class ;
+  sxml:element uslm:p ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "p" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A \"P\" type is a simple unnumbered paragraph. As a <content>  element, it can contain a wide range of text and elements." ;
+.
+uslm:paragraph
+  rdf:type owl:Class ;
+  sxml:element uslm:paragraph ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "paragraph" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <paragraph> is a numbered level usually found below a subsection in the document hierarchy. Paragraphs are  usually numbered with Arabic numbers." ;
+.
+uslm:proviso
+  rdf:type owl:Class ;
+  sxml:element uslm:proviso ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "proviso" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A <proviso> is a paragraph that states conditions relating to the law it is related to. A proviso generally begins with \"Provided that\" or just \"Provided\". Proviso can contain their own  complex structure including sandwich structures. When referencing into numbered parts of a proviso, a \"proviso\" level is added to the reference. If there are multiple provisos within a single parent, then those provisos should be named." ;
+.
+uslm:quotedContent
+  rdf:type owl:Class ;
+  sxml:element uslm:quotedContent ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "quotedContent" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <quotedContent> element is used for an extraction of potentially structured text (text with XML elements) from another source or origin.  Quoted content is used in USC Notes, amendments, and modifications.          " ;
+.
+uslm:ref
+  rdf:type owl:Class ;
+  sxml:element uslm:ref ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "ref" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A property can represent a pointer to either an external document or an element within the document." ;
+.
+uslm:role-header
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "role" ;
+  rdfs:domain uslm:header ;
+  rdfs:label "role" ;
+.
+uslm:role-toc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "role" ;
+  rdfs:domain uslm:toc ;
+  rdfs:label "role" ;
+.
+uslm:section
+  rdf:type owl:Class ;
+  sxml:element uslm:section ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "section" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <section> is the primary hierarchical level in a USC Title or a bill." ;
+.
+uslm:sourceCredit
+  rdf:type owl:Class ;
+  sxml:element uslm:sourceCredit ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "sourceCredit" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <sourceCredit> is a note included to indicate the source of a provision. It usually will contain a reference to the source of the  provision and the Statute(s) that have affected it. Source credits are usually set out in parenthesis. The surrounding parenthesis are shown in the text - they must  not be automatically added." ;
+.
+uslm:status-section
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "status" ;
+  rdfs:domain uslm:section ;
+  rdfs:label "status" ;
+.
+uslm:style-chapeau
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:chapeau ;
+  rdfs:label "style" ;
+.
+uslm:style-chapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:chapter ;
+  rdfs:label "style" ;
+.
+uslm:style-clause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:clause ;
+  rdfs:label "style" ;
+.
+uslm:style-column
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:column ;
+  rdfs:label "style" ;
+.
+uslm:style-continuation
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:continuation ;
+  rdfs:label "style" ;
+.
+uslm:style-header
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:header ;
+  rdfs:label "style" ;
+.
+uslm:style-item
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:item ;
+  rdfs:label "style" ;
+.
+uslm:style-note
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:note ;
+  rdfs:label "style" ;
+.
+uslm:style-p
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:p ;
+  rdfs:label "style" ;
+.
+uslm:style-paragraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:paragraph ;
+  rdfs:label "style" ;
+.
+uslm:style-proviso
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:proviso ;
+  rdfs:label "style" ;
+.
+uslm:style-section
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:section ;
+  rdfs:label "style" ;
+.
+uslm:style-subchapter
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:subchapter ;
+  rdfs:label "style" ;
+.
+uslm:style-subclause
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:subclause ;
+  rdfs:label "style" ;
+.
+uslm:style-subparagraph
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:subparagraph ;
+  rdfs:label "style" ;
+.
+uslm:style-subsection
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "style" ;
+  rdfs:domain uslm:subsection ;
+  rdfs:label "style" ;
+.
+uslm:subchapter
+  rdf:type owl:Class ;
+  sxml:element uslm:subchapter ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "subchapter" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition " A <subchapter> is a hierarchical level of a legislative document. " ;
+.
+uslm:subclause
+  rdf:type owl:Class ;
+  sxml:element uslm:subclause ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "subclause" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <subclause> is an optional hierarchical level below a clause.  Subclauses are usually numbered with upper-case Roman numerals." ;
+.
+uslm:subparagraph
+  rdf:type owl:Class ;
+  sxml:element uslm:subparagraph ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "subparagraph" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <subparagraph> is a level below a paragraph in the document hierarchy. Subparagraphs are usually numbered with upper-case letters." ;
+.
+uslm:subsection
+  rdf:type owl:Class ;
+  sxml:element uslm:subsection ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "subsection" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <subsection> is an optional hierarchical level below a section. Subsections are usually numbered with lower-case letters." ;
+.
+uslm:sup
+  rdf:type owl:Class ;
+  sxml:element uslm:sup ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "sup" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <sup> is a simple inline text to be shown in superscript text." ;
+.
+uslm:title
+  rdf:type owl:Class ;
+  sxml:element uslm:title ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "title" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "  A <title> is the top hierarchical level of a legislative document." ;
+.
+uslm:toc
+  rdf:type owl:Class ;
+  sxml:element uslm:toc ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "toc" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A table of contents" ;
+.
+uslm:tocItem
+  rdf:type owl:Class ;
+  sxml:element uslm:tocItem ;
+  rdfs:isDefinedBy <http://xml.house.gov/schemas/uslm/1.0/USLM-1.0.xsd> ;
+  rdfs:label "tocItem" ;
+  rdfs:subClassOf uslm:uscDoc ;
+  skos:definition "A <tocItem> is an entry in a table of contents. In addition to being found within a <toc> element, a <tocItem> can contain other <tocItem>           elements in a hierarchy." ;
+.
+uslm:topic-note
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "topic" ;
+  rdfs:domain uslm:note ;
+  rdfs:label "topic" ;
+.
+uslm:type-note
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "type" ;
+  rdfs:domain uslm:note ;
+  rdfs:label "type" ;
+.
+uslm:type-notes
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "type" ;
+  rdfs:domain uslm:notes ;
+  rdfs:label "type" ;
+.
+uslm:uscDoc
+  rdf:type owl:Class ;
+  sxml:element uslm:uscDoc ;
+  rdfs:comment "The root class for USLM schema classes" ;
+  rdfs:label "uscDoc" ;
+  rdfs:subClassOf uslm:USC_USLM_Schema ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:onProperty <http://www.topbraid.org/2007/05/composite.owl#index> ;
+      owl:someValuesFrom xsd:integer ;
+    ] ;
+.
+uslm:value-num
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "value" ;
+  rdfs:domain uslm:num ;
+  rdfs:label "value" ;
+.
+uslm:xmlns-uscDoc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "xmlns" ;
+  rdfs:domain uslm:uscDoc ;
+  rdfs:label "xmlns" ;
+.
+dc:creator
+  rdf:type owl:Class ;
+  sxml:element dc:creator ;
+  rdfs:label "dc:creator" ;
+.
+dc:publisher
+  rdf:type owl:Class ;
+  sxml:element dc:publisher ;
+  rdfs:label "dc:publisher" ;
+.
+dc:title
+  rdf:type owl:Class ;
+  sxml:element dc:title ;
+  rdfs:label "dc:title" ;
+.
+dc:type
+  rdf:type owl:Class ;
+  sxml:element dc:type ;
+  rdfs:label "dc:type" ;
+.
+dcterms:created
+  rdf:type owl:Class ;
+  sxml:element dcterms:created ;
+  rdfs:label "dcterms:created" ;
+.
+xsi:schemaLocation-uscDoc
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "xsi:schemaLocation" ;
+  rdfs:domain uslm:uscDoc ;
+  rdfs:label "xsi:schemaLocation" ;
+.

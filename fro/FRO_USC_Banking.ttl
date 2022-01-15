@@ -1,0 +1,24 @@
+# baseURI: http://finregont.com/fro/usc/FRO_USC_Banking.ttl
+# imports: http://finregont.com/fro/usc/FRO_USC_Title_12_Chapter_17.ttl
+# imports: http://finregont.com/fro/usc/FRO_USC_Title_12_Chapter_53.ttl
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://finregont.com/fro/usc/FRO_USC_Banking.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "A simple import of the relevant FRO files for United States Code Title 12 Chapter 17 and 53." ;
+  rdfs:label "Financial Regulation Ontology: FRO USC for Banking module" ;
+  owl:imports <http://finregont.com/fro/usc/FRO_USC_Title_12_Chapter_17.ttl> ;
+  owl:imports <http://finregont.com/fro/usc/FRO_USC_Title_12_Chapter_53.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+  skos:definition "A collection of Financial Regulation Ontology files relevant to Banking: Comprehensive Capital Review and Assessment (CCAR) and Stress Testing." ;
+.
