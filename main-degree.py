@@ -31,8 +31,8 @@ fig.set_figwidth(6)
 fig.set_figheight(10)
 
 # files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
-files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mappings', 'alignment']
-kg_name = {'fibo-vD':'FIBO-vD', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'jel':'JEL', 'fund':'Fund', 'stw-mappings':'STW(mappings)', 'alignment':'alignment'}
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mapping', 'my_mapping']
+kg_name = {'fibo-vD':'FIBO-vD', 'fibo-owl':'FIBO-OWL', 'fro':'FRO', 'hfr':'HFR', 'lkif':'LKIF-Core', 'bro':'BRO', 'figi':'FIGI', 'stw':'STW', 'jel':'JEL', 'fund':'Fund', 'stw-mapping':'STW(mapping)', 'my_mapping':'alignment'}
 in_degree_map = {}
 out_degree_map = {}
 
@@ -40,7 +40,7 @@ markers = ["." , "," , "o" , "v" , "^" , "<", ">"]
 colors = ['r','g','b','c','m', 'y', 'k']
 
 for file in files:
-	path_to_file = './data/'+file+'.hdt'
+	path_to_file = './data/integrated_files/'+file+'.hdt'
 	hdt_kg = HDTDocument(path_to_file)
 	triples, cardinality = hdt_kg.search_triples("", "", "")
 	entities = set()
@@ -87,7 +87,7 @@ for file in files:
 
 print ('\n\n----------INTEGRATED----------\n')
 
-path_to_file = './data/integrated.hdt'
+path_to_file = './data/integrated_files/integrated.hdt'
 hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
@@ -125,11 +125,11 @@ print ('out:', ct_out)
 # in
 x = ct_in.keys()
 y = ct_in.values()
-axs[0].scatter(x, y, alpha = 0.4, label='integrated')
+axs[0].scatter(x, y, alpha = 0.5, label='integrated', color='r')
 # out
 x = ct_out.keys()
 y = ct_out.values()
-axs[1].scatter(x, y, alpha = 0.4, label='integrated')
+axs[1].scatter(x, y, alpha = 0.5, label='integrated' , color='r')
 
 print ('the integrated KG has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')

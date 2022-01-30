@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:void="http://rdfs.org/ns/void#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="http://zbw.eu/stw/mapping/sdmx">
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.7">
+    <skos:prefLabel xml:lang="en">Human settlements and housing</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.6">
+    <skos:narrowMatch rdf:resource="../thsys/71087"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.6">
+    <skos:narrowMatch rdf:resource="../thsys/71095"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/190023">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71087">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.2">
+    <skos:broadMatch rdf:resource="../thsys/70142"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r459">
+    <void:property rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.4">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <rdfs:label xml:lang="en">SDMX</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <rdfs:label xml:lang="de">SDMX</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.1">
+    <skos:prefLabel xml:lang="en">Macroeconomic statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70021">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73354">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r459">
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</void:triples>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <cc:attributionName xml:lang="en">ZBW - Leibniz Information Centre for Economics</cc:attributionName>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <cc:attributionName xml:lang="de">ZBW - Leibniz-Informationszentrum Wirtschaft</cc:attributionName>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70386">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70847">
+    <skos:prefLabel xml:lang="de">W.24  Bildungswesen</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70847">
+    <skos:prefLabel xml:lang="en">W.24  Educational System</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70847">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70851">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71116">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70581">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <skos:relatedMatch rdf:resource="../thsys/70227"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <skos:relatedMatch rdf:resource="../thsys/70538"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <skos:relatedMatch rdf:resource="../thsys/70539"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.7">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71005">
+    <skos:prefLabel xml:lang="de">W.06  Industrie</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71005">
+    <skos:prefLabel xml:lang="en">W.06  Manufacturing industries</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70082">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73354">
+    <skos:prefLabel xml:lang="en">N.10.01  Earth sciences and environment</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73354">
+    <skos:prefLabel xml:lang="de">N.10.01  Geowissenschaften und Umwelt</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70151">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70082">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.1">
+    <skos:prefLabel xml:lang="en">Population and migration</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70847">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70851">
+    <skos:prefLabel xml:lang="de">W.23.02.02  Gewerkschaften</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70851">
+    <skos:prefLabel xml:lang="en">W.23.02.02  Trade unions</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.2">
+    <skos:prefLabel xml:lang="en">Economic accounts</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.7">
+    <skos:prefLabel xml:lang="en">Entrepreneurship</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70227">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.8">
+    <skos:prefLabel xml:lang="en">Justice and crime</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70538">
+    <skos:prefLabel xml:lang="de">P.04  Energie und Wasser</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70538">
+    <skos:prefLabel xml:lang="en">P.04  Energy and Water</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.6">
+    <skos:relatedMatch rdf:resource="../thsys/70187"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.6">
+    <skos:relatedMatch rdf:resource="../thsys/70892"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.6">
+    <skos:relatedMatch rdf:resource="../thsys/70904"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.8">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70851">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73376">
+    <skos:prefLabel xml:lang="en">N.04.03.04  Political participation and elections</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73376">
+    <skos:prefLabel xml:lang="de">N.04.03.04  Politische Partizipation und Wahlen</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70233">
+    <skos:prefLabel xml:lang="en">V.03.04  Production</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70233">
+    <skos:prefLabel xml:lang="de">V.03.04  Produktion</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70581">
+    <skos:prefLabel xml:lang="en">N.08.03  Culture and the arts</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70581">
+    <skos:prefLabel xml:lang="de">N.08.03  Kultur und Kunst</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70052">
+    <skos:prefLabel xml:lang="de">V.13  Arbeit</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70052">
+    <skos:prefLabel xml:lang="en">V.13  Labour</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70923">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.4">
+    <skos:closeMatch rdf:resource="../thsys/70943"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70538">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70892">
+    <skos:prefLabel xml:lang="en">W.16  Insurance industry</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70892">
+    <skos:prefLabel xml:lang="de">W.16  Versicherungswirtschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70227">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.5">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.9">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dc:creator xml:lang="de">ZBW - Leibniz-Informationszentrum Wirtschaft</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dc:creator xml:lang="en">ZBW - Leibniz Information Centre for Economics</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.5">
+    <skos:prefLabel xml:lang="en">Government finance, fiscal and public sector statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.6">
+    <skos:prefLabel xml:lang="en">Social protection</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70538">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.2">
+    <skos:closeMatch rdf:resource="../thsys/71068"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.4">
+    <skos:relatedMatch rdf:resource="../thsys/71095"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.3">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <skos:prefLabel xml:lang="en">V.08  Development economics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <skos:prefLabel xml:lang="de">V.08  Entwicklungsökonomik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71016">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70151">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.3">
+    <skos:narrowMatch rdf:resource="../thsys/70969"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.3">
+    <skos:narrowMatch rdf:resource="../thsys/71005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.3">
+    <skos:narrowMatch rdf:resource="../thsys/71009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.5">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70154">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/183025">
+    <skos:prefLabel xml:lang="en">B.01.05.01  Firm development</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/183025">
+    <skos:prefLabel xml:lang="de">B.01.05.01  Unternehmensentwicklung</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71109">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70154">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:propertyPartition rdf:nodeID="r1635341229r9388r460"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:propertyPartition rdf:nodeID="r1635341229r9388r459"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:propertyPartition rdf:nodeID="r1635341229r9388r458"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:propertyPartition rdf:nodeID="r1635341229r9388r457"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71005">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.1">
+    <skos:relatedMatch rdf:resource="../thsys/70021"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r460">
+    <void:property rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/190023">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.2">
+    <skos:closeMatch rdf:resource="../thsys/70052"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71018">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.3">
+    <skos:relatedMatch rdf:resource="../thsys/71109"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.1">
+    <skos:prefLabel xml:lang="en">Agriculture, forestry, fisheries</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70151">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.1">
+    <skos:prefLabel xml:lang="en">Living conditions, poverty, and cross-cutting social issues</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70573">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.4">
+    <skos:prefLabel xml:lang="en">Globalisation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70187">
+    <skos:prefLabel xml:lang="en">V.05.04  Financial markets</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70187">
+    <skos:prefLabel xml:lang="de">V.05.04  Finanzmärkte</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70573">
+    <skos:prefLabel xml:lang="de">V.14.03  Gesundheitsökonomik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70573">
+    <skos:prefLabel xml:lang="en">V.14.03  Health economics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70573">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4">
+    <skos:closeMatch rdf:resource="../thsys/72180"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72181">
+    <skos:prefLabel xml:lang="en">N.09.02.01  Statistical reports</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72181">
+    <skos:prefLabel xml:lang="de">N.09.02.01  Statistische Übersichten</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71087">
+    <skos:prefLabel xml:lang="en">V.07.04.02  Balance of payments</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71087">
+    <skos:prefLabel xml:lang="de">V.07.04.02  Zahlungsbilanz</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70539">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <cc:attributionURL>http://zbw.eu</cc:attributionURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/190023">
+    <skos:prefLabel xml:lang="en">V.13.07.03  Transportation occupations</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/190023">
+    <skos:prefLabel xml:lang="de">V.13.07.03  Verkehrsberufe</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71116">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3">
+    <skos:relatedMatch rdf:resource="../thsys/72180"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.2">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdfs:label xml:lang="de">Mapping SDMX Sachbereiche - STW</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdfs:label xml:lang="en">Mapping SDMX subject-matter domains - STW</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70828">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70082">
+    <skos:prefLabel xml:lang="en">V.12  Environmental and resource economics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70082">
+    <skos:prefLabel xml:lang="de">V.12  Umwelt- und Ressourcenökonomik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70233">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r457">
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</void:triples>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.1">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.1">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.6">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71016">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <dc:creator xml:lang="de">Statistical Data and Metadata eXchange community (sdmx.org)</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <dc:creator xml:lang="en">Statistical Data and Metadata eXchange community (sdmx.org)</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.2">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.5">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70833">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71068">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70888">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70943">
+    <skos:prefLabel xml:lang="en">W.12  Transport</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70943">
+    <skos:prefLabel xml:lang="de">W.12  Verkehr</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71111">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.1">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70021">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.3">
+    <skos:prefLabel xml:lang="en">Mining, manufacturing, construction</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.4">
+    <skos:narrowMatch rdf:resource="../thsys/70573"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71019">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71109">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.4">
+    <skos:prefLabel xml:lang="en">Transport</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.7">
+    <skos:prefLabel xml:lang="en">Prices</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71005">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71016">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.1">
+    <skos:closeMatch rdf:resource="../thsys/70142"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70539">
+    <skos:prefLabel xml:lang="de">V.12.02.01  Energiepolitik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70539">
+    <skos:prefLabel xml:lang="en">V.12.02.01  Energy Policy</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <dcterms:title>SDMX subject-matter domains classification</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.9">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71009">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70923">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.1">
+    <skos:prefLabel xml:lang="en">Environment</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.11">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <skos:prefLabel xml:lang="en">V.07.03  International economic relations</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <skos:prefLabel xml:lang="de">V.07.03  Internationale Wirtschaftsbeziehungen</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71116">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70892">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71016">
+    <skos:prefLabel xml:lang="de">W.04.01  Energiewirtschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71016">
+    <skos:prefLabel xml:lang="en">W.04.01  Energy sector</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70828">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.5">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4">
+    <skos:prefLabel xml:lang="en">Sectoral statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70386">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70151">
+    <skos:prefLabel xml:lang="en">N.10  Natural sciences and technology</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70151">
+    <skos:prefLabel xml:lang="de">N.10  Naturwissenschaften und Technik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70904">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70493">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70573">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.3">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70923">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70904">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.2">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71028">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70187">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70969">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.9">
+    <skos:relatedMatch rdf:resource="../thsys/70151"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70904">
+    <skos:prefLabel xml:lang="de">W.14.01  Banken</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70904">
+    <skos:prefLabel xml:lang="en">W.14.01  Banking industry</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/183025">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70493">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70233">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70833">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dc:publisher xml:lang="de">ZBW - Leibniz-Informationszentrum Wirtschaft</dc:publisher>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dc:publisher xml:lang="en">ZBW - Leibniz Information Centre for Economics</dc:publisher>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.10">
+    <skos:narrowMatch rdf:resource="../thsys/70851"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.10">
+    <skos:narrowMatch rdf:resource="../thsys/73376"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70187">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.7">
+    <skos:relatedMatch rdf:resource="../thsys/70888"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.11">
+    <skos:closeMatch rdf:resource="../thsys/71116"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70828">
+    <skos:prefLabel xml:lang="en">W.28  Cultural sector</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70828">
+    <skos:prefLabel xml:lang="de">W.28  Kultursektor</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/194089">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:rights xml:lang="en">The CC0 license has been applied to the mapping for broad and easy
+  re-use without legal restrictions. We would, however, appreciate an
+  attribution to the creators (as indicated above) and the free availability
+  of projects which make use of this mapping.</dcterms:rights>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:rights xml:lang="de">Die CC0-Lizenzierung des Mappings soll eine möglichst breite und
+  einfache Wiederverwendung ohne rechtliche Einschränkungen fördern.
+  Über einen Hinweis auf die oben angegebene Urheberschaft und eine freie Verfügbarkeit
+  von Projekten, die dieses Mapping verwenden, würden wir uns
+  jedoch freuen.</dcterms:rights>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71033">
+    <skos:prefLabel xml:lang="en">B.01.06  Environmental management</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71033">
+    <skos:prefLabel xml:lang="de">B.01.06  Umweltmanagement</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:description xml:lang="de">Mapping zur STW-Systematik, aufgebaut von Experten der ZBW mit Hilfe der Amalgame Software (https://github.com/jrvosse/amalgame )</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:description xml:lang="en">Mapping to the STW subject categories, created by domain experts of ZBW using the alignment tool Amalgame (https://github.com/jrvosse/amalgame )</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.3">
+    <skos:closeMatch rdf:resource="../thsys/70847"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71087">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.6">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70943">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70178">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70493">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.3">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71009">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70227">
+    <skos:prefLabel xml:lang="de">V.12.02  Energieökonomik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70227">
+    <skos:prefLabel xml:lang="en">V.12.02  Energy economics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.6">
+    <skos:broadMatch rdf:resource="../thsys/70091"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.9">
+    <skos:relatedMatch rdf:resource="../thsys/70581"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.9">
+    <skos:relatedMatch rdf:resource="../thsys/70828"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70581">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.5">
+    <skos:closeMatch rdf:resource="../thsys/70923"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71111">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <skos:prefLabel xml:lang="de">N.03  Demographie</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <skos:prefLabel xml:lang="en">N.03  Demography</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70144">
+    <skos:prefLabel xml:lang="en">V.09  Public finance</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70144">
+    <skos:prefLabel xml:lang="de">V.09  Öffentliche Finanzen</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70833">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.5">
+    <skos:prefLabel xml:lang="en">Tourism</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/190023">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.6">
+    <skos:prefLabel xml:lang="en">International trade and balance of payments</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71111">
+    <skos:prefLabel xml:lang="en">V.03.06  National accounts</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71111">
+    <skos:prefLabel xml:lang="de">V.03.06  Volkswirtschaftliche Gesamtrechnung</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70888">
+    <skos:prefLabel xml:lang="en">W.17.01  Housing sector</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70888">
+    <skos:prefLabel xml:lang="de">W.17.01  Wohnungswirtschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70144">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71087">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.2">
+    <skos:prefLabel xml:lang="en">Gender and special population groups</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70888">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.8">
+    <skos:closeMatch rdf:resource="../thsys/70154"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70021">
+    <skos:prefLabel xml:lang="en">V.04  Business cycles and growth, economic structure</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70021">
+    <skos:prefLabel xml:lang="de">V.04  Konjunktur, Wachstum und Wirtschaftsstruktur</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.7">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/183025">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71028">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <skos:prefLabel xml:lang="en">N.09.02  Statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <skos:prefLabel xml:lang="de">N.09.02  Statistik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.3">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70052">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.3">
+    <skos:prefLabel xml:lang="en">Information society</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3">
+    <skos:prefLabel xml:lang="en">Multi-domain statistics and indicators</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.5">
+    <skos:broadMatch rdf:resource="../thsys/70144"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <owl:versionInfo>2009</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71005">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71033">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.1">
+    <skos:broadMatch rdf:resource="../thsys/72181"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.1">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70144">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/194089">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71028">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71009">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71018">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70386">
+    <skos:prefLabel xml:lang="en">B.05.03  Transport management</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70386">
+    <skos:prefLabel xml:lang="de">B.05.03  Transportmanagement</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70969">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70144">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.10">
+    <skos:prefLabel xml:lang="en">Political and other community activities</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70233">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70178">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70154">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.1">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70493">
+    <skos:prefLabel xml:lang="de">V.02.01  Haushaltsökonomik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70493">
+    <skos:prefLabel xml:lang="en">V.02.01  Household economics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71095">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.6">
+    <skos:prefLabel xml:lang="en">Banking, insurance, financial statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/194089">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70021">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70904">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.4">
+    <skos:prefLabel xml:lang="en">Health</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <skos:prefLabel xml:lang="en">Energy</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71109">
+    <skos:prefLabel xml:lang="de">V.04.04  Technischer Fortschritt und Innovation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71109">
+    <skos:prefLabel xml:lang="en">V.04.04  Technological change and innovation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.2">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70581">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.5">
+    <skos:closeMatch rdf:resource="../thsys/70493"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.9">
+    <skos:prefLabel xml:lang="en">Science, technology and innovation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70187">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:target rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <void:target rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.8">
+    <skos:relatedMatch rdf:resource="../thsys/70233"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70538">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <dcterms:description xml:lang="de">Klassifikation statistischer Sachbereiche. Die Link Data Fassung
+      stammt von https://github.com/UKGovLD/publishing-statistical-data .</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <dcterms:description xml:lang="en">Classification of statistical subject-matter domains. 
+      The linked data representation stems from https://github.com/UKGovLD/publishing-statistical-data .</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70386">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.10">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.4">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72181">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <skos:prefLabel xml:lang="de">SDMX Subject-Matter Domains Klassifikation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <skos:prefLabel xml:lang="en">SDMX subject-matter domains classification</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.2">
+    <skos:prefLabel xml:lang="en">Labour</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71009">
+    <skos:prefLabel xml:lang="de">W.05.01  Bergbau</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71009">
+    <skos:prefLabel xml:lang="en">W.05.01  Mining</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70892">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70833">
+    <skos:prefLabel xml:lang="en">W.26.01  Social policy</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70833">
+    <skos:prefLabel xml:lang="de">W.26.01  Sozialpolitik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.1">
+    <skos:relatedMatch rdf:resource="../thsys/70082"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.1">
+    <skos:relatedMatch rdf:resource="../thsys/71033"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.1">
+    <skos:relatedMatch rdf:resource="../thsys/73354"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71033">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71033">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70851">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.3">
+    <skos:prefLabel xml:lang="en">Business statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70091">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73376">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/183025">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.6">
+    <skos:broadMatch rdf:resource="../thsys/70833"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71019">
+    <skos:prefLabel xml:lang="en">W.02  Forestry</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71019">
+    <skos:prefLabel xml:lang="de">W.02  Forstwirtschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73354">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.6">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70539">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73376">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70888">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70142">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71028">
+    <skos:prefLabel xml:lang="en">W.01  Agriculture</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71028">
+    <skos:prefLabel xml:lang="de">W.01  Landwirtschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70052">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70969">
+    <skos:prefLabel xml:lang="en">W.07.01  Building construction</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70969">
+    <skos:prefLabel xml:lang="de">W.07.01  Hochbau</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.1">
+    <skos:narrowMatch rdf:resource="../thsys/71018"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.1">
+    <skos:narrowMatch rdf:resource="../thsys/71019"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.1">
+    <skos:narrowMatch rdf:resource="../thsys/71028"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70923">
+    <skos:prefLabel xml:lang="en">W.13  Tourism</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70923">
+    <skos:prefLabel xml:lang="de">W.13  Tourismus</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70539">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70178">
+    <skos:prefLabel xml:lang="de">V.10.02  Preistheorie</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70178">
+    <skos:prefLabel xml:lang="en">V.10.02  Price theory</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.5">
+    <skos:broadMatch rdf:resource="../thsys/70091"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70178">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70154">
+    <skos:prefLabel xml:lang="en">N.05  Law and jurisprudence</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70154">
+    <skos:prefLabel xml:lang="de">N.05  Recht und Rechtswissenschaft</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73376">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.8">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.3">
+    <skos:prefLabel xml:lang="en">Education</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71019">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <ns0:norms xmlns:ns0="http://vocab.org/waiver/terms/" rdf:resource="http://opendatacommons.org/norms/odc-by-sa/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71068">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Linkset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70227">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70847">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.6">
+    <skos:prefLabel xml:lang="en">Sustainable development</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.4">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70892">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r458">
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</void:triples>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71116">
+    <skos:prefLabel xml:lang="en">V.02.05  Economy of time</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71116">
+    <skos:prefLabel xml:lang="de">V.02.05  Zeitökonomie</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/73354">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72181">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.5">
+    <skos:prefLabel xml:lang="en">Indicators related to the Millennium Development Goals</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.2">
+    <skos:relatedMatch rdf:resource="../thsys/71111"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.3">
+    <skos:broadMatch rdf:resource="../thsys/194089"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.2">
+    <skos:broadMatch rdf:resource="../thsys/71016"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70052">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#1.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.4">
+    <skos:narrowMatch rdf:resource="../thsys/190023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.4">
+    <skos:narrowMatch rdf:resource="../thsys/70386"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71111">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70969">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71018">
+    <skos:prefLabel xml:lang="de">W.03  Fischerei</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71018">
+    <skos:prefLabel xml:lang="en">W.03  Fisheries</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.5">
+    <skos:prefLabel xml:lang="en">Income and consumption</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.2">
+    <skos:prefLabel xml:lang="en">Regional and small area statistics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71018">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.4.6">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72180">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70943">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70828">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#3.3.7">
+    <skos:relatedMatch rdf:resource="../thsys/183025"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70082">
+    <dcterms:isPartOf rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.9">
+    <skos:prefLabel xml:lang="en">Culture</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.7">
+    <skos:relatedMatch rdf:resource="../thsys/70178"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.8">
+    <skos:prefLabel xml:lang="en">Labor cost</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/194089">
+    <skos:prefLabel xml:lang="en">N.09.01.01  Business mathematics</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/194089">
+    <skos:prefLabel xml:lang="de">N.09.01.01  Wirtschaftsmathematik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r457">
+    <void:property rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r458">
+    <void:property rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71109">
+    <skos:relatedMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71019">
+    <skos:broadMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/70943">
+    <skos:closeMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#2.4.4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71068">
+    <skos:inScheme rdf:resource="../../stw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/72181">
+    <skos:narrowMatch rdf:resource="http://purl.org/linked-data/sdmx/2009/subject#3.3.1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#1.11">
+    <skos:prefLabel xml:lang="en">Time use</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="sdmx/target">
+    <foaf:homepage rdf:resource="https://sdmx.org/wp-content/uploads/03_sdmx_cog_annex_3_smd_2009.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="r1635341229r9388r460">
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</void:triples>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/subject#2.7">
+    <dcterms:isPartOf rdf:resource="sdmx/target"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71068">
+    <skos:prefLabel xml:lang="de">V.11.08  Räumliche Statistik</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="../thsys/71068">
+    <skos:prefLabel xml:lang="en">V.11.08  Spatial statistics</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

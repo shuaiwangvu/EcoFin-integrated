@@ -1,0 +1,510 @@
+# baseURI: http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl
+# imports: http://finregont.com/fro/ref/FinancialReference.ttl
+# prefix: fr-fin-ref
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-oac-opty: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-arr-cls: <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fr-fin-ref: <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#> .
+@prefix fro-fin-ref: <http://finregont.com/fro/ref/FinancialReference.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fro-fin-ref:PensionInvestmentAdviser
+  rdf:type owl:Class ;
+  rdfs:comment "The equivalent class definition is simplified." ;
+  rdfs:label "Pension Investment Adviser" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdviser ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf [
+          rdf:type rdf:List ;
+          rdf:first fr-fin-ref:InvestmentAdviser ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first [
+                  rdf:type owl:Restriction ;
+                  owl:onProperty fibo-fnd-rel-rel:manages ;
+                  owl:someValuesFrom [
+                      rdf:type owl:Class ;
+                      owl:intersectionOf [
+                          rdf:type rdf:List ;
+                          rdf:first fibo-fbc-fct-fse:ManagementCompany ;
+                          rdf:rest [
+                              rdf:type rdf:List ;
+                              rdf:first [
+                                  rdf:type owl:Restriction ;
+                                  owl:hasValue fr-fin-ref:IAA_misc_pension_plan ;
+                                  owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                                ] ;
+                              rdf:rest () ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ] ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+  skos:definition "An investment adviser who advises pension funds." ;
+.
+<http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The ontology defines classes and properties for Investment Funds. For the Investment Adviser act we define form ADV and the Central Registration Depository Number.  Classes and properties in this ontology extend FIBO." ;
+  owl:imports <http://finregont.com/fro/ref/FinancialReference.ttl> ;
+  skos:definition "Investment Fund specific financial reference data." ;
+.
+fr-fin-ref:AUM_Discretionary
+  rdf:type fr-fin-ref:AssetUnderManagementType ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "AUM discretionary" ;
+.
+fr-fin-ref:AUM_MonetaryAmount
+  rdf:type owl:Class ;
+  rdfs:label "Firm Report Reference" ;
+  rdfs:subClassOf fibo-fnd-acc-cur:MonetaryAmount ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf [
+          rdf:type rdf:List ;
+          rdf:first fibo-fnd-acc-cur:MonetaryAmount ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first [
+                  rdf:type owl:Restriction ;
+                  owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                  owl:someValuesFrom fr-fin-ref:AssetUnderManagementType ;
+                ] ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+  skos:definition "A subclass of Monetary Amount defined for Assets Under Management" ;
+.
+fr-fin-ref:AUM_Non_Discretionary
+  rdf:type fr-fin-ref:AssetUnderManagementType ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "AUM non-descretionary" ;
+.
+fr-fin-ref:AUM_Total
+  rdf:type fr-fin-ref:AssetUnderManagementType ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "AUM Total" ;
+.
+fr-fin-ref:AssetUnderManagementType
+  rdf:type owl:Class ;
+  rdfs:label "Assets Under Management Type " ;
+  rdfs:subClassOf fibo-fnd-arr-cls:Classifier ;
+  skos:definition "The SEC defined type of Asset Under Management amount: Discretionary, Non-Descretionaty and Total" ;
+.
+fr-fin-ref:FeeBasedInvestmentAdvice
+  rdf:type owl:Class ;
+  rdfs:comment "A defined subclass of Investment Advice to break down the rules logic. Service instances of Investment Advice should be tagged by the applicable Fee Types." ;
+  rdfs:label "Fee based Advice" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdvice ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdvice
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+            owl:someValuesFrom fro-fin-ref:ServiceFeeType ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "Investment Advice for which fees are charged." ;
+.
+fr-fin-ref:IAA_misc_Family_office
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Family Office" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_Pension_Consultant
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdfs:label "Pension Consultant" ;
+.
+fr-fin-ref:IAA_misc_Qualified_Investor
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Qualified Adviser" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Private Fund Adviser" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_Small_Business
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Small Business" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_Small_Business_affiliate
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Small Business affiliate" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_Small_Business_license
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Small Business license" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_charity
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA charity" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_charity_fund
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA charity fund" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_church_fund
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA church fund" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_church_plan
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Church Plan" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_eligible_soon
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Adviser soon eligible for registration" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_foreign_based
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Foreign based adviser" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_internet_adviser
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Internet Adviser" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_less_than_15_clients
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Adviser with less than 15 clients" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_multi_state_adviser
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Multi-State Adviser" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_pension_plan
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Pension Plan" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_misc_same_state_client
+  rdf:type fr-fin-ref:IAA_miscellaneous ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "IAA Same state client" ;
+  fibo-fnd-rel-rel:isMemberOf fr-fin-ref:MiscellaneousClassificationScheme_IAA ;
+.
+fr-fin-ref:IAA_miscellaneous
+  rdf:type owl:Class ;
+  rdfs:comment "These are classifiers for investment advisers, services and clients. This is effectively a shortcut to assess regulatory criteria. For example, the IAA classifier \"less than 15 clients\" is asserted for an Investment Adviser. However in a production environment, this information could be inferred by actually counting the clients." ;
+  rdfs:label "IAA miscellaneous classifier" ;
+  rdfs:subClassOf fibo-fnd-arr-cls:Classifier ;
+  skos:definition "Miscellaneous classifers used for Invesment Adviser Act rules." ;
+.
+fr-fin-ref:IAA_miscellaneousClassificationScheme
+  rdf:type owl:Class ;
+  rdfs:label "IAA Miscellaneous classification scheme" ;
+  rdfs:subClassOf fibo-fnd-arr-cls:ClassificationScheme ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom fr-fin-ref:IAA_miscellaneous ;
+      owl:onProperty fibo-fnd-rel-rel:defines ;
+    ] ;
+  skos:definition "A classification scheme for various classification used for the Investment Adviser Act (IAA)." ;
+.
+fr-fin-ref:InvestmentAdvice
+  rdf:type owl:Class ;
+  rdfs:comment "A FIBO Financial Service subclass for services provided by investment advisers." ;
+  rdfs:isDefinedBy <http://finregont.com/fro/ref/www.investopedia.com/terms/i/investment-advice.asp> ;
+  rdfs:label "Investment Advice" ;
+  rdfs:subClassOf fibo-fbc-pas-fpas:FinancialService ;
+  skos:definition "Any recommendation or guidance that attempts to educate, inform or guide an investor regarding a particular investment product or series of products." ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type
+  rdf:type owl:Class ;
+  rdfs:label "SEC Investment Advice Type" ;
+  rdfs:subClassOf fibo-fnd-arr-cls:Classifier ;
+  skos:definition "Types of investment advice defined in the Securities and Exchange Commission Investment Adviser Public Disclosure report" ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Selection of other advisers" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_Educational
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Educational seminars/workshops" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_MarketTiming
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Market Timing" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_Other
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Other investment advice" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Pension Consulting" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Portfolio Management for Bussinesses" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Portfolio Management for Individuals" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Portfolio Management for Investment Companies" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Portfolio Management for Pooled Investment Vehicles" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_Publication
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Publication of newsletters or periodicals" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviceSEC_Type_SecurityRatingPricing
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Security ratings and pricing" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdvice_SEC_Type_FinancialPlaning
+  rdf:type fr-fin-ref:InvestmentAdviceSEC_Type ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:label "Financial Planing" ;
+  fibo-fnd-rel-rel:isMemberOf fro-fin-ref:ClassificationScheme_ServiceType ;
+.
+fr-fin-ref:InvestmentAdviser
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <http://investor.gov/glossary/glossary_terms/investment-adviser> ;
+  rdfs:label "Investment Adviser" ;
+  rdfs:subClassOf fibo-fbc-pas-fpas:FinancialServiceProvider ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:integer ;
+      owl:onProperty fr-fin-ref:hasCentralRegistrationDepositoryNumber ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+      owl:someValuesFrom fibo-fnd-acc-cur:MonetaryAmount ;
+    ] ;
+  skos:definition "An investment adviser is a firm or an individual that, for compensation, engages in the business of advising others as to the value of securities or as to the advisability of investing in, purchasing, or selling securities. An investment adviser can also be a firm or individual that, for compensation and as part of a regular business, issues analyses or reports concerning securities." ;
+.
+fr-fin-ref:InvestmentFund
+  rdf:type owl:Class ;
+  rdfs:comment "A.k.a. Investment vehicle. The superclass for collective/pooled investment vehicles/funds. This is a union of FIBO Management Company and Investment Trust." ;
+  rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Investment_fund> ;
+  rdfs:label "Investment Fund" ;
+  rdfs:subClassOf fibo-fbc-fct-fse:InvestmentCompany ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf [
+          rdf:type rdf:List ;
+          rdf:first fibo-fbc-fct-fse:ManagementCompany ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first fibo-fbc-fct-fse:UnitInvestmentTrust ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+  skos:definition """An investment fund is a way of investing money alongside other investors in order to benefit from the inherent advantages of working as part of a group.
+Terminology varies with country but investment funds are often referred to as investment pools, collective investment vehicles, collective investment schemes, managed funds, or simply funds. An investment fund may be held by the public, such as a mutual fund, exchange-traded fund, or closed-end fund,[1] or it may be sold only in a private placement, such as a hedge fund or private equity fund.[2] The term also includes specialized vehicles such as collective and common trust funds, which are unique bank-managed funds structured primarily to commingle assets from qualifying pension plans or trusts""" ;
+.
+fr-fin-ref:MiscellaneousClassificationScheme_IAA
+  rdf:type fr-fin-ref:IAA_miscellaneousClassificationScheme ;
+  rdf:type owl:NamedIndividual ;
+  rdfs:comment "Any classifiers for \"other\" classifications. The classifiers are shortcuts that may be removed in the future." ;
+  rdfs:label "Miscellaneous Classification Scheme" ;
+  skos:definition "A catch-all scheme for miscellaneous classifications." ;
+.
+fr-fin-ref:PrivateFund
+  rdf:type owl:Class ;
+  rdfs:label "Private Fund" ;
+  rdfs:subClassOf fibo-fbc-fct-fse:InvestmentCompany ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-fbc-fct-fse:InvestmentCompany
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-be-oac-opty:Investor
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue fr-fin-ref:IAA_misc_Qualified_Investor ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty fibo-be-oac-opty:hasInvestor ;
+          ]
+        ) ;
+    ] ;
+  skos:definition """A private Investment Company that is not considered a Management Company. Title 15 U.S. Code § 80a–3 - Definition of investment company exempts:  
+(c) (1): No more than 100 shareholders
+(c) (7): Qualified purchasers""" ;
+.
+fr-fin-ref:PrivateFundAdviser
+  rdf:type owl:Class ;
+  rdfs:comment "The equivalent class definition covers both the asserted value (i.e. already set in the data feed) and the inferrence that the adviser manages Private Funds." ;
+  rdfs:label "Private Fund Adviser" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdviser ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          [
+            rdf:type owl:Class ;
+            owl:intersectionOf (
+                fr-fin-ref:InvestmentAdviser
+                [
+                  rdf:type owl:Restriction ;
+                  owl:onProperty fibo-fnd-rel-rel:manages ;
+                  owl:someValuesFrom fr-fin-ref:PrivateFund ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "An adviser to hedge fund and other private funds." ;
+.
+fr-fin-ref:QualifiedInvestor
+  rdf:type owl:Class ;
+  rdfs:comment "Right now, the class restriction assumes that the status is asserted for the investor. This can be expanded to evaluate the individual criteria such as net worth, income, legal entity type." ;
+  rdfs:label "Qualified Investor" ;
+  rdfs:subClassOf fibo-be-oac-opty:Investor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf [
+          rdf:type rdf:List ;
+          rdf:first fibo-be-oac-opty:Investor ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first [] ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+  skos:definition "An investor qualified invest in certain limited investment vehicles. Also known as Accredited Investor as defined by the Securities and Exchange Commission Title 17, §230.501   Definitions and terms used in Regulation D." ;
+.
+fr-fin-ref:SecuritiesAdvice
+  rdf:type owl:Class ;
+  rdfs:comment "A defined subclass of Investment Advice to break down the rules logic. Service instances of Investment Advice should be tagged as involving the Financial Product Securities." ;
+  rdfs:label "Securities Advice" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdvice ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdvice
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fro-fin-ref:FinancialProduct_Securities ;
+            owl:onProperty fibo-fnd-rel-rel:involves ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "Investment advice involving Securities" ;
+.
+fr-fin-ref:hasAssetMonetaryAmount
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has Asset Monetary Amount" ;
+  rdfs:range fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:subPropertyOf fibo-fnd-rel-rel:has ;
+  skos:definition "Relates a Thing to the Monetary Amount that represents its Asset value." ;
+.
+fr-fin-ref:hasAssetUnderManagementMonetaryAmount
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf [
+          rdf:type rdf:List ;
+          rdf:first fr-fin-ref:InvestmentAdviser ;
+          rdf:rest [
+              rdf:type rdf:List ;
+              rdf:first fibo-fbc-fct-fse:InvestmentCompany ;
+              rdf:rest () ;
+            ] ;
+        ] ;
+    ] ;
+  rdfs:label "Asset under Management Amount" ;
+  rdfs:range fr-fin-ref:AUM_MonetaryAmount ;
+  rdfs:subPropertyOf fr-fin-ref:hasAssetMonetaryAmount ;
+  skos:definition "Relates an asset manager to the Monetary Amount that hols the value of the managed assets. " ;
+.
+fr-fin-ref:hasCentralRegistrationDepositoryNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain fr-fin-ref:InvestmentAdviser ;
+  rdfs:label "CRD Number" ;
+  rdfs:range xsd:integer ;
+.

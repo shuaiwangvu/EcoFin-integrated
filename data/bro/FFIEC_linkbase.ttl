@@ -1,0 +1,530 @@
+# baseURI: http://bankontology.com/br/form/FFIEC_linkbase.ttl
+# imports: http://bankontology.com/br/ref/Bank_Legal_Reference.ttl
+# imports: http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl
+# imports: http://finregont.com/fro/xbrl/linkbase.ttl
+# prefix: ffiec-linkbase
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dtype: <http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl#> .
+@prefix ffiec-linkbase: <http://bankontology.com/br/form/FFIEC_linkbase.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bankontology.com/br/form/FFIEC_linkbase.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  dct:license "https://opensource.org/licenses/MIT"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment """From the CDR Interchange Specification Version 1.02 (rdfs:seeAlso):
+The definition linkbase contains the list of all MDRM concepts that would take part in the particular Call Report taxonomy for a reporting period. In essence, it is a pool of MDRM concepts that are applicable to that particular Call Report (FFIEC 031 and 041). Definition linkbase MUST contain a single extended link that captures the relationship between the MDRM concepts and the root (‘pres-report’) concept. A ‘locator’ element is used to point to the elements in the corresponding Call Report schema, a ‘definitionArc’ to relate concepts. The arc role attribute on the ‘definitionArc’ element MUST be set to: 
+http://www.xbrl.org/2003/role#general-special"""^^xsd:string ;
+  rdfs:comment "The ontology is a conversion of the Federal Financial Institutions Examination Council's (FFIEC) Call Report taxonomy file (ffiec-linkbase-2004-05-14.xsd). The raw XSD import has been enhanced an integrated into HFR and LKIF. Classes and properties that Jayzed added to the raw import have copyright, but they are Open Source, free to use. "^^xsd:string ;
+  rdfs:isDefinedBy <https://cdr.ffiec.gov/public/> ;
+  rdfs:seeAlso <https://www.ffiec.gov/find/taxonomy/call_report_taxonomy.html> ;
+  owl:imports <http://bankontology.com/br/ref/Bank_Legal_Reference.ttl> ;
+  owl:imports <http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl> ;
+  owl:imports <http://finregont.com/fro/xbrl/linkbase.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer from the XML Schema(s) http://www.ffiec.gov/2003/linkbase"^^xsd:string ;
+  skos:definition "An ontology file to extend the XBRL Linkbase. This is part of the ontology RDF/OWL version of form FFIEC 031, the Call Report."^^xsd:string ;
+.
+ffiec-linkbase:AC_arc
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "3"^^xsd:nonNegativeInteger ;
+  dtype:value "arc"^^xsd:string ;
+  rdfs:label "arc"^^xsd:string ;
+.
+ffiec-linkbase:AC_extended
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "1"^^xsd:nonNegativeInteger ;
+  dtype:value "extended"^^xsd:string ;
+  rdfs:label "extended"^^xsd:string ;
+.
+ffiec-linkbase:AC_locator
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "2"^^xsd:nonNegativeInteger ;
+  dtype:value "locator"^^xsd:string ;
+  rdfs:label "locator"^^xsd:string ;
+.
+ffiec-linkbase:AC_resource
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "4"^^xsd:nonNegativeInteger ;
+  dtype:value "resource"^^xsd:string ;
+  rdfs:label "resource"^^xsd:string ;
+.
+ffiec-linkbase:AC_simple
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "0"^^xsd:nonNegativeInteger ;
+  dtype:value "simple"^^xsd:string ;
+  rdfs:label "simple"^^xsd:string ;
+.
+ffiec-linkbase:AC_title
+  rdf:type ffiec-linkbase:AbsoluteContext-type ;
+  dtype:order "5"^^xsd:nonNegativeInteger ;
+  dtype:value "title"^^xsd:string ;
+  rdfs:label "title"^^xsd:string ;
+.
+ffiec-linkbase:AbsoluteContext
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#absoluteContext" ;
+  rdfs:label "Absolute context"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:AbsoluteContext-periodConstraint ;
+      owl:onProperty ffiec-linkbase:periodConstraintRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom ffiec-linkbase:AbsoluteContext-type ;
+      owl:onProperty ffiec-linkbase:typeRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:typeRef ;
+    ] ;
+.
+ffiec-linkbase:AbsoluteContext-periodConstraint
+  rdf:type owl:Class ;
+  rdfs:label "Absolute context-period constraint"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:AbsoluteContext-periodConstraint-instantConstraint ;
+      owl:onProperty ffiec-linkbase:instantConstraintRef ;
+    ] ;
+.
+ffiec-linkbase:AbsoluteContext-periodConstraint-instantConstraint
+  rdf:type owl:Class ;
+  rdfs:label "Absolute context-period constraint-instant constraint"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:day ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:month ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:year ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:day ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:month ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:year ;
+    ] ;
+.
+ffiec-linkbase:AbsoluteContext-type
+  rdf:type owl:Class ;
+  rdfs:comment "Enumeration of values for the type attribute"^^xsd:string ;
+  rdfs:label "Absolute context-type"^^xsd:string ;
+  rdfs:subClassOf ffiec-linkbase:EnumeratedValue ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty dtype:value ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty dtype:value ;
+    ] ;
+  owl:oneOf (
+      ffiec-linkbase:AC_arc
+      ffiec-linkbase:AC_extended
+      ffiec-linkbase:AC_locator
+      ffiec-linkbase:AC_resource
+      ffiec-linkbase:AC_simple
+      ffiec-linkbase:AC_title
+    ) ;
+.
+ffiec-linkbase:EnumeratedValue
+  rdf:type owl:Class ;
+  rdfs:label "Enumerated value"^^xsd:string ;
+  rdfs:subClassOf dtype:EnumeratedValue ;
+.
+ffiec-linkbase:Formula
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formula" ;
+  rdfs:comment "Definition of the formula  resource element."^^xsd:string ;
+  rdfs:label "Formula"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#Resource> ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#ResourceType> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:select ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:select ;
+    ] ;
+.
+ffiec-linkbase:FormulaArc
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formulaArc" ;
+  rdfs:comment "Concrete arc for use in formula extended links."^^xsd:string ;
+  rdfs:label "Formula arc"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#Arc> ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#ArcType> ;
+.
+ffiec-linkbase:FormulaExtendedType
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formulaExtendedType" ;
+  rdfs:label "Formula extended type"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#ExtendedType> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      rdfs:comment """Concrete locator element.  The loc element is the 
+      XLink locator element for all extended links in XBRL."""^^xsd:string ;
+      owl:allValuesFrom ffiec-linkbase:loc ;
+      owl:onProperty ffiec-linkbase:locRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "1"^^xsd:int ;
+      rdfs:comment "Concrete arc for use in formula extended links."^^xsd:string ;
+      owl:allValuesFrom ffiec-linkbase:FormulaArc ;
+      owl:onProperty ffiec-linkbase:formulaArcRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "2"^^xsd:int ;
+      rdfs:comment "Definition of the formula  resource element."^^xsd:string ;
+      owl:allValuesFrom ffiec-linkbase:Formula ;
+      owl:onProperty ffiec-linkbase:formulaRef ;
+    ] ;
+.
+ffiec-linkbase:FormulaLink
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formulaLink" ;
+  rdfs:comment "formula extended link element definition"^^xsd:string ;
+  rdfs:label "Formula link"^^xsd:string ;
+  rdfs:subClassOf ffiec-linkbase:FormulaExtendedType ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#Extended> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:AbsoluteContext ;
+      owl:onProperty ffiec-linkbase:absoluteContextRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "1"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:RelativeContext ;
+      owl:onProperty ffiec-linkbase:relativeContextRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:absoluteContextRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:relativeContextRef ;
+    ] ;
+.
+ffiec-linkbase:RC_arc
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "3"^^xsd:nonNegativeInteger ;
+  dtype:value "arc"^^xsd:string ;
+  rdfs:label "arc"^^xsd:string ;
+.
+ffiec-linkbase:RC_extended
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "1"^^xsd:nonNegativeInteger ;
+  dtype:value "extended"^^xsd:string ;
+  rdfs:label "extended"^^xsd:string ;
+.
+ffiec-linkbase:RC_locator
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "2"^^xsd:nonNegativeInteger ;
+  dtype:value "locator"^^xsd:string ;
+  rdfs:label "locator"^^xsd:string ;
+.
+ffiec-linkbase:RC_resource
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "4"^^xsd:nonNegativeInteger ;
+  dtype:value "resource"^^xsd:string ;
+  rdfs:label "resource"^^xsd:string ;
+.
+ffiec-linkbase:RC_simple
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "0"^^xsd:nonNegativeInteger ;
+  dtype:value "simple"^^xsd:string ;
+  rdfs:label "simple"^^xsd:string ;
+.
+ffiec-linkbase:RC_title
+  rdf:type ffiec-linkbase:RelativeContext-type ;
+  dtype:order "5"^^xsd:nonNegativeInteger ;
+  dtype:value "title"^^xsd:string ;
+  rdfs:label "title"^^xsd:string ;
+.
+ffiec-linkbase:RelativeContext
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#relativeContext" ;
+  rdfs:label "Relative context"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:RelativeContext-periodOffset ;
+      owl:onProperty ffiec-linkbase:periodOffsetRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom ffiec-linkbase:RelativeContext-type ;
+      owl:onProperty ffiec-linkbase:typeRef ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:typeRef ;
+    ] ;
+.
+ffiec-linkbase:RelativeContext-periodOffset
+  rdf:type owl:Class ;
+  rdfs:label "Relative context-period offset"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      sxml:order "0"^^xsd:int ;
+      owl:allValuesFrom ffiec-linkbase:RelativeContext-periodOffset-instantOffset ;
+      owl:onProperty ffiec-linkbase:instantOffsetRef ;
+    ] ;
+.
+ffiec-linkbase:RelativeContext-periodOffset-instantOffset
+  rdf:type owl:Class ;
+  rdfs:label "Relative context-period offset-instant offset"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:base ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "true"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty ffiec-linkbase:offset ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:base ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty ffiec-linkbase:offset ;
+    ] ;
+.
+ffiec-linkbase:RelativeContext-type
+  rdf:type owl:Class ;
+  rdfs:comment "Enumeration of values for the type attribute"^^xsd:string ;
+  rdfs:label "Relative context-type"^^xsd:string ;
+  rdfs:subClassOf ffiec-linkbase:EnumeratedValue ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      sxml:isAttribute "false"^^xsd:boolean ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty dtype:value ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:int ;
+      owl:onProperty dtype:value ;
+    ] ;
+  owl:oneOf (
+      ffiec-linkbase:RC_arc
+      ffiec-linkbase:RC_extended
+      ffiec-linkbase:RC_locator
+      ffiec-linkbase:RC_resource
+      ffiec-linkbase:RC_simple
+      ffiec-linkbase:RC_title
+    ) ;
+.
+ffiec-linkbase:absoluteContextRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#absoluteContext" ;
+  rdfs:label "absolute context ref"^^xsd:string ;
+.
+ffiec-linkbase:base
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#base" ;
+  rdfs:label "base"^^xsd:string ;
+.
+ffiec-linkbase:day
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#day" ;
+  rdfs:label "day"^^xsd:string ;
+.
+ffiec-linkbase:formulaArcRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formulaArc" ;
+  rdfs:label "formula arc ref"^^xsd:string ;
+.
+ffiec-linkbase:formulaRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#formula" ;
+  rdfs:label "formula ref"^^xsd:string ;
+.
+ffiec-linkbase:id
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#id" ;
+  rdfs:label "id"^^xsd:string ;
+.
+ffiec-linkbase:instantConstraintRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#instantConstraint" ;
+  rdfs:label "instant constraint ref"^^xsd:string ;
+.
+ffiec-linkbase:instantOffsetRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#instantOffset" ;
+  rdfs:label "instant offset ref"^^xsd:string ;
+.
+ffiec-linkbase:loc
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#loc" ;
+  rdfs:comment """Concrete locator element.  The loc element is the 
+      XLink locator element for all extended links in XBRL."""^^xsd:string ;
+  rdfs:label "Loc"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#Locator> ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/XLink.ttl#LocatorType> ;
+.
+ffiec-linkbase:locRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#loc" ;
+  rdfs:label "loc ref"^^xsd:string ;
+.
+ffiec-linkbase:month
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#month" ;
+  rdfs:label "month"^^xsd:string ;
+.
+ffiec-linkbase:offset
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#offset" ;
+  rdfs:label "offset"^^xsd:string ;
+.
+ffiec-linkbase:periodConstraintRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#periodConstraint" ;
+  rdfs:label "period constraint ref"^^xsd:string ;
+.
+ffiec-linkbase:periodOffsetRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#periodOffset" ;
+  rdfs:label "period offset ref"^^xsd:string ;
+.
+ffiec-linkbase:relativeContextRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#relativeContext" ;
+  rdfs:label "relative context ref"^^xsd:string ;
+.
+ffiec-linkbase:select
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#select" ;
+  rdfs:label "select"^^xsd:string ;
+.
+ffiec-linkbase:title
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#title" ;
+  rdfs:label "title"^^xsd:string ;
+.
+ffiec-linkbase:typeRef
+  rdf:type owl:ObjectProperty ;
+  sxml:tag "http://www.ffiec.gov/2003/linkbase#type" ;
+  rdfs:label "type ref"^^xsd:string ;
+.
+ffiec-linkbase:year
+  rdf:type owl:DatatypeProperty ;
+  sxml:attribute "http://www.ffiec.gov/2003/linkbase#year" ;
+  rdfs:label "year"^^xsd:string ;
+.
+skos:prefLabel
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "pref label"^^xsd:string ;
+.

@@ -1,0 +1,122 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix voidx: <http://rdfpro.fbk.eu/ontologies/voidx#> .
+
+<stats:Dataset> a void:Dataset ;
+	voidx:label "<stats:Dataset> (927, 1698)" ;
+	void:entities "927"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1698"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1698"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> voidx:label "rdf:type (0, P)" ;
+	voidx:globalStats <stats:type> .
+
+<stats:Dataset> void:propertyPartition <stats:type> .
+
+<stats:type> a void:Dataset ;
+	voidx:label "<stats:type> (0, P)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.w3.org/2004/02/skos/core#exactMatch> voidx:label "skos:exactMatch (1698, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    skos:Collection skos:exactMatch <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection> .
+    rdf:List skos:exactMatch <https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesListings/Listing> .
+    skos:member skos:exactMatch <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasMember> .""" ;
+	voidx:globalStats <stats:exactMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:exactMatch> .
+
+<stats:exactMatch> a void:Dataset ;
+	voidx:label "<stats:exactMatch> (1698, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "927"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1698"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1698"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "927"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1502"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:openSearchDescription voidx:label "void:openSearchDescription" .
+
+void:classes voidx:label "void:classes" .
+
+void:documents voidx:label "void:documents" .
+
+void:TechnicalFeature voidx:label "void:TechnicalFeature" .
+
+void:uriLookupEndpoint voidx:label "void:uriLookupEndpoint" .
+
+void:sparqlEndpoint voidx:label "void:sparqlEndpoint" .
+
+void:dataDump voidx:label "void:dataDump" .
+
+void:triples voidx:label "void:triples" .
+
+void:linkPredicate voidx:label "void:linkPredicate" .
+
+void:uriRegexPattern voidx:label "void:uriRegexPattern" .
+
+void:uriSpace voidx:label "void:uriSpace" .
+
+void:properties voidx:label "void:properties" .
+
+void:subset voidx:label "void:subset" .
+
+void:classPartition voidx:label "void:classPartition" .
+
+void:distinctObjects voidx:label "void:distinctObjects" .
+
+void:propertyPartition voidx:label "void:propertyPartition" .
+
+void:inDataset voidx:label "void:inDataset" .
+
+void:Dataset voidx:label "void:Dataset" .
+
+void:objectsTarget voidx:label "void:objectsTarget" .
+
+void:property voidx:label "void:property" .
+
+void:DatasetDescription voidx:label "void:DatasetDescription" .
+
+void:feature voidx:label "void:feature" .
+
+void:class voidx:label "void:class" .
+
+void:subjectsTarget voidx:label "void:subjectsTarget" .
+
+void:target voidx:label "void:target" .
+
+void:entities voidx:label "void:entities" .
+
+void:Linkset voidx:label "void:Linkset" .
+
+void:distinctSubjects voidx:label "void:distinctSubjects" .
+
+void:exampleResource voidx:label "void:exampleResource" .
+
+void:rootResource voidx:label "void:rootResource" .
+
+void:vocabulary voidx:label "void:vocabulary" .
+
+voidx:globalStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#globalStats>" .
+
+voidx:source voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#source>" .
+
+voidx:type voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#type>" .
+
+voidx:example voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#example>" .
+
+voidx:sourceStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sourceStats>" .
+
+voidx:tboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#tboxTriples>" .
+
+voidx:averageProperties voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#averageProperties>" .
+
+voidx:label voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#label>" .
+
+voidx:sameAsTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sameAsTriples>" .
+
+voidx:typeTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#typeTriples>" .
+
+voidx:aboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#aboxTriples>" .

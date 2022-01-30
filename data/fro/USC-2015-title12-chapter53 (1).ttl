@@ -1,5 +1,0 @@
-# baseURI: http://finregont.com/fro/usc/USC-2015-title12-chapter53.ttl
-# imports: http://finregont.com/fro/usc/USC_USLM_Schema.ttl
-# imports: http://topbraid.org/sxml
-# prefix: usc-t12-ch53
-

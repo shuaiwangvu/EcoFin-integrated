@@ -1,0 +1,2895 @@
+@prefix action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix expression: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix process: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix mereo: <http://www.estrellaproject.org/lkif-core/mereology.owl#> .
+@prefix time: <http://www.estrellaproject.org/lkif-core/time.owl#> .
+@prefix : <http://www.estrellaproject.org/lkif-core/lkif-extended.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns1: <http://www.estrellaproject.org/lkif-core/lkif-top.owl#> .
+@prefix places: <http://www.estrellaproject.org/lkif-core/relative-places.owl#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix ns2: <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#> .
+@prefix ns3: <http://www.estrellaproject.org/lkif-core/role.owl#> .
+@prefix ns4: <http://www.estrellaproject.org/lkif-core/legal-action.owl#> .
+@prefix ns5: <http://www.estrellaproject.org/lkif-core/time-modification.owl#> .
+@prefix ns6: <http://www.estrellaproject.org/lkif-core/legal-role.owl#> .
+@prefix norm: <http://www.estrellaproject.org/lkif-core/norm.owl#> .
+@prefix ns7: <http://www.estrellaproject.org/lkif-core/lkif-core.owl#> .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+rdfs:comment a owl:AnnotationProperty .
+
+<http://www.estrellaproject.org/lkif-core/role.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/action.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA).
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/lkif-extended.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/lkif-rules.owl> , <http://www.estrellaproject.org/lkif-core/time-modification.owl> , <http://www.estrellaproject.org/lkif-core/lkif-core.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA), the University of Bologna (UNIBO) and the Fraunhofer institute (FOKUS)
+
+	Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+	Contributors: Joost Breuker (UvA), Thomas Gordon (FOKUS), Monica Palmirani (UNIBO), Rosella Rubino (UNIBO)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+	The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/relative-places.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/mereology.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA)
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" ;
+	rdfs:comment "Based on the paper \"Relative Places\" by Maureen Donnelly, apeared in \"Applied Ontology\", volume 1, 1 november 2005.  http://iospress.metapress.com/link.asp?id=a8q2mlkcf5frcgah" , "Note that most of the definitions of the relations in this ontology are underspecified because of the limitations of OWL DL semantics. Some of these limitations can be lifted after a move to OWL 1.1 semantics." .
+
+<http://www.estrellaproject.org/lkif-core/lkif-rules.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/expression.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA) and the Fraunhofer institute (FOKUS).
+
+	Authors:      Rinke Hoekstra (UvA), Thomas Gordon (FOKUS)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+	The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" ;
+	rdfs:comment "This ontology describes the classes and properties used in the LKIF rules language, as specified in Deliverable 1.1. Please note that the definition of SWRL rules is not imported into this ontology. This extension will be realised through an argumentation rules framework." .
+
+<http://www.estrellaproject.org/lkif-core/action.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/process.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA).
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" ;
+	rdfs:comment "Currently this module does not commit to any particular theory on/framework of thematic roles (i.e. subproperties of participant). This has consequences for the detail in which actions are described in this ontology." .
+
+<http://www.estrellaproject.org/lkif-core/legal-action.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/expression.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA) and the University of Bologna (UNIBO).
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA)
+Contributors: Joost Breuker (UvA), Rosella Rubino (UNIBO)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/expression.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/role.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA), the University of Bologna (UNIBO) and the Fraunhofer institute (FOKUS).
+
+	Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+	Contributors: Joost Breuker (UvA), Rosella Rubino (UNIBO), Thomas Gordon (FOKUS)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+	The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" ;
+	rdfs:comment "This file defines a number of types of what is commonly called a propositional attitude (PA). These relate propositional content to the proposition expressing the content. A subdivision of the propositional attitudes are the mental attitudes (see e.g. Cugola, 1996), types of propositions in the mind. Another category is the PA of an act of communication." .
+
+<http://www.estrellaproject.org/lkif-core/lkif-top.owl> a owl:Ontology ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA)
+
+Authors:      Rinke Hoekstra (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/time-modification.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/legal-action.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA) and the University of Bologna (UNIBO).
+
+	Authors:      Rinke Hoekstra (UvA), Monica Palmirani (UNIBO)
+	Contributors: Alexander Boer (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+	The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/lkif-core.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/legal-role.owl> , <http://www.estrellaproject.org/lkif-core/norm.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA), the University of Bologna (UNIBO) and the Fraunhofer institute (FOKUS)
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA), Thomas Gordon (FOKUS), Monica Palmirani (UNIBO), Rosella Rubino (UNIBO)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+<http://www.estrellaproject.org/lkif-core/process.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/relative-places.owl> , <http://www.estrellaproject.org/lkif-core/time.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA).
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+ns1:Mental_Object a owl:Class ;
+	rdfs:comment "Metaphor of physical concepts, i.e. the things we mentally manipulate, either in thought or memory" ;
+	rdfs:subClassOf ns1:Mental_Entity , _:node1fqlpa3rgx61 ;
+	owl:equivalentClass _:node1fqlpa3rgx55 .
+
+ns4:Limited_Company a owl:Class ;
+	rdfs:comment "A limited company is a corporation whose liability is limited by law" ;
+	rdfs:subClassOf ns4:Company ;
+	owl:equivalentClass ns4:Unincorporated .
+
+ns1:Mental_Entity a owl:Class ;
+	rdfs:comment """We made the assumption that our views of the mental world have been developed in analogy with physical processes. Mental objects like thoughts are made of elementary parts: concepts. The contents (substance) of these objects are representations. The conceptual content of thoughts are intended by propositional attitudes, like belief, desire, norm etc. Mental objects are processed or stored in containers like a mind which has parts like various memories. Mental processes like thinking, memorizing, imaging, etc. are operations on mental objects. The energy equivalent of mental processing are emotions: the forces that make us focus our mental energies. 
+
+There is an important difference between the mental world and the physical. Where physical processes occur causally, mental processes are controlled by an intentional stance. The outcome of mental processes can be the intention to act. The intention to act may consist of a structure of primary actions: a plan. The actions can be aimed at bringing about physical changes, but they may also be aimed at changing the mental state of another agent: these intended actions are communication actions. Like direct actions, communication actions have a physical appearance. They also need some physical medium to transfer the intended mental state. Speech act is the common term for these actions. 
+
+Whether this notion of intended control over mental processes and actions is an illusion or not is besides the point in modeling common-sense. The intentional stance implies a kind of backward, teleological reasoning over causally related processes. A mental object like a  plan consists of a goal state (intention) and is produced by reasoning from goal to means (actions): this is what rational agency behavior is about. 
+
+The mental world is not only a reflective one based in our minds eye. We may observe the stream of conscious mental processes, but the role of the mental conceptualizations is of even more important in understanding and communicating with other people. Mental processes and attitudes (sources of intention) are in the first place the building stones for modeling the minds of other people. The intentional stance means in the first place that we attribute to others and to some extent also to many animals intentions and intention directed mental processing and belief.""" ;
+	rdfs:subClassOf owl:Thing .
+
+ns4:Unincorporated a owl:Class ;
+	rdfs:subClassOf ns4:Corporation ;
+	owl:equivalentClass ns4:Limited_Company ;
+	owl:disjointWith ns4:Foundation , ns4:Incorporated .
+
+expression:Evaluative_Proposition a owl:Class ;
+	rdfs:comment "Some thing which is evaluatively qualified, i.e. an evaluation applies to the proposition, the proposition is judged. The proposition is comparable to some other proposition." ;
+	rdfs:subClassOf expression:Proposition , _:node1fqlpa3rgx12 , _:node1fqlpa3rgx8 ;
+	owl:equivalentClass _:node1fqlpa3rgx1 .
+
+ns3:Person_Role a owl:Class ;
+	rdfs:comment "A role played by some person (i.e. not an organisation)" ;
+	rdfs:subClassOf ns3:Social_Role , _:node1fqlpa3rgx10 , _:node1fqlpa3rgx4 .
+
+ns4:Company a owl:Class ;
+	rdfs:comment "A company refers to a legal entity formed which has a separate legal identity from its members, and is ordinarily incorporated to undertake commercial business. Although some jurisdictions refer to unincorporated entities as companies, in most jurisdictions the term refers only to incorporated entities." ;
+	rdfs:subClassOf ns4:Private_Legal_Person ;
+	owl:equivalentClass _:node1fqlpa3rgx87 .
+
+<http://www.estrellaproject.org/lkif-core/mereology.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/lkif-top.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA)
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+ns1:Physical_Entity a owl:Class ;
+	rdfs:comment """The physical world evolves around two main classes: physical objects and processes.
+
+In lkif-core, the physical world evolves around two main classes: physical objects and processes. Objects are pieces of matter, while matter is typed by substances. Objects have mass, extension, viz. form and aggregation state (which limits form). Objects are the specification of the notion that matter, and in particular solid objects, is what makes the physical world relatively stable and observable. We define (physical) situations in the first place by the arrangement of physical objects (entities).""" ;
+	rdfs:subClassOf owl:Thing ;
+	owl:disjointWith ns3:Role .
+
+places:Relative_Place a owl:Class ;
+	rdfs:comment "A relative place is defined by some reference to some object/thing" ;
+	rdfs:subClassOf places:Place , _:node1fqlpa3rgx3 ;
+	owl:disjointWith places:Absolute_Place .
+
+ns4:Private_Legal_Person a owl:Class ;
+	rdfs:comment "A legal person as defined in private law" ;
+	rdfs:subClassOf ns4:Legal_Person ;
+	rdfs:label "Legal Person (Private Law)" ;
+	owl:disjointWith ns4:Public_Body .
+
+ns1:Spatio_Temporal_Occurrence a owl:Class ;
+	rdfs:comment "An occurrence in space-time" ;
+	rdfs:subClassOf ns1:Occurrence .
+
+ns1:Occurrence a owl:Class ;
+	rdfs:comment "A consequence of our clear separation of ontology from models of situations (occurrences), is well exemplified in the two ways we look at time and space. Things happen against the canvas of space and time. This 3D canvas moving in time (or whatever metaphor) allows us to index instances of objects and processes. Time and space provide positions in time and space for objects. Positions are in general modeled in some mereological framework. However, the objects and processes as classes have time and space properties in a different way. Space occupied by an object is its inherent property of size or extension. This property was for Descartes even the critical one that separated mental (not: abstract) objects from physical ones. Processes occupy (consume) time; they take some duration. This time resource is inversely related to the consumption of energy. This distinction between position and extension is also made in various other ontologies. However, this distinction is easily obscured by the fact that the extension of an object can also be used as a reference for location. An object can be in another object. In fact, any physical object can be used as a spatial and even temporal referent. This does not refute our view that locations are occurrences. To be precise: extension is an inherent, necessary property of a physical object or process; its location is an accidental one." ;
+	rdfs:subClassOf owl:Thing .
+
+ns4:Public_Body a owl:Class ;
+	rdfs:comment "A public body or body created by an act of law to serve a public interest" ;
+	rdfs:subClassOf ns4:Legal_Person ;
+	owl:disjointWith ns4:Private_Legal_Person .
+
+ns4:Legal_Person a owl:Class ;
+	rdfs:comment """A legal entity is a natural person or a legal construct through which the law allows a group of natural persons to act as if it were a single composite individual for certain purposes. The most common purposes are lawsuits, property ownership, and contracts. Sometimes referred to as corporate personhood or legal personality, this concept allows for easy conduct of business by having ownership, lawsuits, and agreements under the name of the legal entity instead of the several names of the people making up the entity.
+
+A legal entity is not necessarily distinct from the natural persons of which it is composed. Most legal entities are simply amalgamations of the persons that make it up for convenience's sake. A legal entity that does have a separate existence from its members is called a company or corporation. This distinction gives the corporation its unique perpetual succession privilege and is usually also the source of the limited liability of corporate members. Some other legal entities also enjoy limited liability of members, but not on account of separate existence (Source: Wikipedia.org)""" ;
+	rdfs:subClassOf action:Organisation .
+
+ns4:Society a owl:Class ;
+	rdfs:comment "An organized group of people associated together for religious, benevolent, cultural, scientific, political, patriotic, or other purposes." ;
+	rdfs:subClassOf ns4:Private_Legal_Person ;
+	owl:equivalentClass ns4:Association .
+
+action:Creation a owl:Class ;
+	rdfs:comment "An act which results in the creation of some entity/individual" ;
+	rdfs:subClassOf action:Action ;
+	owl:equivalentClass _:node1fqlpa3rgx6 .
+
+expression:Assumption a owl:Class ;
+	rdfs:comment "proposes something that usually is the case, although there is no specific evidence that it is true in this particular case" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx150 .
+
+ns2:Assumption a owl:Class ;
+	rdfs:comment "An assumption is some atom held to be true, without proof, in the head of a rule (defeasibly), cf. Deliverable 1.1" ;
+	rdfs:subClassOf expression:Assumption , ns2:Atom .
+
+ns4:Association a owl:Class ;
+	rdfs:comment "A voluntary association (also sometimes called an unincorporated association, or just an association) is a group of individuals who voluntarily enter into an agreement to form a body (or organization) to accomplish a purpose." ;
+	rdfs:subClassOf ns4:Private_Legal_Person ;
+	owl:equivalentClass ns4:Society .
+
+ns4:Natural_Person a owl:Class ;
+	rdfs:comment "A natural person is a human being perceptible through the senses and subject to physical laws, as opposed to an artificial person, i.e., an organization that the law treats for some purposes as if it were a person distinct from its members or owner." ;
+	rdfs:subClassOf action:Person ;
+	owl:equivalentClass action:Person .
+
+ns2:Atom a owl:Class ;
+	rdfs:comment "An atom is the most basic (undivisible) part of an LKIF rule (cf. Deliverable 1.1)" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx2 , _:node1fqlpa3rgx5 .
+
+mereo:Atom a owl:Class ;
+	rdfs:comment "An atom has no parts" ;
+	rdfs:subClassOf ns1:Abstract_Entity ;
+	owl:disjointWith mereo:Whole .
+
+action:Person a owl:Class ;
+	rdfs:comment "A person is an individual agent. Usually associated with 'human being'." ;
+	rdfs:subClassOf action:Agent , action:Natural_Object ;
+	owl:equivalentClass ns4:Natural_Person ;
+	owl:disjointWith action:Organisation , action:Artifact .
+
+expression:Evaluative_Attitude a owl:Class ;
+	rdfs:comment "An evaluative attitude expresses e.g. a judgment. The proposition qualified by the evaluative attitude is comparable to something else." ;
+	rdfs:subClassOf expression:Propositional_Attitude , _:node1fqlpa3rgx78 ;
+	owl:equivalentClass _:node1fqlpa3rgx81 .
+
+ns3:played_by a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some role is played by some thing" ;
+	owl:inverseOf ns3:plays ;
+	rdfs:range owl:Thing ;
+	rdfs:domain ns3:Role .
+
+expression:evaluated_by a owl:ObjectProperty ;
+	owl:inverseOf expression:evaluates ;
+	rdfs:range expression:Evaluative_Attitude ;
+	rdfs:domain expression:Evaluative_Proposition ;
+	rdfs:subPropertyOf expression:attitude , expression:qualified_by .
+
+ns4:Mandate a owl:Class ;
+	rdfs:comment "Mandate: give (someone) authority to act in a certain way" ;
+	rdfs:subClassOf ns4:Public_Act , _:node1fqlpa3rgx11 , _:node1fqlpa3rgx7 .
+
+places:spatial_reference a owl:ObjectProperty ;
+	rdfs:comment "The reference to an object determines the relative place." ;
+	rdfs:range owl:Thing ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:spatial_relation .
+
+places:Place a owl:Class ;
+	rdfs:comment "A place is a spatio-temporal-occurrence" ;
+	rdfs:subClassOf ns1:Spatio_Temporal_Occurrence , _:node1fqlpa3rgx40 , _:node1fqlpa3rgx54 ;
+	owl:equivalentClass _:node1fqlpa3rgx44 .
+
+action:Transaction a owl:Class ;
+	rdfs:comment "A transaction is an exchange or interaction between at least two agents a and b. Consists of two actions A and B where a is the actor of action A and the recipient of action B, and vice versa. Usually these actions are performed concurrently, but these may also be done consequently." ;
+	rdfs:subClassOf action:Collaborative_Plan , _:node1fqlpa3rgx82 , _:node1fqlpa3rgx84 .
+
+places:Absolute_Place a owl:Class ;
+	rdfs:comment "An absolute place is defined without reference to other places." ;
+	rdfs:subClassOf places:Place ;
+	owl:disjointWith places:Relative_Place .
+
+process:creation a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing is created (i.e. a result of) by a process, and exists because of the process taking place." ;
+	owl:inverseOf process:created_by ;
+	rdfs:subPropertyOf process:result .
+
+mereo:strict_part_of a owl:ObjectProperty ;
+	rdfs:comment "Non transitive part_of relation" ;
+	owl:inverseOf mereo:strict_part ;
+	rdfs:subPropertyOf mereo:part_of ;
+	owl:equivalentProperty mereo:direct_part_of .
+
+ns1:Abstract_Entity a owl:Class ;
+	rdfs:comment """An abstract concept is a concept which does not (necessarily) have a referent in either the physical or the mental world.   
+
+Abstract entities are (proto)mathematical, formal entities, entities which have a purely formal, logical or mathematical meaning.
+
+As all concepts are abstractions, one may argue that a separate abstract world is difficult to see. In common-sense, a circle has more properties and is less abstract than in mathematics. Even mathematicians marvel about the fact their pure abstractions enable us to predict very concrete things. However, we are not directly concerned with these mappings. The most important is that common-sense knows about a (small) number of proto-mathematical concepts, such as collections, sequences and count-numbers (positive integers). We know also about geometric simplifications such as line, circle, square, cube, etc. These common sense notions might even be the real roots of our mathematics. However, these kind of semi-formal abstractions do not play a very central role in law, and therefore LRI-Core is thinly populated with abstract classes.""" ;
+	rdfs:subClassOf owl:Thing .
+
+ns3:Social_Role a owl:Class ;
+	rdfs:comment "A social role is played by some agent in the context of social activities. The social role brings with it some expectation of 'default' behavior of the role-filler." , "played_by all (action:Agent and (action:actor_in some (action:Action and (plays some expression:Expectation))))" ;
+	rdfs:subClassOf ns3:Role , _:node1fqlpa3rgx59 , _:node1fqlpa3rgx63 ;
+	owl:disjointWith ns3:Function .
+
+expression:evaluatively_comparable a owl:ObjectProperty , owl:SymmetricProperty ;
+	rdfs:comment "Expresses whether some thing is evaluatively comparable to some other thing." ;
+	owl:inverseOf expression:evaluatively_comparable ;
+	rdfs:range expression:Evaluative_Proposition ;
+	rdfs:domain expression:Evaluative_Proposition ;
+	rdfs:subPropertyOf expression:qualitatively_comparable .
+
+places:Comprehensive_Place a owl:Class ;
+	rdfs:comment "A place is comprehensive if it always covers every place (and thus also every location-complex) and every object." , "NOTE: definition requires OWL 1.1 semantics" ;
+	rdfs:subClassOf places:Location_Complex .
+
+ns4:Public_Act a owl:Class ;
+	rdfs:comment "A public act is an act by some Person or Organisation which creates (at least) a communicated attitude (and thereby an expression)" ;
+	rdfs:subClassOf action:Action .
+
+action:actor a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some participant is an actor in the action." ;
+	owl:inverseOf action:actor_in ;
+	rdfs:range action:Agent ;
+	rdfs:domain action:Action ;
+	rdfs:subPropertyOf process:participant .
+
+action:Action a owl:Class ;
+	rdfs:comment "An action is a change which is brought about by a single agent, playing a role. The agent is the holder of some indended outcome of the action: an action is always intentional. The intention of the agent has usually corresponds with an expectation the intended outcome to be brought about: the agent believes in some expectation. Note that the intention might not correspond with the *actual* outcome of the action." , "NOTE (OWL 1.1) the action may actually be 'part of' the intention of the agent, that is: intends some (expression:Intention and Self)" ;
+	rdfs:subClassOf process:Process , _:node1fqlpa3rgx126 , _:node1fqlpa3rgx291 , _:node1fqlpa3rgx293 , _:node1fqlpa3rgx77 ;
+	owl:equivalentClass _:node1fqlpa3rgx75 ;
+	owl:disjointWith action:Plan .
+
+action:Organisation a owl:Class ;
+	rdfs:comment "An organisation is a group of other organisations or persons which acts 'as one'. An organisation can be both formal (i.e. created by law or decree) or informal." ;
+	rdfs:subClassOf action:Agent , _:node1fqlpa3rgx21 , _:node1fqlpa3rgx45 ;
+	owl:equivalentClass _:node1fqlpa3rgx13 ;
+	owl:disjointWith action:Person .
+
+places:Location_Complex a owl:Class ;
+	rdfs:comment "A location complex is a relatively stable complex of places referred to as one: it is the maximal collection of places with the same reference object." , "A location complex only overlaps its own parts (OWL 1.1)" ;
+	rdfs:subClassOf places:Place , _:node1fqlpa3rgx26 ;
+	owl:equivalentClass _:node1fqlpa3rgx15 .
+
+ns3:Organisation_Role a owl:Class ;
+	rdfs:comment "A role which has a meaning in the context of an organisation: i.e. the role defines a 'position' within sthe structure of roles within an organisation" ;
+	rdfs:subClassOf ns3:Social_Role , _:node1fqlpa3rgx28 .
+
+mereo:member a owl:ObjectProperty ;
+	rdfs:comment "Specifies membership of a set or group" ;
+	owl:inverseOf mereo:member_of ;
+	rdfs:subPropertyOf mereo:strict_part .
+
+ns4:Corporation a owl:Class ;
+	rdfs:comment "A corporation is a legal entity which, while being composed of natural persons, exists completely separately from them. This separation gives the corporation unique powers which other legal entities lack." ;
+	rdfs:subClassOf ns4:Private_Legal_Person ;
+	owl:equivalentClass _:node1fqlpa3rgx14 .
+
+expression:Proposition a owl:Class ;
+	rdfs:comment "A (non logical) proposition is a proposition qualified by a propositional attitude. NB: The proposition used here does not correspond to a proposition in proposition logics." , "NOTE: In previous versions of this ontology, this class was called 'Qualified'. In lieu of the separation between Proposition and Propositional_Attitude, the intended meaning of that class has been moved to 'Evaluative_Proposition'" ;
+	rdfs:subClassOf ns1:Mental_Object , _:node1fqlpa3rgx107 .
+
+expression:Reason a owl:Class ;
+	rdfs:comment "Teleological counterpart of cause" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx18 .
+
+action:Agent a owl:Class ;
+	rdfs:comment "An agent is any owl:Thing which can act, i.e. play the 'actor' role wrt. an action" , "It is a holder for propositional attitudes" ;
+	rdfs:subClassOf owl:Thing , _:node1fqlpa3rgx33 , _:node1fqlpa3rgx35 , _:node1fqlpa3rgx36 , _:node1fqlpa3rgx57 ;
+	owl:equivalentClass _:node1fqlpa3rgx52 ;
+	owl:disjointWith ns3:Role , process:Change .
+
+ns4:Foundation a owl:Class ;
+	rdfs:comment "A kind of (philanthropic) organization, set up as a legal entity either by individuals or institutions, with the purpose of distributing grants to support causes in line with the goals of the foundation" ;
+	rdfs:subClassOf ns4:Corporation ;
+	owl:disjointWith ns4:Unincorporated , ns4:Incorporated .
+
+places:location_complex_for a owl:InverseFunctionalProperty ;
+	owl:inverseOf places:location_complex ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Location_Complex ;
+	rdfs:subPropertyOf places:spatial_relation .
+
+ns4:Incorporated a owl:Class ;
+	rdfs:comment "An organisation formed into a legal corporation" ;
+	rdfs:subClassOf ns4:Corporation ;
+	owl:equivalentClass ns4:Public_Limited_Company ;
+	owl:disjointWith ns4:Unincorporated , ns4:Foundation .
+
+expression:attitude a owl:ObjectProperty ;
+	rdfs:comment "Relates a proposition to the attitude held towards it" ;
+	owl:inverseOf expression:towards ;
+	rdfs:range expression:Propositional_Attitude ;
+	rdfs:domain expression:Proposition .
+
+expression:Expression a owl:Class ;
+	rdfs:comment "An expression is a proposition beared by some medium, e.g. a document, and is stated by some communicated attitude" ;
+	rdfs:subClassOf expression:Proposition , _:node1fqlpa3rgx155 , _:node1fqlpa3rgx156 , _:node1fqlpa3rgx157 ;
+	owl:equivalentClass _:node1fqlpa3rgx158 .
+
+expression:Belief a owl:Class ;
+	rdfs:comment "Someting an agent 'believes in', i.e. holds as true" ;
+	rdfs:subClassOf expression:Propositional_Attitude , _:node1fqlpa3rgx121 ;
+	owl:equivalentClass _:node1fqlpa3rgx123 .
+
+ns3:Epistemic_Role a owl:Class ;
+	rdfs:comment "The role of something used in a reasoning/inference process" ;
+	rdfs:subClassOf ns3:Role , _:node1fqlpa3rgx79 , _:node1fqlpa3rgx80 .
+
+mereo:Whole a owl:Class ;
+	rdfs:comment "A whole has several parts" ;
+	rdfs:subClassOf ns1:Abstract_Entity , _:node1fqlpa3rgx47 ;
+	owl:equivalentClass _:node1fqlpa3rgx39 ;
+	owl:disjointWith mereo:Atom .
+
+ns2:Valid_Rule a owl:Class ;
+	rdfs:comment "A valid LKIF rule" ;
+	rdfs:subClassOf ns2:Rule .
+
+action:actor_in a owl:ObjectProperty ;
+	rdfs:comment "Specifies that the participant is an actor in some action." ;
+	owl:inverseOf action:actor ;
+	rdfs:range action:Action ;
+	rdfs:domain action:Agent ;
+	rdfs:subPropertyOf process:participant_in .
+
+ns3:Role a owl:Class ;
+	rdfs:comment "A role is a specification of default behavior and accompanying expectations of the thing 'playing' the role. Similar to actors in a theater who play roles, but are not the roles. Example: student." ;
+	rdfs:subClassOf ns1:Mental_Entity ;
+	owl:equivalentClass _:node1fqlpa3rgx88 ;
+	owl:disjointWith ns1:Physical_Entity , action:Agent , process:Process .
+
+expression:Propositional_Attitude a owl:Class ;
+	rdfs:comment "A propositional attitude connects a person (the holder of the attitude) to some proposition, in fact it expresses some qualification over the proposition. Distinguishing a proposition from the propositional content expressed by it is necessary when properties relating to the thing expressed and properties of the expression itself must be distinguished. For LKIF the distinction between Belief, Intention, Qualification, and Observation is relevant. The distinction between belief/expectation, intention, and observation is relevant for i.a. establishing mens rea (guilty mind). The distinction between beliefs (expressing the content of the mind of an agent) and statements (expressing the content of an act of communication by an agent) is classical." ;
+	rdfs:subClassOf ns1:Mental_Object , _:node1fqlpa3rgx43 ;
+	owl:equivalentClass _:node1fqlpa3rgx37 .
+
+ns2:Rule a owl:Class ;
+	rdfs:comment "An LKIF rule, based on swrl:Impl" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx38 , _:node1fqlpa3rgx46 .
+
+ns3:plays a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing plays a role" ;
+	owl:inverseOf ns3:played_by ;
+	rdfs:range ns3:Role ;
+	rdfs:domain owl:Thing .
+
+process:Change a owl:Class ;
+	rdfs:comment "A change is a difference between the situation before and after the change occurs (the event of the change). A change can be instantaneous" ;
+	rdfs:subClassOf owl:Thing , _:node1fqlpa3rgx186 ;
+	owl:equivalentClass _:node1fqlpa3rgx171 , _:node1fqlpa3rgx185 ;
+	owl:disjointWith action:Agent , process:Physical_Object .
+
+expression:towards a owl:ObjectProperty ;
+	rdfs:comment "A towards relation between a propositional attitude and a proposition expresses that the attitude is held towards that proposition. Qualification of the proposition can be either true or false, i.e. the attitude denotes whether the proposition is either true or false." ;
+	owl:inverseOf expression:attitude ;
+	rdfs:range expression:Proposition ;
+	rdfs:domain expression:Propositional_Attitude .
+
+mereo:Composition a owl:Class ;
+	rdfs:comment "A composition has multiple parts, the components should meet (OWL 1.1)" ;
+	rdfs:subClassOf mereo:Whole .
+
+process:participant_in a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing participates in a process" ;
+	owl:inverseOf process:participant ;
+	rdfs:range process:Change ;
+	rdfs:domain owl:Thing .
+
+mereo:Part a owl:Class ;
+	rdfs:comment "A part is a part_of some whole" ;
+	rdfs:subClassOf ns1:Abstract_Entity , _:node1fqlpa3rgx60 ;
+	owl:equivalentClass _:node1fqlpa3rgx58 .
+
+places:location_complex a owl:ObjectProperty , owl:FunctionalProperty ;
+	owl:inverseOf places:location_complex_for ;
+	rdfs:range places:Location_Complex ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:spatial_relation .
+
+mereo:member_of a owl:ObjectProperty ;
+	rdfs:comment "Specifies membership of a set or group" ;
+	owl:inverseOf mereo:member ;
+	rdfs:subPropertyOf mereo:strict_part_of .
+
+mereo:strict_part a owl:ObjectProperty ;
+	rdfs:comment "Non transitive part relation" ;
+	owl:inverseOf mereo:strict_part_of ;
+	rdfs:subPropertyOf mereo:part ;
+	owl:equivalentProperty mereo:direct_part .
+
+ns4:Co-operative a owl:Class ;
+	rdfs:comment "An autonomous association of persons united voluntarily to meet their common economic, social, and cultural needs and aspirations through a jointly-owned and democratically-controlled enterprise." ;
+	rdfs:subClassOf ns4:Society .
+
+action:Natural_Object a owl:Class ;
+	rdfs:comment "A natural object is an object not created by man." ;
+	rdfs:subClassOf process:Physical_Object ;
+	owl:disjointWith action:Artifact .
+
+ns4:Legislative_Body a owl:Class ;
+	rdfs:comment "A legislature is a type of (representative) deliberative assembly with the power to adopt laws." ;
+	rdfs:subClassOf ns4:Public_Body ;
+	rdfs:label "Legislative Body" , "Legislature" .
+
+expression:Exception a owl:Class ;
+	rdfs:comment "An exception is something that is excluded from a general statement or does not follow a rule. In LKIF rules, an exception is a rule which has an exception relation to another rule (cf. Deliverable 1.1)" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx235 .
+
+ns2:Exception a owl:Class ;
+	rdfs:comment "An exception states an exception to the head of the rule (defeasibly), cf. Deliverable 1.1" ;
+	rdfs:subClassOf ns2:Atom , expression:Exception .
+
+ns5:Exception a owl:Class ;
+	rdfs:comment "Restricts the scope of normative content to some particular jurisdiction" ;
+	rdfs:subClassOf ns5:Modification_of_Scope .
+
+expression:holds a owl:ObjectProperty ;
+	rdfs:comment "Relates an agent to the propositional attitude it holds" ;
+	owl:inverseOf expression:held_by ;
+	rdfs:range ns1:Mental_Object ;
+	rdfs:domain action:Agent .
+
+action:Artifact a owl:Class ;
+	rdfs:comment "A physical object created by some person to fulfill a particular purpose" ;
+	rdfs:subClassOf process:Physical_Object , _:node1fqlpa3rgx125 ;
+	owl:equivalentClass _:node1fqlpa3rgx71 ;
+	owl:disjointWith action:Person , action:Natural_Object .
+
+expression:held_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a propositional attitude to the agent holding the attitude" ;
+	owl:inverseOf expression:holds ;
+	rdfs:range action:Agent ;
+	rdfs:domain ns1:Mental_Object .
+
+process:Physical_Object a owl:Class ;
+	rdfs:comment "A physical object is a physical concept consisting of matter, it has a spatio-temporal extension." ;
+	rdfs:subClassOf ns1:Physical_Entity ;
+	owl:disjointWith process:Change .
+
+ns4:Delegation a owl:Class ;
+	rdfs:comment "Delegate: entrust a task or responsibility to some other person" ;
+	rdfs:subClassOf ns4:Public_Act , ns4:Legal_Speech_Act , _:node1fqlpa3rgx62 , _:node1fqlpa3rgx64 .
+
+ns4:Legal_Speech_Act a owl:Class ;
+	rdfs:comment "A legal speech act creates some propositional attitude towards a legal expression." ;
+	rdfs:subClassOf expression:Speech_Act .
+
+ns3:Function a owl:Class ;
+	rdfs:comment "The use or purpose of some object as used in some context." ;
+	rdfs:subClassOf ns3:Role , _:node1fqlpa3rgx116 , _:node1fqlpa3rgx97 ;
+	owl:disjointWith ns3:Social_Role .
+
+places:spatial_relation a owl:ObjectProperty ;
+	rdfs:comment "A spatial relation is a relation between two places" ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place .
+
+expression:Argument a owl:Class ;
+	rdfs:comment "An argument is a reason that is expressed through some medium" ;
+	rdfs:subClassOf expression:Reason , _:node1fqlpa3rgx127 .
+
+ns2:Argument a owl:Class ;
+	rdfs:comment "An argument is some rule used in argumentation (cf. Deliverable 1.1)" ;
+	rdfs:subClassOf ns2:Rule , expression:Argument .
+
+expression:Lie a owl:Class ;
+	rdfs:comment "An assertion that is inconsistent with the beliefs of the speaker. It is *intentionally* false." ;
+	rdfs:subClassOf expression:Assertion .
+
+expression:Assertion a owl:Class ;
+	rdfs:comment "The assertion is subject to a fit between words and world, in Searle's terms. It's propositional content can be true of false. If it is inconsistent with other assertions, beliefs, observations, it may come to be considered false." ;
+	rdfs:subClassOf expression:Communicated_Attitude ;
+	owl:equivalentClass _:node1fqlpa3rgx183 .
+
+expression:Qualification a owl:Class ;
+	rdfs:comment "A qualification expresses e.g. a judgment. The thing qualified by the qualification is comparable to something else." ;
+	rdfs:subClassOf ns1:Mental_Object , _:node1fqlpa3rgx69 ;
+	owl:equivalentClass _:node1fqlpa3rgx65 .
+
+mereo:Pair a owl:Class ;
+	rdfs:comment "A composition of exactly two parts" ;
+	rdfs:subClassOf mereo:Composition , _:node1fqlpa3rgx67 .
+
+ns2:Negated_Atom a owl:Class ;
+	rdfs:comment "A negated atom is the negation of some other atom (cf. Deliverable 1.1)" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx66 , _:node1fqlpa3rgx68 .
+
+places:overlap a owl:ObjectProperty ;
+	rdfs:comment "Two places overlap if they are relatively fixed and partially coincide" ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:relatively_fixed , places:partially_coincide .
+
+time:overlap a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period overlaps with another time period (in any way)" ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+expression:Qualified a owl:Class ;
+	rdfs:comment "Something that is qualified by some qualification" ;
+	rdfs:subClassOf owl:Thing , _:node1fqlpa3rgx237 , _:node1fqlpa3rgx249 ;
+	owl:equivalentClass _:node1fqlpa3rgx243 .
+
+expression:qualifies a owl:ObjectProperty ;
+	rdfs:comment "Relates an evaluative attitude or qualification to the proposition or thing being qualified" ;
+	owl:inverseOf expression:qualified_by ;
+	rdfs:range expression:Qualified ;
+	rdfs:domain expression:Qualification .
+
+places:relatively_fixed a owl:SymmetricProperty , owl:TransitiveProperty ;
+	rdfs:comment "NOTE: This cannot currently be expressed using OWL DL" , "Two places are relatively fixed if and only if either x and y have a common reference object or neither x nor y has a reference object" ;
+	owl:inverseOf places:relatively_fixed ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:spatial_relation .
+
+places:partially_coincide a owl:SymmetricProperty ;
+	rdfs:comment "Definition partially-coincide: partially-coincide(a, b) iff exists x :( cover(a, x) and cover(b, x) )" , "To add in OWL 1.1: 'partially-coincide' is reflexive, 'partially-coincide' is disjoint with 'abut'" ;
+	owl:inverseOf places:partially_coincide ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:meet .
+
+process:result_of a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some participant is the result of a process, it might have existed before the process took place, but is in some way altered (an 'inanimate' goal of an act)" ;
+	owl:inverseOf process:result ;
+	rdfs:subPropertyOf process:participant_in .
+
+places:connect a owl:ObjectProperty ;
+	rdfs:comment "Two places are connected if they are both relatively fixed and when they meet" ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:relatively_fixed , places:meet .
+
+expression:Promise a owl:Class ;
+	rdfs:comment "A promise is a communicated attitude about some future action or state" ;
+	rdfs:subClassOf expression:Communicated_Attitude ;
+	owl:equivalentClass _:node1fqlpa3rgx74 .
+
+places:meet a owl:SymmetricProperty ;
+	rdfs:comment "Specifies that two places meet, but need not overlap or cover (reflexive)" , "To add in OWL 1.1: 'meet' is equivalent with ('abut' union 'partially-coincide')" ;
+	owl:inverseOf places:meet ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:spatial_relation .
+
+ns2:rule_predicate a owl:ObjectProperty ;
+	rdfs:comment "Some predicate in or over some rule" ;
+	rdfs:range _:node1fqlpa3rgx76 ;
+	rdfs:domain _:node1fqlpa3rgx91 .
+
+expression:promises a owl:ObjectProperty ;
+	rdfs:comment "Relates a promise to the expression being promised" ;
+	owl:inverseOf expression:promised_by ;
+	rdfs:range expression:Expression ;
+	rdfs:domain expression:Promise ;
+	rdfs:subPropertyOf expression:states .
+
+expression:Communicated_Attitude a owl:Class ;
+	rdfs:comment "A communictated attitude is a propositional attitude involved in an act of communication." ;
+	rdfs:subClassOf expression:Propositional_Attitude , _:node1fqlpa3rgx143 , _:node1fqlpa3rgx145 , _:node1fqlpa3rgx148 , _:node1fqlpa3rgx149 ;
+	owl:equivalentClass _:node1fqlpa3rgx146 .
+
+places:in a owl:ObjectProperty ;
+	rdfs:comment "The 'in' property is used to express that one place is located (i.e. contained) within another place. It is therefore a mereological relation as well." ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:spatial_relation , mereo:contained_in .
+
+mereo:contained_in a owl:TransitiveProperty ;
+	rdfs:comment "Specifies that some thing is contained (spatially) within some other thing" ;
+	owl:inverseOf mereo:contains ;
+	rdfs:subPropertyOf mereo:part_of .
+
+process:Process a owl:Class ;
+	rdfs:comment "A process is a 'causal' change: any change which can be explained through some known or understood causal structure. Every process has some Time_Period as duration." ;
+	rdfs:subClassOf process:Change ;
+	owl:equivalentClass _:node1fqlpa3rgx187 ;
+	owl:disjointWith ns3:Role .
+
+expression:Speech_Act a owl:Class ;
+	rdfs:comment "A speech act (or illocutionary act) creates some propositional attitude which qualifies an expression (which by default is mediated through some medium). The actor of the speech act is the utterer of the atitude (NB cannot be expressed in OWL DL)." ;
+	rdfs:subClassOf action:Creation ;
+	owl:equivalentClass _:node1fqlpa3rgx253 .
+
+expression:evaluates a owl:ObjectProperty ;
+	owl:inverseOf expression:evaluated_by ;
+	rdfs:range expression:Evaluative_Proposition ;
+	rdfs:domain expression:Evaluative_Attitude ;
+	rdfs:subPropertyOf expression:towards , expression:qualifies .
+
+action:Plan a owl:Class ;
+	rdfs:comment "A plan is a structure of multiple other plans or actions. These can be both sequential or concurrent. Usually a plan is referred to in the context of the intention to act of some agent, however when executed the plan itself comes into effect." ;
+	rdfs:subClassOf ns1:Mental_Object , _:node1fqlpa3rgx117 ;
+	owl:equivalentClass _:node1fqlpa3rgx122 ;
+	owl:disjointWith action:Action .
+
+action:Collaborative_Plan a owl:Class ;
+	rdfs:comment "A collaborative plan is a plan which is shared (and executed) between at least two agents a and b." , "NOTE: this definition cannot currently be expressed in OWL" ;
+	rdfs:subClassOf action:Plan ;
+	owl:disjointWith action:Personal_Plan .
+
+mereo:direct_part a owl:ObjectProperty ;
+	rdfs:comment "The non-transitive part relation." ;
+	owl:inverseOf mereo:direct_part_of ;
+	rdfs:subPropertyOf mereo:part ;
+	owl:equivalentProperty mereo:strict_part .
+
+expression:Observation a owl:Class ;
+	rdfs:comment "An observation is the role played by some proposition believed to be true or false through observation of an agent." ;
+	rdfs:subClassOf ns3:Epistemic_Role ;
+	owl:equivalentClass _:node1fqlpa3rgx92 ;
+	owl:disjointWith expression:Expectation .
+
+places:externally_connect a owl:ObjectProperty ;
+	rdfs:comment "Two places are externally connected if they are relatively fixed and abut, but do not overlap (OWL 1.1)" ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:connect , places:abut .
+
+expression:Expectation a owl:Class ;
+	rdfs:comment "An expectation is a predictive belief held on purely logical grounds, i.e. not based on direct external evidence, like an observation or a statement by another agent. It is also often characterized as a \"belief about the future\", but this isn't very helpful since one may also hold expectations about the (yet unknown) past. The theory of evolution is for instance a fertile ground for predictions about the existence of past species, and therefore at the same a predictor of future observations." , "Is not only not an observation by itself, but also the thing being expected cannot be an observation in any sense" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx188 , _:node1fqlpa3rgx193 ;
+	owl:disjointWith expression:Observation .
+
+action:Personal_Plan a owl:Class ;
+	rdfs:comment "A personal plan is a plan which is held (and can be executed) by at most one agent." ;
+	rdfs:subClassOf action:Plan ;
+	owl:disjointWith action:Collaborative_Plan .
+
+ns4:Public_Limited_Company a owl:Class ;
+	rdfs:comment "Similar to the US corporation, offers several advantages over trading as sole trader." ;
+	rdfs:subClassOf ns4:Company ;
+	owl:equivalentClass ns4:Incorporated ;
+	rdfs:label "PLC" .
+
+ns5:Semantic_Annotation a owl:Class ;
+	rdfs:comment "See ESTRELLA deliverable 3.2" ;
+	rdfs:subClassOf ns5:Modification .
+
+ns4:Decision a owl:Class ;
+	rdfs:comment "Decision: A (written) decision of a public body to perform a public act using a public power assigned by law." , "NOTE: Cannot express that the 'promised' act corresponds to the act qualified by the statement in writing" ;
+	rdfs:subClassOf ns4:Legal_Speech_Act , _:node1fqlpa3rgx108 , _:node1fqlpa3rgx110 , _:node1fqlpa3rgx96 .
+
+ns5:Modification a owl:Class ;
+	rdfs:comment "See ESTRELLA deliverable 3.2" ;
+	rdfs:subClassOf ns4:Public_Act .
+
+ns2:prior a owl:ObjectProperty ;
+	rdfs:comment "Specifies a prior relation between two rules" ;
+	rdfs:range _:node1fqlpa3rgx94 ;
+	rdfs:subPropertyOf ns2:rule_predicate .
+
+places:abut a owl:SymmetricProperty ;
+	rdfs:comment "Two places abut if they meet but do not partially coincide. NOTE: OWL 1.1: 'abut' is irreflexive and disjoint with 'partially-coincide'" ;
+	owl:inverseOf places:abut ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:meet .
+
+places:covered_by a owl:TransitiveProperty ;
+	rdfs:comment "Specifies that two places cover eachother. To add in OWL 1.1: 'covered-by' is reflexive, 'covered-by' is transitive" ;
+	owl:inverseOf places:cover ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:partially_coincide , places:meet .
+
+expression:observer a owl:ObjectProperty ;
+	rdfs:comment "Relates a believed observation to the agent observing it" ;
+	owl:inverseOf expression:observes ;
+	rdfs:range action:Agent ;
+	rdfs:domain expression:Belief ;
+	rdfs:subPropertyOf expression:believed_by .
+
+ns5:Transposition a owl:Class ;
+	rdfs:comment "Interpretation in context of the European Union" ;
+	rdfs:subClassOf ns5:Modification_of_System .
+
+ns2:excluded a owl:ObjectProperty ;
+	rdfs:comment "Specifies an exclusion relation between a rule and an atom" ;
+	rdfs:range _:node1fqlpa3rgx106 ;
+	rdfs:subPropertyOf ns2:rule_predicate .
+
+action:Reaction a owl:Class ;
+	rdfs:comment "A reaction is an action that is (at least) performed by an agent that has observed some other action (this is an intensional view): Action <-> Reaction" , "NOTE: question remains whether some observation is also a *requirement* of the reaction. Furthermore, the current definition ensures that the observed action becomes a top:Mental_Object (i.e. it is internalised)." ;
+	rdfs:subClassOf action:Action , _:node1fqlpa3rgx302 .
+
+expression:Desire a owl:Class ;
+	rdfs:comment "A feeling of wanting" ;
+	rdfs:subClassOf expression:Propositional_Attitude .
+
+ns5:Modification_of_System a owl:Class ;
+	rdfs:comment "See ESTRELLA deliverable 3.2" ;
+	rdfs:subClassOf ns5:Semantic_Annotation .
+
+ns5:Ultractivity a owl:Class ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+ns5:Efficacy_Modification a owl:Class ;
+	rdfs:comment "Modifies the efficacy period of some norm" ;
+	rdfs:subClassOf ns5:Temporal_Modification .
+
+ns2:applies a owl:ObjectProperty ;
+	rdfs:comment "Specifies whether some rule applies to some atom" ;
+	rdfs:range _:node1fqlpa3rgx109 ;
+	rdfs:subPropertyOf ns2:rule_predicate .
+
+ns5:Annulment a owl:Class ;
+	rdfs:subClassOf ns5:In_Force_Modification .
+
+ns5:In_Force_Modification a owl:Class ;
+	rdfs:comment "Modifies the period of being in force of some norm" ;
+	rdfs:subClassOf ns5:Temporal_Modification .
+
+ns5:End_efficacy a owl:Class ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+expression:Statement_In_Writing a owl:Class ;
+	rdfs:comment "Not to be confused with the actual writing/document itself, which is the medium of the statement." ;
+	rdfs:subClassOf expression:Communicated_Attitude , _:node1fqlpa3rgx231 ;
+	owl:equivalentClass _:node1fqlpa3rgx222 .
+
+ns2:rebuts a owl:ObjectProperty ;
+	rdfs:comment "Specifies whether some rule abuts another rule" ;
+	rdfs:range _:node1fqlpa3rgx115 ;
+	rdfs:subPropertyOf ns2:rule_predicate .
+
+places:cover a owl:TransitiveProperty ;
+	rdfs:comment "Definition cover:  cover(a, b) iff forall x:( meet(x, b) implies meet(x, a) )" , "Specifies that two places cover eachother. Note: this cover-relation is the inverse of the COV relation described by Donnelly (2005)" , "To add in OWL 1.1: 'cover' is reflexive, 'cover' is transitive" ;
+	owl:inverseOf places:covered_by ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:meet .
+
+action:Trade a owl:Class ;
+	rdfs:comment "A trade is an exchange of some things between two agents a and b. Consists of two actions A and B where a is the actor of action A and the recipient of action B, and vice versa. Usually these actions are performed concurrently, but these may also be done consequently. The ownership of the things being traded is the requirement/result pair for each action." ;
+	rdfs:subClassOf action:Transaction .
+
+ns5:Temporal_Modification a owl:Class ;
+	rdfs:comment "Modifies the efficacy or being in force of some norm" ;
+	rdfs:subClassOf ns5:Modification .
+
+mereo:direct_part_of a owl:ObjectProperty ;
+	rdfs:comment "The non-transitive part_of relation" ;
+	owl:inverseOf mereo:direct_part ;
+	rdfs:subPropertyOf mereo:part_of ;
+	owl:equivalentProperty mereo:strict_part_of .
+
+mereo:part a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:comment "Transitive part relation" ;
+	owl:inverseOf mereo:part_of .
+
+ns5:Dynamic_Temporal_Entity a owl:Class ;
+	rdfs:comment "A dynamic temporal entity represents the norm in its evolution over time." ;
+	rdfs:subClassOf time:Temporal_Occurrence .
+
+mereo:part_of a owl:TransitiveProperty ;
+	rdfs:comment "Transitive part_of relation" ;
+	owl:inverseOf mereo:part .
+
+time:Temporal_Occurrence a owl:Class ;
+	rdfs:comment "A period of time, has a duration" ;
+	rdfs:subClassOf ns1:Spatio_Temporal_Occurrence , _:node1fqlpa3rgx168 .
+
+ns5:Remaking a owl:Class ;
+	rdfs:comment "When an act is completely rewritten in a new way but the topic remains the same." ;
+	rdfs:subClassOf ns5:Modification_of_System .
+
+expression:believed_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a belief to the agent holding the belief" ;
+	owl:inverseOf expression:believes ;
+	rdfs:range action:Agent ;
+	rdfs:domain expression:Belief ;
+	rdfs:subPropertyOf expression:held_by .
+
+ns5:Application a owl:Class ;
+	rdfs:comment "When a local act applies in the local legal system normative supra-ordered such as when a region applies an EU directive or a decree it applies the normative contant in some act" ;
+	rdfs:subClassOf ns5:Modification_of_System .
+
+ns4:Act_of_Law a owl:Class ;
+	rdfs:comment "Act of law: a public act by a legislative body which creates an expression with legal status; the legal status depends on the jurisdiction of the legislative body." ;
+	rdfs:subClassOf ns4:Public_Act , ns4:Legal_Speech_Act , _:node1fqlpa3rgx124 .
+
+ns5:Ratification a owl:Class ;
+	rdfs:comment "When an international treaty is ratified by local parliament in order to include it in the local legal system. The same thing happens when each local parliament ratifies bilateral or multilateral agreements." ;
+	rdfs:subClassOf ns5:Modification_of_System .
+
+ns5:Textual_Modification a owl:Class ;
+	rdfs:comment "See ESTRELLA deliverable 3.2" ;
+	rdfs:subClassOf ns5:Modification .
+
+ns5:Prorogation_in_Force a owl:Class ;
+	rdfs:comment "Prorogation of the date of enactment of some normative content. The 'life' of the act is lengthened with respect to some previous end of enactment modification." ;
+	rdfs:subClassOf ns5:In_Force_Modification .
+
+process:participant a owl:ObjectProperty ;
+	rdfs:comment "A participant is someone or something that participates in a change, i.e. is involved in a change" ;
+	owl:inverseOf process:participant_in ;
+	rdfs:range owl:Thing ;
+	rdfs:domain process:Change .
+
+ns5:Application_Date a owl:Class ;
+	rdfs:comment "The date when a modification is applied to the destination legislative document. The date can be instantaneous, in the future or in the past. Normally this date coincides with the date of efficacy of the text in which the modification takes place." ;
+	rdfs:subClassOf ns5:Dynamic_Temporal_Entity , time:Moment .
+
+mereo:component_of a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing is a (functional) component of some other thing" ;
+	owl:inverseOf mereo:component ;
+	rdfs:subPropertyOf mereo:strict_part_of .
+
+ns4:Assignment a owl:Class ;
+	rdfs:comment "A public act that attributes a power to perform a public act to a public body." ;
+	rdfs:subClassOf ns4:Public_Act , ns4:Legal_Speech_Act , _:node1fqlpa3rgx132 , _:node1fqlpa3rgx135 .
+
+mereo:component a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing is a (functional) component of some other thing" ;
+	owl:inverseOf mereo:component_of ;
+	rdfs:subPropertyOf mereo:strict_part .
+
+<http://www.estrellaproject.org/lkif-core/legal-role.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/role.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA).
+
+Authors:      Rinke Hoekstra (UvA)
+Contributors: Joost Breuker (UvA)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+time:Moment a owl:Class ;
+	rdfs:comment "A moment is an atomic period of time, i.e. it cannot be divided into other parts" ;
+	rdfs:subClassOf mereo:Atom , time:Temporal_Occurrence ;
+	owl:disjointWith time:Interval .
+
+ns5:Retroactivity a owl:Class ;
+	rdfs:comment "When the efficacy or a partial efficacy starts before the entry into force of the document" ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+expression:Fact a owl:Class ;
+	rdfs:comment "A fact is a proposition (about something) which is (commonly) agreed upon to hold as true: it has some backing in evidence" ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx134 .
+
+ns5:Modification_of_Term a owl:Class ;
+	rdfs:comment "Modification of the term specified by some procedural deadline." ;
+	rdfs:subClassOf ns5:Modification_of_Meaning .
+
+mereo:composed_of a owl:TransitiveProperty ;
+	rdfs:comment "Specifies that some thing is composed_of (spatially) within some other thing" ;
+	owl:inverseOf mereo:composes ;
+	rdfs:subPropertyOf mereo:part .
+
+ns5:Modification_of_Meaning a owl:Class ;
+	rdfs:comment "A modification that changes the meaning of some provision without changing its literal text" ;
+	rdfs:subClassOf ns5:Semantic_Annotation .
+
+ns6:Social_Legal_Role a owl:Class ;
+	rdfs:comment "A social legal role is played by some agent in the context of legal activities." ;
+	rdfs:subClassOf ns3:Social_Role , ns6:Legal_Role .
+
+ns5:Efficacy_Interval a owl:Class ;
+	rdfs:comment "The period during which a normative fragment may be either operative or inoperative, by explicit provision of the document itself. The document is said to be in a period of operation, or enforceability or efficacy, when it may or must be applied or enforced." ;
+	rdfs:subClassOf ns5:Dynamic_Temporal_Entity , time:Interval .
+
+mereo:composes a owl:TransitiveProperty ;
+	rdfs:comment "Specifies that some thing is composed_of (spatially) within some other thing" ;
+	owl:inverseOf mereo:composed_of ;
+	rdfs:subPropertyOf mereo:part_of .
+
+time:Interval a owl:Class ;
+	rdfs:comment "An interval is a composition of multiple periods of time." ;
+	rdfs:subClassOf mereo:Composition , time:Temporal_Occurrence ;
+	owl:disjointWith time:Moment .
+
+ns6:Legal_Role a owl:Class ;
+	rdfs:comment "A legal role is a role played in a legal context. Legal role players can be both Agents and other 'things'" ;
+	rdfs:subClassOf ns3:Role , _:node1fqlpa3rgx142 , _:node1fqlpa3rgx144 .
+
+ns5:Start_Efficacy a owl:Class ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+ns5:Substitution a owl:Class ;
+	rdfs:comment "Substitution of a part or entire act or annex" ;
+	rdfs:subClassOf ns5:Textual_Modification .
+
+mereo:contains a owl:TransitiveProperty ;
+	rdfs:comment "Specifies that some thing is contained (spatially) within some other thing" ;
+	owl:inverseOf mereo:contained_in ;
+	rdfs:subPropertyOf mereo:part .
+
+expression:addressee a owl:ObjectProperty ;
+	rdfs:comment "Allows for expressing the relation between a communicated attitude and the Agent to which the communication act is addressed" ;
+	rdfs:range action:Agent ;
+	rdfs:domain expression:Communicated_Attitude .
+
+ns5:Suspension a owl:Class ;
+	rdfs:comment "When a part of an act or some provisions are suspended in coming to be operative for a period or indefinately" ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+expression:utterer a owl:ObjectProperty ;
+	rdfs:comment "Relates an utterance (communicated propositional attitude) to its utterer" ;
+	owl:inverseOf expression:utters ;
+	rdfs:range action:Agent ;
+	rdfs:domain expression:Communicated_Attitude ;
+	rdfs:subPropertyOf expression:held_by .
+
+ns6:Professional_Legal_Role a owl:Class ;
+	rdfs:comment "A professional legal role is a legal profession of some person, examples: lawyer, judge etc." ;
+	rdfs:subClassOf ns3:Organisation_Role , ns6:Social_Legal_Role , _:node1fqlpa3rgx147 .
+
+expression:states a owl:ObjectProperty ;
+	rdfs:comment "Relates an author to its statements" ;
+	owl:inverseOf expression:stated_by ;
+	rdfs:domain expression:Communicated_Attitude ;
+	rdfs:subPropertyOf expression:towards .
+
+ns5:Publication_Date a owl:Class ;
+	rdfs:comment "The date when the normative document is published in the official journal designated as the source for making all such documents public and legal." ;
+	rdfs:subClassOf time:Moment , ns5:Static_Temporal_Entity .
+
+ns5:Static_Temporal_Entity a owl:Class ;
+	rdfs:comment "A static temporal entity captures a single moment in the norm's life that is fixed over time." ;
+	rdfs:subClassOf time:Temporal_Occurrence .
+
+ns5:Modification_of_Scope a owl:Class ;
+	rdfs:comment "See ESTRELLA deliverable 3.2" ;
+	rdfs:subClassOf ns5:Semantic_Annotation .
+
+places:exactly_coincide a owl:SymmetricProperty , owl:TransitiveProperty ;
+	rdfs:comment "Definition exactly-coincide: exactly-coincide(a, b) iff forall x:( meet(x, a) iff meet(x, b) )" , "To add in OWL 1.1: 'exactly-coincide' is reflexive, 'exactly-coincide' is symetric, 'exactly-coincide' is transitive" ;
+	owl:inverseOf places:exactly_coincide ;
+	rdfs:range places:Place ;
+	rdfs:domain places:Place ;
+	rdfs:subPropertyOf places:meet .
+
+ns5:End_in_Force a owl:Class ;
+	rdfs:comment "When an act states the end of the period of enactment, and includes an implicit repealing of the text." ;
+	rdfs:subClassOf ns5:In_Force_Modification .
+
+ns5:Start_in_Force a owl:Class ;
+	rdfs:subClassOf ns5:In_Force_Modification .
+
+ns5:Integration a owl:Class ;
+	rdfs:subClassOf ns5:Textual_Modification .
+
+<http://www.estrellaproject.org/lkif-core/norm.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/legal-action.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA) and the University of Bologna (UNIBO).
+
+	Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+	Contributors: Joost Breuker (UvA), Rosella Rubino (UNIBO)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+	The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" .
+
+ns5:Application_Interval a owl:Class ;
+	rdfs:comment "This is the interval during which a normative document, or fragment, produces the consequences that the normative provision establishes." ;
+	rdfs:subClassOf ns5:Dynamic_Temporal_Entity , time:Interval .
+
+expression:stated_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a statement to its author" ;
+	owl:inverseOf expression:states ;
+	rdfs:range expression:Communicated_Attitude ;
+	rdfs:subPropertyOf expression:attitude .
+
+ns5:Interpretation a owl:Class ;
+	rdfs:comment "Modification of the interpretation of normative content by the author or some superior actor" ;
+	rdfs:subClassOf ns5:Modification_of_Meaning .
+
+<http://www.estrellaproject.org/lkif-core/time.owl> a owl:Ontology ;
+	owl:imports <http://www.estrellaproject.org/lkif-core/mereology.owl> ;
+	owl:versionInfo "LKIF-Core, version 1.0.3, copyright (C) 2007, the ESTRELLA consortium" , """Partner contributions from the University of Amsterdam (UvA) and the University of Bologna (UNIBO).
+
+Authors:      Rinke Hoekstra (UvA), Alexander Boer (UvA), Kasper van den Berg (UvA)
+Contributors: Joost Breuker (UvA), Monica Palmirani (UNIBO)""" , """The LKIF-Core ontology, version 1.0, is part of Deliverable 1.4 of the European project for Standardised Transparent Representations in order to Extend Legal Accessibility (ESTRELLA, IST-2004-027665), http://www.estrellaproject.org
+
+The use of this ontology, and the OWL files through which it is distributed, is covered by the GNU Lesser General Public License (LGPL), version 2.1 (http://www.gnu.org/copyleft/lesser.html) in as far as the copyright is not covered by additional restrictions of the ESTRELLA consortium agreement (info@estrellaproject.org). The LGPL license places copyright restrictions on the ontology itself but does not apply these restrictions to software that merely links with concepts defined in the ontology library. Please read the license restrictions before using this work.""" , "This module is part of LKIF-Core, version 1.0.3, part of Deliverable 1.4 of ESTRELLA, IST-2004-027665" ;
+	rdfs:comment "An ontology of time based on \"Actions and Events in Interval Logc\" by James F. Allen and George Ferguson, 1994.  This ontology is similar to the W3C best practices OWL-Time ontology draft of 18 May 2006 by Jerry R. Hobbs and Feng Pan (http://www.w3.org/2001/sw/BestPractices/OEP/Time-Ontology).  Meta-physical time concepts are separated from parts dealing with quantitative time.  Relations were strengthened with more axioms." .
+
+norm:Hohfeldian_Power a owl:Class ;
+	rdfs:comment "A hohfeldian power covers any action which determines a legal effect." ;
+	rdfs:subClassOf norm:Potestative_Expression .
+
+ns5:Deregulation a owl:Class ;
+	rdfs:comment "When a part of some primary legislative source is delegated to some secondary legislative source (e.g. from act to regulation)." ;
+	rdfs:subClassOf ns5:Modification_of_System .
+
+expression:Medium a owl:Class ;
+	rdfs:comment "A medium is a bearer of expressions, i.e. externalised propositions. Propositions become expressions once they are externalised through some medium." ;
+	rdfs:subClassOf owl:Thing , _:node1fqlpa3rgx180 ;
+	owl:equivalentClass _:node1fqlpa3rgx176 .
+
+norm:Potestative_Expression a owl:Class ;
+	rdfs:comment "Attributes a power to some agent (for example “a worker has the power to terminate his work contract”);" ;
+	rdfs:subClassOf norm:Legal_Expression .
+
+expression:medium a owl:ObjectProperty ;
+	rdfs:comment "Relates an expression to the medium it is beared in (i.e. for extentional propositions)" ;
+	owl:inverseOf expression:bears ;
+	rdfs:range expression:Medium ;
+	rdfs:domain expression:Expression .
+
+ns5:In_Force_Interval a owl:Class ;
+	rdfs:comment "The period during which a normative fragment belongs to the normative system. The period of force for each fragment may change over time as a function of the modifications the document goes through." ;
+	rdfs:subClassOf ns5:Dynamic_Temporal_Entity , time:Interval .
+
+norm:Normatively_Qualified a owl:Class ;
+	rdfs:comment "Some thing which is qualified (allowed, disallowed) by a norm, i.e. a norm applies to the thing. Taking the principle of deontic choice to mean that the utterer of a normative statement intends to influence choices made by the addressee of the statement, the qualified thing should is comparable to some alternative. Note that Qualified does not partition into Allowed and Disallowed. Firstly, things can be Allowed by one Norm and Disallowed by another one. Secondly, the logical complement of the thing allowed by a permission is qualified (as worse or equal than the thing allowed), but neither allowed nor disallowed." ;
+	rdfs:subClassOf expression:Qualified , _:node1fqlpa3rgx160 ;
+	owl:equivalentClass _:node1fqlpa3rgx159 .
+
+norm:Norm a owl:Class ;
+	rdfs:comment "A norm is a kind of Qualification. A qualification which normatively qualifies some thing (i.e. some normatively qualified): i.e. a qualification which allows or disallows some thing." ;
+	rdfs:subClassOf expression:Qualification ;
+	owl:equivalentClass _:node1fqlpa3rgx278 .
+
+ns5:Repeal a owl:Class ;
+	rdfs:comment "Removal of some part of text or the entire act from the legal system." ;
+	rdfs:subClassOf ns5:Textual_Modification .
+
+expression:qualified_by a owl:ObjectProperty ;
+	rdfs:comment "Relates something which is qualified to the attitude or qualification qualifying it" ;
+	owl:inverseOf expression:qualifies ;
+	rdfs:range expression:Qualification ;
+	rdfs:domain expression:Qualified .
+
+expression:Evidence a owl:Class ;
+	rdfs:comment "Observation and/or statement, used as a backing for a belief. Evidence is the role of observation which is qualified by some belief." ;
+	rdfs:subClassOf ns3:Epistemic_Role , _:node1fqlpa3rgx161 .
+
+norm:normatively_comparable a owl:ObjectProperty ;
+	rdfs:range norm:Normatively_Qualified ;
+	rdfs:domain norm:Normatively_Qualified ;
+	rdfs:subPropertyOf expression:qualitatively_comparable .
+
+ns5:Delivery_Date a owl:Class ;
+	rdfs:comment "The date when the competent authorities finalise the document by affixing their signatures to it (e.g. promulgation by the president, signature by the queen etc.) This is the date shown on the document itself: it is an objective element and clearly identifyable." ;
+	rdfs:subClassOf time:Moment , ns5:Static_Temporal_Entity .
+
+norm:Code_of_Conduct a owl:Class ;
+	rdfs:comment "a code outlining the responsibilities of or best practice for an individual or organisation, such as a set of principles of good corporate behaviour adopted by a business\\" ;
+	rdfs:subClassOf norm:Legal_Document , norm:Soft_Law .
+
+norm:Legal_Document a owl:Class ;
+	rdfs:comment "A legal document is a document bearing norms or normative statements. By virtue of this definition the norm-as-propositional-attitude is reified as norm-as proposition. In other words, the norm being expressed through the legal source is an expression of the propositional attitude." , "Subclasses of legal source can be distinguished through the authority of the agent creating the expression (i.e. the agent holding the norm)." ;
+	rdfs:subClassOf norm:Legal_Source , expression:Document .
+
+norm:Soft_Law a owl:Class ;
+	rdfs:comment "The term \"soft law\" refers to quasi-legal instruments which do not have any binding force, or whose binding force is somewhat \"weaker\" than the binding force of traditional law, often referred to as \"hard law\", in this context. The term \"soft law\" initially appeared in the area of international law, but more recently it has been transferred to other branches of law." ;
+	rdfs:subClassOf norm:Legal_Source .
+
+norm:Regulation a owl:Class ;
+	rdfs:comment "A regulation bears one or more norms, all of which are uttered by some legislative body. It cannot bear expressions which are not uttered by a legislative body." ;
+	rdfs:subClassOf norm:Legal_Document , _:node1fqlpa3rgx172 , _:node1fqlpa3rgx181 .
+
+time:immediately_after a owl:ObjectProperty ;
+	rdfs:comment "'is_met_by' is renamed to 'immediately_after'" , "Add to OWL 1.1: 'immediately_after' is serial, 'immediately_after' is irreflexive" , "Specifies that a time period occurs immediately after another period, i.e. it starts where the other period ends" ;
+	owl:inverseOf time:immediately_before ;
+	rdfs:range time:Temporal_Occurrence ;
+	rdfs:domain time:Temporal_Occurrence ;
+	rdfs:subPropertyOf time:after .
+
+ns5:Enter_in_Force_Date a owl:Class ;
+	rdfs:comment "The date when a dnormative document becomes law and enters the legal system for the first time. This is the moment in the doucment's history starting from which the document can be amended, its applicability assessed, and its manner of producing an effect determined." ;
+	rdfs:subClassOf time:Moment , ns5:Static_Temporal_Entity .
+
+time:immediately_before a owl:ObjectProperty ;
+	rdfs:comment "'meet' in Allen's paper is replaced by 'immediately_before'" , "Add to OWL 1.1: 'immediately_before' is serial, 'immediately_before' is irreflexive" , "Specifies that a time period occurs immediately before another period, i.e. it ends where the other period starts" , "t1 previous t2: interval t1 is before t2, but there is no interval between them, i.e., t1 ends where t2 starts" ;
+	owl:inverseOf time:immediately_after ;
+	rdfs:range time:Temporal_Occurrence ;
+	rdfs:domain time:Temporal_Occurrence ;
+	rdfs:subPropertyOf time:before .
+
+expression:bears a owl:ObjectProperty ;
+	rdfs:comment "A Medium 'bears' or carries expressions." ;
+	owl:inverseOf expression:medium ;
+	rdfs:range expression:Expression ;
+	rdfs:domain expression:Medium .
+
+ns5:Variation a owl:Class ;
+	rdfs:comment "Modification by paraphrasing" ;
+	rdfs:subClassOf ns5:Modification_of_Meaning .
+
+ns5:Existence_Date a owl:Class ;
+	rdfs:comment "The date when the formal act by which a legislative body freezes the document into its final form, it is the time when the document can be said to have begun its existence." ;
+	rdfs:subClassOf time:Moment .
+
+process:requirement a owl:ObjectProperty ;
+	rdfs:comment "A requirement relation relates the process with a prerequisite for that process: without it the process cannot occur" ;
+	owl:inverseOf process:requirement_of ;
+	rdfs:subPropertyOf process:participant .
+
+ns5:Relocation a owl:Class ;
+	rdfs:comment "Moving some part of the text to some other place within the same document" ;
+	rdfs:subClassOf ns5:Textual_Modification .
+
+time:Pair_Of_Periods a owl:Class ;
+	rdfs:comment "A pair of two time periods" ;
+	rdfs:subClassOf mereo:Pair , _:node1fqlpa3rgx184 .
+
+ns5:Prorogation_Efficacy a owl:Class ;
+	rdfs:comment "Prorogation of entry into force, but applied to the efficacy of some norm" ;
+	rdfs:subClassOf ns5:Efficacy_Modification .
+
+expression:asserts a owl:ObjectProperty ;
+	rdfs:comment "Relates an assertion to the expression being asserted" ;
+	owl:inverseOf expression:asserted_by ;
+	rdfs:range expression:Expression ;
+	rdfs:domain expression:Assertion ;
+	rdfs:subPropertyOf expression:states .
+
+process:result a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some participant is the result of the process, it might have existed before the process took place, but is in some way altered" ;
+	owl:inverseOf process:result_of ;
+	rdfs:subPropertyOf process:participant .
+
+norm:Legal_Source a owl:Class ;
+	rdfs:comment "A legal source is a source for legal statements, both norms and legal expressions. In a sense it is literally a 'source' of law" ;
+	rdfs:subClassOf expression:Medium ;
+	owl:equivalentClass _:node1fqlpa3rgx254 .
+
+ns5:Extension a owl:Class ;
+	rdfs:comment "Extends the scope of normative content to some particular jurisdiction" ;
+	rdfs:subClassOf ns5:Modification_of_Scope .
+
+norm:Strictly_Disallowed a owl:Class ;
+	rdfs:comment "Loose end." ;
+	rdfs:subClassOf norm:Disallowed .
+
+norm:Disallowed a owl:Class ;
+	rdfs:comment "See Qualified. Alternative labels: violation, prohibited, forbidden" ;
+	rdfs:subClassOf norm:Normatively_Qualified ;
+	owl:equivalentClass _:node1fqlpa3rgx316 , _:node1fqlpa3rgx317 .
+
+ns5:Renewal a owl:Class ;
+	rdfs:subClassOf ns5:In_Force_Modification .
+
+ns5:initial_date a owl:ObjectProperty ;
+	owl:inverseOf ns5:initial_date_of ;
+	rdfs:range time:Moment ;
+	rdfs:domain time:Interval ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+time:temporal_relation a owl:ObjectProperty ;
+	rdfs:comment "A relation between two time periods" ;
+	rdfs:range time:Temporal_Occurrence ;
+	rdfs:domain time:Temporal_Occurrence .
+
+time:before a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:comment "Specifies that a time period occurs before another period, but might overlap with it." ;
+	owl:inverseOf time:after ;
+	rdfs:range time:Temporal_Occurrence ;
+	rdfs:domain time:Temporal_Occurrence ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+ns5:initial_date_of a owl:ObjectProperty ;
+	owl:inverseOf ns5:initial_date ;
+	rdfs:range time:Interval ;
+	rdfs:domain time:Moment ;
+	rdfs:subPropertyOf time:starts .
+
+process:resource a owl:ObjectProperty ;
+	rdfs:comment "A resource is some quantity of something used to perform the action: i.e. time, energy" ;
+	owl:inverseOf process:resource_for ;
+	rdfs:subPropertyOf process:participant .
+
+ns5:in_force a owl:ObjectProperty ;
+	rdfs:range ns5:In_Force_Interval ;
+	rdfs:domain ns5:Modification .
+
+norm:Permissive_Right a owl:Class ;
+	rdfs:comment "The  negation of a directed obligation is a directed permission. However, it counts as a right,  namely, a permissive right, only when such negation is aimed at benefitting the author of  the permitted action." ;
+	rdfs:subClassOf norm:Right .
+
+norm:Right a owl:Class ;
+	rdfs:comment "A right is the legal or moral entitlement to do or refrain from doing something or to obtain or refrain from obtaining an action, thing or recogition in civil society." ;
+	rdfs:subClassOf norm:Norm .
+
+ns5:final_date_of a owl:ObjectProperty ;
+	owl:inverseOf ns5:final_date ;
+	rdfs:range time:Interval ;
+	rdfs:domain time:Moment ;
+	rdfs:subPropertyOf time:finishes .
+
+norm:Proclamation a owl:Class ;
+	rdfs:comment "A proclamation (Lat. proclamare, to make public by announcement) is an official declaration." ;
+	rdfs:subClassOf norm:Legal_Source .
+
+ns5:final_date a owl:ObjectProperty ;
+	owl:inverseOf ns5:final_date_of ;
+	rdfs:range time:Moment ;
+	rdfs:domain time:Interval ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+time:finishes a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period finishes another period, i.e. the other period starts before, but ends at the same moment" ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+process:Continuation a owl:Class ;
+	rdfs:comment "The continuation of a change, once initiated" ;
+	rdfs:subClassOf process:Change , _:node1fqlpa3rgx199 ;
+	owl:equivalentClass _:node1fqlpa3rgx194 .
+
+norm:Legal_Expression a owl:Class ;
+	rdfs:comment "Legal expressions are created by  some legal speech act and qualified by a communicated attitude" ;
+	rdfs:subClassOf expression:Expression , _:node1fqlpa3rgx195 .
+
+ns5:efficacy a owl:ObjectProperty ;
+	rdfs:range ns5:Efficacy_Interval ;
+	rdfs:domain ns5:Modification .
+
+process:Initiation a owl:Class ;
+	rdfs:comment "The initation of a change" ;
+	rdfs:subClassOf process:Change , _:node1fqlpa3rgx207 ;
+	owl:equivalentClass _:node1fqlpa3rgx210 .
+
+process:created_by a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some thing is created (i.e. a result of) by a process, and exists because of the process taking place." ;
+	owl:inverseOf process:creation ;
+	rdfs:subPropertyOf process:result_of .
+
+time:starts a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period starts another period, i.e. the other period starts at the same time, but ends at a later time." ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+ns5:produce_efficacy_modification a owl:ObjectProperty ;
+	rdfs:domain _:node1fqlpa3rgx200 .
+
+expression:Document a owl:Class ;
+	rdfs:comment "A Document bears some (and only) expression(s) stated by some statement in writing." ;
+	rdfs:subClassOf expression:Medium , _:node1fqlpa3rgx201 ;
+	owl:disjointWith norm:Custom .
+
+norm:Qualificatory_Expression a owl:Class ;
+	rdfs:comment "Ascribes a legal role to a person or an object (for example,  “x is a citizen”, “x is an intellectual work”, “x is a technical invention”);" ;
+	rdfs:subClassOf norm:Legal_Expression .
+
+time:between a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period occurs between two other periods" ;
+	rdfs:range time:Pair_Of_Periods ;
+	rdfs:domain time:Temporal_Occurrence ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+norm:Enabling_Power a owl:Class ;
+	rdfs:comment "An enabling power is used in cases where the law aims at enabling some agent to produce an effect in a particular way." ;
+	rdfs:subClassOf norm:Potestative_Expression .
+
+ns5:duration a owl:ObjectProperty ;
+	rdfs:range time:Interval ;
+	rdfs:domain ns5:Suspension .
+
+norm:Existential_Expression a owl:Class ;
+	rdfs:comment "Establishes or terminates the existence of a legal entity (for example “the company ceases to exist”);" ;
+	rdfs:subClassOf norm:Legal_Expression .
+
+process:Termination a owl:Class ;
+	rdfs:comment "The termination of a change." ;
+	rdfs:subClassOf process:Change , _:node1fqlpa3rgx211 ;
+	owl:equivalentClass _:node1fqlpa3rgx213 .
+
+time:during a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period occurs during another period" ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+expression:Intention a owl:Class ;
+	rdfs:comment "Intention is where the agent expects certain consequences of his or her actions and desires those consequences to occur. This concept must be related to qualification and preference in some way." ;
+	rdfs:subClassOf expression:Propositional_Attitude , _:node1fqlpa3rgx212 ;
+	owl:equivalentClass _:node1fqlpa3rgx214 .
+
+ns5:application a owl:ObjectProperty ;
+	rdfs:range ns5:Application_Date ;
+	rdfs:domain ns5:Modification .
+
+norm:Persuasive_Precedent a owl:Class ;
+	rdfs:comment "In law, a persuasive precedent or advisory precedent is a precedent that need not be followed under the legal principle of stare decisis, but is nevertheless followed. Sources of persuasive precedent include the obiter dicta in the judgment of a court whose judgment would otherwise be binding, and the judgments of courts in other jurisdictions where the facts and/or legal system are similar to the case at hand. If a superior court adopts a persuasive precedent, it may become binding in the jurisdiction." ;
+	rdfs:subClassOf norm:Precedent .
+
+norm:Precedent a owl:Class ;
+	rdfs:comment "In law, a precedent or authority is a legal case establishing a principle or rule that a court may need to adopt when deciding subsequent cases with similar issues or facts. The term may also refer to the collective body of case law that a court should consider when interpreting the law. When a precedent establishes an important legal principle, or represents new or changed law on a particular issue, that precedent is often known as a landmark decision." ;
+	rdfs:subClassOf norm:Legal_Source .
+
+expression:intended_by a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some intention is held by some agent" ;
+	owl:inverseOf expression:intends ;
+	rdfs:range action:Agent ;
+	rdfs:domain expression:Intention ;
+	rdfs:subPropertyOf expression:held_by .
+
+ns5:date a owl:DatatypeProperty ;
+	rdfs:range xsd:dateTime ;
+	rdfs:domain time:Moment .
+
+time:after a owl:ObjectProperty , owl:TransitiveProperty ;
+	rdfs:comment "'after' is the transitive closure of 'next'; this is defined in time-rules.owl." , "Specifies that a time period occurs after another period, but might overlap with it." ;
+	owl:inverseOf time:before ;
+	rdfs:range time:Temporal_Occurrence ;
+	rdfs:domain time:Temporal_Occurrence ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+norm:Belief_In_Violation a owl:Class ;
+	rdfs:comment "A belief in some violation" ;
+	rdfs:subClassOf expression:Belief ;
+	owl:equivalentClass _:node1fqlpa3rgx215 .
+
+ns5:produce_textual_modification a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:range ns5:End_in_Force ;
+	rdfs:domain _:node1fqlpa3rgx216 .
+
+process:resource_for a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some participant is a resource for a process" ;
+	owl:inverseOf process:resource ;
+	rdfs:subPropertyOf process:participant_in .
+
+ns5:produce_inforce_modification a owl:ObjectProperty , owl:InverseFunctionalProperty ;
+	rdfs:range _:node1fqlpa3rgx227 ;
+	rdfs:domain _:node1fqlpa3rgx230 .
+
+norm:Decree a owl:Class ;
+	rdfs:comment "The word decree is often used as a derogative term for any authoritarian decision" ;
+	rdfs:subClassOf norm:Legal_Document , norm:Proclamation .
+
+process:requirement_of a owl:ObjectProperty ;
+	rdfs:comment "Specifies that some participant is a requirement for a process" ;
+	owl:inverseOf process:requirement ;
+	rdfs:subPropertyOf process:participant_in .
+
+expression:author a owl:ObjectProperty ;
+	rdfs:comment "Relates an expression to the author of the expression (e.g. for expressions contained in documents)" ;
+	rdfs:subPropertyOf expression:utterer .
+
+norm:Strictly_Allowed a owl:Class ;
+	rdfs:comment "Loose end." ;
+	rdfs:subClassOf norm:Allowed .
+
+norm:Allowed a owl:Class ;
+	rdfs:comment "See normatively qualified. Alternative labels: permitted, sanctioned, let, licensed." ;
+	rdfs:subClassOf norm:Normatively_Qualified ;
+	owl:equivalentClass _:node1fqlpa3rgx272 , _:node1fqlpa3rgx273 .
+
+expression:Problem a owl:Class ;
+	rdfs:comment "A problem is an observation that deviates from an Intention." , "NOTE: This currently cannot be expressed: OWL DL does not support negation of properties. The definition will be further elaborated once OWL 1.1 is supported by development tools." ;
+	rdfs:subClassOf expression:Observation .
+
+norm:Legal_Doctrine a owl:Class ;
+	rdfs:comment "Legal doctrine is a framework, set of rules, procedural steps, or test, often established through precedent in the common law, through which judgments can be determined in a given legal cas" ;
+	rdfs:subClassOf norm:Legal_Source .
+
+time:preceeds a owl:ObjectProperty ;
+	rdfs:comment "Specifies that a time period preceeds another period, the periods do not overlap" ;
+	rdfs:subPropertyOf time:temporal_relation .
+
+norm:Resolution a owl:Class ;
+	rdfs:comment "A resolution is a written motion adopted by a deliberative body. The substance of the resolution can be anything that can normally be proposed as a motion." ;
+	rdfs:subClassOf norm:Soft_Law , norm:International_Agreement .
+
+expression:Surprise a owl:Class ;
+	rdfs:comment "A surprise is an observation that deviates from an expectation." , "NOTE: This currently cannot be expressed: OWL DL does not support negation of properties. The definition will be further elaborated once OWL 1.1 is supported by development tools." ;
+	rdfs:subClassOf expression:Observation .
+
+norm:International_Agreement a owl:Class ;
+	rdfs:comment "An agreement entered into by actors in international law, namely states and international organizations." ;
+	rdfs:subClassOf norm:Legal_Source .
+
+norm:Evaluative_Expression a owl:Class ;
+	rdfs:comment "A legal evaluative expression asserts that something is good or bad, is a value to be optimised or an evil to be minimised (for example “human dignity is value”, “participation ought to be promoted”);" ;
+	rdfs:subClassOf expression:Evaluative_Proposition , norm:Legal_Expression .
+
+expression:Cause a owl:Class ;
+	rdfs:comment "A cause is an epistemic role played by something which is the outcome of a (chain) of processes" ;
+	rdfs:subClassOf ns3:Epistemic_Role .
+
+norm:Liberty_Right a owl:Class ;
+	rdfs:comment "When, for the benefit of a person, this person is both permitted to perform and to omit an action – that is, when the action is facultative – we can say that he or she has a liberty right with regard to that action." ;
+	rdfs:subClassOf norm:Right .
+
+norm:Declarative_Power a owl:Class ;
+	rdfs:comment "A declarative power covers the case when an effect is produced through the party’s declaration of it" , "We say that j has the declarative power to realize A to mean that if j declares A, then it is legally valid that A. For example, if x has the declarative power to terminate y’s obligation toward x to do then if x declares that y’s obligation toward x finishes, then it is legally valid that this obligation finishes." ;
+	rdfs:subClassOf norm:Potestative_Expression .
+
+expression:Declaration a owl:Class ;
+	rdfs:comment "Searle: the successful performance of a declaration is sufficient to bring about the fit between words and world, to make the propositional content true. In other words, if there is an inconsistency between the declaration and assertions, beliefs, or observations, it is not the declaration that is false. True of definitions and norms, and several other performative statements by legislators." ;
+	rdfs:subClassOf expression:Communicated_Attitude ;
+	owl:equivalentClass _:node1fqlpa3rgx236 .
+
+expression:declares a owl:ObjectProperty ;
+	rdfs:comment "Relates a declaration to the expression being declared" ;
+	owl:inverseOf expression:declared_by ;
+	rdfs:range expression:Expression ;
+	rdfs:domain expression:Declaration ;
+	rdfs:subPropertyOf expression:states .
+
+norm:Contract a owl:Class ;
+	rdfs:comment "A contract bears one or more norms, all of which are uttered by some natural person or legal person. It cannot bear expressions which are uttered by a different kind of agent." ;
+	rdfs:subClassOf norm:Legal_Document , _:node1fqlpa3rgx238 , _:node1fqlpa3rgx244 .
+
+expression:qualitatively_comparable a owl:ObjectProperty , owl:SymmetricProperty ;
+	owl:inverseOf expression:qualitatively_comparable ;
+	rdfs:range expression:Qualified ;
+	rdfs:domain expression:Qualified .
+
+norm:Custom a owl:Class ;
+	rdfs:comment "The collective memory of some group of agents, i.e. propositions beared by custom are shared (i.e. held) by all members of the group" ;
+	rdfs:subClassOf expression:Medium ;
+	owl:disjointWith expression:Document .
+
+norm:Exclusionary_Right a owl:Class ;
+	rdfs:comment """An exclusionary right concerns the prohibition against performing certain inferences (against reasoning in certain ways), or 
+against using certain kinds of premises for certain purposes, in the interest of a particular person. This is especially the case with anti-discrimination rules.""" ;
+	rdfs:subClassOf norm:Obligative_Right .
+
+expression:asserted_by a owl:ObjectProperty ;
+	rdfs:comment "Relates an expression being asserted to the assertion" ;
+	owl:inverseOf expression:asserts ;
+	rdfs:range expression:Assertion ;
+	rdfs:domain expression:Expression ;
+	rdfs:subPropertyOf expression:stated_by .
+
+norm:Obligative_Right a owl:Class ;
+	rdfs:comment "Directed obligative ought-to-do are also called obligative rights. k has the obligative  right that j does A iff it is obligatory, toward k, that j does A. An example of obligative  right is “it is obligatory, toward Mary, that Tom pays 1,000 euro to John”" ;
+	rdfs:subClassOf norm:Right .
+
+norm:Customary_Law a owl:Class ;
+	rdfs:comment "In law, custom, or customary law consists of established patterns of behaviour that can be objectively verified within a particular social setting." ;
+	rdfs:subClassOf norm:Legal_Source , norm:Custom .
+
+expression:observes a owl:ObjectProperty ;
+	rdfs:comment "Relates an agent to the thing it beliefs it observes" ;
+	owl:inverseOf expression:observer ;
+	rdfs:range expression:Belief ;
+	rdfs:domain action:Agent ;
+	rdfs:subPropertyOf expression:believes .
+
+norm:Action_Power a owl:Class ;
+	rdfs:comment "An action-power consists in a generic power to produce a legal effect through an action determining it. Also called Subjections" ;
+	rdfs:subClassOf norm:Hohfeldian_Power .
+
+expression:declared_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a declared expression to the attitude to the declaration" ;
+	owl:inverseOf expression:declares ;
+	rdfs:range expression:Declaration ;
+	rdfs:domain expression:Expression ;
+	rdfs:subPropertyOf expression:stated_by .
+
+norm:Statute a owl:Class ;
+	rdfs:comment "A statute bears one or more norms, all of which are uttered by some legal person. It cannot bear expressions which are uttered by a different kind of agent." ;
+	rdfs:subClassOf norm:Legal_Document , _:node1fqlpa3rgx258 , _:node1fqlpa3rgx263 .
+
+expression:utters a owl:ObjectProperty ;
+	rdfs:comment "Relates an agent to its utterance(s)" ;
+	owl:inverseOf expression:utterer ;
+	rdfs:range expression:Communicated_Attitude ;
+	rdfs:domain action:Agent ;
+	rdfs:subPropertyOf expression:holds .
+
+expression:believes a owl:ObjectProperty ;
+	rdfs:comment "Relates an agent to the belief(s) it holds" ;
+	owl:inverseOf expression:believed_by ;
+	rdfs:range expression:Belief ;
+	rdfs:domain action:Agent ;
+	rdfs:subPropertyOf expression:holds .
+
+expression:intends a owl:ObjectProperty ;
+	rdfs:comment "Specifies that the agent holds some intention" ;
+	owl:inverseOf expression:intended_by ;
+	rdfs:range expression:Intention ;
+	rdfs:domain action:Agent ;
+	rdfs:subPropertyOf expression:holds .
+
+norm:International_Arbitration a owl:Class ;
+	rdfs:comment "International Arbitration is the established method today for resolving disputes between parties to international commercial agreements. As with arbitration generally, it is a creature of contract, i.e., the parties' decision to submit any disputes to private adjudication by one or more arbitrators appointed in accordance with rules the parties themselves have agreed to adopt, usually by including a provision for the same in their contract. The practice of international arbitration has developed so as to allow parties from different legal and cultural backgrounds to resolve their disputes, generally without the formalities of their underlying legal systems." ;
+	rdfs:subClassOf norm:Soft_Law .
+
+norm:Immunity a owl:Class ;
+	rdfs:comment "Also called Disabilities" ;
+	rdfs:subClassOf norm:Hohfeldian_Power .
+
+norm:Treaty a owl:Class ;
+	rdfs:comment "A treaty is a binding agreement under international law entered into by actors in international law, namely states and international organizations. Treaties are called by several names: treaties, international agreements, protocols, covenants, conventions, exchanges of letters, exchanges of notes, etc." ;
+	rdfs:subClassOf norm:Legal_Document , norm:International_Agreement ;
+	owl:disjointWith norm:Non-binding_International_Agreement .
+
+norm:Non-binding_International_Agreement a owl:Class ;
+	rdfs:comment "Some international agreement that is not binding under international law" ;
+	rdfs:subClassOf norm:Soft_Law , norm:International_Agreement ;
+	owl:disjointWith norm:Treaty .
+
+norm:Mandatory_Precedent a owl:Class ;
+	rdfs:comment "In law, a binding precedent (also mandatory precedent or binding authority) is a precedent which must be followed by all lower courts. It is usually created by the decision of a higher court, such as the House of Lords in the United Kingdom. Binding precedent relies on the legal principle of stare decisis." ;
+	rdfs:subClassOf norm:Precedent .
+
+expression:promised_by a owl:ObjectProperty ;
+	rdfs:comment "Relates an expression to the promise over the expression" ;
+	owl:inverseOf expression:promises ;
+	rdfs:range expression:Promise ;
+	rdfs:domain expression:Expression ;
+	rdfs:subPropertyOf expression:stated_by .
+
+norm:Code a owl:Class ;
+	rdfs:comment "A legal code bears one or more norms, all of which are uttered by some legislative body. It cannot bear expressions which are not uttered by a legislative body." ;
+	rdfs:subClassOf norm:Legal_Document , _:node1fqlpa3rgx265 , _:node1fqlpa3rgx270 .
+
+norm:normatively_equivalent_or_worse a owl:ObjectProperty ;
+	owl:inverseOf norm:normatively_equivalent_or_better ;
+	rdfs:domain norm:Allowed ;
+	rdfs:subPropertyOf norm:normatively_comparable .
+
+norm:allowed_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a qualified Allowed to the norm allowing it" ;
+	owl:inverseOf norm:allows ;
+	rdfs:domain norm:Allowed ;
+	rdfs:subPropertyOf expression:qualified_by .
+
+norm:Permission a owl:Class ;
+	rdfs:comment "Permission allows propositions, to which therefore the predication Allowed applies. The thing(s) allowed is/are a subset of the thing(s) qualified by the permission. If S then P(A) means that S is qualified and S and A is allowed." ;
+	rdfs:subClassOf norm:Norm ;
+	owl:equivalentClass _:node1fqlpa3rgx286 .
+
+norm:Observation_of_Violation a owl:Class ;
+	rdfs:comment "An observation of a violation, i.e. of something that is Disallowed." ;
+	rdfs:subClassOf expression:Problem ;
+	owl:equivalentClass _:node1fqlpa3rgx274 .
+
+norm:Potestative_Right a owl:Class ;
+	rdfs:comment """A potestative right is an enabling power which is meant to benefit the holder of the power. For example, if some animal y does not 
+belong to anybody, then x has the potestative-right to start x’s ownership of the animal,  by capturing y.""" ;
+	rdfs:subClassOf norm:Enabling_Power .
+
+norm:Allowed_And_Disallowed a owl:Class ;
+	rdfs:comment "Something which is both allowed and disallowed through some norm" ;
+	rdfs:subClassOf norm:Disallowed , norm:Allowed ;
+	owl:equivalentClass _:node1fqlpa3rgx279 .
+
+norm:Obligation a owl:Class ;
+	rdfs:comment "See prohibition" ;
+	rdfs:subClassOf norm:Permission ;
+	owl:equivalentClass norm:Prohibition .
+
+norm:Prohibition a owl:Class ;
+	rdfs:comment "Prohibition obliges/allows thing(s), to which therefore the predication Obliged applies, and disallows thing(s), to which therefore the predication Disallowed applies. The union of the thing(s) allowed and the thing(s) disallowed is qualified by the prohibition. The things allowed and disallowed by the prohibition are disjoint (and completely partition the space of things qualified). If S then O(A) means that S is qualified, S and A is obliged/allowed, and S and not A is disallowed. If S then F(A) means that S is qualified, S and A is disallowed, and S and not A is obliged/allowed. The difference between Obligation and Prohibition is in which part of the partition of the qualified space is explicitly described by the normative statement. Alternative label: directive" ;
+	rdfs:subClassOf norm:Permission ;
+	owl:equivalentClass norm:Obligation , _:node1fqlpa3rgx318 .
+
+norm:Disallowed_Intention a owl:Class ;
+	rdfs:comment "The propositional content (i.e. that which is intended) of the intention is disallowed. Interesting concept for establishing mens rea (guilty mind), although 'disallowed' is a weaker qualification than criminal. Note the distinction between purposely committing a crime and knowingly committing a crime. The crime committed does not have to match the crime intended for establishing intent!" ;
+	rdfs:subClassOf expression:Intention ;
+	owl:equivalentClass _:node1fqlpa3rgx282 .
+
+norm:allows a owl:ObjectProperty ;
+	rdfs:comment "Relates a norm to the thing it allows" ;
+	owl:inverseOf norm:allowed_by ;
+	rdfs:range norm:Allowed ;
+	rdfs:subPropertyOf expression:qualifies .
+
+norm:Liability_Right a owl:Class ;
+	rdfs:comment "A liability right expresses some right to act that brings with it some liability to perform another (compensating) act. For instance, if some k performs the permitted action A, then k will have to perform another action B for the benefit of j." ;
+	rdfs:subClassOf norm:Right .
+
+norm:Obliged a owl:Class ;
+	rdfs:comment "Is allowed by an Obligation, i.e. the alternative is strictly_worse according to the Obligation. Alternative labels: directed, commanded." ;
+	rdfs:subClassOf norm:Allowed ;
+	owl:equivalentClass _:node1fqlpa3rgx300 , _:node1fqlpa3rgx301 .
+
+norm:normatively_strictly_worse a owl:ObjectProperty , owl:TransitiveProperty ;
+	owl:inverseOf norm:normatively_strictly_better ;
+	rdfs:range norm:Disallowed ;
+	rdfs:domain norm:Obliged ;
+	rdfs:subPropertyOf norm:normatively_equivalent_or_worse , norm:normatively_not_equivalent .
+
+norm:Directive a owl:Class ;
+	rdfs:comment "Examples are European Union directive, a legislative act of the European Union and Directives, used by United States Government agencies (particularly the Department of Defense) to convey policies, responsibilities, and procedures." ;
+	rdfs:subClassOf norm:Legal_Document , norm:Proclamation .
+
+norm:disallowed_by a owl:ObjectProperty ;
+	rdfs:comment "Relates a qualified Disallowed to the norm disallowing it" ;
+	owl:inverseOf norm:disallows ;
+	rdfs:domain norm:Disallowed ;
+	rdfs:subPropertyOf expression:qualified_by .
+
+norm:normatively_strictly_better a owl:ObjectProperty , owl:TransitiveProperty ;
+	owl:inverseOf norm:normatively_strictly_worse ;
+	rdfs:range norm:Obliged ;
+	rdfs:domain norm:Disallowed ;
+	rdfs:subPropertyOf norm:normatively_equivalent_or_better , norm:normatively_not_equivalent .
+
+norm:Definitional_Expression a owl:Class ;
+	rdfs:comment "A definition in a legal context (for example “x means y” or “by x it is meant y”);" ;
+	rdfs:subClassOf norm:Legal_Expression .
+
+norm:disallows a owl:ObjectProperty ;
+	rdfs:comment "Relates a norm to the thing it disallows" ;
+	owl:inverseOf norm:disallowed_by ;
+	rdfs:range norm:Disallowed ;
+	rdfs:subPropertyOf expression:qualifies .
+
+norm:normatively_equivalent_or_better a owl:ObjectProperty , owl:TransitiveProperty ;
+	owl:inverseOf norm:normatively_equivalent_or_worse ;
+	rdfs:range norm:Allowed ;
+	rdfs:subPropertyOf norm:normatively_comparable .
+
+norm:normatively_not_equivalent a owl:ObjectProperty , owl:SymmetricProperty ;
+	owl:inverseOf norm:normatively_not_equivalent ;
+	rdfs:subPropertyOf norm:normatively_comparable .
+
+norm:commands a owl:ObjectProperty ;
+	owl:inverseOf norm:commanded_by ;
+	rdfs:range norm:Obliged ;
+	rdfs:subPropertyOf norm:allows .
+
+norm:commanded_by a owl:ObjectProperty ;
+	owl:inverseOf norm:commands ;
+	rdfs:domain norm:Obliged ;
+	rdfs:subPropertyOf norm:allowed_by .
+
+norm:strictly_equivalent a owl:ObjectProperty , owl:SymmetricProperty , owl:TransitiveProperty ;
+	owl:inverseOf norm:strictly_equivalent ;
+	rdfs:range norm:Allowed ;
+	rdfs:domain norm:Allowed ;
+	rdfs:subPropertyOf norm:normatively_equivalent_or_worse , norm:normatively_equivalent_or_better .
+
+_:node1fqlpa3rgx1 a owl:Restriction ;
+	owl:someValuesFrom expression:Evaluative_Attitude ;
+	owl:onProperty expression:evaluated_by .
+
+_:node1fqlpa3rgx10 a owl:Restriction ;
+	owl:someValuesFrom action:Person ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx100 rdf:first process:Physical_Object ;
+	rdf:rest _:node1fqlpa3rgx103 .
+
+_:node1fqlpa3rgx101 rdf:first expression:Promise ;
+	rdf:rest _:node1fqlpa3rgx105 .
+
+_:node1fqlpa3rgx102 a owl:Class ;
+	owl:complementOf action:Agent .
+
+_:node1fqlpa3rgx103 rdf:first _:node1fqlpa3rgx102 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx104 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Act ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx105 rdf:first _:node1fqlpa3rgx104 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx106 a owl:Restriction ;
+	owl:someValuesFrom ns2:Atom ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx107 a owl:Restriction ;
+	owl:onProperty expression:attitude ;
+	owl:allValuesFrom expression:Propositional_Attitude .
+
+_:node1fqlpa3rgx108 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Body ;
+	owl:onProperty action:actor .
+
+_:node1fqlpa3rgx109 a owl:Restriction ;
+	owl:someValuesFrom ns2:Atom ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx11 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Body ;
+	owl:onProperty action:actor .
+
+_:node1fqlpa3rgx110 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx111 ;
+	owl:onProperty process:creation .
+
+_:node1fqlpa3rgx111 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx112 .
+
+_:node1fqlpa3rgx112 rdf:first expression:Statement_In_Writing ;
+	rdf:rest _:node1fqlpa3rgx114 .
+
+_:node1fqlpa3rgx113 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Act ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx114 rdf:first _:node1fqlpa3rgx113 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx115 a owl:Restriction ;
+	owl:someValuesFrom ns2:Rule ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx116 a owl:Restriction ;
+	owl:someValuesFrom process:Physical_Object ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx117 a owl:Restriction ;
+	owl:onProperty mereo:part ;
+	owl:allValuesFrom _:node1fqlpa3rgx118 .
+
+_:node1fqlpa3rgx118 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx119 .
+
+_:node1fqlpa3rgx119 rdf:first action:Action ;
+	rdf:rest _:node1fqlpa3rgx120 .
+
+_:node1fqlpa3rgx12 a owl:Restriction ;
+	owl:someValuesFrom expression:Evaluative_Proposition ;
+	owl:onProperty expression:evaluatively_comparable .
+
+_:node1fqlpa3rgx120 rdf:first action:Plan ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx121 a owl:Restriction ;
+	owl:onProperty expression:believed_by ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx122 a owl:Restriction ;
+	owl:someValuesFrom action:Action ;
+	owl:onProperty mereo:part .
+
+_:node1fqlpa3rgx123 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:believed_by .
+
+_:node1fqlpa3rgx124 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legislative_Body ;
+	owl:onProperty action:actor .
+
+_:node1fqlpa3rgx125 a owl:Restriction ;
+	owl:someValuesFrom ns3:Function ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx126 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:allValuesFrom _:node1fqlpa3rgx128 .
+
+_:node1fqlpa3rgx127 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx129 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx128 a owl:Restriction ;
+	owl:someValuesFrom ns3:Role ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx129 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx131 .
+
+_:node1fqlpa3rgx13 a owl:Restriction ;
+	owl:someValuesFrom action:Person ;
+	owl:onProperty mereo:member .
+
+_:node1fqlpa3rgx130 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx131 rdf:first _:node1fqlpa3rgx130 ;
+	rdf:rest _:node1fqlpa3rgx133 .
+
+_:node1fqlpa3rgx132 a owl:Restriction ;
+	owl:someValuesFrom action:Transaction ;
+	owl:onProperty mereo:strict_part_of .
+
+_:node1fqlpa3rgx133 rdf:first expression:Expression ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx134 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx136 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx135 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Body ;
+	owl:onProperty action:actor .
+
+_:node1fqlpa3rgx136 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx138 .
+
+_:node1fqlpa3rgx137 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx138 rdf:first _:node1fqlpa3rgx137 ;
+	rdf:rest _:node1fqlpa3rgx139 .
+
+_:node1fqlpa3rgx139 rdf:first expression:Proposition ;
+	rdf:rest _:node1fqlpa3rgx141 .
+
+_:node1fqlpa3rgx14 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx16 .
+
+_:node1fqlpa3rgx140 a owl:Restriction ;
+	owl:someValuesFrom expression:Observation ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx141 rdf:first _:node1fqlpa3rgx140 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx142 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx143 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:addressee .
+
+_:node1fqlpa3rgx144 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx145 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx146 a owl:Restriction ;
+	owl:someValuesFrom expression:Expression ;
+	owl:onProperty expression:states .
+
+_:node1fqlpa3rgx147 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom action:Person .
+
+_:node1fqlpa3rgx148 a owl:Restriction ;
+	owl:onProperty expression:states ;
+	owl:allValuesFrom expression:Expression .
+
+_:node1fqlpa3rgx149 a owl:Restriction ;
+	owl:onProperty expression:addressee ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx15 a owl:Restriction ;
+	owl:someValuesFrom places:Place ;
+	owl:onProperty places:location_complex_for .
+
+_:node1fqlpa3rgx150 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx151 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx151 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx153 .
+
+_:node1fqlpa3rgx152 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx153 rdf:first _:node1fqlpa3rgx152 ;
+	rdf:rest _:node1fqlpa3rgx154 .
+
+_:node1fqlpa3rgx154 rdf:first expression:Proposition ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx155 a owl:Restriction ;
+	owl:onProperty expression:stated_by ;
+	owl:allValuesFrom expression:Communicated_Attitude .
+
+_:node1fqlpa3rgx156 a owl:Restriction ;
+	owl:someValuesFrom expression:Communicated_Attitude ;
+	owl:onProperty expression:stated_by .
+
+_:node1fqlpa3rgx157 a owl:Restriction ;
+	owl:onProperty expression:medium ;
+	owl:allValuesFrom expression:Medium .
+
+_:node1fqlpa3rgx158 a owl:Restriction ;
+	owl:someValuesFrom expression:Medium ;
+	owl:onProperty expression:medium .
+
+_:node1fqlpa3rgx159 a owl:Restriction ;
+	owl:someValuesFrom norm:Norm ;
+	owl:onProperty expression:qualified_by .
+
+_:node1fqlpa3rgx16 rdf:first ns4:Unincorporated ;
+	rdf:rest _:node1fqlpa3rgx17 .
+
+_:node1fqlpa3rgx160 a owl:Restriction ;
+	owl:someValuesFrom norm:Normatively_Qualified ;
+	owl:onProperty norm:normatively_comparable .
+
+_:node1fqlpa3rgx161 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx162 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx162 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx164 .
+
+_:node1fqlpa3rgx163 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx164 rdf:first _:node1fqlpa3rgx163 ;
+	rdf:rest _:node1fqlpa3rgx165 .
+
+_:node1fqlpa3rgx165 rdf:first expression:Proposition ;
+	rdf:rest _:node1fqlpa3rgx167 .
+
+_:node1fqlpa3rgx166 a owl:Restriction ;
+	owl:someValuesFrom expression:Observation ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx167 rdf:first _:node1fqlpa3rgx166 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx168 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx170 .
+
+_:node1fqlpa3rgx169 a owl:Restriction ;
+	owl:someValuesFrom time:Temporal_Occurrence ;
+	owl:onProperty time:immediately_after .
+
+_:node1fqlpa3rgx17 rdf:first ns4:Foundation ;
+	rdf:rest _:node1fqlpa3rgx19 .
+
+_:node1fqlpa3rgx170 rdf:first _:node1fqlpa3rgx169 ;
+	rdf:rest _:node1fqlpa3rgx175 .
+
+_:node1fqlpa3rgx171 a owl:Restriction ;
+	owl:someValuesFrom owl:Thing ;
+	owl:onProperty process:requirement .
+
+_:node1fqlpa3rgx172 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx173 ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx173 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx177 .
+
+_:node1fqlpa3rgx174 a owl:Restriction ;
+	owl:someValuesFrom time:Temporal_Occurrence ;
+	owl:onProperty time:immediately_before .
+
+_:node1fqlpa3rgx175 rdf:first _:node1fqlpa3rgx174 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx176 a owl:Restriction ;
+	owl:someValuesFrom expression:Expression ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx177 rdf:first norm:Norm ;
+	rdf:rest _:node1fqlpa3rgx179 .
+
+_:node1fqlpa3rgx178 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legislative_Body ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx179 rdf:first _:node1fqlpa3rgx178 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx18 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx20 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx180 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom expression:Expression .
+
+_:node1fqlpa3rgx181 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom _:node1fqlpa3rgx182 .
+
+_:node1fqlpa3rgx182 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legislative_Body ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx183 a owl:Restriction ;
+	owl:someValuesFrom expression:Expression ;
+	owl:onProperty expression:asserts .
+
+_:node1fqlpa3rgx184 a owl:Restriction ;
+	owl:onProperty mereo:component ;
+	owl:allValuesFrom time:Temporal_Occurrence .
+
+_:node1fqlpa3rgx185 a owl:Restriction ;
+	owl:someValuesFrom owl:Thing ;
+	owl:onProperty process:result .
+
+_:node1fqlpa3rgx186 a owl:Restriction ;
+	owl:onProperty mereo:part ;
+	owl:allValuesFrom process:Change .
+
+_:node1fqlpa3rgx187 a owl:Restriction ;
+	owl:someValuesFrom time:Temporal_Occurrence ;
+	owl:onProperty process:resource .
+
+_:node1fqlpa3rgx188 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx189 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx189 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx191 .
+
+_:node1fqlpa3rgx19 rdf:first ns4:Incorporated ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx190 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx191 rdf:first _:node1fqlpa3rgx190 ;
+	rdf:rest _:node1fqlpa3rgx192 .
+
+_:node1fqlpa3rgx192 rdf:first expression:Proposition ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx193 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom _:node1fqlpa3rgx196 .
+
+_:node1fqlpa3rgx194 a owl:Restriction ;
+	owl:someValuesFrom process:Initiation ;
+	owl:onProperty process:requirement .
+
+_:node1fqlpa3rgx195 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx197 ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx196 a owl:Restriction ;
+	owl:onProperty ns3:plays ;
+	owl:allValuesFrom _:node1fqlpa3rgx198 .
+
+_:node1fqlpa3rgx197 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Act ;
+	owl:onProperty process:created_by .
+
+_:node1fqlpa3rgx198 a owl:Class ;
+	owl:complementOf expression:Observation .
+
+_:node1fqlpa3rgx199 a owl:Restriction ;
+	owl:someValuesFrom process:Change ;
+	owl:onProperty mereo:direct_part_of .
+
+_:node1fqlpa3rgx2 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom mereo:Atom .
+
+_:node1fqlpa3rgx20 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx23 .
+
+_:node1fqlpa3rgx200 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx202 .
+
+_:node1fqlpa3rgx201 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom _:node1fqlpa3rgx203 .
+
+_:node1fqlpa3rgx202 rdf:first ns5:Repeal ;
+	rdf:rest _:node1fqlpa3rgx204 .
+
+_:node1fqlpa3rgx203 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx205 .
+
+_:node1fqlpa3rgx204 rdf:first ns5:Integration ;
+	rdf:rest _:node1fqlpa3rgx206 .
+
+_:node1fqlpa3rgx205 rdf:first expression:Expression ;
+	rdf:rest _:node1fqlpa3rgx209 .
+
+_:node1fqlpa3rgx206 rdf:first ns5:Substitution ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx207 a owl:Restriction ;
+	owl:someValuesFrom process:Change ;
+	owl:onProperty mereo:direct_part_of .
+
+_:node1fqlpa3rgx208 a owl:Restriction ;
+	owl:someValuesFrom expression:Statement_In_Writing ;
+	owl:onProperty expression:stated_by .
+
+_:node1fqlpa3rgx209 rdf:first _:node1fqlpa3rgx208 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx21 a owl:Restriction ;
+	owl:onProperty mereo:member ;
+	owl:allValuesFrom _:node1fqlpa3rgx24 .
+
+_:node1fqlpa3rgx210 a owl:Restriction ;
+	owl:someValuesFrom process:Continuation ;
+	owl:onProperty process:result .
+
+_:node1fqlpa3rgx211 a owl:Restriction ;
+	owl:someValuesFrom process:Change ;
+	owl:onProperty mereo:direct_part_of .
+
+_:node1fqlpa3rgx212 a owl:Restriction ;
+	owl:onProperty expression:intended_by ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx213 a owl:Restriction ;
+	owl:someValuesFrom process:Continuation ;
+	owl:onProperty process:requirement .
+
+_:node1fqlpa3rgx214 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:intended_by .
+
+_:node1fqlpa3rgx215 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx218 .
+
+_:node1fqlpa3rgx216 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx217 .
+
+_:node1fqlpa3rgx217 rdf:first ns5:Annulment ;
+	rdf:rest _:node1fqlpa3rgx219 .
+
+_:node1fqlpa3rgx218 rdf:first expression:Belief ;
+	rdf:rest _:node1fqlpa3rgx221 .
+
+_:node1fqlpa3rgx219 rdf:first ns5:Renewal ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx22 a owl:Restriction ;
+	owl:someValuesFrom expression:Belief ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx220 a owl:Restriction ;
+	owl:someValuesFrom norm:Disallowed ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx221 rdf:first _:node1fqlpa3rgx220 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx222 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx223 ;
+	owl:onProperty expression:states .
+
+_:node1fqlpa3rgx223 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx224 .
+
+_:node1fqlpa3rgx224 rdf:first expression:Expression ;
+	rdf:rest _:node1fqlpa3rgx226 .
+
+_:node1fqlpa3rgx225 a owl:Restriction ;
+	owl:someValuesFrom expression:Document ;
+	owl:onProperty expression:medium .
+
+_:node1fqlpa3rgx226 rdf:first _:node1fqlpa3rgx225 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx227 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx228 .
+
+_:node1fqlpa3rgx228 rdf:first ns5:Renewal ;
+	rdf:rest _:node1fqlpa3rgx229 .
+
+_:node1fqlpa3rgx229 rdf:first ns5:Annulment ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx23 rdf:first _:node1fqlpa3rgx22 ;
+	rdf:rest _:node1fqlpa3rgx31 .
+
+_:node1fqlpa3rgx230 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx232 .
+
+_:node1fqlpa3rgx231 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:author .
+
+_:node1fqlpa3rgx232 rdf:first ns5:Repeal ;
+	rdf:rest _:node1fqlpa3rgx233 .
+
+_:node1fqlpa3rgx233 rdf:first ns5:Integration ;
+	rdf:rest _:node1fqlpa3rgx234 .
+
+_:node1fqlpa3rgx234 rdf:first ns5:Substitution ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx235 a owl:Restriction ;
+	owl:someValuesFrom expression:Proposition ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx236 a owl:Restriction ;
+	owl:someValuesFrom expression:Expression ;
+	owl:onProperty expression:declares .
+
+_:node1fqlpa3rgx237 a owl:Restriction ;
+	owl:onProperty expression:qualitatively_comparable ;
+	owl:allValuesFrom expression:Qualified .
+
+_:node1fqlpa3rgx238 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom _:node1fqlpa3rgx239 .
+
+_:node1fqlpa3rgx239 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx240 ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx24 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx27 .
+
+_:node1fqlpa3rgx240 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx241 .
+
+_:node1fqlpa3rgx241 rdf:first ns4:Natural_Person ;
+	rdf:rest _:node1fqlpa3rgx242 .
+
+_:node1fqlpa3rgx242 rdf:first ns4:Legal_Person ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx243 a owl:Restriction ;
+	owl:someValuesFrom expression:Qualification ;
+	owl:onProperty expression:qualified_by .
+
+_:node1fqlpa3rgx244 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx245 ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx245 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx246 .
+
+_:node1fqlpa3rgx246 rdf:first norm:Norm ;
+	rdf:rest _:node1fqlpa3rgx248 .
+
+_:node1fqlpa3rgx247 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx250 ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx248 rdf:first _:node1fqlpa3rgx247 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx249 a owl:Restriction ;
+	owl:someValuesFrom expression:Qualified ;
+	owl:onProperty expression:qualitatively_comparable .
+
+_:node1fqlpa3rgx25 rdf:first expression:Expression ;
+	rdf:rest _:node1fqlpa3rgx29 .
+
+_:node1fqlpa3rgx250 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx251 .
+
+_:node1fqlpa3rgx251 rdf:first ns4:Natural_Person ;
+	rdf:rest _:node1fqlpa3rgx252 .
+
+_:node1fqlpa3rgx252 rdf:first ns4:Legal_Person ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx253 a owl:Restriction ;
+	owl:someValuesFrom expression:Communicated_Attitude ;
+	owl:onProperty process:creation .
+
+_:node1fqlpa3rgx254 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx255 ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx255 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx256 .
+
+_:node1fqlpa3rgx256 rdf:first norm:Norm ;
+	rdf:rest _:node1fqlpa3rgx257 .
+
+_:node1fqlpa3rgx257 rdf:first norm:Legal_Expression ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx258 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx259 ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx259 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx260 .
+
+_:node1fqlpa3rgx26 a owl:Restriction ;
+	owl:onProperty places:location_complex_for ;
+	owl:allValuesFrom places:Place .
+
+_:node1fqlpa3rgx260 rdf:first norm:Norm ;
+	rdf:rest _:node1fqlpa3rgx262 .
+
+_:node1fqlpa3rgx261 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legal_Person ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx262 rdf:first _:node1fqlpa3rgx261 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx263 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom _:node1fqlpa3rgx264 .
+
+_:node1fqlpa3rgx264 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legal_Person ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx265 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx266 ;
+	owl:onProperty expression:bears .
+
+_:node1fqlpa3rgx266 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx267 .
+
+_:node1fqlpa3rgx267 rdf:first norm:Norm ;
+	rdf:rest _:node1fqlpa3rgx269 .
+
+_:node1fqlpa3rgx268 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legislative_Body ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx269 rdf:first _:node1fqlpa3rgx268 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx27 rdf:first action:Organisation ;
+	rdf:rest _:node1fqlpa3rgx30 .
+
+_:node1fqlpa3rgx270 a owl:Restriction ;
+	owl:onProperty expression:bears ;
+	owl:allValuesFrom _:node1fqlpa3rgx271 .
+
+_:node1fqlpa3rgx271 a owl:Restriction ;
+	owl:someValuesFrom ns4:Legislative_Body ;
+	owl:onProperty expression:utterer .
+
+_:node1fqlpa3rgx272 a owl:Restriction ;
+	owl:someValuesFrom norm:Normatively_Qualified ;
+	owl:onProperty norm:normatively_equivalent_or_worse .
+
+_:node1fqlpa3rgx273 a owl:Restriction ;
+	owl:someValuesFrom norm:Permission ;
+	owl:onProperty norm:allowed_by .
+
+_:node1fqlpa3rgx274 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx275 .
+
+_:node1fqlpa3rgx275 rdf:first expression:Observation ;
+	rdf:rest _:node1fqlpa3rgx277 .
+
+_:node1fqlpa3rgx276 a owl:Restriction ;
+	owl:someValuesFrom norm:Disallowed ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx277 rdf:first _:node1fqlpa3rgx276 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx278 a owl:Restriction ;
+	owl:someValuesFrom norm:Normatively_Qualified ;
+	owl:onProperty expression:qualifies .
+
+_:node1fqlpa3rgx279 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx280 .
+
+_:node1fqlpa3rgx28 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom _:node1fqlpa3rgx32 .
+
+_:node1fqlpa3rgx280 rdf:first norm:Disallowed ;
+	rdf:rest _:node1fqlpa3rgx281 .
+
+_:node1fqlpa3rgx281 rdf:first norm:Allowed ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx282 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx283 .
+
+_:node1fqlpa3rgx283 rdf:first expression:Intention ;
+	rdf:rest _:node1fqlpa3rgx285 .
+
+_:node1fqlpa3rgx284 a owl:Restriction ;
+	owl:someValuesFrom norm:Disallowed ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx285 rdf:first _:node1fqlpa3rgx284 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx286 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx288 .
+
+_:node1fqlpa3rgx287 a owl:Restriction ;
+	owl:someValuesFrom norm:Allowed ;
+	owl:onProperty norm:allows .
+
+_:node1fqlpa3rgx288 rdf:first _:node1fqlpa3rgx287 ;
+	rdf:rest _:node1fqlpa3rgx290 .
+
+_:node1fqlpa3rgx289 a owl:Restriction ;
+	owl:onProperty norm:allows ;
+	owl:allValuesFrom norm:Allowed .
+
+_:node1fqlpa3rgx29 rdf:first mereo:Atom ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx290 rdf:first _:node1fqlpa3rgx289 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx291 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:allValuesFrom _:node1fqlpa3rgx292 .
+
+_:node1fqlpa3rgx292 a owl:Restriction ;
+	owl:someValuesFrom expression:Intention ;
+	owl:onProperty expression:intends .
+
+_:node1fqlpa3rgx293 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:allValuesFrom _:node1fqlpa3rgx294 .
+
+_:node1fqlpa3rgx294 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx295 ;
+	owl:onProperty expression:believes .
+
+_:node1fqlpa3rgx295 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx296 .
+
+_:node1fqlpa3rgx296 rdf:first expression:Belief ;
+	rdf:rest _:node1fqlpa3rgx298 .
+
+_:node1fqlpa3rgx297 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx299 ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx298 rdf:first _:node1fqlpa3rgx297 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx299 a owl:Restriction ;
+	owl:someValuesFrom expression:Expectation ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx3 a owl:Restriction ;
+	owl:someValuesFrom owl:Thing ;
+	owl:onProperty places:spatial_reference .
+
+_:node1fqlpa3rgx30 rdf:first action:Person ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx300 a owl:Restriction ;
+	owl:someValuesFrom norm:Obligation ;
+	owl:onProperty norm:allowed_by .
+
+_:node1fqlpa3rgx301 a owl:Restriction ;
+	owl:someValuesFrom norm:Disallowed ;
+	owl:onProperty norm:normatively_strictly_worse .
+
+_:node1fqlpa3rgx302 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:allValuesFrom _:node1fqlpa3rgx303 .
+
+_:node1fqlpa3rgx303 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx304 .
+
+_:node1fqlpa3rgx304 rdf:first action:Agent ;
+	rdf:rest _:node1fqlpa3rgx306 .
+
+_:node1fqlpa3rgx305 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx307 ;
+	owl:onProperty expression:observes .
+
+_:node1fqlpa3rgx306 rdf:first _:node1fqlpa3rgx305 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx307 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx308 .
+
+_:node1fqlpa3rgx308 rdf:first expression:Belief ;
+	rdf:rest _:node1fqlpa3rgx310 .
+
+_:node1fqlpa3rgx309 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx311 ;
+	owl:onProperty expression:qualifies .
+
+_:node1fqlpa3rgx31 rdf:first expression:Proposition ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx310 rdf:first _:node1fqlpa3rgx309 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx311 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx312 ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx312 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx313 .
+
+_:node1fqlpa3rgx313 rdf:first expression:Observation ;
+	rdf:rest _:node1fqlpa3rgx315 .
+
+_:node1fqlpa3rgx314 a owl:Restriction ;
+	owl:someValuesFrom action:Action ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx315 rdf:first _:node1fqlpa3rgx314 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx316 a owl:Restriction ;
+	owl:someValuesFrom norm:Prohibition ;
+	owl:onProperty norm:disallowed_by .
+
+_:node1fqlpa3rgx317 a owl:Restriction ;
+	owl:someValuesFrom norm:Allowed ;
+	owl:onProperty norm:normatively_strictly_better .
+
+_:node1fqlpa3rgx318 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx320 .
+
+_:node1fqlpa3rgx319 a owl:Restriction ;
+	owl:onProperty norm:allows ;
+	owl:allValuesFrom norm:Obliged .
+
+_:node1fqlpa3rgx32 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx34 .
+
+_:node1fqlpa3rgx320 rdf:first _:node1fqlpa3rgx319 ;
+	rdf:rest _:node1fqlpa3rgx322 .
+
+_:node1fqlpa3rgx321 a owl:Restriction ;
+	owl:someValuesFrom norm:Obliged ;
+	owl:onProperty norm:allows .
+
+_:node1fqlpa3rgx322 rdf:first _:node1fqlpa3rgx321 ;
+	rdf:rest _:node1fqlpa3rgx324 .
+
+_:node1fqlpa3rgx323 a owl:Restriction ;
+	owl:onProperty norm:disallows ;
+	owl:allValuesFrom norm:Disallowed .
+
+_:node1fqlpa3rgx324 rdf:first _:node1fqlpa3rgx323 ;
+	rdf:rest _:node1fqlpa3rgx326 .
+
+_:node1fqlpa3rgx325 a owl:Restriction ;
+	owl:someValuesFrom norm:Disallowed ;
+	owl:onProperty norm:disallows .
+
+_:node1fqlpa3rgx326 rdf:first _:node1fqlpa3rgx325 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx33 a owl:Restriction ;
+	owl:onProperty action:actor_in ;
+	owl:allValuesFrom action:Action .
+
+_:node1fqlpa3rgx34 rdf:first action:Agent ;
+	rdf:rest _:node1fqlpa3rgx42 .
+
+_:node1fqlpa3rgx35 a owl:Restriction ;
+	owl:onProperty ns3:plays ;
+	owl:allValuesFrom ns3:Role .
+
+_:node1fqlpa3rgx36 a owl:Restriction ;
+	owl:onProperty process:participant_in ;
+	owl:allValuesFrom process:Change .
+
+_:node1fqlpa3rgx37 a owl:Restriction ;
+	owl:someValuesFrom expression:Proposition ;
+	owl:onProperty expression:towards .
+
+_:node1fqlpa3rgx38 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom mereo:Composition .
+
+_:node1fqlpa3rgx39 a owl:Restriction ;
+	owl:someValuesFrom mereo:Part ;
+	owl:onProperty mereo:strict_part .
+
+_:node1fqlpa3rgx4 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom action:Person .
+
+_:node1fqlpa3rgx40 a owl:Restriction ;
+	owl:someValuesFrom places:Location_Complex ;
+	owl:onProperty places:location_complex .
+
+_:node1fqlpa3rgx41 a owl:Restriction ;
+	owl:someValuesFrom action:Organisation ;
+	owl:onProperty mereo:member_of .
+
+_:node1fqlpa3rgx42 rdf:first _:node1fqlpa3rgx41 ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx43 a owl:Restriction ;
+	owl:onProperty expression:towards ;
+	owl:allValuesFrom expression:Proposition .
+
+_:node1fqlpa3rgx44 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx48 .
+
+_:node1fqlpa3rgx45 a owl:Restriction ;
+	owl:onProperty mereo:member ;
+	owl:allValuesFrom _:node1fqlpa3rgx49 .
+
+_:node1fqlpa3rgx46 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx51 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx47 a owl:Restriction ;
+	owl:onProperty mereo:strict_part ;
+	owl:allValuesFrom mereo:Part .
+
+_:node1fqlpa3rgx48 rdf:first places:Absolute_Place ;
+	rdf:rest _:node1fqlpa3rgx50 .
+
+_:node1fqlpa3rgx49 a owl:Restriction ;
+	owl:someValuesFrom ns3:Organisation_Role ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx5 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx9 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx50 rdf:first places:Relative_Place ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx51 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx53 .
+
+_:node1fqlpa3rgx52 a owl:Restriction ;
+	owl:someValuesFrom action:Action ;
+	owl:onProperty action:actor_in .
+
+_:node1fqlpa3rgx53 rdf:first expression:Expression ;
+	rdf:rest _:node1fqlpa3rgx56 .
+
+_:node1fqlpa3rgx54 a owl:Restriction ;
+	owl:onProperty places:location_complex ;
+	owl:allValuesFrom places:Location_Complex .
+
+_:node1fqlpa3rgx55 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:held_by .
+
+_:node1fqlpa3rgx56 rdf:first mereo:Composition ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx57 a owl:Restriction ;
+	owl:onProperty expression:holds ;
+	owl:allValuesFrom ns1:Mental_Entity .
+
+_:node1fqlpa3rgx58 a owl:Restriction ;
+	owl:someValuesFrom mereo:Whole ;
+	owl:onProperty mereo:strict_part_of .
+
+_:node1fqlpa3rgx59 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx6 a owl:Restriction ;
+	owl:onProperty process:creation ;
+	owl:minCardinality "1"^^xsd:int .
+
+_:node1fqlpa3rgx60 a owl:Restriction ;
+	owl:onProperty mereo:strict_part_of ;
+	owl:allValuesFrom mereo:Whole .
+
+_:node1fqlpa3rgx61 a owl:Restriction ;
+	owl:onProperty expression:held_by ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx62 a owl:Restriction ;
+	owl:someValuesFrom ns4:Public_Body ;
+	owl:onProperty action:actor .
+
+_:node1fqlpa3rgx63 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx64 a owl:Restriction ;
+	owl:someValuesFrom action:Transaction ;
+	owl:onProperty mereo:strict_part_of .
+
+_:node1fqlpa3rgx65 a owl:Restriction ;
+	owl:someValuesFrom expression:Qualified ;
+	owl:onProperty expression:qualifies .
+
+_:node1fqlpa3rgx66 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom mereo:Atom .
+
+_:node1fqlpa3rgx67 a owl:Restriction ;
+	owl:onProperty mereo:strict_part ;
+	owl:cardinality "2"^^xsd:nonNegativeInteger .
+
+_:node1fqlpa3rgx68 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx70 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx69 a owl:Restriction ;
+	owl:onProperty expression:qualifies ;
+	owl:allValuesFrom expression:Qualified .
+
+_:node1fqlpa3rgx7 a owl:Restriction ;
+	owl:someValuesFrom action:Transaction ;
+	owl:onProperty mereo:strict_part_of .
+
+_:node1fqlpa3rgx70 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx72 .
+
+_:node1fqlpa3rgx71 a owl:Restriction ;
+	owl:someValuesFrom action:Creation ;
+	owl:onProperty process:result_of .
+
+_:node1fqlpa3rgx72 rdf:first expression:Expression ;
+	rdf:rest _:node1fqlpa3rgx73 .
+
+_:node1fqlpa3rgx73 rdf:first mereo:Atom ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx74 a owl:Restriction ;
+	owl:someValuesFrom expression:Expression ;
+	owl:onProperty expression:promises .
+
+_:node1fqlpa3rgx75 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:cardinality "1"^^xsd:int .
+
+_:node1fqlpa3rgx76 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx83 ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx77 a owl:Restriction ;
+	owl:onProperty action:actor ;
+	owl:allValuesFrom action:Agent .
+
+_:node1fqlpa3rgx78 a owl:Restriction ;
+	owl:onProperty expression:evaluates ;
+	owl:allValuesFrom expression:Evaluative_Proposition .
+
+_:node1fqlpa3rgx79 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom ns1:Mental_Object .
+
+_:node1fqlpa3rgx8 a owl:Restriction ;
+	owl:onProperty expression:evaluatively_comparable ;
+	owl:allValuesFrom expression:Evaluative_Proposition .
+
+_:node1fqlpa3rgx80 a owl:Restriction ;
+	owl:someValuesFrom ns1:Mental_Object ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx81 a owl:Restriction ;
+	owl:someValuesFrom expression:Evaluative_Proposition ;
+	owl:onProperty expression:evaluates .
+
+_:node1fqlpa3rgx82 a owl:Restriction ;
+	owl:onProperty mereo:direct_part ;
+	owl:cardinality "2"^^xsd:int .
+
+_:node1fqlpa3rgx83 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx85 .
+
+_:node1fqlpa3rgx84 a owl:Restriction ;
+	owl:onProperty mereo:direct_part ;
+	owl:allValuesFrom action:Action .
+
+_:node1fqlpa3rgx85 rdf:first ns2:Atom ;
+	rdf:rest _:node1fqlpa3rgx86 .
+
+_:node1fqlpa3rgx86 rdf:first ns2:Rule ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx87 a owl:Class ;
+	owl:unionOf _:node1fqlpa3rgx89 .
+
+_:node1fqlpa3rgx88 a owl:Restriction ;
+	owl:someValuesFrom owl:Thing ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx89 rdf:first ns4:Limited_Company ;
+	rdf:rest _:node1fqlpa3rgx90 .
+
+_:node1fqlpa3rgx9 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx25 .
+
+_:node1fqlpa3rgx90 rdf:first ns4:Public_Limited_Company ;
+	rdf:rest rdf:nil .
+
+_:node1fqlpa3rgx91 a owl:Restriction ;
+	owl:someValuesFrom ns2:Rule ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx92 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx93 ;
+	owl:onProperty ns3:played_by .
+
+_:node1fqlpa3rgx93 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx95 ;
+	owl:onProperty expression:attitude .
+
+_:node1fqlpa3rgx94 a owl:Restriction ;
+	owl:someValuesFrom ns2:Rule ;
+	owl:onProperty ns3:plays .
+
+_:node1fqlpa3rgx95 a owl:Restriction ;
+	owl:someValuesFrom action:Agent ;
+	owl:onProperty expression:observer .
+
+_:node1fqlpa3rgx96 a owl:Restriction ;
+	owl:someValuesFrom _:node1fqlpa3rgx99 ;
+	owl:onProperty process:creation .
+
+_:node1fqlpa3rgx97 a owl:Restriction ;
+	owl:onProperty ns3:played_by ;
+	owl:allValuesFrom _:node1fqlpa3rgx98 .
+
+_:node1fqlpa3rgx98 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx100 .
+
+_:node1fqlpa3rgx99 a owl:Class ;
+	owl:intersectionOf _:node1fqlpa3rgx101 .

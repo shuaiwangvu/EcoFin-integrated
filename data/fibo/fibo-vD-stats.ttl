@@ -1,0 +1,662 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix voidx: <http://rdfpro.fbk.eu/ontologies/voidx#> .
+
+<stats:Dataset> a void:Dataset ;
+	voidx:label "<stats:Dataset> (4075, 28128)" ;
+	void:entities "4075"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "28128"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "28122"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "4071"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#Ontology> voidx:label "owl:Ontology (1)" ;
+	voidx:example """<https://spec.edmcouncil.org/fibo/vocabulary/>
+    owl:imports <http://www.w3.org/2004/02/skos/core>;
+    rdf:type owl:Ontology;
+    rdfs:label \"FIBO SKOS Vocabulary\"@en.""" ;
+	voidx:globalStats <stats:Ontology> .
+
+<stats:Dataset> void:classPartition <stats:Ontology> .
+
+<stats:Ontology> a void:Dataset ;
+	voidx:label "<stats:Ontology> (1, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Ontology> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.0E0 .
+
+<http://www.w3.org/2004/02/skos/core#Concept> voidx:label "skos:Concept (4069)" ;
+	voidx:example """<https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue>
+    <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/MezzanineCDOTranche>;
+    <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/MortgageBackedSecurities/TrancheRatingAtIssue>;
+    rdf:type skos:Concept;
+    rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue>;
+    skos:inScheme <https://spec.edmcouncil.org/fibo/vocabulary/PropertyConcepts>;
+    skos:prefLabel \"rated at issue\"@en.""" ;
+	voidx:globalStats <stats:Concept> .
+
+<stats:Dataset> void:classPartition <stats:Concept> .
+
+<stats:Concept> a void:Dataset ;
+	voidx:label "<stats:Concept> (4069, C)" ;
+	void:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+	void:entities "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "28110"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "28110"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 6.553452936839518E0 .
+
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> voidx:label "skos:ConceptScheme (2)" ;
+	voidx:example """<https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts>
+    rdf:type skos:ConceptScheme;
+    rdfs:isDefinedBy \"concept scheme for concepts derived from ontology classes\"@en;
+    rdfs:label \"FIBO classes scheme\"@en.""" ;
+	voidx:globalStats <stats:ConceptScheme> .
+
+<stats:Dataset> void:classPartition <stats:ConceptScheme> .
+
+<stats:ConceptScheme> a void:Dataset ;
+	voidx:label "<stats:ConceptScheme> (2, C)" ;
+	void:class <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.0E0 .
+
+<http://www.w3.org/2002/07/owl#ObjectProperty> voidx:label "owl:ObjectProperty (2)" ;
+	voidx:example """<https://spec.edmcouncil.org/fibo/vocabulary/domainRelated>
+    rdf:type owl:ObjectProperty;
+    rdfs:isDefinedBy \"denotes an rdfs:domain relationship between concepts\"@en;
+    rdfs:label \"has in domain\"@en;
+    rdfs:subPropertyOf skos:related.""" ;
+	voidx:globalStats <stats:ObjectProperty> .
+
+<stats:Dataset> void:classPartition <stats:ObjectProperty> .
+
+<stats:ObjectProperty> a void:Dataset ;
+	voidx:label "<stats:ObjectProperty> (2, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.0E0 .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> voidx:label "rdf:type (4074, PF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/> rdf:type owl:Ontology .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue> rdf:type skos:Concept .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/DebtAndEquities/Guaranty/Guarantor> rdf:type skos:Concept .""" ;
+	voidx:globalStats <stats:type> .
+
+<stats:Dataset> void:propertyPartition <stats:type> .
+
+<stats:type> a void:Dataset ;
+	voidx:label "<stats:type> (4074, PF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4074"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4074"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4074"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "4074"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4074"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#definition> voidx:label "skos:definition (3401, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/FuturesAndForwards/FutureOnFuture> skos:definition \"futures contract whose underlying asset is at least one (other) futures contract\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Equities/EquityCFIClassificationIndividuals/PreferredVotingRedeemableExchangeableExtendableAdjustableIncomeRegisteredShare> skos:definition \"preferred share that confers exactly one...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/DebtAndEquities/Guaranty/Guarantor> skos:definition \"party that guarantees, endorses, or...\" .""" ;
+	voidx:globalStats <stats:definition> .
+
+<stats:Dataset> void:propertyPartition <stats:definition> .
+
+<stats:definition> a void:Dataset ;
+	voidx:label "<stats:definition> (3401, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#definition> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3396"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3401"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3401"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3396"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3372"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> (951, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/LOAN/LoanTypes/MortgageLoans/MortgageIndemnityGuarantor> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> \"SME Review notes 16 Sept: Guaranty - mortgage insurance e.g. insure up to 80% exposure. When you get into indemnification, then for instance if the product doesn't meet the investor's requirement such that if it doesn't get paid then the lender steps in and takes the hit for the loan - this is usually a precondition for securitizing (issuing) the loan in a pool. If the loan is not going to be sold on the secondary market there would be no need to indemnify that loan so this term would not apply. Indemnification is insurance for the investor, while the lender is the one providing that indemnification.\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/MezzanineCDOTranche> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> \"If there are defaults or the CDO's collateral otherwise underperforms, scheduled payments to mezzanine tranches take precedence over those to subordinated/equity tranches.\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/BE/Partnerships/Partnerships/Partnership> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> \"Partnerships exist in many countries...\" .""" ;
+	voidx:globalStats <stats:explanatoryNote> .
+
+<stats:Dataset> void:propertyPartition <stats:explanatoryNote> .
+
+<stats:explanatoryNote> a void:Dataset ;
+	voidx:label "<stats:explanatoryNote> (951, D)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/explanatoryNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "869"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "951"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "951"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "869"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "945"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> (158, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/BE/Partnerships/Partnerships/LimitedLiabilityPartnership> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> \"LLP\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Places/VirtualPlaces/TelephoneNumber> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> \"phone number\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Securities/SecuritiesIdentificationIndividuals/StockExchangeDailyOfficialListCode> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> \"SEDOL code\" .""" ;
+	voidx:globalStats <stats:abbreviation> .
+
+<stats:Dataset> void:propertyPartition <stats:abbreviation> .
+
+<stats:abbreviation> a void:Dataset ;
+	voidx:label "<stats:abbreviation> (158, D)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/abbreviation> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "153"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "158"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "158"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "153"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "153"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> voidx:label "skos:prefLabel (4071, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/undergoes> skos:prefLabel \"undergoes\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/ABARTNRegistryEntry> skos:prefLabel \"ABA RTN registry entry\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/FuturesAndForwards/FutureOnFuture> skos:prefLabel \"future on future\"@en .""" ;
+	voidx:globalStats <stats:prefLabel> .
+
+<stats:Dataset> void:propertyPartition <stats:prefLabel> .
+
+<stats:prefLabel> a void:Dataset ;
+	voidx:label "<stats:prefLabel> (4071, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4071"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4071"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4006"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#inScheme> voidx:label "skos:inScheme (4069, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/ABARTNRegistryEntry> skos:inScheme <https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/FuturesAndForwards/FutureOnFuture> skos:inScheme <https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Equities/EquityCFIClassificationIndividuals/PreferredVotingRedeemableExchangeableExtendableAdjustableIncomeRegisteredShare> skos:inScheme <https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts> .""" ;
+	voidx:globalStats <stats:inScheme> .
+
+<stats:Dataset> void:propertyPartition <stats:inScheme> .
+
+<stats:inScheme> a void:Dataset ;
+	voidx:label "<stats:inScheme> (4069, OF)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#inScheme> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4069"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#broader> voidx:label "skos:broader (4380, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Equities/EquityCFIClassificationIndividuals/PreferredVotingRedeemableExchangeableExtendableAdjustableIncomeRegisteredShare> skos:broader <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Equities/EquityInstruments/SingleVotingShare> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/DebtAndEquities/Guaranty/Guarantor> skos:broader <https://spec.edmcouncil.org/fibo/vocabulary/BE/OwnershipAndControl/ControlParties/DeJureControllingInterestParty> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/DebtAndEquities/Guaranty/Guarantor> skos:broader <https://spec.edmcouncil.org/fibo/vocabulary/FND/Agreements/Contracts/ContractThirdParty> .""" ;
+	voidx:globalStats <stats:broader> .
+
+<stats:Dataset> void:propertyPartition <stats:broader> .
+
+<stats:broader> a void:Dataset ;
+	voidx:label "<stats:broader> (4380, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#broader> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3206"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4380"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4380"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3206"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1046"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> voidx:label "<https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> (766, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/undergoes> <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/Undergoer> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue> <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/MezzanineCDOTranche> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/specifiesReverseTrigger> <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/JumpZTriggerEventReversal> .""" ;
+	voidx:globalStats <stats:domainRelated> .
+
+<stats:Dataset> void:propertyPartition <stats:domainRelated> .
+
+<stats:domainRelated> a void:Dataset ;
+	voidx:label "<stats:domainRelated> (766, O)" ;
+	void:property <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "762"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "766"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "766"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "762"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "417"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> voidx:label "<https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> (935, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/undergoes> <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/Situation> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue> <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/MortgageBackedSecurities/TrancheRatingAtIssue> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/specifiesReverseTrigger> <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/JumpZTriggerEvent> .""" ;
+	voidx:globalStats <stats:rangeRelated> .
+
+<stats:Dataset> void:propertyPartition <stats:rangeRelated> .
+
+<stats:rangeRelated> a void:Dataset ;
+	voidx:label "<stats:rangeRelated> (935, O)" ;
+	void:property <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "933"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "935"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "935"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "933"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "483"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#isDefinedBy> voidx:label "rdfs:isDefinedBy (4073, PFI)" ;
+	voidx:type <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts> rdfs:isDefinedBy \"concept scheme for concepts derived from ontology classes\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue> rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/ratedAtIssue> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/BE/Partnerships/Partnerships/Partnership> rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/BE/Partnerships/Partnerships/Partnership> .""" ;
+	voidx:globalStats <stats:isDefinedBy> .
+
+<stats:Dataset> void:propertyPartition <stats:isDefinedBy> .
+
+<stats:isDefinedBy> a void:Dataset ;
+	voidx:label "<stats:isDefinedBy> (4073, PFI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4073"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4073"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4073"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4073"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4073"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#label> voidx:label "rdfs:label (5, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/> rdfs:label \"FIBO SKOS Vocabulary\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/ClassConcepts> rdfs:label \"FIBO classes scheme\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/PropertyConcepts> rdfs:label \"FIBO property scheme\"@en .""" ;
+	voidx:globalStats <stats:label> .
+
+<stats:Dataset> void:propertyPartition <stats:label> .
+
+<stats:label> a void:Dataset ;
+	voidx:label "<stats:label> (5, DFI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#imports> voidx:label "owl:imports (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/> owl:imports <http://www.w3.org/2004/02/skos/core> .""" ;
+	voidx:globalStats <stats:imports> .
+
+<stats:Dataset> void:propertyPartition <stats:imports> .
+
+<stats:imports> a void:Dataset ;
+	voidx:label "<stats:imports> (1, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#imports> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> (559, P)" ;
+	voidx:type <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Utilities/Analytics/StatisticalPopulation> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> <http://stats.oecd.org/glossary/detail.asp?ID=2079> .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/ABARTNRegistryEntry> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> \"http://www.accuity.com/aba-registrar/\"^^xs:anyURI .
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/FuturesAndForwards/FinancialFuture> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> \"ISO 10962, Securities and related financial instruments - Classification of financial instruments (CFI) code, Fourth Edition, October 2019\"@en .""" ;
+	voidx:globalStats <stats:adaptedFrom> .
+
+<stats:Dataset> void:propertyPartition <stats:adaptedFrom> .
+
+<stats:adaptedFrom> a void:Dataset ;
+	voidx:label "<stats:adaptedFrom> (559, P)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/adaptedFrom> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "479"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "559"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "559"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "479"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "250"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#editorialNote> voidx:label "skos:editorialNote (139, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/MortgageBackedSecurities/TrancheRatingAtIssue> skos:editorialNote \"In the case of CDOs, senior and mezzanine tranches of a CDO issue are typically rated, with the former receiving ratings of A to AAA and the latter receiving ratings of B to BBB. The ratings reflect both the credit quality of underlying collateral as well as how much protection a given tranch is afforded by tranches that are subordinate to it. Review note: Remove this it's no different from an instrument.\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/CreditDerivatives/CreditDefaultSwaps/CreditDefaultSwapContract> skos:editorialNote \"Earlier draft definition: A swap instrument in which one party underwrites the risk of credit default of the other party or of an identified third party.\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/ExoticOptions/OptionStripContract> skos:editorialNote \"The defining fact is that it is a set of sequential options. So in principal this is a strip of any kind of option. Can you strip forwards? In principal, but usually you would have a Commodity Swap which would be a strip of Forwards. Other strips? Don't always buy a string of caplets and floorlets but buy an individual cap or floor. for IR Options These are always Caps or Floors, that is the option settlement takes the form of the difference between the Strike rate and the designated underlying (observable) rate on the stated dates. Review notes: caps and floors are always strips, but there are strips for other assets as well. SO: There are strips besides Options; There are Option Strips besides IR (Cap and Floor) ones. See eg. in France where you may have a strip of options where the strike is set at each rollover. Details to come by email. In this case it would be an asset option, specifically Equity.\"@en .""" ;
+	voidx:globalStats <stats:editorialNote> .
+
+<stats:Dataset> void:propertyPartition <stats:editorialNote> .
+
+<stats:editorialNote> a void:Dataset ;
+	voidx:label "<stats:editorialNote> (139, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#editorialNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "136"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "139"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "139"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "136"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "135"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> voidx:label "rdfs:subPropertyOf (2, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/domainRelated> rdfs:subPropertyOf skos:related .
+    <https://spec.edmcouncil.org/fibo/vocabulary/rangeRelated> rdfs:subPropertyOf skos:related .""" ;
+	voidx:globalStats <stats:subPropertyOf> .
+
+<stats:Dataset> void:propertyPartition <stats:subPropertyOf> .
+
+<stats:subPropertyOf> a void:Dataset ;
+	voidx:label "<stats:subPropertyOf> (2, OF)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#scopeNote> voidx:label "skos:scopeNote (27, DI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrumentIdentifier> skos:scopeNote \"Identifiers for financial instruments...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Places/Addresses/PhysicalAddress> skos:scopeNote \"An address may be used as an index to...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/BE/FunctionalEntities/Publishers/PublishingHouse> skos:scopeNote \"Publishing house in the sense intended...\" .""" ;
+	voidx:globalStats <stats:scopeNote> .
+
+<stats:Dataset> void:propertyPartition <stats:scopeNote> .
+
+<stats:scopeNote> a void:Dataset ;
+	voidx:label "<stats:scopeNote> (27, DI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#scopeNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "26"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "27"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "27"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "26"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "27"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#example> voidx:label "skos:example (149, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/ProductsAndServices/ClientsAndAccounts/CloseDate> skos:example \"account close date, transaction record...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> skos:example \"Examples of financial instruments...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/RegisteredCharityProgramNumber> skos:example \"000000000RR0001\" .""" ;
+	voidx:globalStats <stats:example> .
+
+<stats:Dataset> void:propertyPartition <stats:example> .
+
+<stats:example> a void:Dataset ;
+	voidx:label "<stats:example> (149, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#example> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "141"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "149"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "149"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "141"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "146"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> (290, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/OwnershipAndControl/Ownership/Asset> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> \"economic resource\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Relations/Relations/confers> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> \"invests with\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Debt/DebtInstruments/Strip> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> \"Separate Trading of Registered Interest and Principal of Securities\"@en .""" ;
+	voidx:globalStats <stats:synonym> .
+
+<stats:Dataset> void:propertyPartition <stats:synonym> .
+
+<stats:synonym> a void:Dataset ;
+	voidx:label "<stats:synonym> (290, D)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "217"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "290"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "290"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "217"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "288"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> (48, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Securities/SecuritiesIdentification/TickerSymbol> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> \"Ticker symbols are reusable, assigned to...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Parties/Parties/Situation> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> \"From a usage perspective, situations are...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/DatesAndTimes/FinancialDates/ExplicitDatePeriod> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> \"As with DatePeriod, any one of {start...\" .""" ;
+	voidx:globalStats <stats:usageNote> .
+
+<stats:Dataset> void:propertyPartition <stats:usageNote> .
+
+<stats:usageNote> a void:Dataset ;
+	voidx:label "<stats:usageNote> (48, D)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/usageNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "44"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "48"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "48"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "44"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "47"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> (18, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/DER/DerivativesContracts/DerivativesMasterAgreements/MasterAgreementRightToTerminationFollowingTerminationEvent> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> \"This specifies an event which is predefined in the Agreement as constituting a Termination Event, with the effect that this right (tro termination) is invoked by the occurrence of that event. That is the assumption modeled here. ISDA Master Agreement example text in full: Right to Terminate Following Termination Event. (i) Notice. If a Termination Event occurs, an Affected Party will, promptly upon becoming aware of it, notify the other party, specifying the nature of that Termination Event and each Affected Transaction and will also give such other information about that Termination Event as the other party may reasonably require. (ii) Transfer to Avoid Termination Event. If either an Illegality under Section 5(b)(i)(1) or a Tax Event occurs and there is only one Affected Party, or if a Tax Event Upon Merger occurs and the Burdened Party is the Affected Party, the Affected Party will, as a condition to its right to designate an Early Termination Date under Section 6(b)(iv), use all reasonable efforts (which will not require such party to incur a loss, excluding immaterial, incidental expenses) to transfer within 20 days after it gives notice under Section 6(b)(i) all its rights and obligations under this Agreement in respect of the Affected Transactions to another of its Offices or Affiliates so that such Termination Event ceases to exist. If the Affected Party is not able to make such a transfer it will give notice to the other party to that effect within such 20 day period, whereupon the other party may effect such a transfer within 30 days after the notice is given under Section 6(b)(i). Any such transfer by a party under this Section 6(b)(ii) will be subject to and conditional upon the prior written consent of the other party, which consent will not be withheld if such other party&rsquo;s policies in effect at such time would permit it to enter into transactions with the transferee on the terms proposed. (iii) Two Affected Parties. If an Illegality under Section 5(b)(i)(1) or a Tax Event occurs and there are two Affected Parties, each party will use all reasonable efforts to reach agreement within 30 days after notice thereof is given under Section 6(b)(i) on action to avoid that Termination Event. (iv) Right to Terminate. If:- (1) a transfer under Section 6(b)(ii) or an agreement under Section 6(b)(iii), as the case may be, has not been effected with respect to all Affected Transactions within 30 days after an Affected Party gives notice under Section 6(b)(i); or (2) an Illegality under Section 5(b)(i)(2), a Credit Event Upon Merger or an Additional Termination Event occurs, or a Tax Event Upon Merger occurs and the Burdened Party is not the Affected Party, either party in the case of an Illegality, the Burdened Party in the case of a Tax Event Upon Merger, any Affected Party in the case of a Tax Event or an Additional Termination Event if there is more than one Affected Party, or the party which is not the Affected Party in the case of a Credit Event Upon Merger or an Additional Termination Event if there is only one Affected Party may, by not more than 20 days notice to the other party and provided that the relevant Termination Event is then continuing, designate a day not earlier than the day such notice is effective as an Early Termination Date in respect of all Affected Transactions.\"@en .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Arrangements/IdentifiersAndIndices/Index> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> \"http://en.wikipedia.org/wiki/Index\"^^xs:anyURI .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Accounting/CurrencyAmount/Currency> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> \"Codes for the representation of...\" .""" ;
+	voidx:globalStats <stats:definitionOrigin> .
+
+<stats:Dataset> void:propertyPartition <stats:definitionOrigin> .
+
+<stats:definitionOrigin> a void:Dataset ;
+	voidx:label "<stats:definitionOrigin> (18, DF)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "11"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> (4, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/IND/EconomicIndicators/EconomicIndicators/CivilianLaborForceParticipationRate> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> \"civilian labor force ÷ civilian...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/IND/EconomicIndicators/EconomicIndicators/UnemploymentRate> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> \"unemployed population ÷ civilian labor...\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/IND/MarketIndices/BasketIndices/MarketCapitalization> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> \"number of shares outstanding x price per share\"@en .""" ;
+	voidx:globalStats <stats:actualExpression> .
+
+<stats:Dataset> void:propertyPartition <stats:actualExpression> .
+
+<stats:actualExpression> a void:Dataset ;
+	voidx:label "<stats:actualExpression> (4, DFI)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#altLabel> voidx:label "skos:altLabel (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Law/Jurisdiction/StatuteLaw> skos:altLabel \"statutory law\" .""" ;
+	voidx:globalStats <stats:altLabel> .
+
+<stats:Dataset> void:propertyPartition <stats:altLabel> .
+
+<stats:altLabel> a void:Dataset ;
+	voidx:label "<stats:altLabel> (1, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#altLabel> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> voidx:label "<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> (4, DI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Utilities/Analytics/StandardDeviation> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> \"σ\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Utilities/Analytics/Variance> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> \"μ2\" .
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Utilities/Analytics/Variance> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> \"σ2\" .""" ;
+	voidx:globalStats <stats:symbol> .
+
+<stats:Dataset> void:propertyPartition <stats:symbol> .
+
+<stats:symbol> a void:Dataset ;
+	voidx:label "<stats:symbol> (4, DI)" ;
+	void:property <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/symbol> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#note> voidx:label "skos:note (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Accounting/CurrencyAmount/CurrencyBasket> skos:note \"A currency basket functions as a...\" .""" ;
+	voidx:globalStats <stats:note> .
+
+<stats:Dataset> void:propertyPartition <stats:note> .
+
+<stats:note> a void:Dataset ;
+	voidx:label "<stats:note> (1, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#note> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#deprecated> voidx:label "owl:deprecated (2, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <https://spec.edmcouncil.org/fibo/vocabulary/FND/Accounting/AccountingEquity/representsAnInterestIn> owl:deprecated \"true\"^^xs:boolean .
+    <https://spec.edmcouncil.org/fibo/vocabulary/SEC/Securities/Pools/PoolEquity> owl:deprecated \"true\"^^xs:boolean .""" ;
+	voidx:globalStats <stats:deprecated> .
+
+<stats:Dataset> void:propertyPartition <stats:deprecated> .
+
+<stats:deprecated> a void:Dataset ;
+	voidx:label "<stats:deprecated> (2, DF)" ;
+	void:property <http://www.w3.org/2002/07/owl#deprecated> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:openSearchDescription voidx:label "void:openSearchDescription" .
+
+void:classes voidx:label "void:classes" .
+
+void:documents voidx:label "void:documents" .
+
+void:TechnicalFeature voidx:label "void:TechnicalFeature" .
+
+void:uriLookupEndpoint voidx:label "void:uriLookupEndpoint" .
+
+void:sparqlEndpoint voidx:label "void:sparqlEndpoint" .
+
+void:dataDump voidx:label "void:dataDump" .
+
+void:triples voidx:label "void:triples" .
+
+void:linkPredicate voidx:label "void:linkPredicate" .
+
+void:uriRegexPattern voidx:label "void:uriRegexPattern" .
+
+void:uriSpace voidx:label "void:uriSpace" .
+
+void:properties voidx:label "void:properties" .
+
+void:subset voidx:label "void:subset" .
+
+void:classPartition voidx:label "void:classPartition" .
+
+void:distinctObjects voidx:label "void:distinctObjects" .
+
+void:propertyPartition voidx:label "void:propertyPartition" .
+
+void:inDataset voidx:label "void:inDataset" .
+
+void:Dataset voidx:label "void:Dataset" .
+
+void:objectsTarget voidx:label "void:objectsTarget" .
+
+void:property voidx:label "void:property" .
+
+void:DatasetDescription voidx:label "void:DatasetDescription" .
+
+void:feature voidx:label "void:feature" .
+
+void:class voidx:label "void:class" .
+
+void:subjectsTarget voidx:label "void:subjectsTarget" .
+
+void:target voidx:label "void:target" .
+
+void:entities voidx:label "void:entities" .
+
+void:Linkset voidx:label "void:Linkset" .
+
+void:distinctSubjects voidx:label "void:distinctSubjects" .
+
+void:exampleResource voidx:label "void:exampleResource" .
+
+void:rootResource voidx:label "void:rootResource" .
+
+void:vocabulary voidx:label "void:vocabulary" .
+
+voidx:globalStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#globalStats>" .
+
+voidx:source voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#source>" .
+
+voidx:type voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#type>" .
+
+voidx:example voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#example>" .
+
+voidx:sourceStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sourceStats>" .
+
+voidx:tboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#tboxTriples>" .
+
+voidx:averageProperties voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#averageProperties>" .
+
+voidx:label voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#label>" .
+
+voidx:sameAsTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sameAsTriples>" .
+
+voidx:typeTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#typeTriples>" .
+
+voidx:aboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#aboxTriples>" .

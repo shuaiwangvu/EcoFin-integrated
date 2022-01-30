@@ -1,0 +1,28 @@
+# baseURI: http://bankontology.com/br/ref/Bank_Legal_Reference.ttl
+# imports: http://finregont.com/fro/ref/AnnotationProperty.ttl
+# prefix: br-leg-ref
+
+@prefix AnnotationProperty: <http://finregont.com/fro/ref/AnnotationProperty.ttl#> .
+@prefix br-leg-ref: <http://bankontology.com/br/ref/Bank_Legal_Reference.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bankontology.com/br/ref/Bank_Legal_Reference.ttl>
+  rdf:type owl:Ontology ;
+  <http://purl.org/dc/terms/license> "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:string ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/author> "Jurgen Ziemer"^^xsd:string ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "The ontology defines a root class for the Call Report, FFIEC 031."^^xsd:string ;
+  owl:imports <http://finregont.com/fro/ref/AnnotationProperty.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  <http://www.w3.org/2004/02/skos/core#definition> "An ontology to define and includeLegal Reference classes for the Bank Regulation Ontology"^^xsd:string ;
+.
+br-leg-ref:Form_FFIEC_031
+  rdf:type owl:Class ;
+  rdfs:label "Form FFIEC 031"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/ref/LegalReference.ttl#Legal_Form> ;
+  <http://www.w3.org/2004/02/skos/core#definition> "A subclass of Legal Form to hold the structure of Federal Financial Institutions Examination Council's (FFIEC) Consolidated Reports of Condition and Income for a Bank with Domestic and Foreign Offices."^^xsd:string ;
+.

@@ -1,0 +1,1114 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix voidx: <http://rdfpro.fbk.eu/ontologies/voidx#> .
+
+<stats:Dataset> a void:Dataset ;
+	voidx:label "<stats:Dataset> (3955, 16434)" ;
+	void:entities "3955"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "16434"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "143"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "16291"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "7866"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#Ontology> voidx:label "owl:Ontology (4)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/AboutFIGI-1.0/>
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> \"http://www.omg.org/spec/ODM/\"^^xs:anyURI;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> \"http://www.w3.org/standards/techs/owl#w3c_all\"^^xs:anyURI;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> \"Copyright (c) 2015 Bloomberg LP...\";
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> \"figi-spc-1.0\";
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> \"AboutFIGI-1.0.rdf\";
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> \"2015-05-18T18:00:00\"^^xs:dateTime;
+    dct:license \"http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense\"^^xs:anyURI;
+    owl:imports <http://www.omg.org/spec/FIGI/AboutFIGI/>;
+    owl:imports <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/>;
+    owl:imports <http://www.omg.org/spec/FIGI/PricingSources/>;
+    owl:imports <http://www.omg.org/spec/FIGI/SecurityTypes/>;
+    owl:versionIRI <http://www.omg.org/spec/FIGI/20150501/AboutFIGI-1.0/>;
+    rdf:type owl:Ontology;
+    rdfs:label \"About the Financial Instrument Global...\".""" ;
+	voidx:globalStats <stats:Ontology> .
+
+<stats:Dataset> void:classPartition <stats:Ontology> .
+
+<stats:Ontology> a void:Dataset ;
+	voidx:label "<stats:Ontology> (4, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Ontology> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "59"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "43"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 1.225E1 .
+
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> voidx:label "<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> (3531)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/PricingSources/DLAM>
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"DLAM\";
+    rdf:type <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource>;
+    rdf:type owl:NamedIndividual;
+    skos:prefLabel \"dai-ichi life asset\".""" ;
+	voidx:globalStats <stats:PricingSource> .
+
+<stats:Dataset> void:classPartition <stats:PricingSource> .
+
+<stats:PricingSource> a void:Dataset ;
+	voidx:label "<stats:PricingSource> (3531, C)" ;
+	void:class <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> ;
+	void:entities "3531"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "14187"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "14187"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "7062"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.0E0 .
+
+<http://www.w3.org/2002/07/owl#NamedIndividual> voidx:label "owl:NamedIndividual (3933)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/PricingSources/BAGR>
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"BAGR\";
+    rdf:type <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource>;
+    rdf:type owl:NamedIndividual;
+    skos:prefLabel \"jsc belagroprombank\".""" ;
+	voidx:globalStats <stats:NamedIndividual> .
+
+<stats:Dataset> void:classPartition <stats:NamedIndividual> .
+
+<stats:NamedIndividual> a void:Dataset ;
+	voidx:label "<stats:NamedIndividual> (3933, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+	void:entities "3933"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "16203"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "16203"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "7866"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.1037376048817698E0 .
+
+<http://www.w3.org/2002/07/owl#Restriction> voidx:label "owl:Restriction (0)" ;
+	voidx:globalStats <stats:Restriction> .
+
+<stats:Dataset> void:classPartition <stats:Restriction> .
+
+<stats:Restriction> a void:Dataset ;
+	voidx:label "<stats:Restriction> (0, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Restriction> ;
+	void:triples "59"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "59"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> voidx:label "<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> (401)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/SecurityTypes/shortTermBn>
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"SHORT TERM BN\";
+    rdf:type <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType>;
+    skos:definition \"Short Term Bank Notes\";
+    skos:prefLabel \"short term bn\".""" ;
+	voidx:globalStats <stats:SecurityType> .
+
+<stats:Dataset> void:classPartition <stats:SecurityType> .
+
+<stats:SecurityType> a void:Dataset ;
+	voidx:label "<stats:SecurityType> (401, C)" ;
+	void:class <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> ;
+	void:entities "401"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2005"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2005"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "802"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.0E0 .
+
+<http://www.w3.org/2000/01/rdf-schema#Datatype> voidx:label "rdfs:Datatype (0)" ;
+	voidx:globalStats <stats:Datatype> .
+
+<stats:Dataset> void:classPartition <stats:Datatype> .
+
+<stats:Datatype> a void:Dataset ;
+	voidx:label "<stats:Datatype> (0, C)" ;
+	void:class <http://www.w3.org/2000/01/rdf-schema#Datatype> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#Class> voidx:label "owl:Class (12)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource>
+    rdf:type owl:Class;
+    rdfs:label \"pricing source\";
+    rdfs:subClassOf <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code>;
+    skos:definition \"the pricing source for a security\".""" ;
+	voidx:globalStats <stats:Class> .
+
+<stats:Dataset> void:classPartition <stats:Class> .
+
+<stats:Class> a void:Dataset ;
+	voidx:label "<stats:Class> (12, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Class> ;
+	void:entities "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "64"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "35"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 5.0E0 .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/SpecificationVersion> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/SpecificationVersion> (1)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0>
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/addressForComments> \"http://www.omg.org/issues/\"^^xs:anyURI;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/isVersionOf> <http://www.omg.org/spec/FIGI/AboutFIGI/FIGISpecification>;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> \"2015-05-18T18:00:00\"^^xs:dateTime;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/responsibleTaskForce> \"http://fdtf.omg.org/\"^^xs:anyURI;
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionStatus> \"Formal Specification\";
+    <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionURL> \"http://www.omg.org/spec/FIGI/1.0/\"^^xs:anyURI;
+    rdf:type <http://www.omg.org/techprocess/ab/SpecificationMetadata/SpecificationVersion>;
+    rdfs:label \"Financial Instrument Global Identifier...\";
+    skos:definition \"individual representing metadata about...\";
+    skos:historyNote \"Revisions to the FIGI specification are...\".""" ;
+	voidx:globalStats <stats:SpecificationVersion> .
+
+<stats:Dataset> void:classPartition <stats:SpecificationVersion> .
+
+<stats:SpecificationVersion> a void:Dataset ;
+	voidx:label "<stats:SpecificationVersion> (1, C)" ;
+	void:class <http://www.omg.org/techprocess/ab/SpecificationMetadata/SpecificationVersion> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "11"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "11"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 1.0E1 .
+
+<http://www.w3.org/2002/07/owl#ObjectProperty> voidx:label "owl:ObjectProperty (5)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies>
+    dct:source \"Merriam-Webster Dictionary\";
+    rdf:type owl:ObjectProperty;
+    rdfs:label \"classifies\";
+    skos:definition \"arranges in classes; assigns to a...\".""" ;
+	voidx:globalStats <stats:ObjectProperty> .
+
+<stats:Dataset> void:classPartition <stats:ObjectProperty> .
+
+<stats:ObjectProperty> a void:Dataset ;
+	voidx:label "<stats:ObjectProperty> (5, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	void:entities "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "20"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "11"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.6E0 .
+
+<http://www.w3.org/2002/07/owl#DatatypeProperty> voidx:label "owl:DatatypeProperty (1)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier>
+    dct:source \"https://en.wikipedia.org/wiki/Unique_identifier\"^^xs:anyURI;
+    rdf:type owl:DatatypeProperty;
+    rdfs:label \"has unique text identifier\";
+    rdfs:range xs:string;
+    skos:definition \"links an entity to a unique identifier...\".""" ;
+	voidx:globalStats <stats:DatatypeProperty> .
+
+<stats:Dataset> void:classPartition <stats:DatatypeProperty> .
+
+<stats:DatatypeProperty> a void:Dataset ;
+	voidx:label "<stats:DatatypeProperty> (1, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 5.0E0 .
+
+<http://www.w3.org/2002/07/owl#FunctionalProperty> voidx:label "owl:FunctionalProperty (1)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies>
+    rdf:type owl:FunctionalProperty;
+    rdfs:label \"identifies\";
+    skos:definition \"relates an identifier to the entity that...\".""" ;
+	voidx:globalStats <stats:FunctionalProperty> .
+
+<stats:Dataset> void:classPartition <stats:FunctionalProperty> .
+
+<stats:FunctionalProperty> a void:Dataset ;
+	voidx:label "<stats:FunctionalProperty> (1, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.0E0 .
+
+<http://www.w3.org/2002/07/owl#IrreflexiveProperty> voidx:label "owl:IrreflexiveProperty (1)" ;
+	voidx:example """<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy>
+    owl:inverseOf <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies>;
+    rdf:type owl:IrreflexiveProperty;
+    rdfs:label \"is classified by\";
+    skos:definition \"indicates the category or classifier...\".""" ;
+	voidx:globalStats <stats:IrreflexiveProperty> .
+
+<stats:Dataset> void:classPartition <stats:IrreflexiveProperty> .
+
+<stats:IrreflexiveProperty> a void:Dataset ;
+	voidx:label "<stats:IrreflexiveProperty> (1, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#IrreflexiveProperty> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.0E0 .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> voidx:label "rdf:type (7909, P)" ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> rdf:type owl:Ontology .
+    <http://www.omg.org/spec/FIGI/PricingSources/DLAM> rdf:type <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/PricingSource> .
+    <http://www.omg.org/spec/FIGI/PricingSources/BAGR> rdf:type owl:NamedIndividual .""" ;
+	voidx:globalStats <stats:type> .
+
+<stats:Dataset> void:propertyPartition <stats:type> .
+
+<stats:type> a void:Dataset ;
+	voidx:label "<stats:type> (7909, P)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3955"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "7909"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "7909"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "7909"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3974"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> voidx:label "skos:prefLabel (3995, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/PricingSources/BAGJ> skos:prefLabel \"bank artha graha\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/DLAM> skos:prefLabel \"dai-ichi life asset\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/DLCY> skos:prefLabel \"delta lloyd and cyrte\" .""" ;
+	voidx:globalStats <stats:prefLabel> .
+
+<stats:Dataset> void:propertyPartition <stats:prefLabel> .
+
+<stats:prefLabel> a void:Dataset ;
+	voidx:label "<stats:prefLabel> (3995, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3995"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3995"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3774"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#onProperty> voidx:label "owl:onProperty (15, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:onProperty> .
+
+<stats:Dataset> void:propertyPartition <stats:onProperty> .
+
+<stats:onProperty> a void:Dataset ;
+	voidx:label "<stats:onProperty> (15, OF)" ;
+	void:property <http://www.w3.org/2002/07/owl#onProperty> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> voidx:label "<http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> (3932, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/PricingSources/BAGJ> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"BAGJ\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/DLAM> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"DLAM\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/DLCY> <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> \"DLCY\" .""" ;
+	voidx:globalStats <stats:hasUniqueTextIdentifier> .
+
+<stats:Dataset> void:propertyPartition <stats:hasUniqueTextIdentifier> .
+
+<stats:hasUniqueTextIdentifier> a void:Dataset ;
+	voidx:label "<stats:hasUniqueTextIdentifier> (3932, DF)" ;
+	void:property <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3932"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3930"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#label> voidx:label "rdfs:label (23, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> rdfs:label \"About the Financial Instrument Global...\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> rdfs:label \"FIGI Security Types Vocabulary\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> rdfs:label \"FIGI Pricing Sources Vocabulary\" .""" ;
+	voidx:globalStats <stats:label> .
+
+<stats:Dataset> void:propertyPartition <stats:label> .
+
+<stats:label> a void:Dataset ;
+	voidx:label "<stats:label> (23, DFI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "23"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "23"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "23"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "23"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "23"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#onClass> voidx:label "owl:onClass (12, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:onClass> .
+
+<stats:Dataset> void:propertyPartition <stats:onClass> .
+
+<stats:onClass> a void:Dataset ;
+	voidx:label "<stats:onClass> (12, OF)" ;
+	void:property <http://www.w3.org/2002/07/owl#onClass> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "11"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/license> voidx:label "dct:license (4, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> dct:license \"http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> dct:license \"http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/PricingSources/> dct:license \"http://www.omg.org/techprocess/ab/SpecificationMetadata/MITLicense\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:license> .
+
+<stats:Dataset> void:propertyPartition <stats:license> .
+
+<stats:license> a void:Dataset ;
+	voidx:label "<stats:license> (4, DF)" ;
+	void:property <http://purl.org/dc/terms/license> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#versionIRI> voidx:label "owl:versionIRI (4, PFI)" ;
+	voidx:type <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> owl:versionIRI \"http://www.omg.org/spec/FIGI/20150501/SecurityTypes/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/PricingSources/> owl:versionIRI \"http://www.omg.org/spec/FIGI/20150501/PricingSources/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> owl:versionIRI <http://www.omg.org/spec/FIGI/20150501/GlobalInstrumentIdentifiers/> .""" ;
+	voidx:globalStats <stats:versionIRI> .
+
+<stats:Dataset> void:propertyPartition <stats:versionIRI> .
+
+<stats:versionIRI> a void:Dataset ;
+	voidx:label "<stats:versionIRI> (4, PFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#versionIRI> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#minQualifiedCardinality> voidx:label "owl:minQualifiedCardinality (6, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:minQualifiedCardinality> .
+
+<stats:Dataset> void:propertyPartition <stats:minQualifiedCardinality> .
+
+<stats:minQualifiedCardinality> a void:Dataset ;
+	voidx:label "<stats:minQualifiedCardinality> (6, DF)" ;
+	void:property <http://www.w3.org/2002/07/owl#minQualifiedCardinality> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#imports> voidx:label "owl:imports (8, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> owl:imports <http://www.omg.org/spec/FIGI/SecurityTypes/> .
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> owl:imports <http://www.omg.org/spec/FIGI/PricingSources/> .
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> owl:imports <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> .""" ;
+	voidx:globalStats <stats:imports> .
+
+<stats:Dataset> void:propertyPartition <stats:imports> .
+
+<stats:imports> a void:Dataset ;
+	voidx:label "<stats:imports> (8, O)" ;
+	void:property <http://www.w3.org/2002/07/owl#imports> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> voidx:label "rdf:first (10, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:first> .
+
+<stats:Dataset> void:propertyPartition <stats:first> .
+
+<stats:first> a void:Dataset ;
+	voidx:label "<stats:first> (10, OF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "9"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> (4, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> \"Copyright (c) 2015 Bloomberg LP...\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> \"Copyright (c) 2013-2015 Bloomberg LP...\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> \"Copyright (c) 2013-2015 Bloomberg LP...\" .""" ;
+	voidx:globalStats <stats:copyright> .
+
+<stats:Dataset> void:propertyPartition <stats:copyright> .
+
+<stats:copyright> a void:Dataset ;
+	voidx:label "<stats:copyright> (4, DF)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> voidx:label "rdf:rest (10, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:rest> .
+
+<stats:Dataset> void:propertyPartition <stats:rest> .
+
+<stats:rest> a void:Dataset ;
+	voidx:label "<stats:rest> (10, OF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "7"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> (4, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> \"AboutFIGI-1.0.rdf\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> \"SecurityTypes.rdf\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> \"PricingSources.rdf\" .""" ;
+	voidx:globalStats <stats:filename> .
+
+<stats:Dataset> void:propertyPartition <stats:filename> .
+
+<stats:filename> a void:Dataset ;
+	voidx:label "<stats:filename> (4, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> (4, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> \"figi-spc-1.0\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> \"figi-st\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> \"figi-ps\" .""" ;
+	voidx:globalStats <stats:fileAbbreviation> .
+
+<stats:Dataset> void:propertyPartition <stats:fileAbbreviation> .
+
+<stats:fileAbbreviation> a void:Dataset ;
+	voidx:label "<stats:fileAbbreviation> (4, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#maxQualifiedCardinality> voidx:label "owl:maxQualifiedCardinality (3, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:maxQualifiedCardinality> .
+
+<stats:Dataset> void:propertyPartition <stats:maxQualifiedCardinality> .
+
+<stats:maxQualifiedCardinality> a void:Dataset ;
+	voidx:label "<stats:maxQualifiedCardinality> (3, DF)" ;
+	void:property <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> (2, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> \"2015-05-18T18:00:00\"^^xs:dateTime .
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> \"2015-05-18T18:00:00\"^^xs:dateTime .""" ;
+	voidx:globalStats <stats:publicationDate> .
+
+<stats:Dataset> void:propertyPartition <stats:publicationDate> .
+
+<stats:publicationDate> a void:Dataset ;
+	voidx:label "<stats:publicationDate> (2, DF)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/publicationDate> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> (8, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> \"http://www.omg.org/spec/ODM/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> \"http://www.w3.org/standards/techs/owl#w3c_all\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> \"http://www.omg.org/spec/ODM/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:contentLanguage> .
+
+<stats:Dataset> void:propertyPartition <stats:contentLanguage> .
+
+<stats:contentLanguage> a void:Dataset ;
+	voidx:label "<stats:contentLanguage> (8, D)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#allValuesFrom> voidx:label "owl:allValuesFrom (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:allValuesFrom> .
+
+<stats:Dataset> void:propertyPartition <stats:allValuesFrom> .
+
+<stats:allValuesFrom> a void:Dataset ;
+	voidx:label "<stats:allValuesFrom> (1, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#allValuesFrom> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#changeNote> voidx:label "skos:changeNote (3, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> skos:changeNote \"The...\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> skos:changeNote \"The...\" .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> skos:changeNote \"The...\" .""" ;
+	voidx:globalStats <stats:changeNote> .
+
+<stats:Dataset> void:propertyPartition <stats:changeNote> .
+
+<stats:changeNote> a void:Dataset ;
+	voidx:label "<stats:changeNote> (3, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#changeNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#definition> voidx:label "skos:definition (420, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/shortTermBn> skos:definition \"Short Term Bank Notes\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/shortTermDn> skos:definition \"Short Term Deposit Notes- Short-term...\" .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/singaporeCP> skos:definition \"Singapore Commercial Paper\" .""" ;
+	voidx:globalStats <stats:definition> .
+
+<stats:Dataset> void:propertyPartition <stats:definition> .
+
+<stats:definition> a void:Dataset ;
+	voidx:label "<stats:definition> (420, DF)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#definition> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "420"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "420"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "420"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "420"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "410"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> voidx:label "rdfs:seeAlso (3, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> rdfs:seeAlso \"http://www.omg.org/spec/FIGI/AboutFIGI/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/PricingSources/> rdfs:seeAlso \"http://www.omg.org/spec/FIGI/AboutFIGI/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> rdfs:seeAlso \"http://www.omg.org/spec/FIGI/AboutFIGI/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:seeAlso> .
+
+<stats:Dataset> void:propertyPartition <stats:seeAlso> .
+
+<stats:seeAlso> a void:Dataset ;
+	voidx:label "<stats:seeAlso> (3, DF)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#seeAlso> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> (3, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> \"The Financial Instrument Global...\" .
+    <http://www.omg.org/spec/FIGI/PricingSources/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> \"The Financial Instrument Global...\" .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> \"The Financial Instrument Global...\" .""" ;
+	voidx:globalStats <stats:fileAbstract> .
+
+<stats:Dataset> void:propertyPartition <stats:fileAbstract> .
+
+<stats:fileAbstract> a void:Dataset ;
+	voidx:label "<stats:fileAbstract> (3, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> (5, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> \"http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/SecurityTypes/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> \"http://www.omg.org/techprocess/ab/SpecificationMetadata/\"^^xs:anyURI .
+    <http://www.omg.org/spec/FIGI/PricingSources/> <http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> \"http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:dependsOn> .
+
+<stats:Dataset> void:propertyPartition <stats:dependsOn> .
+
+<stats:dependsOn> a void:Dataset ;
+	voidx:label "<stats:dependsOn> (5, D)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#onDatatype> voidx:label "owl:onDatatype (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:onDatatype> .
+
+<stats:Dataset> void:propertyPartition <stats:onDatatype> .
+
+<stats:onDatatype> a void:Dataset ;
+	voidx:label "<stats:onDatatype> (1, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#onDatatype> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#withRestrictions> voidx:label "owl:withRestrictions (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:withRestrictions> .
+
+<stats:Dataset> void:propertyPartition <stats:withRestrictions> .
+
+<stats:withRestrictions> a void:Dataset ;
+	voidx:label "<stats:withRestrictions> (1, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#withRestrictions> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2001/XMLSchema#pattern> voidx:label "xs:pattern (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:pattern> .
+
+<stats:Dataset> void:propertyPartition <stats:pattern> .
+
+<stats:pattern> a void:Dataset ;
+	voidx:label "<stats:pattern> (1, DFI)" ;
+	void:property <http://www.w3.org/2001/XMLSchema#pattern> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#qualifiedCardinality> voidx:label "owl:qualifiedCardinality (5, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:qualifiedCardinality> .
+
+<stats:Dataset> void:propertyPartition <stats:qualifiedCardinality> .
+
+<stats:qualifiedCardinality> a void:Dataset ;
+	voidx:label "<stats:qualifiedCardinality> (5, DF)" ;
+	void:property <http://www.w3.org/2002/07/owl#qualifiedCardinality> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#intersectionOf> voidx:label "owl:intersectionOf (3, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:intersectionOf> .
+
+<stats:Dataset> void:propertyPartition <stats:intersectionOf> .
+
+<stats:intersectionOf> a void:Dataset ;
+	voidx:label "<stats:intersectionOf> (3, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#intersectionOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#onDataRange> voidx:label "owl:onDataRange (2, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:onDataRange> .
+
+<stats:Dataset> void:propertyPartition <stats:onDataRange> .
+
+<stats:onDataRange> a void:Dataset ;
+	voidx:label "<stats:onDataRange> (2, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#onDataRange> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#historyNote> voidx:label "skos:historyNote (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> skos:historyNote \"Revisions to the FIGI specification are...\" .""" ;
+	voidx:globalStats <stats:historyNote> .
+
+<stats:Dataset> void:propertyPartition <stats:historyNote> .
+
+<stats:historyNote> a void:Dataset ;
+	voidx:label "<stats:historyNote> (1, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#historyNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionURL> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionURL> (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionURL> \"http://www.omg.org/spec/FIGI/1.0/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:specificationVersionURL> .
+
+<stats:Dataset> void:propertyPartition <stats:specificationVersionURL> .
+
+<stats:specificationVersionURL> a void:Dataset ;
+	voidx:label "<stats:specificationVersionURL> (1, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionURL> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionStatus> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionStatus> (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionStatus> \"Formal Specification\" .""" ;
+	voidx:globalStats <stats:specificationVersionStatus> .
+
+<stats:Dataset> void:propertyPartition <stats:specificationVersionStatus> .
+
+<stats:specificationVersionStatus> a void:Dataset ;
+	voidx:label "<stats:specificationVersionStatus> (1, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/specificationVersionStatus> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/isVersionOf> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/isVersionOf> (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/isVersionOf> <http://www.omg.org/spec/FIGI/AboutFIGI/FIGISpecification> .""" ;
+	voidx:globalStats <stats:isVersionOf> .
+
+<stats:Dataset> void:propertyPartition <stats:isVersionOf> .
+
+<stats:isVersionOf> a void:Dataset ;
+	voidx:label "<stats:isVersionOf> (1, OFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/isVersionOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/responsibleTaskForce> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/responsibleTaskForce> (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/responsibleTaskForce> \"http://fdtf.omg.org/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:responsibleTaskForce> .
+
+<stats:Dataset> void:propertyPartition <stats:responsibleTaskForce> .
+
+<stats:responsibleTaskForce> a void:Dataset ;
+	voidx:label "<stats:responsibleTaskForce> (1, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/responsibleTaskForce> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/addressForComments> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/addressForComments> (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/AboutFIGI-1.0/FIGISpecification-1.0> <http://www.omg.org/techprocess/ab/SpecificationMetadata/addressForComments> \"http://www.omg.org/issues/\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:addressForComments> .
+
+<stats:Dataset> void:propertyPartition <stats:addressForComments> .
+
+<stats:addressForComments> a void:Dataset ;
+	voidx:label "<stats:addressForComments> (1, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/addressForComments> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/source> voidx:label "dct:source (2, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> dct:source \"Merriam-Webster Dictionary\" .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> dct:source \"https://en.wikipedia.org/wiki/Unique_identifier\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:source> .
+
+<stats:Dataset> void:propertyPartition <stats:source> .
+
+<stats:source> a void:Dataset ;
+	voidx:label "<stats:source> (2, DFI)" ;
+	void:property <http://purl.org/dc/terms/source> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#subClassOf> voidx:label "rdfs:subClassOf (16, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/SecurityType> rdfs:subClassOf _:node1fqlq18m7x29 .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> rdfs:subClassOf _:node1fqlq18m7x1 .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> rdfs:subClassOf _:node1fqlq18m7x2 .""" ;
+	voidx:globalStats <stats:subClassOf> .
+
+<stats:Dataset> void:propertyPartition <stats:subClassOf> .
+
+<stats:subClassOf> a void:Dataset ;
+	voidx:label "<stats:subClassOf> (16, O)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "13"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#range> voidx:label "rdfs:range (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/hasUniqueTextIdentifier> rdfs:range xs:string .""" ;
+	voidx:globalStats <stats:range> .
+
+<stats:Dataset> void:propertyPartition <stats:range> .
+
+<stats:range> a void:Dataset ;
+	voidx:label "<stats:range> (1, OFI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#range> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#inverseOf> voidx:label "owl:inverseOf (2, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isClassifiedBy> owl:inverseOf <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/classifies> .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/isIdentifiedBy> owl:inverseOf <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/identifies> .""" ;
+	voidx:globalStats <stats:inverseOf> .
+
+<stats:Dataset> void:propertyPartition <stats:inverseOf> .
+
+<stats:inverseOf> a void:Dataset ;
+	voidx:label "<stats:inverseOf> (2, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#inverseOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> voidx:label "<http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> (2, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Code> <http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> \"ISO/IEC 11179-3, Information technology...\" .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/Identifier> <http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> \"http://en.wikipedia.org/wiki/Identifier\"^^xs:anyURI .""" ;
+	voidx:globalStats <stats:directSource> .
+
+<stats:Dataset> void:propertyPartition <stats:directSource> .
+
+<stats:directSource> a void:Dataset ;
+	voidx:label "<stats:directSource> (2, DFI)" ;
+	void:property <http://www.omg.org/techprocess/ab/SpecificationMetadata/directSource> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#example> voidx:label "skos:example (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/CompositeGlobalIdentifier> skos:example \"AAPL common stock, US Composite\" .""" ;
+	voidx:globalStats <stats:example> .
+
+<stats:Dataset> void:propertyPartition <stats:example> .
+
+<stats:example> a void:Dataset ;
+	voidx:label "<stats:example> (1, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#example> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#scopeNote> voidx:label "skos:scopeNote (2, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> skos:scopeNote \"Note that not all versions of the...\" .
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrument> skos:scopeNote \"Financial instruments can be categorized...\" .""" ;
+	voidx:globalStats <stats:scopeNote> .
+
+<stats:Dataset> void:propertyPartition <stats:scopeNote> .
+
+<stats:scopeNote> a void:Dataset ;
+	voidx:label "<stats:scopeNote> (2, DFI)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#scopeNote> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#equivalentClass> voidx:label "owl:equivalentClass (1, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.omg.org/spec/FIGI/GlobalInstrumentIdentifiers/FinancialInstrumentIdentifier> owl:equivalentClass _:node1fqlq18m7x19 .""" ;
+	voidx:globalStats <stats:equivalentClass> .
+
+<stats:Dataset> void:propertyPartition <stats:equivalentClass> .
+
+<stats:equivalentClass> a void:Dataset ;
+	voidx:label "<stats:equivalentClass> (1, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#equivalentClass> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:openSearchDescription voidx:label "void:openSearchDescription" .
+
+void:classes voidx:label "void:classes" .
+
+void:documents voidx:label "void:documents" .
+
+void:TechnicalFeature voidx:label "void:TechnicalFeature" .
+
+void:uriLookupEndpoint voidx:label "void:uriLookupEndpoint" .
+
+void:sparqlEndpoint voidx:label "void:sparqlEndpoint" .
+
+void:dataDump voidx:label "void:dataDump" .
+
+void:triples voidx:label "void:triples" .
+
+void:linkPredicate voidx:label "void:linkPredicate" .
+
+void:uriRegexPattern voidx:label "void:uriRegexPattern" .
+
+void:uriSpace voidx:label "void:uriSpace" .
+
+void:properties voidx:label "void:properties" .
+
+void:subset voidx:label "void:subset" .
+
+void:classPartition voidx:label "void:classPartition" .
+
+void:distinctObjects voidx:label "void:distinctObjects" .
+
+void:propertyPartition voidx:label "void:propertyPartition" .
+
+void:inDataset voidx:label "void:inDataset" .
+
+void:Dataset voidx:label "void:Dataset" .
+
+void:objectsTarget voidx:label "void:objectsTarget" .
+
+void:property voidx:label "void:property" .
+
+void:DatasetDescription voidx:label "void:DatasetDescription" .
+
+void:feature voidx:label "void:feature" .
+
+void:class voidx:label "void:class" .
+
+void:subjectsTarget voidx:label "void:subjectsTarget" .
+
+void:target voidx:label "void:target" .
+
+void:entities voidx:label "void:entities" .
+
+void:Linkset voidx:label "void:Linkset" .
+
+void:distinctSubjects voidx:label "void:distinctSubjects" .
+
+void:exampleResource voidx:label "void:exampleResource" .
+
+void:rootResource voidx:label "void:rootResource" .
+
+void:vocabulary voidx:label "void:vocabulary" .
+
+voidx:globalStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#globalStats>" .
+
+voidx:source voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#source>" .
+
+voidx:type voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#type>" .
+
+voidx:example voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#example>" .
+
+voidx:sourceStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sourceStats>" .
+
+voidx:tboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#tboxTriples>" .
+
+voidx:averageProperties voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#averageProperties>" .
+
+voidx:label voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#label>" .
+
+voidx:sameAsTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sameAsTriples>" .
+
+voidx:typeTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#typeTriples>" .
+
+voidx:aboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#aboxTriples>" .

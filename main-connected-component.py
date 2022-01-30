@@ -23,11 +23,11 @@ skos_closeMatch = "http://www.w3.org/2004/02/skos/core#closeMatch"
 subPropertyOf = 'http://www.w3.org/2000/01/rdf-schema#subPropertyOf'
 inv = 'http://www.w3.org/2002/07/owl#inverseOf'
 
-files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mappings', 'alignment']
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mapping', 'my_mapping']
 
 
 for file in files:
-	path_to_file = './data/'+file+'.hdt'
+	path_to_file = './data/integrated_files/'+file+'.hdt'
 	hdt_kg = HDTDocument(path_to_file)
 	triples, cardinality = hdt_kg.search_triples("", "", "")
 	entities = set()
@@ -49,7 +49,7 @@ for file in files:
 
 print ('\n\n----------INTEGRATED----------\n')
 
-path_to_file = './data/integrated.hdt'
+path_to_file = './data/integrated_files/integrated.hdt'
 hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()

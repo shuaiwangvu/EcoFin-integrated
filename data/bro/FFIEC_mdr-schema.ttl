@@ -1,0 +1,198 @@
+# baseURI: http://bankontology.com/br/form/FFIEC_mdr-schema.ttl
+# imports: http://bankontology.com/br/ref/Bank_Legal_Reference.ttl
+# imports: http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl
+# imports: http://topbraid.org/sxml
+# prefix: ffiec_mdr_schema
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ffiec_mdr_schema: <http://bankontology.com/br/form/FFIEC_mdr-schema.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bankontology.com/br/form/FFIEC_mdr-schema.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  dct:license "https://opensource.org/licenses/MIT"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment """From the CDR Interchange Specification Version 1.02 (rdfs:seeAlso):
+MDR schema is an XML Schema document specific to the CDR system. It is not based on the XBRL specification. It is used to support versioning of the Call Report taxonomies. It contains definitions for the ‘versionInfo’, ‘versionName’, ‘versionDate’ and ‘VersionDescription’. The MDR schema is imported in the Call Report schema file."""^^xsd:string ;
+  rdfs:comment "The ontology is a conversion of the Federal Financial Institutions Examination Council's (FFIEC) Call Report mdr_schema file. The raw XSD import has been enhanced an integrated into HFR and LKIF. Classes and properties that Jayzed added to the raw import have copyright, but they are Open Source, free to use. "^^xsd:string ;
+  rdfs:isDefinedBy <https://cdr.ffiec.gov/public/> ;
+  rdfs:seeAlso <https://www.ffiec.gov/find/taxonomy/call_report_taxonomy.html> ;
+  owl:imports <http://bankontology.com/br/ref/Bank_Legal_Reference.ttl> ;
+  owl:imports <http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl> ;
+  owl:imports <http://topbraid.org/sxml> ;
+  owl:versionInfo "Created with TopBraid Composer from the XML Schema(s) http://www.ffiec.gov/xbrl/mdr-schema"^^xsd:string ;
+  skos:definition "An ontology version of XML Schema specific to the FFIEC  Central Data Repository system. Part of the ontology RDF/OWL version of form FFIEC 031, the Call Report."^^xsd:string ;
+.
+ffiec_mdr_schema:DataSeriesDatatype
+  rdf:type rdfs:Datatype ;
+  rdf:type owl:Class ;
+  rdfs:comment "Name of the dataSeries"^^xsd:string ;
+  rdfs:label "Data series datatype"^^xsd:string ;
+  rdfs:subClassOf xsd:string ;
+.
+ffiec_mdr_schema:ReportNameDatatype
+  rdf:type rdfs:Datatype ;
+  rdf:type owl:Class ;
+  rdfs:comment "Name of the report"^^xsd:string ;
+  rdfs:label "Report name datatype"^^xsd:string ;
+  rdfs:subClassOf xsd:string ;
+.
+ffiec_mdr_schema:VersionDateDatatype
+  rdf:type rdfs:Datatype ;
+  rdf:type owl:Class ;
+  rdfs:comment "Version Date"^^xsd:string ;
+  rdfs:label "Version date datatype"^^xsd:string ;
+  rdfs:subClassOf xsd:date ;
+.
+ffiec_mdr_schema:VersionDescriptionDatatype
+  rdf:type rdfs:Datatype ;
+  rdf:type owl:Class ;
+  rdfs:comment "Description of the version"^^xsd:string ;
+  rdfs:label "Version description datatype"^^xsd:string ;
+  rdfs:subClassOf xsd:string ;
+.
+ffiec_mdr_schema:VersionInfo
+  rdf:type owl:Class ;
+  sxml:tag "http://www.ffiec.gov/xbrl/mdr-schema#versionInfo" ;
+  rdfs:comment "Versioning information"^^xsd:string ;
+  rdfs:label "Version info"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ffiec_mdr_schema:DataSeriesDatatype ;
+      owl:onProperty ffiec_mdr_schema:dataSeries ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ffiec_mdr_schema:ReportNameDatatype ;
+      owl:onProperty ffiec_mdr_schema:reportName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ffiec_mdr_schema:VersionDateDatatype ;
+      owl:onProperty ffiec_mdr_schema:versionDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ffiec_mdr_schema:VersionDescriptionDatatype ;
+      owl:onProperty ffiec_mdr_schema:versionDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ffiec_mdr_schema:VersionNameDatatype ;
+      owl:onProperty ffiec_mdr_schema:versionName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ffiec_mdr_schema:dataSeries ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ffiec_mdr_schema:reportName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ffiec_mdr_schema:versionDate ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ffiec_mdr_schema:versionName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ffiec_mdr_schema:versionDescription ;
+    ] ;
+.
+ffiec_mdr_schema:VersionNameDatatype
+  rdf:type rdfs:Datatype ;
+  rdf:type owl:Class ;
+  rdfs:comment "Name of the version"^^xsd:string ;
+  rdfs:label "Version name datatype"^^xsd:string ;
+  rdfs:subClassOf xsd:string ;
+.
+ffiec_mdr_schema:dataSeries
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
+  sxml:attribute "http://www.ffiec.gov/xbrl/mdr-schema#dataSeries" ;
+  rdfs:label "data series"^^xsd:string ;
+.
+ffiec_mdr_schema:reportName
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
+  sxml:attribute "http://www.ffiec.gov/xbrl/mdr-schema#reportName" ;
+  rdfs:label "report name"^^xsd:string ;
+.
+ffiec_mdr_schema:versionDate
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
+  sxml:attribute "http://www.ffiec.gov/xbrl/mdr-schema#versionDate" ;
+  rdfs:label "version date"^^xsd:string ;
+.
+ffiec_mdr_schema:versionDescription
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
+  sxml:attribute "http://www.ffiec.gov/xbrl/mdr-schema#versionDescription" ;
+  rdfs:label "version description"^^xsd:string ;
+.
+ffiec_mdr_schema:versionName
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
+  sxml:attribute "http://www.ffiec.gov/xbrl/mdr-schema#versionName" ;
+  rdfs:label "version name"^^xsd:string ;
+.
+sxml:isAttribute
+  rdf:type owl:AnnotationProperty ;
+.
+sxml:order
+  rdf:type owl:AnnotationProperty ;
+.
+sxml:tag
+  rdf:type owl:AnnotationProperty ;
+.
+xsd:date
+  rdf:type owl:Class ;
+.
+xsd:string
+  rdf:type owl:Class ;
+.
+skos:prefLabel
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "pref label"^^xsd:string ;
+.
+[
+  sxml:isAttribute "false"^^xsd:boolean ;
+  sxml:order "0"^^xsd:int ;
+  rdfs:comment "Name of the dataSeries"^^xsd:string ;
+].
+[
+  sxml:isAttribute "false"^^xsd:boolean ;
+  sxml:order "1"^^xsd:int ;
+  rdfs:comment "Name of the report"^^xsd:string ;
+].
+[
+  sxml:isAttribute "false"^^xsd:boolean ;
+  sxml:order "2"^^xsd:int ;
+  rdfs:comment "Name of the version"^^xsd:string ;
+].
+[
+  sxml:isAttribute "false"^^xsd:boolean ;
+  sxml:order "3"^^xsd:int ;
+  rdfs:comment "Version Date"^^xsd:string ;
+].
+[
+  sxml:isAttribute "false"^^xsd:boolean ;
+  sxml:order "4"^^xsd:int ;
+  rdfs:comment "Description of the version"^^xsd:string ;
+].

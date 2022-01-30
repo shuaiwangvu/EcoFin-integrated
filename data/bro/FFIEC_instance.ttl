@@ -1,0 +1,49 @@
+# baseURI: http://bankontology.com/br/form/FFIEC_instance.ttl
+# imports: http://bankontology.com/br/ref/Bank_Legal_Reference.ttl
+# imports: http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl
+# imports: http://finregont.com/fro/xbrl/instance.ttl
+# prefix: ffiec-inst
+
+@prefix ffiec-inst: <http://bankontology.com/br/form/FFIEC_instance.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bankontology.com/br/form/FFIEC_instance.ttl>
+  rdf:type owl:Ontology ;
+  <http://purl.org/dc/terms/license> "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^xsd:string ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/author> "Jurgen Ziemer"^^xsd:string ;
+  <http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment """From the CDR Interchange Specification Version 1.02 (rdfs:seeAlso):
+All numeric concepts fall into one of the following three categories. They are numeric concepts that MUST NOT have a negative value, Numeric concepts that normally have positive values and may have a negative value, and Numeric concepts that can have any value.
+Numeric concepts that MUST not have a negative value: 
+These concepts MUST be assigned to data types that restrict their values. ‘xbrli:nonNegativeIntegerItemType’, ‘ffieci:nonNegativeMonetaryItemType’ and ‘ffieci:nonNegativeDecimalItemType’ are the data types that restrict integers, monetary values and decimals to the positive range. A financial institution MUST submit positive values for all the concepts in this category. The instance document is not valid if any of these concepts have a negative value."""^^xsd:string ;
+  rdfs:comment "Taxonomy schema for FFIEC data types (derived from XBRL 2.1 data types)."^^xsd:string ;
+  rdfs:comment "The ontology is a conversion of the corresponding Federal Financial Institutions Examination Council's (FFIEC) Call Report taxonomy file (ffiec-instance-2004-06-10.xsd). The raw XSD import has been enhanced an integrated into HFR and LKIF. Classes and properties that Jayzed added to the raw import have copyright, but they are Open Source, free to use. "^^xsd:string ;
+  rdfs:isDefinedBy <https://cdr.ffiec.gov/public/> ;
+  rdfs:seeAlso <https://www.ffiec.gov/find/taxonomy/call_report_taxonomy.html> ;
+  owl:imports <http://bankontology.com/br/ref/Bank_Legal_Reference.ttl> ;
+  owl:imports <http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl> ;
+  owl:imports <http://finregont.com/fro/xbrl/instance.ttl> ;
+  owl:versionInfo "Created with TopBraid Composer from the XML Schema(s) http://www.ffiec.gov/2004/instance, http://www.ffiec.gov/2004/instance, http://www.ffiec.gov/2004/instance"^^xsd:string ;
+  skos:definition "A FFIEC extension to XBRL instance to restrict Non-Negative values. The ontology is part RDF/OWL version of form FFIEC 031, the Call Report."^^xsd:string ;
+.
+ffiec-inst:NonNegativeDecimalItemType
+  rdf:type owl:Class ;
+  <http://topbraid.org/sxml#tag> "http://www.ffiec.gov/2004/instance#nonNegativeDecimalItemType" ;
+  rdfs:label "Non negative decimal item type"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/instance.ttl#DecimalItemType> ;
+.
+ffiec-inst:NonNegativeMonetaryItemType
+  rdf:type owl:Class ;
+  <http://topbraid.org/sxml#tag> "http://www.ffiec.gov/2004/instance#nonNegativeMonetaryItemType" ;
+  rdfs:label "Non negative monetary item type"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/xbrl/instance.ttl#MonetaryItemType> ;
+.
+skos:prefLabel
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "pref label"^^xsd:string ;
+.

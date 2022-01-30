@@ -1,0 +1,38 @@
+# baseURI: http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl
+# imports: http://finregont.com/fro/ref/LegalReference.ttl
+# prefix: fr-leg-ref
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fr-leg-ref: <http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl#> .
+@prefix lkif-action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix lkif-norm: <http://www.estrellaproject.org/lkif-core/norm.owl#> .
+@prefix lkif-proc: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix lkif-top: <http://www.estrellaproject.org/lkif-core/lkif-top.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "For the Investment Adviser act we define form ADV.  Classes and properties in this ontology extend LKIF."^^xsd:string ;
+  owl:imports <http://finregont.com/fro/ref/LegalReference.ttl> ;
+  skos:definition "The ontology defines legal classes and properties for Investment Funds."^^xsd:string ;
+.
+fr-leg-ref:Form_ADV
+  rdf:type owl:Class ;
+  rdfs:label "Form ADV"^^xsd:string ;
+  rdfs:subClassOf <http://finregont.com/fro/ref/LegalReference.ttl#LegalForm> ;
+  skos:definition "A subclass of Legal Form to hold the structure of Securities and Exchange Commission for ADV, Investment Adviser Firm reports."^^xsd:string ;
+.
+fr-leg-ref:Form_ADV_gen
+  rdf:type fr-leg-ref:Form_ADV ;
+  rdfs:label "Firm Report Reference"^^xsd:string ;
+  skos:definition "A generic instance of form ADV."^^xsd:string ;
+.

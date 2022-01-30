@@ -1,0 +1,2265 @@
+# baseURI: http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl
+# imports: http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl
+# prefix: fr-ia-firm-sec
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-fnd-aap-agt: <https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/> .
+@prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-dt-fd: <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fr-fin-ref: <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#> .
+@prefix fr-ia-firm-sec: <http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl#> .
+@prefix fro-fin-ref: <http://finregont.com/fro/ref/FinancialReference.ttl#> .
+@prefix fro-ref: <http://finregont.com/fro/ref/Reference.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "The instances in this file populate FIBO Functional Business Entities and Monetary Amounts for assets under Management." ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl> ;
+  skos:definition "Fund Regulation Investment Adviser Firm Report instance data." ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-0
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "ADAGE CAPITAL MANAGEMENT, L.P.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-1
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "CREDIT SUISSE ASSET MANAGEMENT, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-10
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "TIAA-CREF INVESTMENT MANAGEMENT LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-11
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "THE DREYFUS CORPORATION-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-12
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "T. ROWE PRICE ASSOCIATES, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-13
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "STATE STREET GLOBAL ADVISORS LIMITED-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-14
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "SSGA FUNDS MANAGEMENT, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-15
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "PGIM, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-16
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "PACIFIC INVESTMENT MANAGEMENT COMPANY LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-17
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "OZ MANAGEMENT LP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-18
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "NORTHERN TRUST INVESTMENTS, INCORPORATED-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-19
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "NOMURA ASSET MANAGEMENT CO., LTD.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-2
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "WELLS FARGO FUNDS MANAGEMENT, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-20
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MORGAN STANLEY INVESTMENT MANAGEMENT INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-21
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MORGAN STANLEY-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdvice_SEC_Type_FinancialPlaning ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-22
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MILLENNIUM MANAGEMENT LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-23
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MFS INVESTMENT MANAGEMENT-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-24
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Hourly_Charges ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdvice_SEC_Type_FinancialPlaning ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-25
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "MELLON CAPITAL MANAGEMENT CORPORATION-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-26
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "M&G INVESTMENT MANAGEMENT LTD.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-27
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "J.P. MORGAN ASSET MANAGEMENT-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-28
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "J.P. MORGAN ASSET MANAGEMENT-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-29
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "INVESCO ADVISERS, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-3
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "WELLS FARGO ADVISORS, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Hourly_Charges ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdvice_SEC_Type_FinancialPlaning ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-30
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "HAMILTON LANE-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-31
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "GOLDMAN SACHS ASSET MANAGEMENT, L.P.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-32
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "GOLDMAN SACHS ASSET MANAGEMENT INTERNATIONAL-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-33
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "FRANKLIN ADVISERS, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-34
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "FMR CO., INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-35
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "FIDELITY INVESTMENTS MONEY MANAGEMENT, INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-36
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "FEDERATED INVESTMENT MANAGEMENT COMPANY-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-37
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "DODGE & COX-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-38
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "DIMENSIONAL FUND ADVISORS LP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-39
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "DEUTSCHE INVESTMENT MANAGEMENT AMERICAS INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-4
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "WELLS CAPITAL MANAGEMENT INC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-40
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "COLUMBIA MANAGEMENT INVESTMENT ADVISERS, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-41
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "CITADEL ADVISORS LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-42
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "AB PRIVATE CREDIT INVESTORS LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-43
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "AQR CAPITAL MANAGEMENT, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-44
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "BLACKROCK ADVISORS, LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-45
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "BLACKROCK FINANCIAL MANAGEMENT, INC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-46
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "BRIDGEWATER ASSOCIATES, LP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-47
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "CAPITAL RESEARCH AND MANAGEMENT COMPANY-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-48
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "CHARLES SCHWAB INVESTMENT MANAGEMENT, INC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-49
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "AIG ASSET MANAGEMENT (U.S.), LLC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-5
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "WELLINGTON MANAGEMENT COMPANY LLP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-6
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "VIKING GLOBAL INVESTORS LP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-7
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "VANGUARD GROUP INC-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_InvestmentCompanies ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-8
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "UBS FINANCIAL SERVICES INC.-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Hourly_Charges ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_AdviserSelectionServices ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Educational ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PensionConsulting ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Businesses ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_Individuals ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_Publication ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_SecurityRatingPricing ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdvice_SEC_Type_FinancialPlaning ;
+.
+fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-9
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  fibo-fnd-aap-agt:hasName "TWO SIGMA INVESTMENTS, LP-Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:InvestmentAdviceSEC_Type_PortfolioManagement_PooledInvestmentVehicles ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-0
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "ADAGE CAPITAL MANAGEMENT, L.P." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-0> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-0-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-0-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-0-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 160679 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-0 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-1
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "CREDIT SUISSE ASSET MANAGEMENT, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-1> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-1-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-1-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-1-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 106012 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-1 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-10
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "TIAA-CREF INVESTMENT MANAGEMENT LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-10> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-10-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-10-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-10-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107168 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-10 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-11
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "THE DREYFUS CORPORATION" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-11> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-11-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-11-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-11-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105642 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-11 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-12
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "T. ROWE PRICE ASSOCIATES, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-12> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-12-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-12-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-12-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105496 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-12 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-13
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "STATE STREET GLOBAL ADVISORS LIMITED" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-13> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-13-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-13-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-13-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 112861 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-13 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-14
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "SSGA FUNDS MANAGEMENT, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-14> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-14-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-14-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-14-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 111242 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-14 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-15
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "PGIM, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-15> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-15-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-15-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-15-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105676 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-15 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-16
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "PACIFIC INVESTMENT MANAGEMENT COMPANY LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-16> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-16-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-16-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-16-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 104559 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-16 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-17
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "OZ MANAGEMENT LP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-17> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-17-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-17-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-17-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107913 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-17 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-18
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "NORTHERN TRUST INVESTMENTS, INCORPORATED" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-18> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-18-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-18-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-18-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105780 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-18 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-19
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "NOMURA ASSET MANAGEMENT CO., LTD." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-19> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-19-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-19-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-19-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 110814 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-19 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-2
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "WELLS FARGO FUNDS MANAGEMENT, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-2> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-2-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-2-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-2-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 110841 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-2 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-20
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MORGAN STANLEY INVESTMENT MANAGEMENT INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-20> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-20-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-20-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-20-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 110353 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-20 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-21
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MORGAN STANLEY" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-21> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-21-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-21-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-21-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 149777 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-21 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-22
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MILLENNIUM MANAGEMENT LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-22> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-22-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-22-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-22-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 158117 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-22 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-23
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MFS INVESTMENT MANAGEMENT" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-23> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-23-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-23-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-23-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 110045 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-23 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-24
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-24> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-24-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-24-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-24-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 7691 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-24 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-25
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "MELLON CAPITAL MANAGEMENT CORPORATION" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-25> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-25-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-25-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-25-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105764 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-25 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-26
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "M&G INVESTMENT MANAGEMENT LTD." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-26> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-26-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-26-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-26-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 114527 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-26 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-27
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "J.P. MORGAN ASSET MANAGEMENT" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-27> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-27-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-27-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-27-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 135960 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-27 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-28
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "J.P. MORGAN ASSET MANAGEMENT" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-28> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-28-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-28-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-28-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107038 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-28 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-29
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "INVESCO ADVISERS, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-29> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-29-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-29-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-29-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105360 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-29 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-3
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "WELLS FARGO ADVISORS, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-3> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-3-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-3-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-3-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 19616 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-3 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-30
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "HAMILTON LANE" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-30> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-30-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-30-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-30-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107876 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-30 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-31
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "GOLDMAN SACHS ASSET MANAGEMENT, L.P." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-31> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-31-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-31-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-31-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107738 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-31 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-32
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "GOLDMAN SACHS ASSET MANAGEMENT INTERNATIONAL" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-32> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-32-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-32-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-32-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107715 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-32 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-33
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "FRANKLIN ADVISERS, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-33> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-33-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-33-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-33-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 104517 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-33 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-34
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "FMR CO., INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-34> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-34-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-34-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-34-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 108617 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-34 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-35
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "FIDELITY INVESTMENTS MONEY MANAGEMENT, INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-35> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-35-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-35-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-35-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 108252 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-35 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-36
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "FEDERATED INVESTMENT MANAGEMENT COMPANY" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-36> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-36-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-36-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-36-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105138 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-36 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-37
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "DODGE & COX" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-37> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-37-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-37-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-37-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 104596 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-37 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-38
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "DIMENSIONAL FUND ADVISORS LP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-38> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-38-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-38-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-38-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 106482 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-38 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-39
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "DEUTSCHE INVESTMENT MANAGEMENT AMERICAS INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-39> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-39-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-39-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-39-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 104518 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-39 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-4
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "WELLS CAPITAL MANAGEMENT INC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-4> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-4-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-4-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-4-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 104973 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-4 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-40
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "COLUMBIA MANAGEMENT INVESTMENT ADVISERS, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-40> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-40-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-40-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-40-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 108257 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-40 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-41
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "CITADEL ADVISORS LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-41> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-41-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-41-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-41-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 148826 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-41 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-42
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "AB PRIVATE CREDIT INVESTORS LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-42> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-42-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-42-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-42-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 173027 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-42 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-43
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "AQR CAPITAL MANAGEMENT, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-43> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-43-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-43-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-43-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 111883 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-43 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-44
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "BLACKROCK ADVISORS, LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-44> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-44-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-44-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-44-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 106614 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-44 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-45
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "BLACKROCK FINANCIAL MANAGEMENT, INC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-45> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-45-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-45-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-45-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 107105 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-45 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-46
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "BRIDGEWATER ASSOCIATES, LP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-46> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-46-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-46-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-46-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105129 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-46 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-47
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "CAPITAL RESEARCH AND MANAGEMENT COMPANY" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-47> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-47-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-47-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-47-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 110885 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-47 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-48
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "CHARLES SCHWAB INVESTMENT MANAGEMENT, INC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-48> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-48-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-48-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-48-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 106753 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-48 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-49
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "AIG ASSET MANAGEMENT (U.S.), LLC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-49> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-49-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-49-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-49-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 150088 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-49 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-5
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "WELLINGTON MANAGEMENT COMPANY LLP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-5> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-5-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-5-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-5-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 106595 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-5 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-6
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "VIKING GLOBAL INVESTORS LP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-6> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-6-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-6-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-6-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 132272 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-6 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-7
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "VANGUARD GROUP INC" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-7> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-7-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-7-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-7-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 105958 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-7 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-8
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "UBS FINANCIAL SERVICES INC." ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-8> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-8-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-8-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-8-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 8174 ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-8 ;
+.
+fr-ia-firm-sec:InvestmentAdviser-r-0-9
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "TWO SIGMA INVESTMENTS, LP" ;
+  fro-ref:hasSourceInstance <http://fundontology.com/fr/data/IA_Firm_SEC_Feed.ttl#r-0-9> ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-9-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-9-6-0-11 ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-9-6-0-11 ;
+  fr-fin-ref:hasCentralRegistrationDepositoryNumber 137137 ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_SEC_Private_Fund_Adviser ;
+  fibo-fnd-rel-rel:provides fr-ia-firm-sec:InvestmentAdvice_Generic-r-0-9 ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-0-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "45412023330"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-1-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "52464205087"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-10-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "224675464000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-11-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "269885924929"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-12-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "755255849062"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-13-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "312299673511"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-14-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "384947572235"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-15-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "579009922592"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-16-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1430499263788"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-17-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "61042048137"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-18-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "614497305180"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-19-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "367605306105"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-2-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "244525879372"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-20-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "269111695548"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-21-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "318862634578"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-22-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "207883137000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-23-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "289895377014"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-24-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "206068290817"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-25-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "267843552270"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-26-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "336117494872"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-27-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "323067278274"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-28-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1130262152433"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-29-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "394211500047"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-3-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "219483908912"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-30-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "37789736155"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-31-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "690673148633"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-32-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "245653514747"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-33-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "461290822092"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-34-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1105010882939"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-35-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "644940297675"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-36-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "239399329463"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-37-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "258018612885"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-38-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "424504874312"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-39-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "189597528391"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-4-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "284635197756"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-40-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "337319114480"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-41-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "149215631922"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-42-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1104603701"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-43-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "222418227413"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-44-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "491297599217"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-45-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "574896927707"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-46-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "212286924638"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-47-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1456599651539"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-48-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "268465571466"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-49-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "411810422485"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-5-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "847253290127"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-6-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "45724420990"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-7-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "3238683963404"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-8-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "152750745875"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Discretionary-r-0-9-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "44701962183"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-0-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-1-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "6065157"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-10-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-11-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-12-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "699159059"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-13-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-14-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-15-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "8607062215"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-16-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "4542287154"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-17-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-18-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "9135811713"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-19-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "4440869000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-2-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "284347705"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-20-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "3194839217"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-21-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "217027441127"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-22-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-23-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-24-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "369273287148"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-25-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-26-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-27-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-28-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "13755514548"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-29-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "6876058640"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-3-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "152628763241"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-30-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "215080995770"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-31-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "16352710104"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-32-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "5190536"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-33-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-34-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-35-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-36-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-37-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1454899141"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-38-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-39-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1510687403"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-4-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1800311256"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-40-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1500052627"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-41-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-42-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "366480464"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-43-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-44-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-45-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "3438099421"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-46-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-47-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1602556442"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-48-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "11724622636"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-49-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-5-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "45347912480"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-6-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-7-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-8-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "205502703244"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Non_Discretionary-r-0-9-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "0"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Non_Discretionary ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-0-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "45412023330"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-1-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "52470270244"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-10-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "224675464000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-11-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "269885924929"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-12-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "755955008121"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-13-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "312299673511"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-14-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "384947572235"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-15-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "587616984807"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-16-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1435041550942"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-17-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "61042048137"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-18-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "623633116893"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-19-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "372046175105"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-2-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "244810227077"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-20-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "272306534765"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-21-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "535890075705"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-22-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "207883137000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-23-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "289895377014"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-24-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "575341577965"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-25-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "267843552270"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-26-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "336117494872"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-27-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "323067278274"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-28-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1144017666981"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-29-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "401087558687"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-3-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "372112672153"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-30-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "252870731925"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-31-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "707025858737"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-32-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "245658705283"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-33-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "461290822092"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-34-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1105010882939"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-35-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "644940297675"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-36-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "239399329463"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-37-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "259473512026"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-38-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "424504874312"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-39-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "191108215794"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-4-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "286435509012"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-40-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "338819167107"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-41-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "149215631922"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-42-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1471084165"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-43-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "222418227413"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-44-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "491297599217"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-45-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "578335027128"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-46-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "212286924638"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-47-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "1458202207981"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-48-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "280190194102"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-49-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "411810422485"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-5-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "892601202607"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-6-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "45724420990"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-7-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "3238683963404"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-8-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "358253449119"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-ia-firm-sec:MonetaryAmount_AUM_Total-r-0-9-6-0-11
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  fibo-fnd-acc-cur:hasAmount "44701962183"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-dt-fd:hasDate "2016-11-05"^^xsd:date ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.

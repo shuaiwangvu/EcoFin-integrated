@@ -1,0 +1,645 @@
+# baseURI: http://fundontology.com/fr/data/FundSampleData.ttl
+# imports: http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl
+# prefix: fr-samp-data
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-corp-corp: <https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-be-le-cb: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-oac-opty: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-mkt: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/> .
+@prefix fibo-fbc-fct-rga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/> .
+@prefix fibo-fbc-fct-usfse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/USJurisdiction/USFinancialServicesEntities/> .
+@prefix fibo-fbc-fct-usjrga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/> .
+@prefix fibo-fbc-fi-fi: <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-4217: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-agr-ctr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix fibo-fnd-pas-pas: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-pty-rl: <https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fr-fin-ref: <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#> .
+@prefix fr-samp-data: <http://fundontology.com/fr/data/FundSampleData.ttl#> .
+@prefix fro-fin-ref: <http://finregont.com/fro/ref/FinancialReference.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fro-fin-ref:Jayzed_consulting_service
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+.
+<http://fundontology.com/fr/data/FundSampleData.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment "While the data file FR_IA_Firm_SEC.tll contains real Investment Adviser data, the advisers in this file are made up. The records populate FIBO Business Entity and related classes. The test data is constructed to trigger Investment Adviser Act exclusions, exceptions and prohibitions." ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl> ;
+  skos:definition "A sample data file with fictitious Vermont financial companies." ;
+.
+fr-samp-data:AUM_MonetaryAmount_1
+  rdf:type fr-fin-ref:AUM_MonetaryAmount ;
+  rdfs:label "Manchester Family Office AUM" ;
+.
+fr-samp-data:AUM_Stratton_Private_fund
+  rdf:type fr-fin-ref:AUM_MonetaryAmount ;
+  rdfs:label "Stratton_Private_fund AUM" ;
+  fibo-fnd-acc-cur:hasAmount "200000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasBaseCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Black_Rock_Fund_Advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Black Rock Fund Advisers" ;
+  rdfs:comment "Sample record based on large ETF manager" ;
+  rdfs:label "Black Rock Fund Advisers" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:iShares_MSCI_Emerging_Markets_ETF ;
+.
+<http://fundontology.com/fr/data/FundSampleData.ttl#Brattleboro_S&L_services>
+  rdf:type fibo-fnd-pas-pas:Service ;
+  rdfs:label "Brattleboro S&L generic services" ;
+.
+fr-samp-data:Brattleboro_SL_generic_banking_services
+  rdf:type fibo-fbc-pas-fpas:FinancialService ;
+  rdfs:label "Brattleboro S&L generic services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:FeeBasedInvestmentAdvice ;
+.
+fr-samp-data:East_Jamaica_Nationwide
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "East Jamaica Nationwide" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:East_Jamaica_Nationwide_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "East Jamaica Nationwide" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_multi_state_adviser ;
+  fibo-fnd-rel-rel:provides fr-samp-data:East_Jamaica_services ;
+.
+fr-samp-data:East_Jamaica_Nationwide_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "East Jamaica Nationwide AUM" ;
+  fibo-fnd-acc-cur:hasAmount "100000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:East_Jamaica_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "East Jamaica services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+.
+fr-samp-data:Heartvellville_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Heartvellville services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+.
+fr-samp-data:Heartvellville_tiny_advisory
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Heartvellville tiny advisory" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Heartvellville_tiny_advisory_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Heartvellville tiny advisory" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_less_than_15_clients ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Heartvellville_services ;
+.
+fr-samp-data:Heartvellville_tiny_advisory_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:InsuranceCompany_State_Farm
+  rdf:type fibo-fbc-fct-fse:InsuranceCompany ;
+  fro-fin-ref:hasBusinessName "State Farm Insurance" ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Service_State_Farm_generic ;
+.
+fr-samp-data:Investor_GreenMountainPensons
+  rdf:type fibo-be-oac-opty:Investor ;
+  rdfs:comment "A fictitious Vermont Pension Fund" ;
+  rdfs:label "Green Mountain pension fund" ;
+.
+fr-samp-data:Issuer_iShares_MSCI_Emerging_Markets_ETF
+  rdf:type fibo-fbc-fi-fi:Issuer ;
+  rdfs:label "iShares MSCI Emerging Markets ETF (issuer)" ;
+  fibo-fbc-fct-rga:issues fr-samp-data:iShares_MSCI_Emerging_Markets_ETF_Share ;
+  fibo-fnd-pty-rl:isPlayedBy fr-samp-data:iShares_MSCI_Emerging_Markets_ETF ;
+  fibo-fnd-rel-rel:hasIdentity fr-samp-data:iShares_MSCI_Emerging_Markets_ETF ;
+.
+fr-samp-data:Jacksonville_Advisers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Jacksonville_Advisors
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Jacksonville Advisers" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Jacksonville_Advisers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Jacksonville Advisers" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:The_Vermont_Fund ;
+.
+fr-samp-data:Jacksonville_Growth_Fund
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "Jacksonville Growth Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Jacksonville_Growth_Fund_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Fund" ;
+  rdfs:label "Jacksonville Growth Fund" ;
+.
+fr-samp-data:Jacksonville_Growth_Fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasAmount "90000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Malboro_Charity_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Malboro Charity services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Other ;
+.
+fr-samp-data:Malboro_Foundation
+  rdf:type fibo-be-fct-fct:FunctionalBusinessEntity ;
+  rdf:type fibo-be-oac-opty:Investor ;
+  fro-fin-ref:hasBusinessName "Malboro Foundation" ;
+  rdfs:label "Malboro Foundation" ;
+  fibo-fnd-rel-rel:hasIdentity fr-samp-data:Malboro_Non_Profit ;
+.
+fr-samp-data:Malboro_Foundation_Agreement
+  rdf:type fibo-fnd-pas-pas:ServiceAgreement ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-agr-ctr:hasContractParty fr-samp-data:Malboro_Foundation ;
+.
+fr-samp-data:Malboro_Non_Profit
+  rdf:type fibo-be-le-fbo:NotForProfitOrganization ;
+  rdfs:label "Malboro Non-Profit" ;
+  skos:definition "A fictitious Vermont non-profit organization. This is the legal identity of the Malboro Foundtion." ;
+.
+fr-samp-data:Malboro_charity_portfolios
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Malboro Charity Advisers" ;
+  fro-fin-ref:isPrincipal fr-samp-data:Malboro_Foundation_Agreement ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Malboro_charity_portfolios_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Malboro Charity Advisers" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_charity ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_charity_fund ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Malboro_Charity_services ;
+.
+fr-samp-data:Malboro_charity_portfolios_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Manchester_Family_Office_adviser
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Manchester Family Offices" ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Manchester Family Offices" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Manchester_Family_Portfolio ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Manchester_Family_Offices_services ;
+.
+fr-samp-data:Manchester_Family_Offices_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Manchester Family Office services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Hourly_Charges ;
+.
+fr-samp-data:Manchester_Family_Portfolio
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Manchester_Family_office_advivers_AUM ;
+  rdfs:label "Manchester Family Office AUM" ;
+.
+fr-samp-data:Manchester_Family_office_advivers_AUM
+  rdf:type fr-fin-ref:AUM_MonetaryAmount ;
+  rdfs:label "Manchester Family Office AUM" ;
+  fibo-fnd-acc-cur:hasAmount "87000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasBaseCurrency fibo-fnd-acc-4217:USDollar ;
+.
+fr-samp-data:Mount_Snow_Pension_Plan_Advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Mt. Snow Pension Plan advisers" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Mount_Snow_Pension_Plan_Advisers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Mt. Snow Pension Plan advisers" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_Pension_Consultant ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Windham_County_Firefighter_Retirement ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Mount_Snow_services ;
+.
+fr-samp-data:Mount_Snow_Pension_Plan_Advisers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Mount_Snow_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Mt. Snow services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+.
+fr-samp-data:New_Jacksonville_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "New Jacksonville services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+.
+fr-samp-data:New_York_Stock_Exchange
+  rdf:type fibo-fbc-fct-mkt:Exchange ;
+  rdfs:label "New York Stock Exchange" ;
+.
+fr-samp-data:PSP_Jayzed_Data_Models
+  rdf:type fro-fin-ref:ProfessionalServiceProvider ;
+  fro-fin-ref:hasBusinessName "Jayzed Data Models" ;
+  fro-fin-ref:hasIncorporationDate "1999-04-25T00:00:00.000"^^xsd:dateTime ;
+  rdfs:label "Jayzed Data Models" ;
+  fibo-fnd-rel-rel:provides fro-fin-ref:Jayzed_consulting_service ;
+.
+fr-samp-data:Publisher_Bloomberg
+  rdf:type fibo-be-fct-pub:Publisher ;
+  fro-fin-ref:hasBusinessName "Jayzed Data Models" ;
+  rdfs:label "Bloomberg" ;
+.
+fr-samp-data:RatingAgency_Moodys
+  rdf:type fro-fin-ref:RatingAgency ;
+  fro-fin-ref:hasBusinessName "Moody's" ;
+  rdfs:label "Moody's" ;
+.
+fr-samp-data:RatingAgency_SandP
+  rdf:type fro-fin-ref:RatingAgency ;
+  fro-fin-ref:hasBusinessName "Standard & Poors" ;
+  rdfs:label "Standard & Poors" ;
+.
+fr-samp-data:Readsboro_Insurance_Portfolio_Managers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Readsboro Insurance Portfolio Managers" ;
+  fro-fin-ref:isPrincipal fr-samp-data:Readsboro_StateFarm_Agreement ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Readsboro_Insurance_Portfolio_Managers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Readsboro Insurance Portfolio Managers" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Readsboro_large_Portflio_Services ;
+.
+fr-samp-data:Readsboro_Insurance_Portfolio_Managers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Readsboro_StateFarm_Agreement
+  rdf:type fibo-fnd-pas-pas:ServiceAgreement ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-agr-ctr:hasContractParty fr-samp-data:InsuranceCompany_State_Farm ;
+  fibo-fnd-rel-rel:governs fr-samp-data:Readsboro_large_Portflio_Services ;
+.
+fr-samp-data:Readsboro_large_Portflio_Services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "TD Prime Service" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isProvidedBy fr-samp-data:Readsboro_Insurance_Portfolio_Managers ;
+.
+fr-samp-data:Readsboro_small_Portflio_Services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "TD Prime Service" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Commissions ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:isProvidedBy fr-samp-data:Readsboro_Insurance_Portfolio_Managers ;
+.
+fr-samp-data:Readsboro_small_Portfolio_Managers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Readsboro Small Portfolio Managers" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Readsboro_small_Portfolio_Managers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Readsboro Small Portfolio Managers" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Readsboro_large_Portflio_Services ;
+.
+fr-samp-data:Readsboro_small_Portfolio_Managers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:SavingsAndLoanAssociation_Brattleboro_SL
+  rdf:type fibo-fbc-fct-usfse:SavingsAndLoanAssociation ;
+  fro-fin-ref:hasBusinessName "Brattleboro Savings & Loan" ;
+  rdfs:comment "A sample Financial Service Provider record. As a bank Brattleboro S&L should be excluded from registration." ;
+  rdfs:label "Brattleboro Savings & Loan" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Brattleboro_SL_generic_banking_services ;
+.
+fr-samp-data:Searsburg_Commodity_Traders
+  rdf:type fibo-fbc-fct-fse:CommodityTradingAdvisor ;
+  fro-fin-ref:hasBusinessName "Searsburg Commodity Traders" ;
+  rdfs:comment "As a commodity trading adviser, Searsburg should be exempted from registration" ;
+  rdfs:label "Searsburg Commodity Traders" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Searsburg_commodity_advice ;
+.
+fr-samp-data:Searsburg_church_advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Searsburg Church advisers" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Searsburg_church_advisers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Searsburg Church advisers" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Searsburg_church_fund ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Searsburg_services ;
+.
+fr-samp-data:Searsburg_church_advisers_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Searsburg_church_fund
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "Searsburg Church Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Searsburg_church_fund_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Fund" ;
+  rdfs:label "Searsburg Church Fund" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_church_plan ;
+.
+fr-samp-data:Searsburg_church_fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasAmount "20000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Searsburg_commodity_advice
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Searsburg Commodity Advice" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+.
+fr-samp-data:Searsburg_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Searsburg services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Hourly_Charges ;
+.
+fr-samp-data:Service_State_Farm_generic
+  rdf:type fibo-fnd-pas-pas:Service ;
+  rdfs:label "State Farm services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:FeeBasedInvestmentAdvice ;
+.
+fr-samp-data:Stamford_Charity_Fund
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "Stamford Charity Funds" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Stamford_Charity_Funds_AUM ;
+  rdfs:label "Stamford Charity Funds" ;
+  fibo-be-oac-opty:hasInvestor fr-samp-data:Malboro_Foundation ;
+.
+fr-samp-data:Stamford_Charity_Fund_advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Stamford Charity Funds" ;
+  rdfs:comment "A fititious Vermont investment Adviser who only manages charity funds." ;
+  rdfs:label "Stamford Charity Funds" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Stamford_Charity_Fund ;
+.
+fr-samp-data:Stamford_Charity_Funds_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Stamford Charity Funds AUM" ;
+  fibo-fnd-acc-cur:hasAmount "105000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Stratton_Private_Fund_advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Stratton Private Fund advisers" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:AUM_Stratton_Private_fund ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Stratton Private Fund advisers" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Stratton_Private_fund ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Stratton_Private_Fund_services ;
+.
+fr-samp-data:Stratton_Private_Fund_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Stratton Private Fund Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+.
+fr-samp-data:Stratton_Private_fund
+  rdf:type fibo-fbc-fct-fse:InvestmentCompany ;
+  fro-fin-ref:hasBusinessName "Stratton Private Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:AUM_Stratton_Private_fund ;
+  rdfs:comment "A fictitious Vermont Hedge Fund" ;
+  rdfs:label "Stratton Private Fund" ;
+  fibo-fbc-fct-rga:isRegulatedBy fibo-fbc-fct-usjrga:SecuritiesAndExchangeRegulator ;
+.
+fr-samp-data:The_New_Jacksonville_Advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "The New Jacksonville Advisors" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Jacksonville_Advisers_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "The New Jacksonville Advisors" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_eligible_soon ;
+  fibo-fnd-rel-rel:manages fr-samp-data:Jacksonville_Growth_Fund ;
+  fibo-fnd-rel-rel:provides fr-samp-data:New_Jacksonville_services ;
+.
+fr-samp-data:The_Vermont_Fund
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "The Vermont Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:The_Vermont_Fund_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Fund" ;
+  rdfs:label "The Vermont Fund" ;
+.
+fr-samp-data:The_Vermont_Fund_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasAmount "40000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Thing_1
+  rdf:type owl:Thing ;
+  rdfs:label "Monetary Amount properties" ;
+.
+fr-samp-data:Thing_2
+  rdf:type owl:Thing ;
+  rdfs:label "Woodford Brokerage services" ;
+.
+fr-samp-data:Wardsboro_Online_Advisers
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Wardsboro Online Advisers" ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Wardsboro Online Advisers" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_internet_adviser ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Wardsboro_services ;
+.
+fr-samp-data:Wardsboro_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Wardsboro services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_Fixed ;
+.
+fr-samp-data:WestHalifax_Europe_based_investors
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "West Halifax Europe based Investors" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:WestHalifax_Europe_based_investors_AUM ;
+  sm:author "Jurgen Ziemer" ;
+  rdfs:comment "A fictitious Vermont Hedge Fund" ;
+  rdfs:label "West Halifax Europe based Investors" ;
+  fibo-fbc-fct-rga:isRegulatedBy fibo-fbc-fct-usjrga:SecuritiesAndExchangeRegulator ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_foreign_based ;
+.
+fr-samp-data:WestHalifax_Europe_based_investors_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasAmount "800000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:WestHalifax_foreign_wealth
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "West Halifax foreign wealth" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:WestHalifax_foreign_wealth_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "West Halifax foreign wealth" ;
+  fibo-fnd-rel-rel:manages fr-samp-data:WestHalifax_Europe_based_investors ;
+  fibo-fnd-rel-rel:provides fr-samp-data:West_Halifax_services ;
+.
+fr-samp-data:WestHalifax_foreign_wealth_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:West_Dover_small_business
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "West Dover advisers for Small Businesses" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:West_Dover_small_business_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "West Dover advisers for Small Businesses" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_Small_Business ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_Small_Business_license ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_same_state_client ;
+  fibo-fnd-rel-rel:provides fr-samp-data:West_Dover_small_business_investment_service ;
+.
+fr-samp-data:West_Dover_small_business_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:West_Dover_small_business_affiliates
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "West Dover Small Business affiliates" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:West_Dover_small_business_affiliates_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "West Dover Small Business affiliates" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_Small_Business_affiliate ;
+  fibo-fnd-rel-rel:provides fr-samp-data:West_Dover_small_business_investment_service ;
+.
+fr-samp-data:West_Dover_small_business_affiliates_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:West_Dover_small_business_investment_service
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Whitingham Wealth Services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Searsburg_commodity_advice ;
+.
+fr-samp-data:West_Halifax_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "West Halifax services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+.
+fr-samp-data:Wilmington_Gilt_Edge_Advice
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "TD Prime Service" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_Government_Bond_Advice ;
+  fibo-fnd-rel-rel:isProvidedBy fr-samp-data:Wilmington_Widows_Orphans_Trust ;
+.
+fr-samp-data:Wilmington_Widows_Orphans_Trust
+  rdf:type fr-fin-ref:InvestmentAdviser ;
+  fro-fin-ref:hasBusinessName "Wilmington Widows Orphans trust" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Wilmington_Widows_Orphans_Trust_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Manager" ;
+  rdfs:label "Wilmington Widows Orphans trust" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Wilmington_Gilt_Edge_Advice ;
+.
+fr-samp-data:Wilmington_Widows_Orphans_Trust_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Windham_County_Firefighter_Retirement
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "Windham county Firefighter's Retirement Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Windham_county_Firefighter_Retirement_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Fund" ;
+  rdfs:label "Windham county Firefighter's Retirement Fund" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_pension_plan ;
+.
+fr-samp-data:Windham_County_Teacher_Retirement
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "Windham country Teacher's Retirement Fund" ;
+  fr-fin-ref:hasAssetUnderManagementMonetaryAmount fr-samp-data:Windham_county_Teacher_Retirement_AUM ;
+  rdfs:comment "A fictitious Vermont Investment Fund" ;
+  rdfs:label "Windham country Teacher's Retirement Fund" ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:IAA_misc_pension_plan ;
+.
+fr-samp-data:Windham_county_Firefighter_Retirement_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Windham county Firefighters Retirement AUM" ;
+  fibo-fnd-acc-cur:hasAmount "250000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Windham_county_Teacher_Retirement_AUM
+  rdf:type fibo-fnd-acc-cur:MonetaryAmount ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  fibo-fnd-acc-cur:hasAmount "20000000"^^xsd:decimal ;
+  fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-4217:USDollar ;
+  fibo-fnd-rel-rel:isClassifiedBy fr-fin-ref:AUM_Total ;
+.
+fr-samp-data:Woodford_Brokerage
+  rdf:type fibo-fbc-fct-fse:BrokerageFirm ;
+  fro-fin-ref:hasBusinessName "Woodford Brokerage" ;
+  rdfs:label "Woodford Brokerage" ;
+  fibo-fnd-rel-rel:provides fr-samp-data:Woodford_Brokerage_generic_services ;
+.
+fr-samp-data:Woodford_Brokerage_generic_services
+  rdf:type fr-fin-ref:InvestmentAdvice ;
+  rdfs:label "Woodford Brokerage services" ;
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_PerformanceBased ;
+.
+fr-samp-data:iShares_MSCI_Emerging_Markets_ETF
+  rdf:type fibo-fbc-fct-fse:ManagementCompany ;
+  fro-fin-ref:hasBusinessName "iShares MSCI Emerging Markets ETF" ;
+  rdfs:comment "Sample record of an ETF" ;
+  rdfs:label "iShares MSCI Emerging Markets ETF" ;
+  fibo-fbc-fct-rga:isRegulatedBy fibo-fbc-fct-usjrga:SecuritiesAndExchangeRegulator ;
+.
+fr-samp-data:iShares_MSCI_Emerging_Markets_ETF_Share
+  rdf:type fibo-fbc-fi-fi:EquityInstrument ;
+  rdfs:label "iShares MSCI Emerging Markets ETF share" ;
+.
+fr-fin-ref:InvestmentAdvice
+  fibo-fnd-rel-rel:involves fro-fin-ref:FinancialProduct_Securities ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceFeeType_AssetPercentage ;
+  fibo-fnd-rel-rel:isClassifiedBy fro-fin-ref:ServiceType_InvestmentAdvice ;
+.

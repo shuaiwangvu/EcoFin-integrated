@@ -1,0 +1,7 @@
+/Users/sw-works/Documents/EcoFinKG/ready_to_use_rdfpro/rdfpro/rdfpro @read \
+FR_IA_Firm_SEC.ttl               Fund_Reasoning.ttl \
+FundSampleData.ttl               IAPDSECCompilationReport.ttl \
+Fund_Financial_Reference.ttl     IA_Firm_SEC_Feed.ttl \
+Fund_Legal_Reference.ttl         Rules_Investment_Adviser_Act.ttl \
+{ @unique @write fund.ttl \
+@stats @write fund-stats.ttl }

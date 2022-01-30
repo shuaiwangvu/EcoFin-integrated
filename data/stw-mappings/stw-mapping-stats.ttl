@@ -1,0 +1,708 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix voidx: <http://rdfpro.fbk.eu/ontologies/voidx#> .
+
+<stats:Dataset> a void:Dataset ;
+	voidx:label "<stats:Dataset> (35879, 177603)" ;
+	void:entities "35879"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "177603"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "177603"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:Linkset voidx:label "void:Linkset (9)" ;
+	voidx:example """<http://zbw.eu/stw/mapping/jel>
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/>;
+    dc:publisher \"ZBW - Leibniz Information Centre for Economics\"@en;
+    dc:publisher \"ZBW - Leibniz-Informationszentrum Wirtschaft\"@de;
+    dct:description \"Mapping to the STW subject categories, created by domain experts of ZBW using the alignment tool Amalgame (https://github.com/jrvosse/amalgame )\"@en;
+    dct:description \"Mapping zur STW-Systematik, aufgebaut von Experten der ZBW mit Hilfe der Amalgame Software (https://github.com/jrvosse/amalgame )\"@de;
+    dct:license <http://creativecommons.org/publicdomain/zero/1.0/>;
+    dct:rights \"Die CC0-Lizenzierung des Mappings soll eine möglichst breite und\\n  einfache Wiederverwendung ohne rechtliche Einschränkungen fördern.\\n  Über einen Hinweis auf die oben angegebene Urheberschaft und eine freie Verfügbarkeit\\n  von Projekten, die dieses Mapping verwenden, würden wir uns\\n  jedoch freuen.\"@de;
+    dct:rights \"The CC0 license has been applied to the mapping for broad and easy\\n  re-use without legal restrictions. We would, however, appreciate an\\n  attribution to the creators (as indicated above) and the free availability\\n  of projects which make use of this mapping.\"@en;
+    rdf:type void:Linkset;
+    void:target <http://zbw.eu/stw/mapping/jel/target>;
+    void:target <http://zbw.eu/stw>;
+    wv:norms <http://opendatacommons.org/norms/odc-by-sa/>.""" ;
+	voidx:globalStats <stats:Linkset> .
+
+<stats:Dataset> void:classPartition <stats:Linkset> .
+
+<stats:Linkset> a void:Dataset ;
+	voidx:label "<stats:Linkset> (9, C)" ;
+	void:class void:Linkset ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "185"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "185"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 1.1222222222222221E1 .
+
+void:Dataset voidx:label "void:Dataset (9)" ;
+	voidx:example """<http://zbw.eu/stw/mapping/gnd/target>
+    dct:description \"Die Gemeinsame Normdatei ist ein kontrolliertes Schlagwortsystem, \\n      das vor allem zur Sacherschließung in deutschen Bibliotheken eingesetzt wird.\"@de;
+    dct:description \"The Integrated Authority File (GND) is a controlled keyword system,\\n      that is mainly used for indexing in German libraries.\"@en;
+    foaf:homepage <http://www.dnb.de/EN/Standardisierung/GND/gnd_node.html>;
+    owl:versionInfo \"2021-06\";
+    rdf:type void:Dataset.""" ;
+	voidx:globalStats <stats:Dataset_1> .
+
+<stats:Dataset> void:classPartition <stats:Dataset_1> .
+
+<stats:Dataset_1> a void:Dataset ;
+	voidx:label "<stats:Dataset_1> (9, C)" ;
+	void:class void:Dataset ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "110"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "110"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 8.222222222222221E0 .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> voidx:label "rdf:type (18, PF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> rdf:type void:Linkset .
+    <http://zbw.eu/stw/mapping/eurovoc> rdf:type void:Linkset .
+    <http://zbw.eu/stw/mapping/wkdarbr> rdf:type void:Linkset .""" ;
+	voidx:globalStats <stats:type> .
+
+<stats:Dataset> void:propertyPartition <stats:type> .
+
+<stats:type> a void:Dataset ;
+	voidx:label "<stats:type> (18, PF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "18"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#exactMatch> voidx:label "skos:exactMatch (29556, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    dbpedia:Monetary_policy skos:exactMatch <http://zbw.eu/stw/descriptor/10382-3> .
+    wd:Q57497812 skos:exactMatch <http://zbw.eu/stw/descriptor/18575-1> .
+    <http://aims.fao.org/aos/agrovoc/c_331091> skos:exactMatch <http://zbw.eu/stw/descriptor/20553-3> .""" ;
+	voidx:globalStats <stats:exactMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:exactMatch> .
+
+<stats:exactMatch> a void:Dataset ;
+	voidx:label "<stats:exactMatch> (29556, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "20092"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "29556"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "29556"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "20092"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "20092"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/isPartOf> voidx:label "dct:isPartOf (35861, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    dbpedia:Sewage_treatment dct:isPartOf <http://zbw.eu/stw/mapping/dbpedia/target> .
+    wd:Q57497812 dct:isPartOf <http://zbw.eu/stw/mapping/wikidata/target> .
+    dbpedia:Monetary_policy dct:isPartOf <http://zbw.eu/stw/mapping/dbpedia/target> .""" ;
+	voidx:globalStats <stats:isPartOf> .
+
+<stats:Dataset> void:propertyPartition <stats:isPartOf> .
+
+<stats:isPartOf> a void:Dataset ;
+	voidx:label "<stats:isPartOf> (35861, OF)" ;
+	void:property <http://purl.org/dc/terms/isPartOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "35861"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "35861"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "35861"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "35861"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "10"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> voidx:label "skos:prefLabel (55390, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    wd:Q102078 skos:prefLabel \"Bauxit\"@de .
+    wd:Q102078 skos:prefLabel \"bauxite\"@en .
+    wd:Q57497812 skos:prefLabel \"Bahnpolitik\"@de .""" ;
+	voidx:globalStats <stats:prefLabel> .
+
+<stats:Dataset> void:propertyPartition <stats:prefLabel> .
+
+<stats:prefLabel> a void:Dataset ;
+	voidx:label "<stats:prefLabel> (55390, D)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "35356"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "55390"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "55390"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "35356"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "38391"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#label> voidx:label "rdfs:label (36, DI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> rdfs:label \"Mapping JEL Klassifikation - STW\"@de .
+    <http://zbw.eu/stw/mapping/jel> rdfs:label \"Mapping JEL classification - STW\"@en .
+    <http://zbw.eu/stw/mapping/eurovoc> rdfs:label \"Mapping EuroVoc - STW\"@de .""" ;
+	voidx:globalStats <stats:label> .
+
+<stats:Dataset> void:propertyPartition <stats:label> .
+
+<stats:label> a void:Dataset ;
+	voidx:label "<stats:label> (36, DI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "36"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "36"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "36"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#closeMatch> voidx:label "skos:closeMatch (6418, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    dbpedia:Sewage_treatment skos:closeMatch <http://zbw.eu/stw/descriptor/13327-3> .
+    dbpedia:Sewage_treatment skos:closeMatch <http://zbw.eu/stw/descriptor/13331-5> .
+    dbpedia:Monetary_policy skos:closeMatch <http://zbw.eu/stw/descriptor/10978-5> .""" ;
+	voidx:globalStats <stats:closeMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:closeMatch> .
+
+<stats:closeMatch> a void:Dataset ;
+	voidx:label "<stats:closeMatch> (6418, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "5197"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "6418"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "6418"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5197"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5197"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://creativecommons.org/ns#attributionName> voidx:label "cc:attributionName (12, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> cc:attributionName \"ZBW - Leibniz Information Centre for Economics\"@en .
+    <http://zbw.eu/stw/mapping/jel> cc:attributionName \"ZBW - Leibniz-Informationszentrum Wirtschaft\"@de .
+    <http://zbw.eu/stw/mapping/wkdarbr> cc:attributionName \"Wolters Kluwer Deutschland GmbH\"@de .""" ;
+	voidx:globalStats <stats:attributionName> .
+
+<stats:Dataset> void:propertyPartition <stats:attributionName> .
+
+<stats:attributionName> a void:Dataset ;
+	voidx:label "<stats:attributionName> (12, D)" ;
+	void:property <http://creativecommons.org/ns#attributionName> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "12"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "6"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://schema.org/subjectOf> voidx:label "schema:subjectOf (3787, OI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    wd:Q102078 schema:subjectOf <https://de.wikipedia.org/wiki/Bauxit> .
+    wd:Q102078 schema:subjectOf <https://en.wikipedia.org/wiki/Bauxite> .
+    wd:Q881668 schema:subjectOf <https://de.wikipedia.org/wiki/Blankstahl> .""" ;
+	voidx:globalStats <stats:subjectOf> .
+
+<stats:Dataset> void:propertyPartition <stats:subjectOf> .
+
+<stats:subjectOf> a void:Dataset ;
+	voidx:label "<stats:subjectOf> (3787, OI)" ;
+	void:property <http://schema.org/subjectOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2144"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3787"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "3787"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2144"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3787"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#inScheme> voidx:label "skos:inScheme (17988, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://aims.fao.org/aos/agrovoc/c_331091> skos:inScheme <http://aims.fao.org/aos/agrovoc> .
+    <http://eurovoc.europa.eu/1031> skos:inScheme <http://eurovoc.europa.eu/100141> .
+    <http://eurovoc.europa.eu/1031> skos:inScheme <http://eurovoc.europa.eu/100250> .""" ;
+	voidx:globalStats <stats:inScheme> .
+
+<stats:Dataset> void:propertyPartition <stats:inScheme> .
+
+<stats:inScheme> a void:Dataset ;
+	voidx:label "<stats:inScheme> (17988, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#inScheme> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "15131"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "17988"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "17988"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "15131"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "130"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#broadMatch> voidx:label "skos:broadMatch (10053, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    wd:Q881668 skos:broadMatch <http://zbw.eu/stw/descriptor/19051-2> .
+    <https://d-nb.info/gnd/4152694-6> skos:broadMatch <http://zbw.eu/stw/descriptor/19182-1> .
+    wd:Q2737119 skos:broadMatch <http://zbw.eu/stw/descriptor/14802-1> .""" ;
+	voidx:globalStats <stats:broadMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:broadMatch> .
+
+<stats:broadMatch> a void:Dataset ;
+	voidx:label "<stats:broadMatch> (10053, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#broadMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9550"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "10053"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "10053"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9550"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "3010"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/elements/1.1/creator> voidx:label "dc:creator (38, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> dc:creator \"ZBW - Leibniz Information Centre for Economics\"@en .
+    <http://zbw.eu/stw/mapping/jel> dc:creator \"ZBW - Leibniz-Informationszentrum Wirtschaft\"@de .
+    <http://zbw.eu/stw/mapping/eurovoc> dc:creator \"Amt für Veröffentlichungen der Europäischen Union\"@de .""" ;
+	voidx:globalStats <stats:creator> .
+
+<stats:Dataset> void:propertyPartition <stats:creator> .
+
+<stats:creator> a void:Dataset ;
+	voidx:label "<stats:creator> (38, D)" ;
+	void:property <http://purl.org/dc/elements/1.1/creator> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "38"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "38"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "28"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:propertyPartition voidx:label "void:propertyPartition (29, OI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> void:propertyPartition _:r1635341229r9388r452 .
+    <http://zbw.eu/stw/mapping/jel> void:propertyPartition _:r1635341229r9388r453 .
+    <http://zbw.eu/stw/mapping/jel> void:propertyPartition _:r1635341229r9388r454 .""" ;
+	voidx:globalStats <stats:propertyPartition> .
+
+<stats:Dataset> void:propertyPartition <stats:propertyPartition> .
+
+<stats:propertyPartition> a void:Dataset ;
+	voidx:label "<stats:propertyPartition> (29, OI)" ;
+	void:property void:propertyPartition ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "29"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#relatedMatch> voidx:label "skos:relatedMatch (8172, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/descriptor/19339-1> skos:relatedMatch <https://d-nb.info/gnd/4007389-0> .
+    <http://zbw.eu/stw/descriptor/19339-1> skos:relatedMatch <https://d-nb.info/gnd/4034421-6> .
+    <http://zbw.eu/stw/descriptor/19339-1> skos:relatedMatch <https://d-nb.info/gnd/4146141-1> .""" ;
+	voidx:globalStats <stats:relatedMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:relatedMatch> .
+
+<stats:relatedMatch> a void:Dataset ;
+	voidx:label "<stats:relatedMatch> (8172, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#relatedMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "5947"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "8172"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "8172"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5947"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5947"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://creativecommons.org/ns#attributionURL> voidx:label "cc:attributionURL (7, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> cc:attributionURL \"http://zbw.eu\" .
+    <http://zbw.eu/stw/mapping/wkdarbr> cc:attributionURL \"http://www.wolterskluwer.de\" .
+    <http://zbw.eu/stw/mapping/dbpedia> cc:attributionURL \"http://zbw.eu\" .""" ;
+	voidx:globalStats <stats:attributionURL> .
+
+<stats:Dataset> void:propertyPartition <stats:attributionURL> .
+
+<stats:attributionURL> a void:Dataset ;
+	voidx:label "<stats:attributionURL> (7, D)" ;
+	void:property <http://creativecommons.org/ns#attributionURL> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "7"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "7"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/elements/1.1/publisher> voidx:label "dc:publisher (18, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> dc:publisher \"ZBW - Leibniz Information Centre for Economics\"@en .
+    <http://zbw.eu/stw/mapping/jel> dc:publisher \"ZBW - Leibniz-Informationszentrum Wirtschaft\"@de .
+    <http://zbw.eu/stw/mapping/eurovoc> dc:publisher \"ZBW - Leibniz Information Centre for Economics\"@en .""" ;
+	voidx:globalStats <stats:publisher> .
+
+<stats:Dataset> void:propertyPartition <stats:publisher> .
+
+<stats:publisher> a void:Dataset ;
+	voidx:label "<stats:publisher> (18, D)" ;
+	void:property <http://purl.org/dc/elements/1.1/publisher> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/rights> voidx:label "dct:rights (16, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> dct:rights \"Die CC0-Lizenzierung des Mappings soll eine möglichst breite und\\n  einfache Wiederverwendung ohne rechtliche Einschränkungen fördern.\\n  Über einen Hinweis auf die oben angegebene Urheberschaft und eine freie Verfügbarkeit\\n  von Projekten, die dieses Mapping verwenden, würden wir uns\\n  jedoch freuen.\"@de .
+    <http://zbw.eu/stw/mapping/jel> dct:rights \"The CC0 license has been applied to the mapping for broad and easy\\n  re-use without legal restrictions. We would, however, appreciate an\\n  attribution to the creators (as indicated above) and the free availability\\n  of projects which make use of this mapping.\"@en .
+    <http://zbw.eu/stw/mapping/eurovoc> dct:rights \"see https://op.europa.eu/en/web/about-us/legal-notices/publications-office-of-the-european-union-copyright\"@en .""" ;
+	voidx:globalStats <stats:rights> .
+
+<stats:Dataset> void:propertyPartition <stats:rights> .
+
+<stats:rights> a void:Dataset ;
+	voidx:label "<stats:rights> (16, D)" ;
+	void:property <http://purl.org/dc/terms/rights> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "8"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "10"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/description> voidx:label "dct:description (36, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> dct:description \"Mapping to the STW subject categories, created by domain experts of ZBW using the alignment tool Amalgame (https://github.com/jrvosse/amalgame )\"@en .
+    <http://zbw.eu/stw/mapping/jel> dct:description \"Mapping zur STW-Systematik, aufgebaut von Experten der ZBW mit Hilfe der Amalgame Software (https://github.com/jrvosse/amalgame )\"@de .
+    <http://zbw.eu/stw/mapping/eurovoc> dct:description \"Das Mapping wurde\\n    durch einen automatischen String-Matching Prozess unter Verwendung von Silk\\n    (http://silkframework.org) aufgebaut. Es wurde verifiziert durch die\\n    Redaktionen beider Thesauri.\"@de .""" ;
+	voidx:globalStats <stats:description> .
+
+<stats:Dataset> void:propertyPartition <stats:description> .
+
+<stats:description> a void:Dataset ;
+	voidx:label "<stats:description> (36, D)" ;
+	void:property <http://purl.org/dc/terms/description> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "36"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "36"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "34"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://creativecommons.org/ns#license> voidx:label "cc:license (6, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> cc:license <http://creativecommons.org/publicdomain/zero/1.0/> .
+    <http://zbw.eu/stw/mapping/wkdarbr> cc:license <http://creativecommons.org/publicdomain/zero/1.0/> .
+    <http://zbw.eu/stw/mapping/dbpedia> cc:license <http://creativecommons.org/publicdomain/zero/1.0/> .""" ;
+	voidx:globalStats <stats:license> .
+
+<stats:Dataset> void:propertyPartition <stats:license> .
+
+<stats:license> a void:Dataset ;
+	voidx:label "<stats:license> (6, OF)" ;
+	void:property <http://creativecommons.org/ns#license> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/license> voidx:label "dct:license (6, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> dct:license <http://creativecommons.org/publicdomain/zero/1.0/> .
+    <http://zbw.eu/stw/mapping/wkdarbr> dct:license <http://creativecommons.org/publicdomain/zero/1.0/> .
+    <http://zbw.eu/stw/mapping/dbpedia> dct:license <http://creativecommons.org/publicdomain/zero/1.0/> .""" ;
+	voidx:globalStats <stats:license_1> .
+
+<stats:Dataset> void:propertyPartition <stats:license_1> .
+
+<stats:license_1> a void:Dataset ;
+	voidx:label "<stats:license_1> (6, OF)" ;
+	void:property <http://purl.org/dc/terms/license> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "6"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2004/02/skos/core#narrowMatch> voidx:label "skos:narrowMatch (10043, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/descriptor/19182-1> skos:narrowMatch <https://d-nb.info/gnd/4152694-6> .
+    <http://zbw.eu/stw/descriptor/19182-1> skos:narrowMatch <https://d-nb.info/gnd/4203251-9> .
+    <http://zbw.eu/stw/descriptor/19182-1> skos:narrowMatch <https://d-nb.info/gnd/4482068-9> .""" ;
+	voidx:globalStats <stats:narrowMatch> .
+
+<stats:Dataset> void:propertyPartition <stats:narrowMatch> .
+
+<stats:narrowMatch> a void:Dataset ;
+	voidx:label "<stats:narrowMatch> (10043, O)" ;
+	void:property <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "10043"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "10043"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3000"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "9542"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:target voidx:label "void:target (18, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> void:target <http://zbw.eu/stw> .
+    <http://zbw.eu/stw/mapping/jel> void:target <http://zbw.eu/stw/mapping/jel/target> .
+    <http://zbw.eu/stw/mapping/eurovoc> void:target <http://zbw.eu/stw> .""" ;
+	voidx:globalStats <stats:target> .
+
+<stats:Dataset> void:propertyPartition <stats:target> .
+
+<stats:target> a void:Dataset ;
+	voidx:label "<stats:target> (18, O)" ;
+	void:property void:target ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "10"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://vocab.org/waiver/terms/norms> voidx:label "wv:norms (5, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/jel> wv:norms <http://opendatacommons.org/norms/odc-by-sa/> .
+    <http://zbw.eu/stw/mapping/wkdarbr> wv:norms <http://opendatacommons.org/norms/odc-by-sa/> .
+    <http://zbw.eu/stw/mapping/dbpedia> wv:norms <http://opendatacommons.org/norms/odc-by-sa/> .""" ;
+	voidx:globalStats <stats:norms> .
+
+<stats:Dataset> void:propertyPartition <stats:norms> .
+
+<stats:norms> a void:Dataset ;
+	voidx:label "<stats:norms> (5, OF)" ;
+	void:property <http://vocab.org/waiver/terms/norms> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "5"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://purl.org/dc/terms/title> voidx:label "dct:title (9, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/gnd/target> dct:title \"Gemeinsame Normdatei (GND)\" .
+    <http://zbw.eu/stw/mapping/thesoz/target> dct:title \"Thesaurus for the Social Sciences...\" .
+    <http://zbw.eu/stw/mapping/jel/target> dct:title \"JEL classification\" .""" ;
+	voidx:globalStats <stats:title> .
+
+<stats:Dataset> void:propertyPartition <stats:title> .
+
+<stats:title> a void:Dataset ;
+	voidx:label "<stats:title> (9, DFI)" ;
+	void:property <http://purl.org/dc/terms/title> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "9"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#versionInfo> voidx:label "owl:versionInfo (9, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/gnd/target> owl:versionInfo \"2021-06\" .
+    <http://zbw.eu/stw/mapping/thesoz/target> owl:versionInfo \"2021-09-23\" .
+    <http://zbw.eu/stw/mapping/jel/target> owl:versionInfo \"20210225\" .""" ;
+	voidx:globalStats <stats:versionInfo> .
+
+<stats:Dataset> void:propertyPartition <stats:versionInfo> .
+
+<stats:versionInfo> a void:Dataset ;
+	voidx:label "<stats:versionInfo> (9, DFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#versionInfo> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "9"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://xmlns.com/foaf/0.1/homepage> voidx:label "foaf:homepage (10, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/gnd/target> foaf:homepage <http://www.dnb.de/EN/Standardisierung/GND/gnd_node.html> .
+    <http://zbw.eu/stw/mapping/thesoz/target> foaf:homepage <https://www.gesis.org/angebot/recherchieren/tools-zur-recherche/thesaurus-sozialwissenschaften/> .
+    <http://zbw.eu/stw/mapping/jel/target> foaf:homepage <https://www.aeaweb.org/econlit/jelCodes.php> .""" ;
+	voidx:globalStats <stats:homepage> .
+
+<stats:Dataset> void:propertyPartition <stats:homepage> .
+
+<stats:homepage> a void:Dataset ;
+	voidx:label "<stats:homepage> (10, OF)" ;
+	void:property <http://xmlns.com/foaf/0.1/homepage> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "9"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://xmlns.com/foaf/0.1/focus> voidx:label "foaf:focus (2, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/dbpedia/target> foaf:focus db: .
+    <http://zbw.eu/stw/mapping/wikidata/target> foaf:focus <http://www.wikidata.org> .""" ;
+	voidx:globalStats <stats:focus> .
+
+<stats:Dataset> void:propertyPartition <stats:focus> .
+
+<stats:focus> a void:Dataset ;
+	voidx:label "<stats:focus> (2, OFI)" ;
+	void:property <http://xmlns.com/foaf/0.1/focus> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> voidx:label "rdfs:seeAlso (2, OI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://zbw.eu/stw/mapping/agrovoc> rdfs:seeAlso <http://zbw.eu/stw> .
+    <http://zbw.eu/stw/mapping/agrovoc> rdfs:seeAlso <http://aims.fao.org/aos/agrovoc/agrovocScheme> .""" ;
+	voidx:globalStats <stats:seeAlso> .
+
+<stats:Dataset> void:propertyPartition <stats:seeAlso> .
+
+<stats:seeAlso> a void:Dataset ;
+	voidx:label "<stats:seeAlso> (2, OI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#seeAlso> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:property voidx:label "void:property (29, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:property> .
+
+<stats:Dataset> void:propertyPartition <stats:property> .
+
+<stats:property> a void:Dataset ;
+	voidx:label "<stats:property> (29, OF)" ;
+	void:property void:property ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "5"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:triples voidx:label "void:triples (29, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:triples> .
+
+<stats:Dataset> void:propertyPartition <stats:triples> .
+
+<stats:triples> a void:Dataset ;
+	voidx:label "<stats:triples> (29, DFI)" ;
+	void:property void:triples ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "29"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "29"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:openSearchDescription voidx:label "void:openSearchDescription" .
+
+void:classes voidx:label "void:classes" .
+
+void:documents voidx:label "void:documents" .
+
+void:TechnicalFeature voidx:label "void:TechnicalFeature" .
+
+void:uriLookupEndpoint voidx:label "void:uriLookupEndpoint" .
+
+void:sparqlEndpoint voidx:label "void:sparqlEndpoint" .
+
+void:dataDump voidx:label "void:dataDump" .
+
+void:triples voidx:label "void:triples" .
+
+void:linkPredicate voidx:label "void:linkPredicate" .
+
+void:uriRegexPattern voidx:label "void:uriRegexPattern" .
+
+void:uriSpace voidx:label "void:uriSpace" .
+
+void:properties voidx:label "void:properties" .
+
+void:subset voidx:label "void:subset" .
+
+void:classPartition voidx:label "void:classPartition" .
+
+void:distinctObjects voidx:label "void:distinctObjects" .
+
+void:propertyPartition voidx:label "void:propertyPartition" .
+
+void:inDataset voidx:label "void:inDataset" .
+
+void:Dataset voidx:label "void:Dataset" .
+
+void:objectsTarget voidx:label "void:objectsTarget" .
+
+void:property voidx:label "void:property" .
+
+void:DatasetDescription voidx:label "void:DatasetDescription" .
+
+void:feature voidx:label "void:feature" .
+
+void:class voidx:label "void:class" .
+
+void:subjectsTarget voidx:label "void:subjectsTarget" .
+
+void:target voidx:label "void:target" .
+
+void:entities voidx:label "void:entities" .
+
+void:Linkset voidx:label "void:Linkset" .
+
+void:distinctSubjects voidx:label "void:distinctSubjects" .
+
+void:exampleResource voidx:label "void:exampleResource" .
+
+void:rootResource voidx:label "void:rootResource" .
+
+void:vocabulary voidx:label "void:vocabulary" .
+
+voidx:globalStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#globalStats>" .
+
+voidx:source voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#source>" .
+
+voidx:type voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#type>" .
+
+voidx:example voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#example>" .
+
+voidx:sourceStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sourceStats>" .
+
+voidx:tboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#tboxTriples>" .
+
+voidx:averageProperties voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#averageProperties>" .
+
+voidx:label voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#label>" .
+
+voidx:sameAsTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sameAsTriples>" .
+
+voidx:typeTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#typeTriples>" .
+
+voidx:aboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#aboxTriples>" .

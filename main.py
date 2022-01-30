@@ -21,20 +21,20 @@ skos_relatedMatch = "http://www.w3.org/2004/02/skos/core#relatedMatch"
 skos_closeMatch = "http://www.w3.org/2004/02/skos/core#closeMatch"
 lkif_eq = 'http://www.estrellaproject.org/lkif-core/norm.owl#strictly_equivalent'
 rdfs_subClassOf = "http://www.w3.org/2000/01/rdf-schema#subClassOf"
-files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mappings', 'alignment']
+files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mapping', 'my_mapping']
 # files = []
 
 
 for file in files:
-	path_to_file = './data/'+file+'.hdt'
+	path_to_file = './data/integrated_files/'+file+'.hdt'
 	hdt_kg = HDTDocument(path_to_file)
 	triples, cardinality = hdt_kg.search_triples("", "", "")
 	entities = set()
 	for s, p, o in triples:
 		entities.add(s)
 		entities.add(o)
-	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
-	print ('\t with ', len (entities), ' entities')
+	print ('\n\nKG ', file, 'has ', cardinality, 'edges')
+	print ('\t with ', len (entities), ' nodes')
 
 	# owl:sameAs
 	triples, cardinality = hdt_kg.search_triples("", owl_sameas, "")
@@ -90,15 +90,15 @@ ax = plt.subplot(111)
 
 
 
-path_to_file = './data/integrated.hdt'
+path_to_file = './data/integrated_files/integrated.hdt'
 hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
 for s, p, o in triples:
 	entities.add(s)
 	entities.add(o)
-print ('the integrated KG has ', cardinality, 'triples')
-print ('\t with ', len (entities), ' entities')
+print ('the integrated KG has ', cardinality, 'edges')
+print ('\t with ', len (entities), ' nodes')
 # owl:sameAs
 triples, cardinality = hdt_kg.search_triples("", owl_sameas, "")
 print ('owl:sameAs ', cardinality)

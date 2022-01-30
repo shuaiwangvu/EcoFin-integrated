@@ -1,0 +1,1900 @@
+# baseURI: http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl
+# imports: http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl
+# imports: http://finregont.com/fro/ref/FIBO_LKIF_Alignment.ttl
+# imports: http://finregont.com/fro/ref/Judging_Contracts_Core.ttl
+# imports: http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl
+# imports: http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl
+# imports: http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl
+# prefix: fr-rule-iaa
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-be-fct-fct: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/> .
+@prefix fibo-be-fct-pub: <https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/> .
+@prefix fibo-be-le-fbo: <https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/> .
+@prefix fibo-be-oac-opty: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/> .
+@prefix fibo-be-tr-tr: <https://spec.edmcouncil.org/fibo/ontology/BE/Trusts/Trusts/> .
+@prefix fibo-fbc-fct-fse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/> .
+@prefix fibo-fbc-fct-rga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/> .
+@prefix fibo-fbc-fct-usfse: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/> .
+@prefix fibo-fbc-fct-usjrga: <https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/> .
+@prefix fibo-fbc-pas-fpas: <https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/> .
+@prefix fibo-fnd-acc-cur: <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+@prefix fibo-fnd-agr-ctr: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+@prefix fibo-fnd-pas-pas: <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+@prefix fibo-fnd-rel-rel: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+@prefix fr-fin-ref: <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl#> .
+@prefix fr-leg-ref: <http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl#> .
+@prefix fr-rule-iaa: <http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl#> .
+@prefix fro-leg-ref: <http://finregont.com/fro/ref/LegalReference.ttl#> .
+@prefix jc-core: <http://finregont.com/fro/ref/Judging_Contracts_Core.ttl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2dl: <http://finregont.com/fro/ref/owl2dl.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fr-fin-ref:InvestmentAdviser
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "total" ;
+              ] ;
+            sp:predicate fibo-fnd-acc-cur:hasAmount ;
+            sp:subject [
+                sp:varName "myAUM_MA" ;
+              ] ;
+          ]
+          [
+            sp:object fr-fin-ref:AUM_Total ;
+            sp:predicate fibo-fnd-rel-rel:isClassifiedBy ;
+            sp:subject [
+                sp:varName "myAUM_MA" ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "myAUM_MA" ;
+              ] ;
+            sp:predicate fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:SubQuery ;
+            sp:query [
+                rdf:type sp:Select ;
+                sp:groupBy (
+                    spin:_this
+                  ) ;
+                sp:resultVariables (
+                    spin:_this
+                    [
+                      sp:expression [
+                          rdf:type sp:Sum ;
+                          sp:expression [
+                              sp:varName "amount" ;
+                            ] ;
+                        ] ;
+                      sp:varName "total" ;
+                    ]
+                  ) ;
+                sp:where (
+                    [
+                      sp:object [
+                          sp:varName "fund" ;
+                        ] ;
+                      sp:predicate fibo-fnd-rel-rel:manages ;
+                      sp:subject spin:_this ;
+                    ]
+                    [
+                      sp:object [
+                          sp:varName "assetMA" ;
+                        ] ;
+                      sp:predicate fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+                      sp:subject [
+                          sp:varName "fund" ;
+                        ] ;
+                    ]
+                    [
+                      sp:object [
+                          sp:varName "amount" ;
+                        ] ;
+                      sp:predicate fibo-fnd-acc-cur:hasAmount ;
+                      sp:subject [
+                          sp:varName "assetMA" ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+.
+<http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment """The rules determine registration and filing requirements under United States Code (USC) 15 U.S. Code § 80b–2 - Definitions
+The rules are encoded as defined subclasses of LKIF-norm:Normatively_Qualified. There are 4 Financial Condition subclasses:
+1) Defining Conditions 15 U.S. Code § 80b–2 11
+2) Excluding Conditions 15 U.S. Code § 80b–2 11 A-H
+3) Exempting Conditions 15 U.S. Code § 80b–3 (b) 1-7
+4) Prohibiting Condition 15 U.S. Code § 80b–3a - State and Federal responsibilities 
+and exceptions from prohibition Code of Federal Regulations (CFR) 17 CFR 275.203A-2 """ ;
+  owl:imports <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl> ;
+  owl:imports <http://finregont.com/fro/ref/FIBO_LKIF_Alignment.ttl> ;
+  owl:imports <http://finregont.com/fro/ref/Judging_Contracts_Core.ttl> ;
+  owl:imports <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl> ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Financial_Reference.ttl> ;
+  owl:imports <http://fundontology.com/fr/ref/Fund_Legal_Reference.ttl> ;
+  skos:definition "Defined classes and SPARQL rules to implement filing requirements under the Investment Adviser Act." ;
+.
+fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Regulation prototype, the SEC Firm report and Sample data simply load into subclasses of FIBO Business. The equivalet class definition can be expanded for a deeper more complex evaluation" ;
+  rdfs:label "Defined ex. USC § 80b–2 (a) 11 - Business" ;
+  rdfs:subClassOf fr-rule-iaa:DefiningCondition ;
+  owl:equivalentClass fibo-be-fct-fct:Business ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Business ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the U.S. Code § 80b–2-11 (business) 
+“Investment adviser” means any person who, for compensation, engages in the Business of ...\" Inferred members are considered by the financial rule, which applies the status.""" ;
+.
+fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Compensation
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Regulation prototype, the equivalent class is simply being a FIBO Financial Service Provider (asserted in the SEC FIrm & Sample data load) and providing fee based advice. The equivalet class definition can be expanded to examine actual fees charged, rather than providing a fee based service offering." ;
+  rdfs:label "Defined ex. USC § 80b–2 (a) 11 - Compensation" ;
+  rdfs:subClassOf fr-rule-iaa:DefiningCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-fbc-pas-fpas:FinancialServiceProvider
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:provides ;
+            owl:someValuesFrom fr-fin-ref:FeeBasedInvestmentAdvice ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Compensation ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the U.S. Code § 80b–2-11 (compensation) 
+“Investment adviser” means any person who, for Compensation, engages in the business of ...\" Inferred members are considered by the financial rule, which applies the status.""" ;
+.
+fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Securities_Advice
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Regulation prototype, the equivalent class is simply being a FIBO Financial Service Provider (asserted in the SEC FIrm & Sample data load) and providing Securities Advice (advice service offering that involves Securities). " ;
+  rdfs:label "Defined ex. USC § 80b–2 (a) 11 - Securities Advice" ;
+  rdfs:subClassOf fr-rule-iaa:DefiningCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-fbc-pas-fpas:FinancialServiceProvider
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:provides ;
+            owl:someValuesFrom fr-fin-ref:SecuritiesAdvice ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Securities_Advice ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the U.S. Code § 80b–2-11 (securities advice) 
+“...advising others, either directly or through publications or writings, as to the value of Securities or as to the advisability of investing in, purchasing, or selling Securities, or who, for compensation and as part of a regular business, issues or promulgates analyses or reports concerning Securities\" Inferred members are considered by the financial rule, which applies the status.""" ;
+.
+fr-rule-iaa:DefiningCondition
+  rdf:type owl:Class ;
+  rdfs:comment "For the Investment Adviser Act, the subclasses define Functional Business Entities as Advisers, if they meet the U.S. Code § 80b–2 - 11 Definitions: For Compensation, being in the Business or Providing Securities advice." ;
+  rdfs:label "Defining Condition" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-rule-iaa:FinancialCondition
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty jc-core:considered_by ;
+            owl:someValuesFrom fr-rule-iaa:FinancialDefinitionRule ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A financial condition that subsumes members, who meet certain regulatory definitions. If the condition is fulfilled, it will be considered by a Financial Definition Rule, which in turn applies a Defined Status." ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_A_Bank
+  rdf:type owl:Class ;
+  rdfs:comment "In the Fund Regulation prototype, excluded banks are the Federal Reserve member banks (instantiated in FIBO) and a Savings & Loan company (asserted in the Sample data)." ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (A) - Bank" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          fibo-fbc-fct-fse:BankHoldingCompany
+          fibo-fbc-fct-usfse:SavingsAndLoanHoldingCompany
+          fibo-fbc-fct-fse:CentralBank
+          fibo-fbc-fct-fse:DepositoryInstitution
+          fibo-fbc-fct-usjrga:FRSMemberBank
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_A_Bank ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the U.S. Code § 80b–2 (11) (A) Bank exclusion. 
+“a bank, or any bank holding company as defined in the Bank Holding Company Act of 1956 [12 U.S.C. 1841 et seq.]... \".
+The equivalent class is the Union of FIBO classes for Bank Holding companies, S&L, Central Banks, Depository Institutions and Federal Reserve Board Member Banks.  
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_B_Professional
+  rdf:type owl:Class ;
+  rdfs:comment "In the Fund Regulation prototype has a sample data record \"Jayzed Data Models\" asserted as professional service provider. The equivalet class definition can be expanded to examine lawyer, accountant, engineer, teacher individually. " ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (B) - Professional" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass <http://finregont.com/fro/ref/FinancialReference.ttl#ProfessionalServiceProvider> ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_B_Professional ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the U.S. Code § 80b–2 (11) (B) Professional exclusion.
+“any lawyer, accountant, engineer, or teacher whose performance of such services is solely incidental to the practice of his profession;\".
+The equivalent class is anything asserted as a Professional Service Provider.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_C_Broker_Dealer
+  rdf:type owl:Class ;
+  rdfs:comment "FIBO has a deep taxonomy of more than 60 Service Provider subclasses. However these are mostly primitive rather than defined classes. Thus Broker Dealer is asserted by the source system  rather than inferred by the reasoner. " ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (C) - Broker Dealer" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass fibo-fbc-fct-fse:BrokerageFirm ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_C_Broker_Dealer ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion U.S. Code § 80b–2 (11) (C) Broker Dealer.
+“any broker or dealer whose performance of such services is solely incidental to the conduct of his business as a broker or dealer and who receives no special compensation therefor;\"
+The equivalent class is anything asserted as a FIBO Brokerage Firm.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_D_Publisher
+  rdf:type owl:Class ;
+  rdfs:comment "FIBO has a deep taxonomy of more than 60 Service Provider subclasses. However these are mostly primitive rather than defined classes. Thus being a Publisher is asserted by the source system  rather than inferred by the reasoner." ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (D) - Publisher" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass fibo-be-fct-pub:Publisher ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_D_Publisher ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion under U.S. Code § 80b–2 (11) (D) Publisher.
+“the publisher of any bona fide newspaper, news magazine or business or financial publication of general and regular circulation; \".
+The equivalent class is anything asserted as a FIBO Publisher.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_E_Government_Securities_only
+  rdf:type owl:Class ;
+  rdfs:comment "In the Fund Regulation prototype has a sample data record for an adviser, who only offers government bond advice. A more complex definition would examine the portfolio holdings of managed funds." ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (E) - Government Securities only" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:provides ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fr-fin-ref:InvestmentAdvice
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://finregont.com/fro/ref/FinancialReference.ttl#ServiceType_Government_Bond_Advice> ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_E_Government_Securities_only ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion under U.S. Code § 80b–2 (11) (E) Government Securities.
+“any person whose advice, analyses or reports relate to no securities other than securities which are direct obligations of or obligations guaranteed as to principal or interest by the United States, or securities issued or guaranteed by corporations in which the United States \".
+The equivalent class is simply a classification of the service provided.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_F_Rating_Organization
+  rdf:type owl:Class ;
+  rdfs:comment "In the Fund Regulation prototype has a sample data records for Moody's and Standard and Poors asserted as Rating Agency. The equivalet class definition can be expanded to examine criteria under the Securities Exchange Act of 1934 [15 U.S.C. 78c (a)(12)] in full. We would simply change Rating Agency to a defined class." ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (F) - Rating Organization" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass <http://finregont.com/fro/ref/FinancialReference.ttl#RatingAgency> ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_F_Rating_Organization ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion under U.S. Code § 80b–2 (11) (F) Rating Organization.
+“any nationally recognized statistical rating organization... \".
+The equivalent class is anything asserted as a FRO Rating Agency.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_G_Family_Office
+  rdf:type owl:Class ;
+  rdfs:comment "A shortcut. We just have the Family Office already classifiied in the Sample Data. The equivalent class definition can be expanded to formally define what cirteria a \"family office\" must fulfill." ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (G) - Family office" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_Family_office ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_G_Family_Office ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion under U.S. Code § 80b–2 (11) (G) Family Office.
+“any family office, as defined by rule, regulation, or order of the Commission, in accordance with the purposes of this subchapter;\".
+The equivalent class is any Investment Adviser classified as a Family Office.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Excluded_Ex_USC_s80b_2_a_11_H_other
+  rdf:type owl:Class ;
+  rdfs:comment "An example of a \"future use\" condition. Nothing is equivalent to the condition. Once there are other exclusion (in the Code of Federal Regulations), we can update the equivalent class expression and the rule will be considered. " ;
+  rdfs:label "Excluded ex. USC § 80b–2 (a) (11) (F) - Rating Organization" ;
+  rdfs:subClassOf fr-rule-iaa:ExcludingCondition ;
+  owl:equivalentClass owl:Nothing ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_H_other ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that meet the exclusion under U.S. Code § 80b–2 (11) (H) other.
+“such other persons not within the intent of this paragraph, as the Commission may designate by rules and regulations or order. \".
+We don't have any Other exclusion yet, so the equivalent class is Nothing. """ ;
+.
+fr-rule-iaa:ExcludingCondition
+  rdf:type owl:Class ;
+  rdfs:comment "For the Investment Adviser Act, the subclasses define Functional Business Entities as Excluded from Adviser definition, if they meet the U.S. Code § 80b–2 - 11 Exclusions A through H: \"Investment Adviser means ... ;but does not include\" (banks, broker dealers, publishers etc.)" ;
+  rdfs:label "Excluding Condition" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-rule-iaa:FinancialCondition
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty jc-core:considered_by ;
+            owl:someValuesFrom fr-rule-iaa:FinancialExclusionRule ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A financial condition that subsumes members, who are excluded from regulatory definition. If the condition is fulfilled, it will be considered by an Exclusion Rule, which in turn applies an Exclusion Status." ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_1_Private_Fund_same_state
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification that assumes the source system provides the legal assessment. The equivalent class definition can be expanded to actually compare the FIBO Primary Address of the adviser and all its clients." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (1) - Private Fund same state" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:PrivateFundAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_same_state_client ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_1_Private_Fund_same_state ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (1) : “any investment adviser, other than an investment adviser who acts as an investment adviser to any private fund, all of whose clients are residents of the State...\".
+The equivalent class simply consits of all FRO Private Fund Advisers that have the same state classifier.  
+Inferred members are considered by the exemption rule, which applies the exemption status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_2_Insurance_clients
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification for the Fund Regulation Prototype and the limited sample data. We don't examine the type of contract and whether the adviser has contracts with non-insurers." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (2) - Insurance clients only" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty <http://finregont.com/fro/ref/FinancialReference.ttl#isPrincipal> ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fnd-agr-ctr:Contract
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fibo-fnd-agr-ctr:hasContractParty ;
+                      owl:someValuesFrom fibo-fbc-fct-fse:InsuranceCompany ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_2_Insurance_clients ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An equivalent class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (3) : “any investment adviser whose only clients are insurance companies; \".
+The equivalent class simply consits of all FIBO Investment Advisers that are principal to contracts with Insurance Companies.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_3_Foreign_private
+  rdf:type owl:Class ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (3) - Foreign Private Investors only" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fbc-fct-fse:ManagementCompany
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue fr-fin-ref:IAA_misc_foreign_based ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_3_Foreign_private ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (3) \"any investment adviser that is a foreign private adviser; \".
+The equivalent class simply consits of all FRO Investment Advisers to FIBO Managment Companies classified as foreign based.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_4_A_charitable_client
+  rdf:type owl:Class ;
+  rdfs:comment "As a simplification for the Fund Regulation Prototype and the limited sample data, we assume the client in the FIBO Service agreement is tagged as a charity (foundation). This can be expanded to examine the full definition of trustee, director, officer etc." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (4) (A) - Charitable clients" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty <http://finregont.com/fro/ref/FinancialReference.ttl#isPrincipal> ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fnd-pas-pas:ServiceAgreement
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fibo-fnd-agr-ctr:hasContractParty ;
+                      owl:someValuesFrom <http://finregont.com/fro/ref/FinancialReference.ttl#Foundation> ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_A_Charitable_client ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (4) : “any investment adviser that is a charitable organization, as defined in section 3(c)(10)(D) of the Investment Company Act...\".
+(A) any such charitable organization; 
+The equivalent class simply consits of all FIBO Investment Advisers that are principal to contracts with Foundations.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_4_B_charity_fund_80a_3c_10_B
+  rdf:type owl:Class ;
+  rdfs:comment "This assumes that the investors are already asserted as Non-Profits in the FIBO load." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (4) (B) - Charitable fund" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fbc-fct-fse:ManagementCompany
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fibo-be-oac-opty:hasInvestor ;
+                      owl:someValuesFrom fibo-be-le-fbo:NotForProfitOrganization ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_B_Charity_fund ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (4) : “any investment adviser that is a charitable organization, as defined in section 3(c)(10)(D) of the Investment Company Act...\".
+(B) \"a fund that is excluded from the definition of an investment company under section 3(c)(10)(B) of the Investment Company Act of 1940 [15 U.S.C. 80a–3 (c)(10)(B)];\"
+The equivalent class simply consits of all FIBO Investment Advisers that manage funds with FIBO Non-Profits as investors.""" ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_4_C_Trust
+  rdf:type owl:Class ;
+  rdfs:comment "This assumes that the load into FIBO asserts the fund to be a Trust. As a simplification, we don't examine trustees, administrators setlors or beneficiaries." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (4) (C) - Trust" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+            owl:someValuesFrom fibo-be-tr-tr:Trust ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom fibo-be-tr-tr:Trust ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_C_Trust ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (4) : “any investment adviser that is a charitable organization, as defined in section 3(c)(10)(D) of the Investment Company Act...\".
+(C) a trust or other donative instrument described in section 3(c)(10)(B) of the Investment Company Act of 1940 [15 U.S.C. 80a–3 (c)(10)(B)], or the trustees, administrators, settlors (or potential settlors), or beneficiaries of any such trust or other instrument;  
+The equivalent class simply consits of all FIBO Investment Advisers that manage only trusts.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_5_Church_plan
+  rdf:type owl:Class ;
+  rdfs:comment "This assumes that the managed company as tagged as a church plan in the FIBO load." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (5) - Church plan" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fbc-fct-fse:ManagementCompany
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue fr-fin-ref:IAA_misc_church_plan ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_5_Church_plan ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (5) : “ any plan described in section 414 (e) of title 26, ...\".
+The equivalent class simply consits of all FIBO Investment Advisers that manage funds classified as Church Plans.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_6_Commodity_Trading_Advisor
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification for the Fund Regulation Prototype and the limited sample data. We don't examine Primary Business in full." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (6) - Commodity Trading Adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass fibo-fbc-fct-fse:CommodityTradingAdvisor ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_6_Commodity_Trading_Advisor ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (1) : “any investment adviser that is registered with the Commodity Futures Trading Commission as a commodity trading advisor ...\".
+The equivalent class simply consits of FIBO Commodity Trading Advisors.  
+Inferred members are considered by the exemption rule, which applies the exemption status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_7_A_Small_Business
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification for the Fund Regulation Prototype. We assume the adviser is already tagged in the FIBO load. This can be expanded to examine the nature of Business Development Company." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (7) (A) - Small Business" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_Small_Business ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_A_small_business ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """A defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (7) : “any investment adviser, other than any entity that has elected to be regulated or is regulated as a business development company pursuant to section 54 of the Investment Company Act of 1940 [15 U.S.C. 80a–53], who solely advises— \".
+(A)  small business investment companies that are licensees under the Small Business Investment Act of 1958 [15 U.S.C. 661 et seq.]; 
+The equivalent class simply consits of all FIBO Investment Advisers that are classified as Small Business Advisers.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_7_B_Small_Business_license
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification for the Fund Regulation Prototype. We assume the adviser is already tagged in the FIBO load. This can be expanded to examine the notice and license qualification." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (7) (B) - Small Business license" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_Small_Business_license ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_B_small_business_license ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """A defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (7) : “any investment adviser, other than any entity that has elected to be regulated or is regulated as a business development company pursuant to section 54 of the Investment Company Act of 1940 [15 U.S.C. 80a–53], who solely advises— \".
+(B) entities that have received from the Small Business Administration notice to proceed to qualify for a license as a small business investment company under the Small Business Investment Act of 1958, which notice or license has not been revoked;
+The equivalent class simply consits of all FIBO Investment Advisers that are classified as Small Business Advisers license pending.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Exempted_Ex_USC_s80b_3_b_7_C_Small_Business_affiliate
+  rdf:type owl:Class ;
+  rdfs:comment "A simplification for the Fund Regulation Prototype. We assume the adviser is already tagged in the FIBO load. This can be expanded to actually validate the affiliation and license aplication." ;
+  rdfs:label "Exempted ex. USC § 80b–3 (b) (7) (C) - Small Business affiliate" ;
+  rdfs:subClassOf fr-rule-iaa:ExemptingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_Small_Business_affiliate ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_C_small_business_affiliate ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """A defined class for FIBO Functional Business Entities that are exempted from Securities & Exchange Commission registration under U.S. Code § 80b–3 (b) (7) : “any investment adviser, other than any entity that has elected to be regulated or is regulated as a business development company pursuant to section 54 of the Investment Company Act of 1940 [15 U.S.C. 80a–53], who solely advises— \".
+(C) applicants that are affiliated with 1 or more licensed small business investment companies described in subparagraph (A) and that have applied for another license under the Small Business Investment Act of 1958, which application remains pending. 
+The equivalent class simply consits of all FIBO Investment Advisers that are classified as Small Business affiliate Advisers.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:ExemptingCondition
+  rdf:type owl:Class ;
+  rdfs:comment "For the Investment Adviser Act, the subclasses define Functional Business Entities as Exempted from Adviser definition, if they meet the criteria in U.S. Code § 80b–3 (b) - Investment advisers who need not be registered." ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-rule-iaa:FinancialCondition
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty jc-core:considered_by ;
+            owl:someValuesFrom fr-rule-iaa:FinancialExemptionRule ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A set of financial conditions that subsume members, who are exempted from regulatory definition. If the condition is fulfilled, it will be considered by an Exemption Rule, which in turn applies an Exemption Status." ;
+.
+fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Business
+  rdf:type fr-rule-iaa:FinancialDefinitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Business ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Defined per U.S. Code § 80b–2 (a) (11) - Business" ;
+.
+fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Compensation
+  rdf:type fr-rule-iaa:FinancialDefinitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Compensation ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Defined per U.S. Code § 80b–2 (a) (11) - Compensation" ;
+.
+fr-rule-iaa:FR_Defined_USC_s80b_2_a_11_Securities_Advice
+  rdf:type fr-rule-iaa:FinancialDefinitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Securities_Advice ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Defined per U.S. Code § 80b–2 (a) (11) - Seurities" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_A_Bank
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_A_Bank ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded U.S. Code § 80b–2 (11) (A) Bank" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_B_Professional
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_B_Professional ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (B) - Professional" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_C_Broker_Dealer
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_C_Broker_Dealer ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (C) - Broker Dealer" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_D_Publisher
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_D_Publisher ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (D) - Publisher" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_E_Government_Securities_only
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_E_Government_Securities_only ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (E) - Government Securities only" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_F_Rating_Organization
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_F_Rating_Organization ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (F) - Rating Organization" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_G_Family_Office
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_G_Family_Office ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (G) - Family Office" ;
+.
+fr-rule-iaa:FR_Excluded_USC_s80b_2_a_11_H_other
+  rdf:type fr-rule-iaa:FinancialExclusionRule ;
+  jc-core:applies fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_H_other ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Excluded per U.S. Code § 80b–2 (a) (11) (H) - other" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_1_Private_Fund_same_state
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_1_Private_Fund_same_state ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b61-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (1) Private Fund same state" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_2_Insurance_clients
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_2_Insurance_clients ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b62-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (2) Insurance clients" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_3_Foreign_private
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_3_foreign_private ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b62-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (3) Foreign Private Investors only" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_A_Charitable_client
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_4_A_charitable_client ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b65-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (4) (B) Charitable clients" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_B_Charity_fund
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_5_church_plan ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b66-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (4) (B) Charity Funds" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_4_C_Trust
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_4_C_less_than_fifteen_clients ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b67-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (4) (C) Trust" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_5_Church_plan
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_5_church_plan ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b68-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (5) Church Plan" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_6_Commodity_Trading_Advisor
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_6_Commodity_Trading_Adviser ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b6a-0c74-11e6-aa53-e455a13f2ad9> ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b6c-0c74-11e6-aa53-e455a13f2ad9> ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b6d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (6) Commodity Trading Adviser" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_A_small_business
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_A_small_business ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b6f-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (7) (A) Small Business" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_B_small_business_license
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_B_small_business_license ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b70-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (7) (B) Small Business license" ;
+.
+fr-rule-iaa:FR_Exempted_USC_s80b_3_b_7_C_small_business_affiliate
+  rdf:type fr-rule-iaa:FinancialExemptionRule ;
+  jc-core:applies fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_C_small_business_affiliate ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b71-0c74-11e6-aa53-e455a13f2ad9> ;
+  lkif-expr:medium <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b71-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Exempted U.S. Code § 80b–3 (b) (7) (A) Small Business affiliate" ;
+.
+fr-rule-iaa:Filing_Consequence
+  rdf:type owl:Class ;
+  rdfs:label "Filing Consequence" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  rdfs:subClassOf [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          jc-core:Legal_Consequence
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fro-leg-ref:hasForm ;
+            owl:someValuesFrom fro-leg-ref:Legal_Form ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A legal consequence with forms to file." ;
+.
+fr-rule-iaa:FinRule_Prohibited_USC_80b-3a_a_1_A_state_regulated_small_adviser
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibited_USC_80b-3a_a_1_A_state_regulated_small_adviser ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd0543dd8-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Prohibited U.S. Code § 80b–3a (a) (1) (A) State Regulated small adviser" ;
+.
+fr-rule-iaa:FinRule_Prohibited_USC_80b-3a_a_2_B_mid-sized_adviser
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibited_USC_80b-3a_a_2_B_mid-sized_adviser ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd0543de0-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Financial Rule Prohibited U.S. Code § 80b–3a (a) (1) (B) State Regulated mid-size adviser" ;
+.
+fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_a_pension_consultant
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_a_pension_consultant ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-19-4> ;
+  rdfs:label "Financial Rule Prohibition Exempted CFR 275.203A-2 (a) Pension consultants" ;
+.
+fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_b_registered_company_adviser
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_b_registered_company_adviser ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-19-10> ;
+  rdfs:label "Financial Rule Prohibition Exempted CFR 275.203A-2 (b) Registered Company Adviser" ;
+.
+fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_c_eligible_120_days
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_c_eligible_120_days ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-19-12> ;
+  rdfs:label "Financial Rule Prohibition Exempted CFR 275.203A-2 (c) Eligible within 120 days" ;
+.
+fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_d_multi_state
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_d_multi_state ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-19-15> ;
+  rdfs:label "Financial Rule Prohibition Exempted CFR 275.203A-2 (d) Multi-state adviser" ;
+.
+fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_e_internet
+  rdf:type fr-rule-iaa:FinancialProhibitionRule ;
+  jc-core:applies fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_e_internet ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/cfr/FRO_CFR_Title_17_Part_275.ttl#r-1-19-21> ;
+  rdfs:label "Financial Rule Prohibition Exempted CFR 275.203A-2 (e) Internet Adviser" ;
+.
+fr-rule-iaa:FinancialCondition
+  rdf:type owl:Class ;
+  rdfs:comment "For the Investment Adivisor Act Registration requirements, the Financial Conditions subsume FIBO Business Entities. The property chain regulated_as (considered_by and applies) links the Business Entity directly to a Financial Status.." ;
+  rdfs:label "Financial Condition" ;
+  rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/norm.owl#Normatively_Qualified> ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          <http://www.estrellaproject.org/lkif-core/norm.owl#Normatively_Qualified>
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty jc-core:considered_by ;
+            owl:someValuesFrom fr-rule-iaa:FinancialRule ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "The Financial Condition is an equivalent class of financial criteria, typically refering to FIBO classification and values and amounts. If the condition is fulfilled, it will be considered by a Financial Rule, which in turn applies a Legal Status." ;
+.
+fr-rule-iaa:FinancialDefinitionRule
+  rdf:type owl:Class ;
+  rdfs:comment "fro-leg-ref:hasCodeReference point to U.S. Code § 80b–2 - Definitions" ;
+  rdfs:label "Financial Definition Rules" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialRule ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty jc-core:applies ;
+      owl:someValuesFrom fr-rule-iaa:Legal_Status_Defined ;
+    ] ;
+  skos:definition """Instances of this class apply a Legal Status for the three definition criteria in the United States Code Investment Adviser Act:
+“Investment adviser” means any person who, 
+	for Compensation, 
+	engages in the Business 
+	advising others ... to the value of Securities ..""" ;
+.
+fr-rule-iaa:FinancialExclusionRule
+  rdf:type owl:Class ;
+  rdfs:comment "fro-leg-ref:hasCodeReference point to U.S. Code § 80b–2 - Exclusions" ;
+  rdfs:label "Financial Exclusion Rule" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialRule ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty jc-core:applies ;
+      owl:someValuesFrom fr-rule-iaa:Legal_Status_Excluded ;
+    ] ;
+  skos:definition """Instances of this class apply a Legal Status for the Exclusion from Registration requirements as per the Investment Adviser Act. 
+15 U.S. Code § 80b–2 - Definitions (a) (11) (A) through (H)""" ;
+.
+fr-rule-iaa:FinancialExemptionRule
+  rdf:type owl:Class ;
+  rdfs:comment "fro-leg-ref:hasCodeReference point to U.S. Code § 80b–3 - Exemptions" ;
+  rdfs:label "Financial Exemption Rule" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialRule ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty jc-core:applies ;
+      owl:someValuesFrom fr-rule-iaa:Legal_Status_Exempted ;
+    ] ;
+  skos:definition """Instances of this class apply a Legal Status for the Exemption from Registration requirements as per the Investment Adviser Act. 
+15 U.S. Code § 80b–3 (b) - Exemptions (1) through (7)""" ;
+.
+fr-rule-iaa:FinancialProhibitionRule
+  rdf:type owl:Class ;
+  rdfs:comment "fro-leg-ref:hasCodeReference points to U.S. Code § 80b–3a Prohibitions and CFR 275.203A-2 Exemption from Prohibition" ;
+  rdfs:label "Financial Prohibition Rule" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialRule ;
+  skos:definition """Instances of this class apply a Legal Status for Prohibition from registering with the Securities and Exchange Commission as an Investment Adviser. The rules cover prohibition, based in Assets under Mnagement and excemptions from the prohibition.  
+U.S. Code § 80b–3a Prohibitions and CFR 275.203A-2""" ;
+.
+fr-rule-iaa:FinancialRule
+  rdf:type owl:Class ;
+  rdfs:comment """Legal Reasoning on the Investment Adviser Act infers new Status Codes for Business Entities. For expample: 
+	Vanguard is regulated_as Defined_Investment_Adviser. 
+The object property fro-leg-ref:regulated as is  a property chain [jc-core:considered_by, jc-core:applies]. 
+The Financial Rules is the link in this property chain. The Financial Condition is consided_by the rule, which applies the status. """ ;
+  rdfs:label "Financial Rule" ;
+  rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/norm.owl#Legal_Expression> ;
+  rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/norm.owl#Norm> ;
+  rdfs:subClassOf [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom <http://www.estrellaproject.org/lkif-core/norm.owl#Statute> ;
+            owl:onProperty fro-leg-ref:hasCodeReference ;
+          ]
+          fibo-fbc-fct-rga:Regulation
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom jc-core:Law_Declaration ;
+      owl:onProperty lkif-expr:attitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty jc-core:applies ;
+      owl:someValuesFrom jc-core:Legal_Status ;
+    ] ;
+  skos:definition "Financial Rules apply a legal status. They have a reference to the Investment Adviser Act law or regulation that they implement. Financial Conditions invoke the rule.  " ;
+.
+fr-rule-iaa:LC_RegistrationProhibited_USC_s80b_3a
+  rdf:type fr-rule-iaa:RegistrationProhibited ;
+  rdfs:label "Registration prohibited U.S. Code § 80b–3a" ;
+.
+fr-rule-iaa:LC_Registration_Defined_USC_s80b_2_a_11
+  rdf:type fr-rule-iaa:RegistrationDefined ;
+  rdfs:label "Registration Defined U.S. Code § 80b–2 - 11" ;
+.
+fr-rule-iaa:LC_Registration_Excluded_USC_s80b_2_a_11
+  rdf:type fr-rule-iaa:RegistrationExcluded ;
+  rdfs:label "Registration excluded U.S. Code § 80b–2 - 11" ;
+.
+fr-rule-iaa:LC_Registration_Exempt_USC_80b_3_b
+  rdf:type fr-rule-iaa:RegistrationExempted ;
+  rdfs:label "Registration exempted U.S. Code § 80b–3 (b)" ;
+.
+fr-rule-iaa:LC_Required_to_File_Form_ADV
+  rdf:type fr-rule-iaa:Filing_Consequence ;
+  fro-leg-ref:hasForm fr-leg-ref:Form_ADV_gen ;
+  rdfs:label "Required to file form ADV" ;
+.
+fr-rule-iaa:LC_Required_to_Register_USC_s80b
+  rdf:type fr-rule-iaa:RegistrationRequired ;
+  rdfs:label "Required to register with the SEC" ;
+.
+fr-rule-iaa:LR_USC_80b_3_b_Exemption
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies fr-rule-iaa:LC_Registration_Exempt_USC_80b_3_b ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b60-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Legal Rule U.S. Code § 80b–3-b Exemption" ;
+  skos:definition "The legal rule applies Registration Excluded status. An instance will be inferred, when the Legal Condition has been met. That is for business entities Regulated As any exemption status." ;
+.
+fr-rule-iaa:LR_USC_s80b_2_a_11_Definition
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies fr-rule-iaa:LC_Registration_Defined_USC_s80b_2_a_11 ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Legal Rule U.S. Code § 80b–2 - Definitions" ;
+  skos:definition "The legal rule applies Registration Defined status. An instance will be inferred, when the Legal Condition has been met. That is for business entities Regulated As all 3 definition critera (compensation, business, securities)." ;
+.
+fr-rule-iaa:LR_USC_s80b_2_a_11_Exclusion
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies fr-rule-iaa:LC_Registration_Excluded_USC_s80b_2_a_11 ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Legal Rule U.S. Code § 80b–2 - Exclusion" ;
+  skos:definition "The legal rule applies Registration Excluded status. An instance will be inferred, when the Legal Condition has been met. That is for business entities Regulated As any of the exclusion status." ;
+.
+fr-rule-iaa:LR_USC_s80b_3a_Prohibition
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies fr-rule-iaa:LC_RegistrationProhibited_USC_s80b_3a ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd0543dd6-0c74-11e6-aa53-e455a13f2ad9> ;
+  lkif-expr:medium <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Legal Rule U.S. Code § 80b–3-a Prohibition" ;
+  skos:definition "The legal rule applies Registration Prohibited status. An instance will be inferred, when the Legal Condition has been met. That is for business entities Regulated As prohibited and not exempted from prohibition." ;
+.
+fr-rule-iaa:LR_USC_s80b_Required_to_Register
+  rdf:type jc-core:Legal_Rule ;
+  jc-core:applies fr-rule-iaa:LC_Required_to_File_Form_ADV ;
+  jc-core:applies fr-rule-iaa:LC_Required_to_Register_USC_s80b ;
+  fro-leg-ref:hasCodeReference <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  lkif-expr:medium <http://finregont.com/fro/usc/FRO_USC_Title_15_Chapter_2D.ttl#idd04f5b2d-0c74-11e6-aa53-e455a13f2ad9> ;
+  rdfs:label "Legal Rule U.S. Code § 80b Required to Register" ;
+.
+fr-rule-iaa:LS_Defined_USC_s80b_2_a_11
+  rdf:type fr-rule-iaa:Legal_Status_Defined ;
+  rdfs:label "Legal Status Defined USC § 80b–2 (a) (11)" ;
+.
+fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Business
+  rdf:type fr-rule-iaa:Legal_Status_Defined ;
+  rdfs:label "Legal Status Defined USC § 80b–2 (a) (11) Business" ;
+.
+fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Compensation
+  rdf:type fr-rule-iaa:Legal_Status_Defined ;
+  rdfs:label "Legal Status Defined USC § 80b–2 (a) (11) Compensation" ;
+.
+fr-rule-iaa:LS_Defined_USC_s80b_2_a_11_Securities_Advice
+  rdf:type fr-rule-iaa:Legal_Status_Defined ;
+  rdfs:label "Legal Status Defined USC § 80b–2 (a) (11) Securities Advice" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_A_Bank
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (A) Bank" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_B_Professional
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (B) Professional" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_C_Broker_Dealer
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (C) Broker Dealer" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_D_Publisher
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (D) Publisher" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_E_Government_Securities_only
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (E) Government Securities" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_F_Rating_Organization
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (F) Rating Organization" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_G_Family_Office
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (G) Family Office" ;
+.
+fr-rule-iaa:LS_Excluded_USC_s80b_2_a_11_H_other
+  rdf:type fr-rule-iaa:Legal_Status_Excluded ;
+  rdfs:label "Legal Status Excluded USC § 80b–2 (a) (11) (H) other" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_1_Private_Fund_same_state
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (1) Private Fund same state" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_2_Insurance_clients
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (2) Insurance Clients only" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_3_foreign_private
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (3) Foreign Private investors only" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_4_A_charitable_client
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (4) (A) Foreign Private investors only" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_4_B_charity_fund_80a_3c_10_B
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (4) (B) Charity Fund" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_4_C_less_than_fifteen_clients
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (4) (C) Less than 15 clients" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_5_church_plan
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (5) Church Fund" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_6_Commodity_Trading_Adviser
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (6) Commodity Trading adviser" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_A_small_business
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (7) (A) Small Business" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_B_small_business_license
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (7) (B) Small Business license" ;
+.
+fr-rule-iaa:LS_Exempted_USC_s80b_3_b_7_C_small_business_affiliate
+  rdf:type fr-rule-iaa:Legal_Status_Exempted ;
+  rdfs:label "Legal Status Exempted USC § 80b–3 (b) (7) (A) Small Business affiliate" ;
+.
+fr-rule-iaa:LS_Prohibited_USC_80b-3a_a_1_A_state_regulated_small_adviser
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Defined ;
+  rdfs:label "Legal Status Prohibited U.S. Code § 80b–3a (a) (1) (A) State Regulated small adviser" ;
+.
+fr-rule-iaa:LS_Prohibited_USC_80b-3a_a_2_B_mid-sized_adviser
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Defined ;
+  rdfs:label "Legal Status Prohibited U.S. Code § 80b–3a (a) (1) (B) State Regulated mid-size adviser" ;
+.
+fr-rule-iaa:LS_Prohibited_USC_80b-3a_a_2_B_mid-sized_adviser_1
+  rdf:type fr-rule-iaa:Legal_Status_Prohibited ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+.
+fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_a_pension_consultant
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+  rdfs:label "Legal Status Prohibition Exempted CFR 275.203A-2 (a) Pension consultants" ;
+.
+fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_b_registered_company_adviser
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+  rdfs:label "Legal Status Prohibition Exempted CFR 275.203A-2 (b) Registered Company Adviser" ;
+.
+fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_c_eligible_120_days
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+  rdfs:label "Legal Status Prohibition Exempted CFR 275.203A-2 (c) Eligible within 120 days" ;
+.
+fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_d_multi_state
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+  rdfs:label "Legal Status Prohibition Exempted CFR 275.203A-2 (d) Multi-state adviser" ;
+.
+fr-rule-iaa:LS_Prohibition_Exempted_CFR_275_203_A_2_e_internet
+  rdf:type fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+  rdfs:label "Legal Status Prohibition Exempted CFR 275.203A-2 (e) Internet Adviser" ;
+.
+fr-rule-iaa:LegalCondition
+  rdf:type owl:Class ;
+  rdfs:comment """For the Investment Adviser Act the Legal Conditions conclude on registration Definition, Exclusion, Exemption and Prohibition.
+In general a Defined Investment Adviser must register with the Securities and Exchange Commission, unless the adviser is excluded, exempted to prohibited. 
+The SEC website provides a good overview: General Information on the Regulation of Investment Advisers (rdfs:seeAlso)""" ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:seeAlso <https://www.sec.gov/divisions/investment/iaregulation/memoia.htm> ;
+  rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/norm.owl#Normatively_Qualified> ;
+  owl:equivalentClass <http://www.estrellaproject.org/lkif-core/norm.owl#Normatively_Qualified> ;
+  skos:definition "The Legal Condition is an equivalent class that evaluates Legal Status. The Legal Status codes are set as a result of Financial Conditions and rules. If the legal condition is fulfilled, it will be considered by a Legal Rule, which in turn applies a Legal Consequence." ;
+.
+fr-rule-iaa:Legal_Status_Defined
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act, status instances indicate that the FIBO Functional Business Entity matches the Investment Adviser Definition." ;
+  rdfs:label "Legal Status Defined as Investment Adviser" ;
+  rdfs:subClassOf jc-core:Legal_Status ;
+  skos:definition "The Legal Status that regulates an entity being of some Regulatory Definition. " ;
+.
+fr-rule-iaa:Legal_Status_Excluded
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act, status instances indicate that the FIBO Functional Business Entity is excluded from the Investment Adviser Definition." ;
+  rdfs:label "Legal Status Excluded from registration as Investment Adviser" ;
+  rdfs:subClassOf jc-core:Legal_Status ;
+  skos:definition "The Legal Status that regulates an entity being Excluded from some Regulatory Definition. " ;
+.
+fr-rule-iaa:Legal_Status_Exempted
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act the status instances that the FIBO Functional Business Entity is exempted from registration with the Securities & Exchange Commission." ;
+  rdfs:label "Legal Status Exempted from registration as Investment Adviser" ;
+  rdfs:subClassOf jc-core:Legal_Status ;
+  skos:definition "The Legal Status that regulates an entity is exempted from some Regulatory requirement. " ;
+.
+fr-rule-iaa:Legal_Status_Prohibited
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act the status instances that the FIBO Functional Business Entity is prohibited from registration with the Securities & Exchange Commission. (i.e. a small/medium adviser subject to state regulation)" ;
+  rdfs:label "Legal Status Prohibited from registration as investment adviser" ;
+  rdfs:subClassOf jc-core:Legal_Status ;
+  skos:definition "The Legal Status that regulates an entity is prohibited from something. " ;
+.
+fr-rule-iaa:Legal_Status_Prohibition_Defined
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act the status instances that the FIBO Functional Business Entity is a small/mid-size advisor prohibited from registration with the Securities & Exchange Commission. (unless exempted from prohibition)" ;
+  rdfs:label "Legal Status Prohibition from registration defined" ;
+  rdfs:subClassOf fr-rule-iaa:Legal_Status_Prohibited ;
+  skos:definition "The Legal Status that regulates an entity meets the definition of some prohibition. " ;
+.
+fr-rule-iaa:Legal_Status_Prohibition_Exempted
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Ontology Investment Advisor Act the status instances that the FIBO Functional Business Entity is exempted from registration prohibition. It must file with the Securities & Exchange Commission. Note: We always set this status, where applicable, even if the entity is a large adviser not meeting the Definition of Prohibited Advisors." ;
+  rdfs:label "Legal Status Prohibition excempted" ;
+  rdfs:subClassOf fr-rule-iaa:Legal_Status_Prohibited ;
+  skos:definition "The Legal Status that regulates an entity is exempted from some prohibition. " ;
+.
+fr-rule-iaa:Prohibited_Ex_USC_s80b-3a_a_1_A_State_Regulated_small_Adviser
+  rdf:type owl:Class ;
+  rdfs:comment "The segmentation of advisers by asset size itself can be useful beyond the legal rule. Therefore it is designed as an extension to FIBO rather than LKIF." ;
+  rdfs:label "Prohibited ex. USC § 80b–3a (a) (1) (A) - State regulated small adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass fr-rule-iaa:SEC_Small_Adviser ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibited_USC_80b-3a_a_1_A_state_regulated_small_adviser ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are prohibited from Securities & Exchange Commission registration under U.S. Code § 80b–3a (a) (1) (A) : “has assets under management of not less than $25,000,000, or such higher amount as the Commission may, by rule, deem appropriate in accordance with the purposes of this subchapter;\"
+The equivalent class simply consits of all FR SEC Small Advisers.   
+Inferred members are considered by the prohibition rule, which applies the prohibition status. """ ;
+.
+fr-rule-iaa:Prohibited_Ex_USC_s80b-3a_a_2_B_State_Regulated_mid_size_Adviser
+  rdf:type owl:Class ;
+  rdfs:comment "The segmentation of advisers by asset size itself can be useful beyond the legal rule. Therefore it is designed as an extension to FIBO rather than LKIF." ;
+  rdfs:label "Prohibited ex. USC § 80b–3a (a) (1) (B) - State regulated mid-size adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass fr-rule-iaa:SEC_Mid_Adviser ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibited_USC_80b-3a_a_2_B_mid-sized_adviser ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are prohibited from Securities & Exchange Commission registration under U.S. Code § 80b–3a (a) (2) (B) : “An investment adviser described in this subparagraph is an investment adviser that (II) has assets under management between $100,000,000, or such higher amount as the Commission may, by rule, deem appropriate in accordance with the purposes of this subchapter\"
+The equivalent class simply consits of all FR SEC Mid-size Advisers.   
+Inferred members are considered by the prohibition rule, which applies the prohibition status. """ ;
+.
+fr-rule-iaa:Prohibitiion_Defined
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object fr-rule-iaa:LR_USC_s80b_3a_Prohibition ;
+            sp:predicate jc-core:considered_by ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object fr-rule-iaa:Legal_Status_Prohibition_Defined ;
+            sp:predicate fro-leg-ref:regulated_as ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Minus ;
+            sp:elements (
+                [
+                  sp:object fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+                  sp:predicate fro-leg-ref:regulated_as ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  rdfs:label "Prohibition defined" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          fr-rule-iaa:Prohibited_Ex_USC_s80b-3a_a_1_A_State_Regulated_small_Adviser
+          fr-rule-iaa:Prohibited_Ex_USC_s80b-3a_a_2_B_State_Regulated_mid_size_Adviser
+        ) ;
+    ] ;
+  skos:definition "A grouping of subclasses that define the Prohibition of registering with the Securities & Exchange commission. This is the union of State regulated small and mid-size adviser conditions." ;
+.
+fr-rule-iaa:ProhibitingCondition
+  rdf:type owl:Class ;
+  rdfs:comment "For the Investment Adviser Act, the subclasses define Functional Business Entities as Prohibited from registration with the Securities & Exchange Commission, if they meet the criteria in U.S. Code § 80b–3a (a) and are not exempted from prohibition under CFR 275.203 A-2" ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fr-rule-iaa:FinancialCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-rule-iaa:FinancialCondition
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty jc-core:considered_by ;
+            owl:someValuesFrom fr-rule-iaa:FinancialProhibitionRule ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A set of financial conditions that subsume members, who fullfill a prohibition. If the condition is fulfilled, it will be considered by a Prohibition Rule, which in turn applies an Prohibition Status." ;
+.
+fr-rule-iaa:Prohibition_Exempted
+  rdf:type owl:Class ;
+  rdfs:label "Prohibition Exempted" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_a_pension_consultant
+          fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_b_registered_company_adviser
+          fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_c_eligible_120_days
+          fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_d_multi_state
+          fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_e_internet
+        ) ;
+    ] ;
+  skos:definition "A grouping of subclasses that define Exemptions from the Prohibition of registering with the Securities & Exchange commission under Title 17 CFR 275.203A-2. This class is the union of individual exemptions." ;
+.
+fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_a_pension_consultant
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Regulation Prototype, we simply assume that the adviser is tagged as a pension consultant. This can be expanded to consider the aggregate value and type pf plans." ;
+  rdfs:label "Prohibition Exempted ex. CFR 275.203A-2 (a) Pension consultants" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_Pension_Consultant ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_a_pension_consultant ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted the prohibition to register with the  Securities & Exchange Commission registration under Code of Federal Regulations 275.203 A-2 (a) Pension Consultant.
+The equivalent class simply consits of all FIBO Investment Advisers that are principal to contracts with Foundations.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_b_registered_company_adviser
+  rdf:type owl:Class ;
+  rdfs:comment "The Registered Company is defined as an extension to FIBO rather than LKIF." ;
+  rdfs:label "Prohibition Exempted ex. CFR 275.203A-2 (b) Registered Company Adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fnd-rel-rel:manages ;
+            owl:someValuesFrom fr-rule-iaa:RegulatedManagementCompany ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_b_registered_company_adviser ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted the prohibition to register with the  Securities & Exchange Commission registration under Code of Federal Regulations 275.203 A-2 (b) Registered Company adviser.
+The equivalent class simply consits of all FIBO Investment Advisers that manage a regulated investment company.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_c_eligible_120_days
+  rdf:type owl:Class ;
+  rdfs:comment "A shortcut. We don't examine the details of registration status with the states." ;
+  rdfs:label "Prohibition Exempted ex. CFR 275.203A-2 (c) Eligible within 120 days" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_eligible_soon ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_c_eligible_120_days ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted the prohibition to register with the  Securities & Exchange Commission registration under Code of Federal Regulations 275.203 A-2 (b) \"Investment advisers expecting to be eligible for Commission registration within 120 Days.\"
+The equivalent class simply consits of all FIBO Investment Advisers that have this classification.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_d_multi_state
+  rdf:type owl:Class ;
+  rdfs:comment "For the Fund Regulation Prototype we simply expect the source (sample data) to have this classified. A more comprehensive rule can examine the number of states that the adviser must register with." ;
+  rdfs:label "Prohibition Exempted ex. CFR 275.203A-2 (d) Multi-state adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_multi_state_adviser ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_d_multi_state ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted the prohibition to register with the  Securities & Exchange Commission registration under Code of Federal Regulations 275.203 A-2 (c) \"Multi-state investment advisers\"\"
+The equivalent class simply consits of all FIBO Investment Advisers that have this classification.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:Prohibition_Exempted_Ex_CFR_275_203_A_2_e_internet
+  rdf:type owl:Class ;
+  rdfs:comment "The assumption is that the commission has approved internet status for the adviser." ;
+  rdfs:label "Prohibition Exempted ex. CFR 275.203A-2 (e) Internet adviser" ;
+  rdfs:subClassOf fr-rule-iaa:ProhibitingCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-fin-ref:IAA_misc_internet_adviser ;
+            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:FinRule_Prohibition_Exempted_CFR_275_203_A_2_e_internet ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition """An defined class for FIBO Functional Business Entities that are exempted the prohibition to register with the  Securities & Exchange Commission registration under Code of Federal Regulations 275.203 A-2 (c) \"Internet investment advisers\"\"
+The equivalent class simply consits of all FIBO Investment Advisers that have this classification.
+Inferred members are considered by the exclusion rule, which applies the exclusion status. """ ;
+.
+fr-rule-iaa:RegistrationDefined
+  rdf:type owl:Class ;
+  rdfs:label "Registration Defined" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  skos:definition "Legal Consequence status codes for Registration Defined. That means the business entity meets criteria for  SEC registration, but may be exemted or prohibited." ;
+.
+fr-rule-iaa:RegistrationExcluded
+  rdf:type owl:Class ;
+  rdfs:label "Registration Excluded" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  skos:definition "Legal Consequence status codes for Registration Excluded. That means the business entity must not register with the SEC as an Investment Adviser." ;
+.
+fr-rule-iaa:RegistrationExempted
+  rdf:type owl:Class ;
+  rdfs:label "Registration Exempted" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  skos:definition "Legal Consequence status codes for Registration Exempted. That means the business entity must not register with the SEC as an Investment Adviser." ;
+.
+fr-rule-iaa:RegistrationProhibited
+  rdf:type owl:Class ;
+  rdfs:label "Registration Prohibited" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  skos:definition "Legal Consequence status codes for Registration Prohibited. That means the small adviser is suject to State Regulation rather then SEC." ;
+.
+fr-rule-iaa:RegistrationRequired
+  rdf:type owl:Class ;
+  rdfs:label "Registration Required" ;
+  rdfs:subClassOf jc-core:Legal_Consequence ;
+  skos:definition "Legal Consequence status codes for Registration Required. That means the business entity must register with the SEC as an Investment Adviser." ;
+.
+fr-rule-iaa:RegulatedManagementCompany
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fibo-fbc-fct-fse:ManagementCompany ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-fbc-fct-fse:ManagementCompany
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fibo-fbc-fct-rga:isRegulatedBy ;
+            owl:someValuesFrom fibo-fbc-fct-rga:RegulatoryAgency ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "A management company that is regulated by an agency." ;
+.
+fr-rule-iaa:Relevant_Ex_USC_s80b-3a_a_1_Prohibited
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)" ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-be-fct-fct:FunctionalBusinessEntity
+          [
+            rdf:type owl:Class ;
+            owl:intersectionOf (
+                [
+                  rdf:type owl:Restriction ;
+                  owl:onProperty fro-leg-ref:regulated_as ;
+                  owl:someValuesFrom fr-rule-iaa:Legal_Status_Prohibition_Defined ;
+                ]
+                [
+                  rdf:type owl:Class ;
+                  owl:complementOf [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fro-leg-ref:regulated_as ;
+                      owl:someValuesFrom fr-rule-iaa:Legal_Status_Prohibition_Exempted ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_s80b_3a_Prohibition ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition "The Legal Condition is defined class equivalent to Functional Business Entities that are prohibited from registration with the Securities & Exchange Commission. They must match the prohibition definition status, and not have any exemption from prohibition status." ;
+.
+fr-rule-iaa:Relevant_Ex_USC_s80b_2_a_11_Definition
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)" ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-be-fct-fct:FunctionalBusinessEntity
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fro-leg-ref:regulated_as ;
+            owl:someValuesFrom fr-rule-iaa:Legal_Status_Defined ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_s80b_2_a_11_Definition ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition "The Legal Condition is defined class equivalent to Functional Business Entities that have all three Defining Legal Status." ;
+.
+fr-rule-iaa:Relevant_Ex_USC_s80b_2_a_11_Exclusion
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)" ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-be-fct-fct:FunctionalBusinessEntity
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fro-leg-ref:regulated_as ;
+            owl:someValuesFrom fr-rule-iaa:Legal_Status_Excluded ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_s80b_2_a_11_Exclusion ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition "The Legal Condition is defined class equivalent to Functional Business Entities that have an Exclusion from Registration with the Securities and Exchange Commission." ;
+.
+fr-rule-iaa:Relevant_Ex_USC_s80b_2_a_11_Required_to_Register
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)" ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-be-fct-fct:FunctionalBusinessEntity
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue fr-rule-iaa:LC_Registration_Defined_USC_s80b_2_a_11 ;
+            owl:onProperty fro-leg-ref:regulated_as ;
+          ]
+          [
+            rdf:type owl:Class ;
+            owl:complementOf [
+                rdf:type owl:Restriction ;
+                owl:onProperty fro-leg-ref:regulated_as ;
+                owl:someValuesFrom fr-rule-iaa:RegistrationExcluded ;
+              ] ;
+          ]
+          [
+            rdf:type owl:Class ;
+            owl:complementOf [
+                rdf:type owl:Restriction ;
+                owl:onProperty fro-leg-ref:regulated_as ;
+                owl:someValuesFrom fr-rule-iaa:RegistrationExempted ;
+              ] ;
+          ]
+          [
+            rdf:type owl:Class ;
+            owl:complementOf [
+                rdf:type owl:Restriction ;
+                owl:onProperty fro-leg-ref:regulated_as ;
+                owl:someValuesFrom fr-rule-iaa:RegistrationProhibited ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_s80b_Required_to_Register ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition "The Legal Condition is defined class equivalent to Functional Business Entities that must register with the Securities and Exchange Commission. A Defined Investment Adviser must register with the Securities and Exchange Commission, unless the adviser is excluded, exempted, or prohibited. " ;
+.
+fr-rule-iaa:Relevant_Ex_USC_s80b_3_b_Exemption
+  rdf:type owl:Class ;
+  rdfs:label "USC IAA 202(a)(11)" ;
+  rdfs:subClassOf fr-rule-iaa:LegalCondition ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fibo-be-fct-fct:FunctionalBusinessEntity
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fro-leg-ref:regulated_as ;
+            owl:someValuesFrom fr-rule-iaa:Legal_Status_Exempted ;
+          ]
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue fr-rule-iaa:LR_USC_80b_3_b_Exemption ;
+      owl:onProperty jc-core:considered_by ;
+    ] ;
+  skos:definition "The Legal Condition is defined class equivalent to Functional Business Entities that have an Exemption from Registration with the Securities and Exchange Commission." ;
+.
+fr-rule-iaa:SEC_Large_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdviser ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fnd-acc-cur:MonetaryAmount
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue fr-fin-ref:AUM_Total ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fibo-fnd-acc-cur:hasAmount ;
+                      owl:someValuesFrom [
+                          rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:decimal ;
+                          owl:withRestrictions (
+                              [
+                                xsd:minExclusive "100000000"^^xsd:decimal ;
+                              ]
+                            ) ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "An Investment Adviser with more than 100 million assets under management." ;
+.
+fr-rule-iaa:SEC_Mid_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdviser ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fnd-acc-cur:MonetaryAmount
+                    [
+                      rdf:type owl:Class ;
+                      owl:intersectionOf (
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:hasValue fr-fin-ref:AUM_Total ;
+                            owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                          ]
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty fibo-fnd-acc-cur:hasAmount ;
+                            owl:someValuesFrom [
+                                rdf:type rdfs:Datatype ;
+                                owl:onDatatype xsd:decimal ;
+                                owl:withRestrictions (
+                                    [
+                                      xsd:minInclusive "25000000"^^xsd:decimal ;
+                                    ]
+                                    [
+                                      xsd:maxInclusive "100000000"^^xsd:decimal ;
+                                    ]
+                                  ) ;
+                              ] ;
+                          ]
+                        ) ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "An Investment Adviser with assets under management from 25 to 100 million." ;
+.
+fr-rule-iaa:SEC_Small_Adviser
+  rdf:type owl:Class ;
+  rdfs:label "Legal Status Expression: Defined as Service" ;
+  rdfs:subClassOf fr-fin-ref:InvestmentAdviser ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          fr-fin-ref:InvestmentAdviser
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty fr-fin-ref:hasAssetUnderManagementMonetaryAmount ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    fibo-fnd-acc-cur:MonetaryAmount
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue fr-fin-ref:AUM_Total ;
+                      owl:onProperty fibo-fnd-rel-rel:isClassifiedBy ;
+                    ]
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty fibo-fnd-acc-cur:hasAmount ;
+                      owl:someValuesFrom [
+                          rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:decimal ;
+                          owl:withRestrictions (
+                              [
+                                xsd:maxExclusive "25000000"^^xsd:decimal ;
+                              ]
+                            ) ;
+                        ] ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  skos:definition "An Investment Adviser with less than 25 million assets under management." ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#allowed_by>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#allows>
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#commanded_by>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#commands>
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#disallowed_by>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#disallows>
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_comparable>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_equivalent_or_better>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_equivalent_or_worse>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_not_equivalent>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_strictly_better>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#normatively_strictly_worse>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+<http://www.estrellaproject.org/lkif-core/norm.owl#strictly_equivalent>
+  rdfs:domain fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+  rdfs:range fr-rule-iaa:Defined_Ex_USC_s80b_2_a_11_Business ;
+.
+owl:Thing
+  spin:rule [
+      rdf:type owl2dl:cls-svf-max-excl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-max-incl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-min-excl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-min-excl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-min-excl-max-incl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-min-incl-max-excl ;
+    ] ;
+  spin:rule [
+      rdf:type owl2dl:cls-svf-min-incl-max-incl ;
+    ] ;
+.

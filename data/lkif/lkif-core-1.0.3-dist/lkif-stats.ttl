@@ -1,0 +1,687 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix voidx: <http://rdfpro.fbk.eu/ontologies/voidx#> .
+
+<stats:Dataset> a void:Dataset ;
+	voidx:label "<stats:Dataset> (336, 2363)" ;
+	void:entities "336"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2363"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1982"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "381"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#AnnotationProperty> voidx:label "owl:AnnotationProperty (2)" ;
+	voidx:example """owl:versionInfo
+    rdf:type owl:AnnotationProperty.""" ;
+	voidx:globalStats <stats:AnnotationProperty> .
+
+<stats:Dataset> void:classPartition <stats:AnnotationProperty> .
+
+<stats:AnnotationProperty> a void:Dataset ;
+	voidx:label "<stats:AnnotationProperty> (2, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#AnnotationProperty> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 1.0E0 .
+
+<http://www.w3.org/2002/07/owl#Ontology> voidx:label "owl:Ontology (15)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/role.owl>
+    owl:imports <http://www.estrellaproject.org/lkif-core/action.owl>;
+    owl:versionInfo \"LKIF-Core, version 1.0.3, copyright (C)...\";
+    owl:versionInfo \"Partner contributions from the...\";
+    owl:versionInfo \"The LKIF-Core ontology, version 1.0, is...\";
+    owl:versionInfo \"This module is part of LKIF-Core,...\";
+    rdf:type owl:Ontology.""" ;
+	voidx:globalStats <stats:Ontology> .
+
+<stats:Dataset> void:classPartition <stats:Ontology> .
+
+<stats:Ontology> a void:Dataset ;
+	voidx:label "<stats:Ontology> (15, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Ontology> ;
+	void:entities "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "99"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "33"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "66"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.2666666666666666E0 .
+
+<http://www.w3.org/2002/07/owl#Class> voidx:label "owl:Class (205)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object>
+    owl:equivalentClass _:node1fqlpa3rgx55;
+    rdf:type owl:Class;
+    rdfs:comment \"Metaphor of physical concepts, i.e. the...\";
+    rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Entity>;
+    rdfs:subClassOf _:node1fqlpa3rgx61.""" ;
+	voidx:globalStats <stats:Class> .
+
+<stats:Dataset> void:classPartition <stats:Class> .
+
+<stats:Class> a void:Dataset ;
+	voidx:label "<stats:Class> (205, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Class> ;
+	void:entities "205"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "941"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "726"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "215"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.848780487804878E0 .
+
+<http://www.w3.org/2002/07/owl#ObjectProperty> voidx:label "owl:ObjectProperty (100)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/role.owl#played_by>
+    owl:inverseOf <http://www.estrellaproject.org/lkif-core/role.owl#plays>;
+    rdf:type owl:ObjectProperty;
+    rdfs:comment \"Specifies that some role is played by...\";
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/role.owl#Role>;
+    rdfs:range owl:Thing.""" ;
+	voidx:globalStats <stats:ObjectProperty> .
+
+<stats:Dataset> void:classPartition <stats:ObjectProperty> .
+
+<stats:ObjectProperty> a void:Dataset ;
+	voidx:label "<stats:ObjectProperty> (100, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	void:entities "100"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "493"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "411"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "82"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.64E0 .
+
+<http://www.w3.org/2002/07/owl#SymmetricProperty> voidx:label "owl:SymmetricProperty (9)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/expression.owl#evaluatively_comparable>
+    owl:inverseOf <http://www.estrellaproject.org/lkif-core/expression.owl#evaluatively_comparable>;
+    rdf:type owl:SymmetricProperty;
+    rdfs:comment \"Expresses whether some thing is...\";
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/expression.owl#Evaluative_Proposition>;
+    rdfs:range <http://www.estrellaproject.org/lkif-core/expression.owl#Evaluative_Proposition>;
+    rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/expression.owl#qualitatively_comparable>.""" ;
+	voidx:globalStats <stats:SymmetricProperty> .
+
+<stats:Dataset> void:classPartition <stats:SymmetricProperty> .
+
+<stats:SymmetricProperty> a void:Dataset ;
+	voidx:label "<stats:SymmetricProperty> (9, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#SymmetricProperty> ;
+	void:entities "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "60"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "50"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 5.333333333333333E0 .
+
+<http://www.w3.org/2002/07/owl#InverseFunctionalProperty> voidx:label "owl:InverseFunctionalProperty (2)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/relative-places.owl#location_complex_for>
+    owl:inverseOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#location_complex>;
+    rdf:type owl:InverseFunctionalProperty;
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/relative-places.owl#Location_Complex>;
+    rdfs:range <http://www.estrellaproject.org/lkif-core/relative-places.owl#Place>;
+    rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_relation>.""" ;
+	voidx:globalStats <stats:InverseFunctionalProperty> .
+
+<stats:Dataset> void:classPartition <stats:InverseFunctionalProperty> .
+
+<stats:InverseFunctionalProperty> a void:Dataset ;
+	voidx:label "<stats:InverseFunctionalProperty> (2, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "9"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.0E0 .
+
+<http://www.w3.org/2002/07/owl#FunctionalProperty> voidx:label "owl:FunctionalProperty (2)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/relative-places.owl#location_complex>
+    owl:inverseOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#location_complex_for>;
+    rdf:type owl:FunctionalProperty;
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/relative-places.owl#Place>;
+    rdfs:range <http://www.estrellaproject.org/lkif-core/relative-places.owl#Location_Complex>;
+    rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_relation>.""" ;
+	voidx:globalStats <stats:FunctionalProperty> .
+
+<stats:Dataset> void:classPartition <stats:FunctionalProperty> .
+
+<stats:FunctionalProperty> a void:Dataset ;
+	voidx:label "<stats:FunctionalProperty> (2, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	void:entities "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "10"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.0E0 .
+
+<http://www.w3.org/2002/07/owl#TransitiveProperty> voidx:label "owl:TransitiveProperty (16)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/relative-places.owl#relatively_fixed>
+    owl:inverseOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#relatively_fixed>;
+    rdf:type owl:TransitiveProperty;
+    rdfs:comment \"NOTE: This cannot currently be expressed...\";
+    rdfs:comment \"Two places are relatively fixed if and...\";
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/relative-places.owl#Place>;
+    rdfs:range <http://www.estrellaproject.org/lkif-core/relative-places.owl#Place>;
+    rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_relation>.""" ;
+	voidx:globalStats <stats:TransitiveProperty> .
+
+<stats:Dataset> void:classPartition <stats:TransitiveProperty> .
+
+<stats:TransitiveProperty> a void:Dataset ;
+	voidx:label "<stats:TransitiveProperty> (16, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#TransitiveProperty> ;
+	void:entities "16"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "96"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "79"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "17"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 4.8125E0 .
+
+<http://www.w3.org/2002/07/owl#DatatypeProperty> voidx:label "owl:DatatypeProperty (1)" ;
+	voidx:example """<http://www.estrellaproject.org/lkif-core/time-modification.owl#date>
+    rdf:type owl:DatatypeProperty;
+    rdfs:domain <http://www.estrellaproject.org/lkif-core/time.owl#Moment>;
+    rdfs:range xs:dateTime.""" ;
+	voidx:globalStats <stats:DatatypeProperty> .
+
+<stats:Dataset> void:classPartition <stats:DatatypeProperty> .
+
+<stats:DatatypeProperty> a void:Dataset ;
+	voidx:label "<stats:DatatypeProperty> (1, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	void:entities "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:averageProperties 3.0E0 .
+
+<http://www.w3.org/2002/07/owl#Restriction> voidx:label "owl:Restriction (0)" ;
+	voidx:globalStats <stats:Restriction> .
+
+<stats:Dataset> void:classPartition <stats:Restriction> .
+
+<stats:Restriction> a void:Dataset ;
+	voidx:label "<stats:Restriction> (0, C)" ;
+	void:class <http://www.w3.org/2002/07/owl#Restriction> ;
+	void:triples "564"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "564"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> voidx:label "rdf:type (585, P)" ;
+	voidx:example """
+    owl:versionInfo rdf:type owl:AnnotationProperty .
+    rdfs:comment rdf:type owl:AnnotationProperty .
+    <http://www.estrellaproject.org/lkif-core/role.owl> rdf:type owl:Ontology .""" ;
+	voidx:globalStats <stats:type> .
+
+<stats:Dataset> void:propertyPartition <stats:type> .
+
+<stats:type> a void:Dataset ;
+	voidx:label "<stats:type> (585, P)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "336"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "585"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "585"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:typeTriples "585"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "569"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#imports> voidx:label "owl:imports (18, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/role.owl> owl:imports <http://www.estrellaproject.org/lkif-core/action.owl> .
+    <http://www.estrellaproject.org/lkif-core/lkif-extended.owl> owl:imports <http://www.estrellaproject.org/lkif-core/lkif-rules.owl> .
+    <http://www.estrellaproject.org/lkif-core/lkif-extended.owl> owl:imports <http://www.estrellaproject.org/lkif-core/time-modification.owl> .""" ;
+	voidx:globalStats <stats:imports> .
+
+<stats:Dataset> void:propertyPartition <stats:imports> .
+
+<stats:imports> a void:Dataset ;
+	voidx:label "<stats:imports> (18, O)" ;
+	void:property <http://www.w3.org/2002/07/owl#imports> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "14"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "18"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "14"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "14"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#versionInfo> voidx:label "owl:versionInfo (60, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/role.owl> owl:versionInfo \"LKIF-Core, version 1.0.3, copyright (C)...\" .
+    <http://www.estrellaproject.org/lkif-core/role.owl> owl:versionInfo \"Partner contributions from the...\" .
+    <http://www.estrellaproject.org/lkif-core/role.owl> owl:versionInfo \"The LKIF-Core ontology, version 1.0, is...\" .""" ;
+	voidx:globalStats <stats:versionInfo> .
+
+<stats:Dataset> void:propertyPartition <stats:versionInfo> .
+
+<stats:versionInfo> a void:Dataset ;
+	voidx:label "<stats:versionInfo> (60, D)" ;
+	void:property <http://www.w3.org/2002/07/owl#versionInfo> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "60"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "60"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "15"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "17"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#comment> voidx:label "rdfs:comment (317, D)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/relative-places.owl> rdfs:comment \"Based on the paper \\\"Relative Places\\\" by...\" .
+    <http://www.estrellaproject.org/lkif-core/relative-places.owl> rdfs:comment \"Note that most of the definitions of the...\" .
+    <http://www.estrellaproject.org/lkif-core/lkif-rules.owl> rdfs:comment \"This ontology describes the classes and...\" .""" ;
+	voidx:globalStats <stats:comment> .
+
+<stats:Dataset> void:propertyPartition <stats:comment> .
+
+<stats:comment> a void:Dataset ;
+	voidx:label "<stats:comment> (317, D)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#comment> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "290"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "317"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "317"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "290"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "306"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#subClassOf> voidx:label "rdfs:subClassOf (328, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object> rdfs:subClassOf _:node1fqlpa3rgx61 .
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Limited_Company> rdfs:subClassOf <http://www.estrellaproject.org/lkif-core/legal-action.owl#Company> .
+    <http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Entity> rdfs:subClassOf owl:Thing .""" ;
+	voidx:globalStats <stats:subClassOf> .
+
+<stats:Dataset> void:propertyPartition <stats:subClassOf> .
+
+<stats:subClassOf> a void:Dataset ;
+	voidx:label "<stats:subClassOf> (328, O)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "205"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "328"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "328"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "205"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "187"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#equivalentClass> voidx:label "owl:equivalentClass (61, OI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Limited_Company> owl:equivalentClass <http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated> .
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated> owl:equivalentClass <http://www.estrellaproject.org/lkif-core/legal-action.owl#Limited_Company> .
+    <http://www.estrellaproject.org/lkif-core/expression.owl#Evaluative_Proposition> owl:equivalentClass _:node1fqlpa3rgx1 .""" ;
+	voidx:globalStats <stats:equivalentClass> .
+
+<stats:Dataset> void:propertyPartition <stats:equivalentClass> .
+
+<stats:equivalentClass> a void:Dataset ;
+	voidx:label "<stats:equivalentClass> (61, OI)" ;
+	void:property <http://www.w3.org/2002/07/owl#equivalentClass> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "56"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "61"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "61"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "56"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "61"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#disjointWith> voidx:label "owl:disjointWith (42, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated> owl:disjointWith <http://www.estrellaproject.org/lkif-core/legal-action.owl#Foundation> .
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Unincorporated> owl:disjointWith <http://www.estrellaproject.org/lkif-core/legal-action.owl#Incorporated> .
+    <http://www.estrellaproject.org/lkif-core/lkif-top.owl#Physical_Entity> owl:disjointWith <http://www.estrellaproject.org/lkif-core/role.owl#Role> .""" ;
+	voidx:globalStats <stats:disjointWith> .
+
+<stats:Dataset> void:propertyPartition <stats:disjointWith> .
+
+<stats:disjointWith> a void:Dataset ;
+	voidx:label "<stats:disjointWith> (42, O)" ;
+	void:property <http://www.w3.org/2002/07/owl#disjointWith> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "33"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "42"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "42"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "33"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "33"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#label> voidx:label "rdfs:label (4, DI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Private_Legal_Person> rdfs:label \"Legal Person (Private Law)\" .
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Legislative_Body> rdfs:label \"Legislative Body\" .
+    <http://www.estrellaproject.org/lkif-core/legal-action.owl#Legislative_Body> rdfs:label \"Legislature\" .""" ;
+	voidx:globalStats <stats:label> .
+
+<stats:Dataset> void:propertyPartition <stats:label> .
+
+<stats:label> a void:Dataset ;
+	voidx:label "<stats:label> (4, DI)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:aboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#inverseOf> voidx:label "owl:inverseOf (85, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/role.owl#played_by> owl:inverseOf <http://www.estrellaproject.org/lkif-core/role.owl#plays> .
+    <http://www.estrellaproject.org/lkif-core/expression.owl#evaluated_by> owl:inverseOf <http://www.estrellaproject.org/lkif-core/expression.owl#evaluates> .
+    <http://www.estrellaproject.org/lkif-core/process.owl#creation> owl:inverseOf <http://www.estrellaproject.org/lkif-core/process.owl#created_by> .""" ;
+	voidx:globalStats <stats:inverseOf> .
+
+<stats:Dataset> void:propertyPartition <stats:inverseOf> .
+
+<stats:inverseOf> a void:Dataset ;
+	voidx:label "<stats:inverseOf> (85, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#inverseOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "85"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "85"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "85"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "85"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "85"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#range> voidx:label "rdfs:range (79, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#rule_predicate> rdfs:range _:node1fqlpa3rgx76 .
+    <http://www.estrellaproject.org/lkif-core/expression.owl#evaluated_by> rdfs:range <http://www.estrellaproject.org/lkif-core/expression.owl#Evaluative_Attitude> .
+    <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_reference> rdfs:range owl:Thing .""" ;
+	voidx:globalStats <stats:range> .
+
+<stats:Dataset> void:propertyPartition <stats:range> .
+
+<stats:range> a void:Dataset ;
+	voidx:label "<stats:range> (79, OF)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#range> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "79"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "79"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "79"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "79"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "41"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#domain> voidx:label "rdfs:domain (76, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/lkif-rules.owl#rule_predicate> rdfs:domain _:node1fqlpa3rgx91 .
+    <http://www.estrellaproject.org/lkif-core/expression.owl#evaluated_by> rdfs:domain <http://www.estrellaproject.org/lkif-core/expression.owl#Evaluative_Proposition> .
+    <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_reference> rdfs:domain <http://www.estrellaproject.org/lkif-core/relative-places.owl#Place> .""" ;
+	voidx:globalStats <stats:domain> .
+
+<stats:Dataset> void:propertyPartition <stats:domain> .
+
+<stats:domain> a void:Dataset ;
+	voidx:label "<stats:domain> (76, OF)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#domain> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "76"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "76"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "76"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "76"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "35"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2000/01/rdf-schema#subPropertyOf> voidx:label "rdfs:subPropertyOf (97, O)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/expression.owl#evaluated_by> rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/expression.owl#attitude> .
+    <http://www.estrellaproject.org/lkif-core/expression.owl#evaluated_by> rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/expression.owl#qualified_by> .
+    <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_reference> rdfs:subPropertyOf <http://www.estrellaproject.org/lkif-core/relative-places.owl#spatial_relation> .""" ;
+	voidx:globalStats <stats:subPropertyOf> .
+
+<stats:Dataset> void:propertyPartition <stats:subPropertyOf> .
+
+<stats:subPropertyOf> a void:Dataset ;
+	voidx:label "<stats:subPropertyOf> (97, O)" ;
+	void:property <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "87"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "97"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "97"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "87"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "39"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#equivalentProperty> voidx:label "owl:equivalentProperty (4, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:example """
+    <http://www.estrellaproject.org/lkif-core/mereology.owl#strict_part_of> owl:equivalentProperty <http://www.estrellaproject.org/lkif-core/mereology.owl#direct_part_of> .
+    <http://www.estrellaproject.org/lkif-core/mereology.owl#strict_part> owl:equivalentProperty <http://www.estrellaproject.org/lkif-core/mereology.owl#direct_part> .
+    <http://www.estrellaproject.org/lkif-core/mereology.owl#direct_part> owl:equivalentProperty <http://www.estrellaproject.org/lkif-core/mereology.owl#strict_part> .""" ;
+	voidx:globalStats <stats:equivalentProperty> .
+
+<stats:Dataset> void:propertyPartition <stats:equivalentProperty> .
+
+<stats:equivalentProperty> a void:Dataset ;
+	voidx:label "<stats:equivalentProperty> (4, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#equivalentProperty> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:entities "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:triples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "4"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "4"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#someValuesFrom> voidx:label "owl:someValuesFrom (131, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:someValuesFrom> .
+
+<stats:Dataset> void:propertyPartition <stats:someValuesFrom> .
+
+<stats:someValuesFrom> a void:Dataset ;
+	voidx:label "<stats:someValuesFrom> (131, OF)" ;
+	void:property <http://www.w3.org/2002/07/owl#someValuesFrom> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "131"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "131"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "131"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "76"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#onProperty> voidx:label "owl:onProperty (188, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:onProperty> .
+
+<stats:Dataset> void:propertyPartition <stats:onProperty> .
+
+<stats:onProperty> a void:Dataset ;
+	voidx:label "<stats:onProperty> (188, OF)" ;
+	void:property <http://www.w3.org/2002/07/owl#onProperty> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "188"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "188"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "188"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "58"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> voidx:label "rdf:first (93, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:first> .
+
+<stats:Dataset> void:propertyPartition <stats:first> .
+
+<stats:first> a void:Dataset ;
+	voidx:label "<stats:first> (93, OF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "68"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> voidx:label "rdf:rest (93, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:rest> .
+
+<stats:Dataset> void:propertyPartition <stats:rest> .
+
+<stats:rest> a void:Dataset ;
+	voidx:label "<stats:rest> (93, OF)" ;
+	void:property <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "93"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "51"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#complementOf> voidx:label "owl:complementOf (2, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:complementOf> .
+
+<stats:Dataset> void:propertyPartition <stats:complementOf> .
+
+<stats:complementOf> a void:Dataset ;
+	voidx:label "<stats:complementOf> (2, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#complementOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "2"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#allValuesFrom> voidx:label "owl:allValuesFrom (53, OF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:allValuesFrom> .
+
+<stats:Dataset> void:propertyPartition <stats:allValuesFrom> .
+
+<stats:allValuesFrom> a void:Dataset ;
+	voidx:label "<stats:allValuesFrom> (53, OF)" ;
+	void:property <http://www.w3.org/2002/07/owl#allValuesFrom> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "53"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "53"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "53"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "40"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#intersectionOf> voidx:label "owl:intersectionOf (30, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:intersectionOf> .
+
+<stats:Dataset> void:propertyPartition <stats:intersectionOf> .
+
+<stats:intersectionOf> a void:Dataset ;
+	voidx:label "<stats:intersectionOf> (30, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#intersectionOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "30"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "30"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "30"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "30"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#unionOf> voidx:label "owl:unionOf (13, OFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#ObjectProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:unionOf> .
+
+<stats:Dataset> void:propertyPartition <stats:unionOf> .
+
+<stats:unionOf> a void:Dataset ;
+	voidx:label "<stats:unionOf> (13, OFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#unionOf> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "13"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "13"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "13"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "13"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#minCardinality> voidx:label "owl:minCardinality (1, DFI)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> , <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> ;
+	voidx:globalStats <stats:minCardinality> .
+
+<stats:Dataset> void:propertyPartition <stats:minCardinality> .
+
+<stats:minCardinality> a void:Dataset ;
+	voidx:label "<stats:minCardinality> (1, DFI)" ;
+	void:property <http://www.w3.org/2002/07/owl#minCardinality> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "1"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "1"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+<http://www.w3.org/2002/07/owl#cardinality> voidx:label "owl:cardinality (3, DF)" ;
+	voidx:type <http://www.w3.org/2002/07/owl#DatatypeProperty> , <http://www.w3.org/2002/07/owl#FunctionalProperty> ;
+	voidx:globalStats <stats:cardinality> .
+
+<stats:Dataset> void:propertyPartition <stats:cardinality> .
+
+<stats:cardinality> a void:Dataset ;
+	voidx:label "<stats:cardinality> (3, DF)" ;
+	void:property <http://www.w3.org/2002/07/owl#cardinality> ;
+	void:properties "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	void:triples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	voidx:tboxTriples "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctSubjects "3"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	void:distinctObjects "2"^^<http://www.w3.org/2001/XMLSchema#long> .
+
+void:openSearchDescription voidx:label "void:openSearchDescription" .
+
+void:classes voidx:label "void:classes" .
+
+void:documents voidx:label "void:documents" .
+
+void:TechnicalFeature voidx:label "void:TechnicalFeature" .
+
+void:uriLookupEndpoint voidx:label "void:uriLookupEndpoint" .
+
+void:sparqlEndpoint voidx:label "void:sparqlEndpoint" .
+
+void:dataDump voidx:label "void:dataDump" .
+
+void:triples voidx:label "void:triples" .
+
+void:linkPredicate voidx:label "void:linkPredicate" .
+
+void:uriRegexPattern voidx:label "void:uriRegexPattern" .
+
+void:uriSpace voidx:label "void:uriSpace" .
+
+void:properties voidx:label "void:properties" .
+
+void:subset voidx:label "void:subset" .
+
+void:classPartition voidx:label "void:classPartition" .
+
+void:distinctObjects voidx:label "void:distinctObjects" .
+
+void:propertyPartition voidx:label "void:propertyPartition" .
+
+void:inDataset voidx:label "void:inDataset" .
+
+void:Dataset voidx:label "void:Dataset" .
+
+void:objectsTarget voidx:label "void:objectsTarget" .
+
+void:property voidx:label "void:property" .
+
+void:DatasetDescription voidx:label "void:DatasetDescription" .
+
+void:feature voidx:label "void:feature" .
+
+void:class voidx:label "void:class" .
+
+void:subjectsTarget voidx:label "void:subjectsTarget" .
+
+void:target voidx:label "void:target" .
+
+void:entities voidx:label "void:entities" .
+
+void:Linkset voidx:label "void:Linkset" .
+
+void:distinctSubjects voidx:label "void:distinctSubjects" .
+
+void:exampleResource voidx:label "void:exampleResource" .
+
+void:rootResource voidx:label "void:rootResource" .
+
+void:vocabulary voidx:label "void:vocabulary" .
+
+voidx:globalStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#globalStats>" .
+
+voidx:source voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#source>" .
+
+voidx:type voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#type>" .
+
+voidx:example voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#example>" .
+
+voidx:sourceStats voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sourceStats>" .
+
+voidx:tboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#tboxTriples>" .
+
+voidx:averageProperties voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#averageProperties>" .
+
+voidx:label voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#label>" .
+
+voidx:sameAsTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#sameAsTriples>" .
+
+voidx:typeTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#typeTriples>" .
+
+voidx:aboxTriples voidx:label "<http://rdfpro.fbk.eu/ontologies/voidx#aboxTriples>" .

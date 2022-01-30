@@ -1,0 +1,44 @@
+# baseURI: http://fundontology.com/fr/Fund_Reasoning.ttl
+# imports: http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl
+# imports: http://fundontology.com/fr/data/FundSampleData.ttl
+# imports: http://fundontology.com/fr/form/IAPDSECCompilationReport.ttl
+# imports: http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl
+# prefix: fr-fund_reas
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fr-fund_reas: <http://fundontology.com/fr/Fund_Reasoning.ttl#> .
+@prefix fr-ia-firm-sec: <http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl#> .
+@prefix fr-rule-iaa: <http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl#> .
+@prefix jc-core: <http://judo.googlecode.com/svn/tunk/Judging_Contracts_Core.owl#> .
+@prefix lkif-expr: <http://www.estrellaproject.org/lkif-core/expression.owl#> .
+@prefix lkif-jc-core: <http://judo.googlecode.com/svn/tunk/Judging_Contracts_Core.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2dl: <http://www.jayzed.com/hfr/owl2dl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fundontology.com/fr/Fund_Reasoning.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0" ;
+  dct:license "https://opensource.org/licenses/MIT" ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  sm:author "Jurgen Ziemer" ;
+  sm:copyright "Jayzed Data Models Inc." ;
+  rdfs:comment """This ontology doesn't define any tripples. It is a configuration of ontology includes: 
+1) The Investment Adviser Act rules ontology
+2) Real adviser data from the Investment Adviser Firm SEC report 
+3) Made-up advisers to test exceptions
+4) The schema for report and forn Investment Adviser Publis Disclosure Compilation Report.
+5) Some OWL-2  DL extensions for Topbraid Composer
+Running the inference engine (reasoner) will set the regulated_as object properties for the adviser records.""" ;
+  owl:imports <http://fundontology.com/fr/data/FR_IA_Firm_SEC.ttl> ;
+  owl:imports <http://fundontology.com/fr/data/FundSampleData.ttl> ;
+  owl:imports <http://fundontology.com/fr/form/IAPDSECCompilationReport.ttl> ;
+  owl:imports <http://fundontology.com/fr/rule/Rules_Investment_Adviser_Act.ttl> ;
+  skos:definition "An ontology file to run rules of the Investment Adviser Act over a set of Adviser Data." ;
+.

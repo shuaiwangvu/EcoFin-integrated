@@ -1,0 +1,46 @@
+# baseURI: http://bankontology.com/br/form/Call_Report_Taxonomy.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_calc.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_cap.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_def.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_ec.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_ec_mess.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_intr.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_pres.ttl
+# imports: http://bankontology.com/br/form/Call_Report_v129_ref.ttl
+# imports: http://bankontology.com/br/form/FFIEC_concepts.ttl
+# imports: http://bankontology.com/br/ref/Bank_Legal_Reference.ttl
+# imports: http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl
+# imports: http://finregont.com/fro/ref/AnnotationProperty.ttl
+# prefix: ffiec-cr-taxon
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ffiec-cr-taxon: <http://bankontology.com/br/form/Call_Report_Taxonomy.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bankontology.com/br/form/Call_Report_Taxonomy.ttl>
+  rdf:type owl:Ontology ;
+  dct:license "https://opensource.org/licenses/GPL-3.0"^^xsd:string ;
+  dct:license "https://opensource.org/licenses/MIT"^^xsd:string ;
+  sm:author "Jurgen Ziemer"^^xsd:string ;
+  sm:copyright "Jayzed Data Models Inc."^^xsd:string ;
+  rdfs:comment "This ontology file doesn't define any tripples."^^xsd:string ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_calc.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_cap.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_def.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_ec.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_ec_mess.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_intr.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_pres.ttl> ;
+  owl:imports <http://bankontology.com/br/form/Call_Report_v129_ref.ttl> ;
+  owl:imports <http://bankontology.com/br/form/FFIEC_concepts.ttl> ;
+  owl:imports <http://bankontology.com/br/ref/Bank_Legal_Reference.ttl> ;
+  owl:imports <http://finregont.com/fro/dtype/SCHEMA_dtype-v1.2.ttl> ;
+  owl:imports <http://finregont.com/fro/ref/AnnotationProperty.ttl> ;
+  skos:definition """A configuration ontology file to include all Call Report concepts, formulas, abstract presentation elements, and various linkbases.
+Part of the ontology RDF/OWL version of form FFIEC 031, the Call Report."""^^xsd:string ;
+.
