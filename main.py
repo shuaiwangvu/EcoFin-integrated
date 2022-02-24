@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 
 owl_sameas = "http://www.w3.org/2002/07/owl#sameAs"
+owl_equivalentClass = "http://www.w3.org/2002/07/owl#equivalentClass"
 skos_exactMatch = "http://www.w3.org/2004/02/skos/core#exactMatch"
 skos_broadMatch = "http://www.w3.org/2004/02/skos/core#broadMatch"
 skos_broader = "http://www.w3.org/2004/02/skos/core#broader"
@@ -23,7 +24,7 @@ lkif_eq = 'http://www.estrellaproject.org/lkif-core/norm.owl#strictly_equivalent
 rdfs_subClassOf = "http://www.w3.org/2000/01/rdf-schema#subClassOf"
 files = ['fibo-vD', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'jel', 'fund', 'stw-mapping', 'my_mapping']
 # files = []
-
+# owl:equivalentClass
 
 for file in files:
 	path_to_file = './data/integrated_files/'+file+'.hdt'
@@ -35,6 +36,10 @@ for file in files:
 		entities.add(o)
 	print ('\n\nKG ', file, 'has ', cardinality, 'edges')
 	print ('\t with ', len (entities), ' nodes')
+
+	#owl_equivalentClass
+	triples, cardinality = hdt_kg.search_triples("", owl_equivalentClass, "")
+	print ('owl:equivalentClass ', cardinality)
 
 	# owl:sameAs
 	triples, cardinality = hdt_kg.search_triples("", owl_sameas, "")
@@ -127,6 +132,33 @@ y = ct.values()
 ax.bar(x, y, color ='purple', width=barWidth, label='owl:sameAs', align='center')
 print ('owl:sameAs max ', max(ct.keys()))
 
+
+# triples, cardinality = hdt_kg.search_triples("", owl_equivalentClass, "")
+# print ('owl:equivalentClass ', cardinality)
+#
+# g_eqClass = nx.Graph()
+# for (s, p, o) in triples:
+# 	g_eqClass.add_edge(s, o)
+#
+# # ccs = nx.connected_components(g_sameAs)
+# # for cc in ccs:
+# # 	if len (cc) > 13:
+# # 		print('size = ',len (cc))
+# # 		for c in cc:
+# # 			print ('\t related_match: ', c)
+# # 			triples, cardinality = hdt_kg.search_triples(c, "http://www.w3.org/2004/02/skos/core#prefLabel", "")
+# # 			for (_, p, o) in triples:
+# # 				print ('\t\t',p,o)
+#
+# ccs = nx.connected_components(g_eqClass)
+# len_summary = [len (cc) for cc in ccs]
+# ct = Counter(len_summary)
+# print ('owl:eqC connected components: ',ct)
+# x = ct.keys()
+# y = ct.values()
+# ax.bar(x, y, color ='green', width=barWidth, label='owl:equivalentClass', align='center')
+# print ('owl:eqC max ', max(ct.keys()))
+#
 
 # ccs = nx.connected_components(g_sameAs)
 # for cc in ccs:
