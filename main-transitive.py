@@ -19,24 +19,24 @@ inv = 'http://www.w3.org/2002/07/owl#inverseOf'
 
 files = ['fibo-skos', 'fibo-owl', 'fro', 'hfr', 'lkif', 'bro', 'figi', 'stw', 'stw-mappings', 'jel', 'fund']
 # files = []
-
-for file in files:
-	path_to_file = './data/'+file+'.hdt'
-	hdt_kg = HDTDocument(path_to_file)
-	triples, cardinality = hdt_kg.search_triples("", "", "")
-	entities = set()
-	for s, p, o in triples:
-		if str(s)[0] != '"':
-			entities.add(s)
-		# else:
-			# print ('Subject - not an entity but a string/number',s)
-
-		if str(o)[0] != '"':
-			entities.add(o)
-		# else:
-			# print ('Object - not an entity but a string/number',o)
-	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
-	print ('\t with ', len (entities), ' entities')
+#
+# for file in files:
+# 	path_to_file = './data/'+file+'.hdt'
+# 	hdt_kg = HDTDocument(path_to_file)
+# 	triples, cardinality = hdt_kg.search_triples("", "", "")
+# 	entities = set()
+# 	for s, p, o in triples:
+# 		if str(s)[0] != '"':
+# 			entities.add(s)
+# 		# else:
+# 			# print ('Subject - not an entity but a string/number',s)
+#
+# 		if str(o)[0] != '"':
+# 			entities.add(o)
+# 		# else:
+# 			# print ('Object - not an entity but a string/number',o)
+# 	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
+# 	print ('\t with ', len (entities), ' entities')
 
 	# # owl:sameAs
 	# triples, cardinality = hdt_kg.search_triples("", owl_sameas, "")
@@ -77,7 +77,7 @@ type = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
 
 print ('\n\n----------INTEGRATED----------\n')
 
-path_to_file = './data/integrated.hdt'
+path_to_file = './data/integrated_files/integrated.hdt'
 hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
