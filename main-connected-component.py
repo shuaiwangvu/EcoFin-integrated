@@ -33,9 +33,16 @@ for file in files:
 	entities = set()
 	g = nx.DiGraph()
 	for s, p, o in triples:
-		entities.add(s)
-		entities.add(o)
-		g.add_edge(s, o)
+		if str(s)[0] != '"':
+			entities.add(s)
+		# else:
+			# print ('Subject - not an entity but a string/number',s)
+
+		if str(o)[0] != '"':
+			entities.add(o)
+		# else:
+			# print ('Object - not an entity but a string/number',o)
+			g.add_edge(s, o)
 	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
 	print ('\t with ', len (entities), ' entities')
 	print ('the graph has', g.number_of_nodes(),'entities')
@@ -55,9 +62,16 @@ triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
 g = nx.DiGraph()
 for s, p, o in triples:
-	entities.add(s)
-	entities.add(o)
-	g.add_edge(s, o)
+	if str(s)[0] != '"':
+		entities.add(s)
+	# else:
+		# print ('Subject - not an entity but a string/number',s)
+
+	if str(o)[0] != '"':
+		entities.add(o)
+	# else:
+		# print ('Object - not an entity but a string/number',o)
+		g.add_edge(s, o)
 print ('the integrated KG has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')
 

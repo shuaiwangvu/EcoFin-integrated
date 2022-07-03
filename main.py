@@ -32,8 +32,15 @@ for file in files:
 	triples, cardinality = hdt_kg.search_triples("", "", "")
 	entities = set()
 	for s, p, o in triples:
-		entities.add(s)
-		entities.add(o)
+		if str(s)[0] != '"':
+			entities.add(s)
+		# else:
+			# print ('Subject - not an entity but a string/number',s)
+
+		if str(o)[0] != '"':
+			entities.add(o)
+		# else:
+			# print ('Object - not an entity but a string/number',o)
 	print ('\n\nKG ', file, 'has ', cardinality, 'edges')
 	print ('\t with ', len (entities), ' nodes')
 
@@ -100,8 +107,15 @@ hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
 for s, p, o in triples:
-	entities.add(s)
-	entities.add(o)
+	if str(s)[0] != '"':
+		entities.add(s)
+	# else:
+		# print ('Subject - not an entity but a string/number',s)
+
+	if str(o)[0] != '"':
+		entities.add(o)
+	# else:
+		# print ('Object - not an entity but a string/number',o)
 print ('the integrated KG has ', cardinality, 'edges')
 print ('\t with ', len (entities), ' nodes')
 # owl:sameAs
