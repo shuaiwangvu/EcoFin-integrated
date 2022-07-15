@@ -32,12 +32,12 @@ for file in files:
 	triples, cardinality = hdt_kg.search_triples("", "", "")
 	entities = set()
 	for s, p, o in triples:
-		if str(s)[0] != '"':
+		if str(s)[0] != '"'  and not (str(s)[0] == '_' and str(s)[1] == ':'):
 			entities.add(s)
 		# else:
 			# print ('Subject - not an entity but a string/number',s)
 
-		if str(o)[0] != '"':
+		if str(o)[0] != '"'  and not (str(o)[0] == '_' and str(o)[1] == ':'):
 			entities.add(o)
 		# else:
 			# print ('Object - not an entity but a string/number',o)
@@ -107,12 +107,12 @@ hdt_kg = HDTDocument(path_to_file)
 triples, cardinality = hdt_kg.search_triples("", "", "")
 entities = set()
 for s, p, o in triples:
-	if str(s)[0] != '"':
+	if str(s)[0] != '"'  and not (str(s)[0] == '_' and str(s)[1] == ':'):
 		entities.add(s)
 	# else:
 		# print ('Subject - not an entity but a string/number',s)
 
-	if str(o)[0] != '"':
+	if str(o)[0] != '"'  and not (str(o)[0] == '_' and str(o)[1] == ':'):
 		entities.add(o)
 	# else:
 		# print ('Object - not an entity but a string/number',o)

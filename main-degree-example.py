@@ -53,12 +53,12 @@ for file in files:
 	ct_in = Counter()
 	ct_out = Counter()
 	for s, p, o in triples:
-		if str(s)[0] != '"':
+		if str(s)[0] != '"'  and not (str(s)[0] == '_' and str(s)[1] == ':'):
 			entities.add(s)
 		# else:
 			# print ('Subject - not an entity but a string/number',s)
 
-		if str(o)[0] != '"':
+		if str(o)[0] != '"'  and not (str(o)[0] == '_' and str(o)[1] == ':'):
 			entities.add(o)
 		# else:
 			# print ('Object - not an entity but a string/number',o)
@@ -112,12 +112,12 @@ g = nx.DiGraph()
 ct_in = Counter()
 ct_out = Counter()
 for s, p, o in triples:
-	if str(s)[0] != '"':
+	if str(s)[0] != '"'  and not (str(s)[0] == '_' and str(s)[1] == ':'):
 		entities.add(s)
 	# else:
 		# print ('Subject - not an entity but a string/number',s)
 
-	if str(o)[0] != '"':
+	if str(o)[0] != '"'  and not (str(s)[0] == '_' and str(s)[1] == ':'):
 		entities.add(o)
 	# else:
 		# print ('Object - not an entity but a string/number',o)
