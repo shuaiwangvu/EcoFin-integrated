@@ -62,6 +62,7 @@ for file in files:
 			entities.add(o)
 		# else:
 			# print ('Object - not an entity but a string/number',o)
+		if str(s)[0] != '"' and str(o)[0] != '"':
 			g.add_edge(s, o)
 
 	print ('\n\nKG ', file, 'has ', cardinality, 'triples')
@@ -121,6 +122,7 @@ for s, p, o in triples:
 		entities.add(o)
 	# else:
 		# print ('Object - not an entity but a string/number',o)
+	if str(s)[0] != '"' and str(o)[0] != '"':
 		g.add_edge(s, o)
 
 print ('\n\nKG ', file, 'has ', cardinality, 'triples')

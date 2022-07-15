@@ -71,6 +71,7 @@ for s, p, o in triples:
 		entities.add(o)
 	# else:
 		# print ('Object - not an entity but a string/number',o)
+	if str(s)[0] != '"' and str(o)[0] != '"':
 		g.add_edge(s, o)
 print ('the integrated KG has ', cardinality, 'triples')
 print ('\t with ', len (entities), ' entities')
