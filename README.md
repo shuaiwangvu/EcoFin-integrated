@@ -8,6 +8,7 @@ Knowledge graphs are being used for the detection of money laundering, insurance
 
 ### Data 
 **/data** is the directory where you can find each individual knowledge graph and the integrated knowledge graph.
+[![DOI](https://zenodo.org/badge/441545123.svg)](https://zenodo.org/doi/10.5281/zenodo.10417179)
 
 ### Integration 
 **`main.py`** is a Python script for the analysis of each individual knowledge graph and the integrated knowledge graph.
